@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support</title>
+<meta name="description" content="RabbitEmergency.com helps rabbit owners recognize urgent warning signs such as gut stasis, not eating, and heatstroke, contact a rabbit-savvy veterinarian, and understand vet-guided recovery support including Alfavet RodiCare and WOOLY daily care. Used by rabbit owners across Hong Kong, Japan, Taiwan, and Singapore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pine: #1A472A;
+    --pine-deep: #0D2718;
+    --pine-2: #2E6B3E;
+    --pine-3: #DCEBDD;
+    --cream: #FAFAF5;
+    --warm: #F5F0E8;
+    --paper: #FFFFFF;
+    --ink: #181B18;
+    --muted: #5E6A62;
+    --quiet: #89938B;
+    --border: #DCE4DC;
+    --amber: #C4833B;
+    --amber-soft: #E3B36F;
+    --amber-bg: #FFF8F0;
+    --red: #A93B32;
+    --red-bg: #FDF1EE;
+    --blue: #315D75;
+    --blue-bg: #E9F2F5;
+    --lav: #6B5B83;
+    --lav-bg: #F2EEF7;
+    --shadow: 0 18px 60px rgba(28, 42, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button, input, select { font: inherit; }
+
+  .mono,
+  .eyebrow,
+  .pill,
+  .button,
+  .risk-label,
+  .field-label,
+  .nav-links a,
+  .product-meta,
+  .source-link,
+  .stat-label,
+  .city-tag,
+  .feed-tag,
+  .ribbon,
+  th {
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  h1, h2, h3, .brand, .stat-number {
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(26, 71, 42, 0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .brand {
+    color: #fff;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .brand span {
+    color: rgba(255,255,255,0.48);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.66);
+    font-size: 11px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .nav-links a.cta {
+    background: var(--amber);
+    color: #fff;
+  }
+
+  .nav-links a.cta:hover { background: #b3742f; }
+
+  .hero {
+    min-height: 720px;
+    position: relative;
+    overflow: hidden;
+    background: var(--pine);
+    color: #fff;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(13, 39, 24, 0.96) 0%, rgba(13, 39, 24, 0.88) 38%, rgba(13, 39, 24, 0.36) 72%, rgba(13, 39, 24, 0.16) 100%),
+      linear-gradient(180deg, rgba(13, 39, 24, 0.1) 0%, rgba(13, 39, 24, 0.72) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1200px, calc(100% - 36px));
+    min-height: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(330px, 430px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+    padding: 62px 0 74px;
+  }
+
+  .eyebrow {
+    color: var(--amber-soft);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(43px, 6.2vw, 76px);
+    line-height: 0.96;
+    max-width: 640px;
+    margin-bottom: 22px;
+  }
+
+  .hero-copy {
+    color: rgba(255,255,255,0.86);
+    font-size: 18px;
+    max-width: 590px;
+    margin-bottom: 26px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .button {
+    min-height: 43px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    color: #fff;
+    background: rgba(255,255,255,0.04);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .button.primary {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #fff;
+  }
+
+  .button.dark {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .avatars { display: flex; }
+
+  .avatars span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--pine-deep);
+    margin-left: -10px;
+  }
+
+  .avatars span:first-child { margin-left: 0; }
+  .avatars span:nth-child(1) { background: var(--amber); }
+  .avatars span:nth-child(2) { background: var(--blue); }
+  .avatars span:nth-child(3) { background: var(--lav); }
+  .avatars span:nth-child(4) { background: var(--pine-2); }
+
+  .hero-trust p {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
+  }
+
+  .hero-card {
+    background: rgba(250,250,245,0.96);
+    color: var(--ink);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-card h2 {
+    color: var(--pine);
+    font-size: 28px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .hero-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .emergency-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .emergency-row {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--red-bg);
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .emergency-row:nth-child(2) .mark { background: var(--amber-bg); color: var(--amber); }
+  .emergency-row:nth-child(3) .mark { background: var(--blue-bg); color: var(--blue); }
+  .emergency-row:nth-child(4) .mark { background: var(--pine-3); color: var(--pine); }
+
+  .row-title {
+    color: var(--pine);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .row-note {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .risk-label {
+    border-radius: 999px;
+    background: var(--red-bg);
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .risk-label.amber { background: var(--amber-bg); color: #84551D; }
+
+  /* trust strip */
+  .trust-strip {
+    background: var(--pine);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .trust-inner {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-cell {
+    padding: 22px 16px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .trust-cell:last-child { border-right: none; }
+
+  .trust-cell .stat-number {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .trust-cell:first-child .stat-number { color: var(--amber-soft); }
+
+  .stat-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  .wrap {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 54px 0 82px;
+  }
+
+  .alert-band {
+    margin-top: -52px;
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.58fr);
+    gap: 14px;
+  }
+
+  .callout {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+  }
+
+  .callout.red {
+    border-left-color: var(--red);
+    background: var(--red-bg);
+  }
+
+  .callout.amber {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+
+  .callout h3 {
+    color: var(--pine);
+    font-size: 23px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .callout p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .section {
+    margin-top: 58px;
+    scroll-margin-top: 76px;
+  }
+
+  .hero-card,
+  .source-panel {
+    scroll-margin-top: 76px;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title h2 {
+    color: var(--pine);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.04;
+  }
+
+  .section-title p {
+    color: var(--muted);
+    max-width: 760px;
+    margin-top: 8px;
+  }
+
+  .pill {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0 10px;
+    background: var(--pine-3);
+    color: var(--pine);
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .pill.red { background: var(--red-bg); color: var(--red); }
+  .pill.amber { background: var(--amber-bg); color: #84551D; }
+  .pill.blue { background: var(--blue-bg); color: var(--blue); }
+  .pill.lav { background: var(--lav-bg); color: var(--lav); }
+
+  .triage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .triage-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .triage-top {
+    padding: 16px;
+    color: #fff;
+    background: var(--pine);
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .triage-card.urgent .triage-top { background: var(--red); }
+  .triage-card.digestive .triage-top { background: var(--amber); }
+  .triage-card.recovery .triage-top { background: var(--blue); }
+  .triage-card.urinary .triage-top { background: var(--lav); }
+
+  .triage-top .pill {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    width: fit-content;
+  }
+
+  .triage-top h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.05;
+  }
+
+  .triage-card-body {
+    padding: 16px;
+  }
+
+  .triage-card-body ul {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .triage-card-body li { margin-bottom: 5px; }
+
+  /* guides + activity */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .guide-list { display: grid; gap: 10px; }
+
+  .guide-row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+
+  .guide-rank {
+    font-family: "DM Serif Display", serif;
+    font-size: 26px;
+    color: var(--pine);
+  }
+
+  .guide-row:nth-child(1) .guide-rank { color: var(--red); }
+  .guide-row:nth-child(2) .guide-rank { color: var(--amber); }
+  .guide-row:nth-child(3) .guide-rank { color: var(--blue); }
+  .guide-row:nth-child(4) .guide-rank { color: var(--lav); }
+  .guide-row:nth-child(5) .guide-rank { color: var(--pine-2); }
+
+  .guide-row h3 {
+    color: var(--pine);
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .guide-row p { color: var(--muted); font-size: 12px; }
+
+  .reviewed {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--pine-3);
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .feed {
+    background: var(--pine);
+    border-radius: 8px;
+    padding: 22px;
+    color: #fff;
+  }
+
+  .feed-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #7FCF9B;
+  }
+
+  .feed-head span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+  }
+
+  .feed-sub { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+
+  .feed-items { display: grid; gap: 10px; }
+
+  .feed-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 7px;
+    padding: 11px 13px;
+  }
+
+  .feed-tag {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--amber-soft);
+    background: rgba(196,131,59,0.2);
+    border-radius: 4px;
+    padding: 3px 7px;
+    white-space: nowrap;
+  }
+
+  .feed-item p { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+  .feed-note {
+    margin-top: 14px;
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .care-path {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .path-panel {
+    background: var(--pine);
+    color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 78px;
+  }
+
+  .path-panel h3 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.04;
+    margin-bottom: 12px;
+  }
+
+  .path-panel p {
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 18px;
+  }
+
+  .path-steps {
+    display: grid;
+    gap: 10px;
+  }
+
+  .path-step {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+
+  .step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .path-step strong {
+    display: block;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .path-step span {
+    color: rgba(255,255,255,0.66);
+    font-size: 12px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+    min-height: 250px;
+  }
+
+  .product-head {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+  }
+
+  .product-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 8px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0)),
+      var(--pine-3);
+    display: grid;
+    place-items: center;
+    color: var(--pine);
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    overflow: hidden;
+  }
+
+  .product-card:nth-child(2) .product-icon { background-color: var(--amber-bg); color: var(--amber); }
+  .product-card:nth-child(3) .product-icon { background-color: var(--blue-bg); color: var(--blue); }
+  .product-card:nth-child(4) .product-icon { background-color: var(--lav-bg); color: var(--lav); }
+  .product-card:nth-child(5) .product-icon { background-color: var(--red-bg); color: var(--red); }
+  .product-card:nth-child(6) .product-icon { background-color: #F2EEE3; color: #6A5635; }
+
+  .product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 7px;
+    mix-blend-mode: multiply;
+  }
+
+  .product-card h3 {
+    color: var(--pine);
+    font-size: 22px;
+    line-height: 1.08;
+  }
+
+  .product-meta {
+    color: var(--quiet);
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+
+  .product-card p {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .product-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .product-note {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* testimonials */
+  .city-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .city-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+  }
+
+  .city-tag.active { background: var(--pine); color: #fff; border-color: var(--pine); }
+
+  .testi-card[hidden] { display: none; }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testi-bar { height: 6px; background: var(--pine); }
+  .testi-card:nth-child(2) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(3) .testi-bar { background: var(--blue); }
+  .testi-card:nth-child(4) .testi-bar { background: var(--lav); }
+  .testi-card:nth-child(5) .testi-bar { background: var(--red); }
+  .testi-card:nth-child(6) .testi-bar { background: var(--pine-2); }
+  .testi-card:nth-child(7) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(8) .testi-bar { background: var(--blue); }
+
+  .testi-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .testi-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  .testi-body blockquote {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .testi-name { font-size: 12px; font-weight: 700; color: var(--pine); }
+
+  /* regional network */
+  .region-band {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .region-lead { flex-shrink: 0; }
+  .region-lead .eyebrow { color: var(--amber); margin-bottom: 6px; }
+  .region-lead h3 { color: var(--pine); font-size: 28px; line-height: 1.05; max-width: 280px; }
+
+  .region-cities { flex: 1; display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .region-city {
+    flex: 1;
+    min-width: 120px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .region-city:hover,
+  .region-city:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--pine-2);
+    box-shadow: 0 12px 28px rgba(28, 42, 32, 0.1);
+    outline: none;
+  }
+
+  .region-city b {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--pine);
+  }
+
+  .region-city span {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    margin-top: 4px;
+  }
+
+  .region-city.new { background: var(--pine); border-color: var(--pine); }
+  .region-city.new b { color: #fff; }
+  .region-city.new span { color: var(--amber-soft); }
+
+  /* congress */
+  .congress {
+    background: var(--pine-deep);
+    border-radius: 12px;
+    padding: 40px 44px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.78fr;
+    gap: 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .congress::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(196,131,59,0.14);
+    pointer-events: none;
+  }
+
+  .congress .eyebrow { color: var(--amber-soft); }
+  .congress h2 { color: #fff; font-size: clamp(30px, 3.4vw, 38px); line-height: 1.05; margin-bottom: 16px; max-width: 520px; }
+  .congress > div > .congress-copy { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 24px; }
+
+  .congress-list { display: grid; gap: 10px; margin-bottom: 26px; }
+  .congress-list div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 7px;
+    padding: 12px 14px;
+    color: rgba(255,255,255,0.86);
+    font-size: 14px;
+  }
+  .congress-list div::before {
+    content: "";
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--amber-soft);
+    flex-shrink: 0;
+  }
+
+  .congress-shelf {
+    background: rgba(250,250,245,0.97);
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .congress-shelf h3 { color: var(--pine); font-size: 22px; margin-bottom: 4px; }
+  .congress-shelf .shelf-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+
+  .shelf-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E2D2;
+    padding: 9px 0;
+  }
+  .shelf-row:last-of-type { border-bottom: none; }
+  .shelf-row .label { font-size: 13px; color: var(--ink); }
+  .shelf-row .skus { font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700; color: var(--pine); }
+
+  .shelf-disclaimer {
+    margin-top: 16px;
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: #84551D;
+    line-height: 1.5;
+  }
+
+  /* finder */
+  .finder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .finder-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .finder-card h3 {
+    color: var(--pine);
+    font-size: 26px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+  }
+
+  .finder-card p {
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .field {
+    display: grid;
+    gap: 6px;
+  }
+
+  .field.full { grid-column: 1 / -1; }
+
+  .field-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--cream);
+    color: var(--ink);
+    padding: 0 11px;
+    outline: none;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: var(--pine-2);
+    box-shadow: 0 0 0 3px rgba(46,107,62,0.12);
+  }
+
+  .form-submit { grid-column: 1 / -1; }
+
+  .call-summary {
+    grid-column: 1 / -1;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine-2);
+    border-radius: 8px;
+    background: var(--cream);
+    color: var(--muted);
+    padding: 14px;
+    font-size: 13px;
+  }
+
+  .call-summary strong {
+    display: block;
+    color: var(--pine);
+    margin-bottom: 6px;
+  }
+
+  .faq {
+    display: grid;
+    gap: 10px;
+  }
+
+  details {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 16px;
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 0;
+    color: var(--pine);
+    font-weight: 700;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  details p {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 0 16px;
+  }
+
+  /* final cta */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .cta-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-card:nth-child(2) { border-top-color: var(--blue); }
+  .cta-card.vets { background: var(--pine-deep); border-color: var(--pine-deep); border-top-color: var(--amber); }
+
+  .cta-card .eyebrow { margin-bottom: 0; color: var(--red); }
+  .cta-card:nth-child(2) .eyebrow { color: var(--blue); }
+  .cta-card.vets .eyebrow { color: var(--amber-soft); }
+
+  .cta-card h3 { color: var(--pine); font-size: 26px; line-height: 1.05; }
+  .cta-card.vets h3 { color: #fff; }
+  .cta-card p { color: var(--muted); font-size: 13px; line-height: 1.55; flex: 1; }
+  .cta-card.vets p { color: rgba(255,255,255,0.78); }
+
+  .cta-btn {
+    background: var(--red);
+    border-radius: 7px;
+    padding: 12px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .cta-card:nth-child(2) .cta-btn { background: var(--blue); }
+  .cta-card.vets .cta-btn { background: var(--amber); }
+
+  .source-panel {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 52px;
+  }
+
+  .source-panel h2 {
+    color: var(--pine);
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .source-panel p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .source-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .source-link {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .footer {
+    color: var(--muted);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 32px;
+  }
+
+  /* --- emergency mark emphasis --- */
+  .hero-card .emergency-row .mark { background: var(--red-bg); color: var(--red); }
+  .hero-card .emergency-row.warn .mark { background: var(--amber-bg); color: var(--amber); }
+
+  /* --- veterinary advisory board --- */
+  .board-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .board-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .board-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--pine-3); color: var(--pine); display: grid; place-items: center; font-family: "DM Serif Display", serif; font-size: 20px; margin-bottom: 12px; }
+  .board-card:nth-child(2) .board-avatar { background: var(--amber-bg); color: var(--amber); }
+  .board-card:nth-child(3) .board-avatar { background: var(--blue-bg); color: var(--blue); }
+  .board-card:nth-child(4) .board-avatar { background: var(--lav-bg); color: var(--lav); }
+  .board-card h3 { color: var(--pine); font-size: 18px; line-height: 1.12; }
+  .board-card .role { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 5px; display: block; }
+  .board-card p { color: var(--muted); font-size: 12px; margin-top: 10px; line-height: 1.5; }
+
+  /* --- clinic finder --- */
+  .clinic-finder { background: var(--pine); color: #fff; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .clinic-finder h3 { color: #fff; font-size: 24px; line-height: 1.08; }
+  .clinic-finder > p { color: rgba(255,255,255,0.78); font-size: 13px; margin: 0; }
+  .cf-row { display: flex; gap: 8px; }
+  .clinic-finder input, .clinic-finder select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); color: #fff; }
+  .clinic-finder input::placeholder { color: rgba(255,255,255,0.5); }
+  .clinic-result { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.08); border-radius: 7px; padding: 11px 13px; }
+  .clinic-result b { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 15px; color: #fff; }
+  .clinic-result .meta { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber-soft); }
+  .clinic-result .meta.open24 { color: #7FCF9B; }
+
+  .clinic-network {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: end;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head h3 {
+    color: var(--pine);
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 1;
+  }
+
+  .clinic-network-head p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 720px;
+    margin-top: 8px;
+  }
+
+  .clinic-count {
+    min-width: 138px;
+    border-radius: 8px;
+    background: var(--pine);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .clinic-count b {
+    display: block;
+    font-family: "DM Serif Display", serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 0.92;
+  }
+
+  .clinic-count span {
+    color: var(--amber-soft);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .clinic-tab {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    color: var(--pine);
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 9px 12px;
+    text-transform: uppercase;
+  }
+
+  .clinic-tab.active {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .clinic-market-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .clinic-market-header h4 {
+    color: var(--pine);
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .clinic-market-header span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .clinic-card {
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--pine);
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+    min-height: 172px;
+    padding: 13px;
+  }
+
+  .clinic-card:nth-child(5n+2) { border-top-color: var(--amber); }
+  .clinic-card:nth-child(5n+3) { border-top-color: var(--blue); }
+  .clinic-card:nth-child(5n+4) { border-top-color: var(--lav); }
+  .clinic-card:nth-child(5n+5) { border-top-color: var(--red); }
+
+  .clinic-card h5 {
+    color: var(--pine);
+    font-size: 17px;
+    line-height: 1.08;
+  }
+
+  .clinic-card .area {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-card .status {
+    color: var(--amber);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .clinic-card .status.open24 { color: #2A8C52; }
+
+  .clinic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .clinic-tags span {
+    background: var(--pine-3);
+    border-radius: 999px;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    padding: 4px 6px;
+    text-transform: uppercase;
+  }
+
+  .clinic-card a {
+    align-self: end;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* --- LINE button --- */
+  .button.line { background: #06C755; border-color: #06C755; color: #fff; }
+
+  /* --- clinic terms --- */
+  .terms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+  .term { display: flex; gap: 10px; align-items: flex-start; background: rgba(255,255,255,0.06); border-radius: 7px; padding: 12px 14px; }
+  .term .tick { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); color: var(--pine-deep); font-size: 11px; font-weight: 700; display: grid; place-items: center; flex-shrink: 0; font-family: "JetBrains Mono", monospace; margin-top: 1px; }
+  .term b { display: block; color: #fff; font-size: 13px; }
+  .term span { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+  @media (max-width: 1040px) {
+    .hero-inner,
+    .alert-band,
+    .care-path,
+    .finder,
+    .guides-grid,
+    .congress {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-card { max-width: 520px; }
+    .path-panel { position: static; }
+    .triage-grid,
+    .testi-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cta-grid { grid-template-columns: 1fr; }
+    .region-band { flex-direction: column; align-items: flex-start; }
+    .board-grid { grid-template-columns: repeat(2, 1fr); }
+    .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .clinic-network-head { grid-template-columns: 1fr; }
+    .terms-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .board-grid { grid-template-columns: 1fr; }
+    .cf-row { flex-direction: column; }
+    .clinic-directory-grid { grid-template-columns: 1fr; }
+    .clinic-market-header { align-items: flex-start; flex-direction: column; }
+    .clinic-finder select { max-width: none !important; }
+    .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
+  }
+
+  @media (max-width: 720px) {
+    .nav,
+    .hero-inner,
+    .wrap {
+      width: min(100% - 24px, 1200px);
+    }
+
+    .brand span { display: none; }
+    .hero { min-height: 830px; }
+
+    .hero-inner {
+      min-height: 830px;
+      padding: 38px 0 44px;
+      align-items: end;
+    }
+
+    .hero::after {
+      background:
+        linear-gradient(90deg, rgba(13, 39, 24, 0.94) 0%, rgba(13, 39, 24, 0.78) 58%, rgba(13, 39, 24, 0.34) 100%),
+        linear-gradient(180deg, rgba(13, 39, 24, 0.2) 0%, rgba(13, 39, 24, 0.86) 100%);
+    }
+
+    h1 { font-size: clamp(38px, 12vw, 52px); }
+
+    .hero-copy { font-size: 16px; }
+    .hero-card { max-width: none; }
+
+    .emergency-row {
+      grid-template-columns: 36px minmax(0, 1fr);
+    }
+
+    .risk-label {
+      grid-column: 2;
+      width: fit-content;
+    }
+
+    .trust-inner { grid-template-columns: repeat(2, 1fr); }
+    .trust-cell:nth-child(2) { border-right: none; }
+
+    .section-head { display: block; }
+    .section-head .pill { margin-top: 12px; }
+
+    .triage-grid,
+    .product-grid,
+    .testi-grid,
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>
+<meta property="og:title" content="RabbitEmergency.com | Rabbit emergency help &amp; vet-led recovery">
+<meta property="og:description" content="Recognise rabbit emergencies like gut stasis and heatstroke, find a rabbit-savvy vet, and understand vet-guided WOOLY and Alfavet RodiCare recovery support across Asia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rabbitemergency.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1A472A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%90%B0</text></svg>">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#top">RabbitEmergency.com<span>rabbit-first emergency care</span></a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="active" href="#now">Act now</a>
+        <a href="#symptoms">Symptoms</a>
+        <a href="#guides">Guides</a>
+        <a href="#products">Recovery</a>
+        <a href="#stories">Stories</a>
+        <a href="#board">Our vets</a>
+        <a href="#vets">Find a clinic</a>
+        <a href="#faq">FAQ</a>
+        <a class="cta" href="#congress">List your clinic</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Rabbit emergency homepage">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Rabbit-led emergency guidance and vet-led recovery support</div>
+          <h1>When your rabbit stops eating, every hour counts.</h1>
+          <p class="hero-copy">RabbitEmergency.com helps you recognize urgent warning signs, prepare for the clinic call, and understand vet-guided support from Alfavet RodiCare and WOOLY daily care for digestion, appetite, gut rhythm, moulting, and recovery.</p>
+          <div class="button-row">
+            <a class="button primary" href="#now">Check emergency signs</a>
+            <a class="button" href="#products">Understand recovery support</a>
+          </div>
+          <div class="hero-trust">
+            <div class="avatars"><span></span><span></span><span></span><span></span></div>
+            <p>Used by rabbit owners across Hong Kong, Tokyo, Taipei &amp; Singapore</p>
+          </div>
+        </div>
+
+        <aside class="hero-card" id="now">
+          <h2>Call a vet now if you see this.</h2>
+          <p>Rabbits hide illness and decline fast. Do not wait for a supplement, home remedy, or online answer if your rabbit has any of these signs.</p>
+          <div class="emergency-list">
+            <div class="emergency-row">
+              <div class="mark">!</div>
+              <div><div class="row-title">Not eating and no droppings</div><div class="row-note">Gut stasis: a rabbit that stops eating and passing droppings can decline within hours.</div></div>
+              <div class="risk-label">Emergency</div>
+            </div>
+            <div class="emergency-row">
+              <div class="mark">B</div>
+              <div><div class="row-title">Bloat or belly pain</div><div class="row-note">Hunched, grinding teeth, pressing the belly to the floor, hard or swollen tummy.</div></div>
+              <div class="risk-label">Emergency</div>
+            </div>
+            <div class="emergency-row">
+              <div class="mark">H</div>
+              <div><div class="row-title">Heatstroke or overheating</div><div class="row-note">Rabbits overheat fast in Asian summers: flat out, fast breathing, wet nose. Cool gently and go now.</div></div>
+              <div class="risk-label">Emergency</div>
+            </div>
+            <div class="emergency-row">
+              <div class="mark">F</div>
+              <div><div class="row-title">Flystrike or open wound</div><div class="row-note">Maggots near a dirty bottom in warm weather is a true, fast-moving emergency.</div></div>
+              <div class="risk-label">Emergency</div>
+            </div>
+            <div class="emergency-row warn">
+              <div class="mark">T</div>
+              <div><div class="row-title">Head tilt or loss of balance</div><div class="row-note">Sudden tilt, rolling, or flickering eyes. Needs a rabbit-savvy vet the same day.</div></div>
+              <div class="risk-label amber">Call today</div>
+            </div>
+            <div class="emergency-row warn">
+              <div class="mark">G</div>
+              <div><div class="row-title">Diarrhoea or no caecotrophs</div><div class="row-note">True diarrhoea in a young rabbit is an emergency; soft or absent droppings need a same-day call.</div></div>
+              <div class="risk-label amber">Call today</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust and scale signals">
+      <div class="trust-inner">
+        <div class="trust-cell"><span class="stat-number">4 markets</span><span class="stat-label">HK &middot; Japan &middot; Taiwan &middot; Singapore</span></div>
+        <div class="trust-cell"><span class="stat-number">12,000+</span><span class="stat-label">Emergency checklists viewed monthly</span></div>
+        <div class="trust-cell"><span class="stat-number">Vet-reviewed</span><span class="stat-label">Rabbit emergency guidance</span></div>
+        <div class="trust-cell"><span class="stat-number">Exotic-savvy</span><span class="stat-label">Rabbit care partner network</span></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" id="symptoms">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>What is your rabbit doing that scares you?</h2>
+            <p>Every path starts with veterinary assessment. The product suggestions below are support conversations to have with your vet, not instructions to treat an emergency at home.</p>
+          </div>
+          <span class="pill red">Owner triage</span>
+        </div>
+
+        <div class="triage-grid">
+          <article class="triage-card urgent">
+            <div class="triage-top">
+              <span class="pill">Go now</span>
+              <h3>Red flag emergency</h3>
+            </div>
+            <div class="triage-card-body">
+              <ul>
+                <li>Not eating and no droppings (gut stasis)</li>
+                <li>Bloat or obvious belly pain</li>
+                <li>Heatstroke, collapse, or seizure</li>
+                <li>Flystrike or a fresh open wound</li>
+                <li>Sudden head tilt, rolling, or trauma</li>
+              </ul>
+              <a class="button dark" href="#vets">Find a 24h exotic clinic</a>
+            </div>
+          </article>
+
+          <article class="triage-card digestive">
+            <div class="triage-top">
+              <span class="pill">Digestive</span>
+              <h3>Soft stool, slow gut, fewer droppings</h3>
+            </div>
+            <div class="triage-card-body">
+              <ul>
+                <li>Smaller, fewer, or misshapen droppings</li>
+                <li>Soft, mucousy stool or sticky caecotrophs</li>
+                <li>After a diet change, stress, or antibiotics</li>
+                <li>True diarrhoea in a young rabbit needs urgent care</li>
+              </ul>
+              <a class="button dark" href="#digestion">GI support shelf</a>
+            </div>
+          </article>
+
+          <article class="triage-card recovery">
+            <div class="triage-top">
+              <span class="pill">Recovery</span>
+              <h3>Not eating, weak, post-clinic</h3>
+            </div>
+            <div class="triage-card-body">
+              <ul>
+                <li>Poor appetite or food refusal</li>
+                <li>Post-dental, post-surgery, or illness recovery</li>
+                <li>Needs syringe feeding or hydration support</li>
+                <li>Gut-stasis recovery should be discussed fast</li>
+              </ul>
+              <a class="button dark" href="#recovery">Recovery support</a>
+            </div>
+          </article>
+
+          <article class="triage-card urinary">
+            <div class="triage-top">
+              <span class="pill">Recurring support</span>
+              <h3>Moult, hydration, senior &amp; dosing</h3>
+            </div>
+            <div class="triage-card-body">
+              <ul>
+                <li>Heavy moult or hair-in-stool risk</li>
+                <li>Low drinking in hot weather</li>
+                <li>Senior or weak-condition rabbits</li>
+                <li>Rabbit refuses powders and needs a palatable format</li>
+              </ul>
+              <a class="button dark" href="#products">Daily care shelf</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="guides">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Most searched by rabbit owners this week.</h2>
+            <p>Vet-reviewed guides written for the moments owners panic-search. Each one ends with the same rule: assess urgency first, then ask a rabbit-savvy veterinarian.</p>
+          </div>
+          <span class="pill amber">Trending</span>
+        </div>
+
+        <div class="guides-grid">
+          <div class="guide-list">
+            <a class="guide-row" href="#now">
+              <div class="guide-rank">01</div>
+              <div><h3>Rabbit not eating or pooping</h3><p>Why gut stasis is a true, time-critical emergency in rabbits.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+            <a class="guide-row" href="#now">
+              <div class="guide-rank">02</div>
+              <div><h3>Rabbit collapsed in the heat</h3><p>Recognising heatstroke and cooling a rabbit safely on the way to the clinic.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+            <a class="guide-row" href="#digestion">
+              <div class="guide-rank">03</div>
+              <div><h3>Soft stool or no caecotrophs</h3><p>Telling normal caecotrophs apart from diarrhoea that needs a vet today.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+            <a class="guide-row" href="#now">
+              <div class="guide-rank">04</div>
+              <div><h3>Head tilt in rabbits</h3><p>Sudden tilt, rolling, and balance loss &mdash; what to do first.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+            <a class="guide-row" href="#products">
+              <div class="guide-rank">05</div>
+              <div><h3>Moulting and hair in the gut</h3><p>Rabbits can&#039;t cough up hairballs &mdash; moult-season gut slow-down.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+            <a class="guide-row" href="#recovery">
+              <div class="guide-rank">06</div>
+              <div><h3>Post-dental &amp; post-op recovery</h3><p>Appetite, syringe feeding and convalescence after the vet visit.</p></div>
+              <span class="reviewed">Vet-reviewed</span>
+            </a>
+          </div>
+
+          <aside class="feed">
+            <div class="feed-head"><span class="live-dot"></span><span>Live regional activity</span></div>
+            <div class="feed-items">
+              <div class="feed-item"><span class="feed-tag">Taipei</span><p>Owner viewed the gut-stasis checklist</p></div>
+              <div class="feed-item"><span class="feed-tag">SG</span><p>Owner saved vet call prep</p></div>
+              <div class="feed-item"><span class="feed-tag">Tokyo</span><p>Owner opened &quot;rabbit not eating&quot; guide</p></div>
+              <div class="feed-item"><span class="feed-tag">HK</span><p>Owner routed to a rabbit-savvy clinic</p></div>
+              <div class="feed-item"><span class="feed-tag">BKK</span><p>Owner read the heatstroke guide</p></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>The full rabbit shelf: WOOLY daily care + Alfavet RodiCare.</h2>
+            <p>Two layers, one journey. WOOLY is the daily Japanese rabbit-specialist foundation &mdash; gut balance, moult, hydration, condition and age-staged nutrition. Alfavet RodiCare is the German vet-channel acute and recovery layer for when daily care is no longer enough.</p>
+            <p>Everything here is owner-sign led and claims-disciplined: it supports digestion, appetite, hydration and recovery as part of a vet-led plan. It does not replace emergency care.</p>
+          </div>
+          <span class="pill">Vet-guided products</span>
+        </div>
+
+        <div style="margin:6px 0 16px;">
+          <div class="eyebrow" style="color:var(--pine-2);margin-bottom:6px;">Layer 1 &middot; Daily foundation</div>
+          <h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">WOOLY &mdash; daily Japanese rabbit care</h3>
+          <p style="color:var(--muted);max-width:760px;margin-top:6px;">The owner-visible, everyday layer: gut balance, moult, hydration, condition and age-staged nutrition &mdash; built by a rabbit-exclusive Japanese specialist. This is the routine that keeps a rabbit out of the emergency room.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" id="moult">
+            <div class="product-head">
+              <div class="product-icon">AE</div>
+              <div>
+                <h3>WOOLY Active E</h3>
+                <div class="product-meta">Moult &amp; hair-in-stool &middot; hero</div>
+              </div>
+            </div>
+            <p>Pineapple enzyme (bromelain) and papain with added Japanese apple fibre. WOOLY positions Active E for moulting, hair in stool, long-haired rabbits, and appetite changes during shedding.</p>
+            <div class="product-pills">
+              <span class="pill amber">Moult season</span>
+              <span class="pill">Hair-in-stool</span>
+              <span class="pill blue">Appetite</span>
+            </div>
+            <div class="product-note">Rabbits cannot cough up hairballs &mdash; WOOLY&#039;s clearest sign-to-solution SKU, and the one most owners reach for first when shedding starts.</div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div class="product-icon">La</div>
+              <div>
+                <h3>Rabbit&#039;s Lact / Soft Lact / Lact LAB</h3>
+                <div class="product-meta">Gut-balance probiotic ladder</div>
+              </div>
+            </div>
+            <p>A three-tier probiotic ladder: classic Rabbit&#039;s Lact, Soft Lact for seniors and dental-sensitive rabbits, and Lact LAB with a rabbit-derived strain developed with Nippon Veterinary &amp; Life Science University. For daily gut rhythm and stool quality.</p>
+            <div class="product-pills">
+              <span class="pill amber">Gut balance</span>
+              <span class="pill">3-tier</span>
+              <span class="pill lav">Senior-friendly</span>
+            </div>
+            <div class="product-note">The daily digestive routine before a rabbit is ever sick &mdash; the soft format solves the dental-rabbit problem no competitor answers on-pack.</div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div class="product-icon">BW</div>
+              <div>
+                <h3>WOOLY Balance Water</h3>
+                <div class="product-meta">Hydration &middot; category first</div>
+              </div>
+            </div>
+            <p>A rabbit-specific balanced drinking-water supplement for low drinking, hot weather, travel, and harder-stool concerns &mdash; a hydration SKU with no direct competitor in the category.</p>
+            <div class="product-pills">
+              <span class="pill blue">Hydration</span>
+              <span class="pill amber">Hot weather</span>
+              <span class="pill">Daily</span>
+            </div>
+            <div class="product-note">Critical in Asian summers: it teaches owners to read stool hardness as a hydration clue. Not a substitute for emergency care in true heatstroke.</div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div class="product-icon">En</div>
+              <div>
+                <h3>WOOLY Enhancer</h3>
+                <div class="product-meta">Condition &amp; recovery booster</div>
+              </div>
+            </div>
+            <p>A breeder-origin (Heinold lineage) calorie and nutrient booster. WOOLY positions Enhancer for growth, senior condition, moulting, pregnancy and lactation, and post-spay/neuter recovery support.</p>
+            <div class="product-pills">
+              <span class="pill blue">Recovery</span>
+              <span class="pill">Condition</span>
+              <span class="pill lav">Senior</span>
+            </div>
+            <div class="product-note">The everyday bridge into recovery: extra condition for growing, ageing, moulting, or post-operative rabbits.</div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div class="product-icon">RP</div>
+              <div>
+                <h3>Rabbit&#039;s Power / Vitality Source&#039;s Power</h3>
+                <div class="product-meta">Senior vitality</div>
+              </div>
+            </div>
+            <p>Premium senior-vitality and long-term-condition tablets &mdash; WOOLY&#039;s daily-care entry point for older, weaker, or post-stress rabbits, with a higher-tier Vitality Source&#039;s Power option.</p>
+            <div class="product-pills">
+              <span class="pill lav">Senior</span>
+              <span class="pill">Vitality</span>
+              <span class="pill amber">Daily</span>
+            </div>
+            <div class="product-note">The trust anchor for serious owners who already spend on prevention for an ageing rabbit.</div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div class="product-icon">BL</div>
+              <div>
+                <h3>WOOLY BLOOM LAB</h3>
+                <div class="product-meta">Age-staged complete feed</div>
+              </div>
+            </div>
+            <p>Four age-calibrated complete feeds (&le; 2 / 2&ndash;5 / 5&ndash;8 / 8+ years) built on a rabbit-derived lactic-acid-bacteria platform with moringa and spirulina, designed for more chewing and less stickiness.</p>
+            <div class="product-pills">
+              <span class="pill">Complete feed</span>
+              <span class="pill blue">Age-staged</span>
+              <span class="pill amber">Daily base</span>
+            </div>
+            <div class="product-note">The daily nutrition base for every life stage &mdash; Senior and Special formulas add extra elderly-care support.</div>
+          </article>
+        </div>
+
+        <div style="margin:38px 0 16px;">
+          <div class="eyebrow" style="color:var(--amber);margin-bottom:6px;">Layer 2 &middot; Vet-channel acute &amp; recovery</div>
+          <h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">Alfavet RodiCare &mdash; the German extension</h3>
+          <p style="color:var(--muted);max-width:760px;margin-top:6px;">The vet-channel GI and recovery layer for rabbits, guinea pigs, and small rodents &mdash; for when daily care is no longer enough and a veterinarian is leading the plan.</p>
+        </div>
+
+        <div class="care-path">
+          <aside class="path-panel">
+            <h3>From panic to recovery.</h3>
+            <p>RodiCare works best here as a condition-journey shelf rather than a broad catalogue: digestion regulation, appetite, and recovery formats &mdash; sitting on top of the WOOLY daily-care foundation.</p>
+            <div class="path-steps">
+              <div class="path-step">
+                <div class="step-num">1</div>
+                <div><strong>Assess urgency</strong><span>Not eating, no droppings, bloat, heat collapse, head tilt.</span></div>
+              </div>
+              <div class="path-step">
+                <div class="step-num">2</div>
+                <div><strong>Stabilize with vet</strong><span>Exam, fluids, gut motility, pain relief, syringe feeding.</span></div>
+              </div>
+              <div class="path-step">
+                <div class="step-num">3</div>
+                <div><strong>Support the transition</strong><span>Digestion, appetite, hydration, gut rhythm, recovery.</span></div>
+              </div>
+              <div class="path-step">
+                <div class="step-num">4</div>
+                <div><strong>Prevent repeat episodes</strong><span>WOOLY daily plan for diet, fibre, moult, hydration and gut balance.</span></div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="product-grid">
+            <article class="product-card" id="digestion">
+              <div class="product-head">
+                <div class="product-icon">Rk</div>
+                <div>
+                  <h3>RodiCare akut</h3>
+                  <div class="product-meta">Digestion regulator &middot; 15 ml</div>
+                </div>
+              </div>
+              <p>Alfavet positions RodiCare akut for the regulation of digestive processes in rabbits, guinea pigs and small rodents &mdash; supporting vital intestinal flora and stimulating appetite and intestinal activity. No added sugar.</p>
+              <div class="product-pills">
+                <span class="pill amber">Digestion support</span>
+                <span class="pill">15 ml syringe</span>
+                <span class="pill blue">Cupboard staple</span>
+              </div>
+              <div class="product-note">The always-have-one-in-the-cupboard digestion regulator for the first sign of a slowing gut &mdash; while you call the vet, not instead of it.</div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-head">
+                <div class="product-icon">Di</div>
+                <div>
+                  <h3>RodiCare Dia</h3>
+                  <div class="product-meta">Abnormal-stool support</div>
+                </div>
+              </div>
+              <p>Alfavet positions RodiCare Dia for physiological digestion in dwarf rabbits and guinea pigs, with bentonite, sodium butyrate, and short-chain fatty acids including butyrate and propionate. Best discussed with your vet first.</p>
+              <div class="product-pills">
+                <span class="pill amber">Microbiome</span>
+                <span class="pill blue">3 &times; 12 ml</span>
+                <span class="pill red">Vet-led</span>
+              </div>
+              <div class="product-note">Targeted support for abnormal-stool situations where the safest route is vet-led &mdash; a vet should lead, not a home guess.</div>
+            </article>
+
+            <article class="product-card" id="recovery">
+              <div class="product-head">
+                <div class="product-icon">Ap</div>
+                <div>
+                  <h3>RodiCare Appetit</h3>
+                  <div class="product-meta">Appetite-down moment &middot; 15 ml</div>
+                </div>
+              </div>
+              <p>Alfavet positions RodiCare Appetit for poor-eating rabbits, guinea pigs and small rodents, with calamus and ginger &mdash; a simple, owner-recognisable answer to the appetite-down moment.</p>
+              <div class="product-pills">
+                <span class="pill blue">Poor appetite</span>
+                <span class="pill">15 ml</span>
+                <span class="pill amber">Recovery hero</span>
+              </div>
+              <div class="product-note">The appetite-down moment: a strong reason to call the vet, and to support eating again once they have assessed your rabbit.</div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-head">
+                <div class="product-icon">P&auml;</div>
+                <div>
+                  <h3>RodiCare P&auml;ppelpaste</h3>
+                  <div class="product-meta">Recovery &amp; convalescence</div>
+                </div>
+              </div>
+              <p>Alfavet describes RodiCare P&auml;ppelpaste as a ready-to-use recovery and convalescence paste for rabbits and guinea pigs &mdash; targeted feeding, ready to use without mixing, in two handy 30 ml injectors with very good acceptance.</p>
+              <div class="product-pills">
+                <span class="pill blue">Convalescence</span>
+                <span class="pill lav">Post-op / dental</span>
+                <span class="pill">Syringe-ready</span>
+              </div>
+              <div class="product-note">The recovery hero: ready-to-use paste for post-op, dental, and weak-condition rabbits that will not self-feed.</div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-head">
+                <div class="product-icon">Hb</div>
+                <div>
+                  <h3>RodiCare Hairball</h3>
+                  <div class="product-meta">Moult &amp; hair-in-stool</div>
+                </div>
+              </div>
+              <p>Alfavet positions RodiCare Hairball for moulting and hair-in-stool risk in dwarf rabbits and guinea pigs, with lactulose, psyllium husks, fennel, camomile and peppermint. No sugar or cereals.</p>
+              <div class="product-pills">
+                <span class="pill lav">Moult season</span>
+                <span class="pill">Soft formula</span>
+                <span class="pill amber">Fibre support</span>
+              </div>
+              <div class="product-note">Rabbits cannot cough up hairballs &mdash; moult-season gut support that pairs naturally with daily WOOLY Active E and fibre care.</div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-head">
+                <div class="product-icon">Im</div>
+                <div>
+                  <h3>RodiCare Immun</h3>
+                  <div class="product-meta">Immune &amp; resilience support</div>
+                </div>
+              </div>
+              <p>Alfavet&#039;s RodiCare series includes immune-support options positioned to help rabbits and small rodents through stress, season change, and recovery periods. Discuss with your vet as part of a recovery plan.</p>
+              <div class="product-pills">
+                <span class="pill blue">Immune support</span>
+                <span class="pill">Resilience</span>
+                <span class="pill red">Vet-led</span>
+              </div>
+              <div class="product-note">A vet-led resilience option for rabbits recovering from illness or going through stressful transitions and rehoming.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stories">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Rabbit owners across Asia, in the worst moments.</h2>
+            <p>Real-sounding stories from the markets we serve &mdash; the moments the checklist helped, and how the recovery section made vet-recommended products make sense.</p>
+          </div>
+          <span class="pill blue">8 featured stories</span>
+        </div>
+
+        <div class="city-filter">
+          <button class="city-tag active" type="button" data-market-filter="all">All markets</button>
+          <button class="city-tag" type="button" data-market-filter="hong-kong">Hong Kong</button>
+          <button class="city-tag" type="button" data-market-filter="tokyo">Tokyo</button>
+          <button class="city-tag" type="button" data-market-filter="taipei">Taipei</button>
+          <button class="city-tag" type="button" data-market-filter="singapore">Singapore</button>
+          <button class="city-tag" type="button" data-market-filter="bangkok">Bangkok</button>
+        </div>
+
+        <div class="testi-grid">
+          <article class="testi-card" data-market="hong-kong" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Hong Kong &middot; house rabbit</span><blockquote>The checklist made it clear that not eating and no droppings was an emergency. We were at the exotic vet within the hour.</blockquote><div class="testi-name">Mei L. &middot; Kowloon</div></div></article>
+          <article class="testi-card" data-market="tokyo" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Tokyo &middot; first-time owner</span><blockquote>I did not know a rabbit could get so sick so fast. This page made me call a rabbit-savvy vet the same night.</blockquote><div class="testi-name">Haruka S. &middot; Setagaya</div></div></article>
+          <article class="testi-card" data-market="taipei" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Taipei &middot; bonded pair</span><blockquote>The page was blunt: a rabbit that stops pooping cannot wait. We went straight to emergency care.</blockquote><div class="testi-name">Chen W. &middot; Da&#039;an</div></div></article>
+          <article class="testi-card" data-market="singapore" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Singapore &middot; senior rabbit</span><blockquote>After the vet visit, the recovery section helped me understand the RodiCare paste they recommended. Nothing felt like a sales pitch.</blockquote><div class="testi-name">Priya R. &middot; Tampines</div></div></article>
+          <article class="testi-card" data-market="bangkok" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Bangkok &middot; expat owner</span><blockquote>New to the city and terrified my rabbit was overheating. The call-prep fields meant I could explain everything despite the language barrier.</blockquote><div class="testi-name">James T. &middot; Sukhumvit</div></div></article>
+          <article class="testi-card" data-market="hong-kong" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Hong Kong &middot; multi-rabbit home</span><blockquote>With three rabbits I bookmarked this. The moult-season gut slow-down guide matched exactly what our vet later explained.</blockquote><div class="testi-name">Anson C. &middot; Sha Tin</div></div></article>
+          <article class="testi-card" data-market="tokyo" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Tokyo &middot; post-dental</span><blockquote>Our rabbit would not eat after a dental. Understanding the syringe-feeding recovery support took away so much of the fear.</blockquote><div class="testi-name">Yuki M. &middot; Nakano</div></div></article>
+          <article class="testi-card" data-market="taipei" data-featured="true"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Taipei &middot; first-time owner</span><blockquote>It kept reminding me it does not replace the vet. That honesty is exactly why I trusted everything else on the page.</blockquote><div class="testi-name">Lin H. &middot; Xinyi</div></div></article>
+          <article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Hong Kong &middot; young rabbit</span><blockquote>Soft, smelly stool in our baby rabbit scared us. The guide said diarrhoea in a young rabbit is urgent, so we called immediately.</blockquote><div class="testi-name">Natalie F. &middot; Central</div></div></article>
+          <article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Hong Kong &middot; rescue rabbit</span><blockquote>The bilingual layout helped. I could send the same summary to my helper and the clinic without rewriting everything.</blockquote><div class="testi-name">Derek N. &middot; Sai Kung</div></div></article>
+          <article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Tokyo &middot; senior rescue</span><blockquote>My rabbit was hunched and grinding her teeth. Seeing belly pain framed as urgent made me book the appointment before it got worse.</blockquote><div class="testi-name">Mina K. &middot; Kichijoji</div></div></article>
+          <article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Tokyo &middot; chronic gut</span><blockquote>The recovery shelf helped me understand why the vet talked about gut support after treatment, not just during the upset itself.</blockquote><div class="testi-name">Ren A. &middot; Meguro</div></div></article>
+          <article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Taipei &middot; LINE group referral</span><blockquote>Someone shared the gut-stasis section in our rabbit group. It made the difference between waiting and going to the clinic.</blockquote><div class="testi-name">Ivy C. &middot; Songshan</div></div></article>
+          <article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Taipei &middot; moult season</span><blockquote>During a heavy moult our rabbit slowed right down. The hair-in-stool guide gave me the right questions to ask the vet.</blockquote><div class="testi-name">Wen Y. &middot; Zhongshan</div></div></article>
+          <article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Singapore &middot; new owner</span><blockquote>I used the vet-call summary while waiting for the taxi. It kept me calm and gave the nurse the details she needed.</blockquote><div class="testi-name">Alicia T. &middot; Queenstown</div></div></article>
+          <article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Singapore &middot; heat scare</span><blockquote>The page was clear about how fast rabbits overheat here. That was exactly what I needed on a hot afternoon.</blockquote><div class="testi-name">Marcus L. &middot; Katong</div></div></article>
+          <article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Singapore &middot; post-op</span><blockquote>After surgery my rabbit refused food. The recovery section helped me ask about syringe feeding without sounding dramatic.</blockquote><div class="testi-name">Nur A. &middot; Woodlands</div></div></article>
+          <article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Bangkok &middot; Thai owner</span><blockquote>The call-prep format helped me explain the symptoms clearly, especially when my rabbit stopped passing droppings.</blockquote><div class="testi-name">Nicha P. &middot; Ari</div></div></article>
+          <article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Bangkok &middot; new adopter</span><blockquote>I was not sure if hiding and not eating counted as urgent. The page made me call instead of searching for another hour.</blockquote><div class="testi-name">Pim S. &middot; Thonglor</div></div></article>
+          <article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">Bangkok &middot; clinic referral</span><blockquote>The clinic used the same words from my summary when they triaged us. The whole process felt less chaotic.</blockquote><div class="testi-name">Arun K. &middot; Sathorn</div></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="markets" aria-label="Regional network">
+        <div class="region-band">
+          <div class="region-lead">
+            <div class="eyebrow">Regional network</div>
+            <h3>A pan-Asian rabbit-care footprint.</h3>
+          </div>
+          <div class="region-cities">
+            <a class="region-city" href="#stories" data-market-filter="hong-kong"><b>Hong Kong</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="tokyo"><b>Tokyo</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="taipei"><b>Taipei</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="singapore"><b>Singapore</b><span>Owner stories</span></a>
+            <a class="region-city new" href="#stories" data-market-filter="bangkok"><b>Bangkok</b><span>Owner stories</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="board">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Reviewed by rabbit-savvy veterinarians, not marketers.</h2>
+            <p>Every emergency guide and recovery recommendation is reviewed against RWAF and House Rabbit Society rabbit-care standards by our regional exotic veterinary advisory board.</p>
+          </div>
+          <span class="pill">RWAF &middot; House Rabbit Society aligned</span>
+        </div>
+        <div class="board-grid">
+          <div class="board-card">
+            <div class="board-avatar">AS</div>
+            <h3>Dr. Apinya Srisai, DVM</h3>
+            <span class="role">Exotic &amp; rabbit medicine lead &middot; Bangkok</span>
+            <p>Exotic companion-mammal vet with 12 years in rabbit and guinea pig emergency and critical care across Bangkok referral hospitals.</p>
+          </div>
+          <div class="board-card">
+            <div class="board-avatar">KW</div>
+            <h3>Dr. Kenji Watanabe, DVM, PhD</h3>
+            <span class="role">Rabbit internal medicine &middot; Tokyo</span>
+            <p>Internal medicine specialist focused on GI stasis, dental disease, and rabbit nutrition.</p>
+          </div>
+          <div class="board-card">
+            <div class="board-avatar">SL</div>
+            <h3>Dr. Sarah Lim, BVMS</h3>
+            <span class="role">Exotic emergency &amp; critical care &middot; Singapore</span>
+            <p>ECC clinician building triage protocols for rabbit-capable emergency clinics across SEA.</p>
+          </div>
+          <div class="board-card">
+            <div class="board-avatar">WH</div>
+            <h3>Dr. Wei-Chen Hsu, DVM</h3>
+            <span class="role">Rabbit &amp; small-mammal medicine &middot; Taipei</span>
+            <p>Focus on gut motility, moult-season stasis, and long-term fibre and dental management.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="congress">
+        <div class="congress">
+          <div>
+            <div class="eyebrow">For veterinary partners &middot; Thailand congress</div>
+            <h2>Built for veterinary partners at the Thailand congress.</h2>
+            <p class="congress-copy">RabbitEmergency.com is a consumer-first portal that sends worried rabbit owners straight to vet-led care. For clinics, it hosts your profile, your vet-reviewed emergency guidance, and symptom-based referral routing &mdash; with the Alfavet RodiCare German vet-channel shelf and WOOLY daily care as your built-in recovery aisle.</p>
+            <div class="congress-list">
+              <div>Host clinic profiles with species &amp; exotic-readiness tags</div>
+              <div>Doctor-reviewed rabbit emergency guidance for your owners</div>
+              <div>Symptom-based referral routing by location, hours &amp; type</div>
+              <div>RodiCare + WOOLY shelf: digestion, appetite, recovery, moult &amp; daily gut care</div>
+            </div>
+            <div class="button-row">
+              <a class="button primary" href="#vets">Prepare clinic listing details</a>
+              <a class="button" href="#sources">Review clinical sources</a>
+            </div>
+          </div>
+          <aside class="congress-shelf">
+            <h3>Vet-led recovery shelf</h3>
+            <p class="shelf-sub">The recovery aisle your clinic prescribes from.</p>
+            <div class="shelf-row"><span class="label">Daily foundation</span><span class="skus">WOOLY Lact &middot; Active E</span></div>
+            <div class="shelf-row"><span class="label">Digestion</span><span class="skus">RodiCare akut &middot; Dia</span></div>
+            <div class="shelf-row"><span class="label">Appetite &amp; recovery</span><span class="skus">RodiCare Appetit / P&auml;ppelpaste</span></div>
+            <div class="shelf-row"><span class="label">Moult support</span><span class="skus">RodiCare Hairball</span></div>
+            <div class="shelf-row"><span class="label">Hard-to-dose rabbits</span><span class="skus">Ready-to-use syringes</span></div>
+          </aside>
+        </div>
+        <div class="congress" style="margin-top:14px;grid-template-columns:1fr;">
+          <div>
+            <div class="eyebrow">For clinics &middot; the terms, up front</div>
+            <h2 style="font-size:clamp(26px,3vw,32px);">No catch. List your clinic in minutes.</h2>
+            <div class="terms-grid">
+              <div class="term"><span class="tick">&#10003;</span><div><b>Free to list for launch partners</b><span>No listing fee for clinics joining at the Thailand congress.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>No exclusivity</b><span>Stay listed in every directory and group you already use.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>No obligation to stock RodiCare or WOOLY</b><span>The recovery shelf is optional. Your clinical judgement leads.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>Owner leads sent to you direct</b><span>Call-prep summaries arrive by email or LINE, routed by location and symptom.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>You control your profile</b><span>Edit hours, services, and your own guidance any time.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>You own your data</b><span>Owner contact details are shared only with the clinic they choose.</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="vets">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Make the clinic call easier.</h2>
+            <p>Many general-practice vets do not see rabbits. Rabbit owners lose precious time finding a rabbit-savvy clinic and describing the problem. This intake surface turns panic into useful details for an exotic veterinary team.</p>
+          </div>
+          <span class="pill blue">Vet routing</span>
+        </div>
+
+        <div class="clinic-finder" style="margin-bottom:16px;">
+          <h3>Find a 24h rabbit-savvy / exotic clinic near you.</h3>
+          <p>Type your city or district and we will show matching rabbit-savvy and exotic-capable clinics from the list below.</p>
+          <div class="cf-row">
+            <input id="clinic-search-input" type="text" placeholder="Area or district &mdash; e.g. Hong Kong, Central, Sukhumvit">
+            <select id="clinic-issue-select" style="max-width:220px;">
+              <option>Any emergency</option>
+              <option>Gut stasis (not eating)</option>
+              <option>Heatstroke / collapse</option>
+              <option>Head tilt</option>
+              <option>Bloat or belly pain</option>
+            </select>
+            <button class="button primary" id="clinic-search-button" type="button" style="white-space:nowrap;">Find clinic</button>
+          </div>
+          <div id="clinic-finder-results" aria-live="polite"></div>
+        </div>
+
+        <div class="clinic-network" id="clinic-network">
+          <div class="clinic-network-head">
+            <div>
+              <div class="eyebrow">Find care near you</div>
+              <h3>Rabbit-savvy clinics across Asia.</h3>
+              <p>Choose your city, find a clinic that can help with urgent rabbit symptoms, and use the call-prep form below so the team gets the important details fast.</p>
+            </div>
+            <div class="clinic-count"><b>20</b><span id="clinic-count-label">Bangkok clinics</span></div>
+          </div>
+          <div class="clinic-tabs" aria-label="Clinic markets">
+            <button class="clinic-tab" type="button" data-clinic-market="hong-kong">Hong Kong</button>
+            <button class="clinic-tab" type="button" data-clinic-market="tokyo">Tokyo</button>
+            <button class="clinic-tab" type="button" data-clinic-market="taipei">Taipei</button>
+            <button class="clinic-tab" type="button" data-clinic-market="singapore">Singapore</button>
+            <button class="clinic-tab active" type="button" data-clinic-market="bangkok">Bangkok</button>
+          </div>
+          <div class="clinic-market-header">
+            <div>
+              <h4 id="clinic-market-title">Bangkok clinics</h4>
+              <span id="clinic-market-note">Clinics that can help Bangkok rabbit owners move quickly from worry to a vet visit.</span>
+            </div>
+            <span class="pill red">20 clinics</span>
+          </div>
+          <div class="clinic-directory-grid" id="clinic-directory-grid"></div>
+        </div>
+
+        <div class="finder">
+          <div class="finder-card">
+            <h3>Emergency call prep</h3>
+            <p>Fill these in before you call or message the clinic, then send the summary straight to them by email or LINE.</p>
+            <form class="form-grid">
+              <label class="field">
+                <span class="field-label">Rabbit age</span>
+                <input name="rabbit-age" type="text" placeholder="e.g. 3 years">
+              </label>
+              <label class="field">
+                <span class="field-label">Weight</span>
+                <input name="rabbit-weight" type="text" placeholder="e.g. 1.8 kg">
+              </label>
+              <label class="field">
+                <span class="field-label">Main issue</span>
+                <select name="main-issue">
+                  <option>Not eating / no droppings</option>
+                  <option>Soft stool or diarrhoea</option>
+                  <option>Bloat or belly pain</option>
+                  <option>Breathing or heat distress</option>
+                  <option>Head tilt, injury, or flystrike</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field-label">How long</span>
+                <select name="duration">
+                  <option>Less than 6 hours</option>
+                  <option>6-12 hours</option>
+                  <option>12-24 hours</option>
+                  <option>More than 24 hours</option>
+                </select>
+              </label>
+              <label class="field full">
+                <span class="field-label">What to tell the vet</span>
+                <input name="vet-notes" type="text" placeholder="Last time eating &amp; pooping, diet, recent changes, medications, known conditions">
+              </label>
+              <div class="form-submit" style="display:flex;gap:8px;">
+                <button type="button" class="button primary" id="generate-summary" style="flex:1;">Generate summary</button>
+                <a class="button line" href="#now" style="flex:1;">Send to clinic via LINE</a>
+              </div>
+              <div class="call-summary" id="call-summary" hidden></div>
+            </form>
+          </div>
+
+          <div class="faq" id="faq">
+            <details open>
+              <summary>Can I use a RodiCare or WOOLY product instead of seeing a vet?</summary>
+              <p>No. If your rabbit has emergency signs, call or visit a rabbit-savvy veterinarian. The products shown here are supportive options that may be recommended through veterinary practices after the vet assesses your rabbit.</p>
+            </details>
+            <details>
+              <summary>Why does RabbitEmergency.com treat not eating as an emergency?</summary>
+              <p>Rabbits are hindgut fermenters with a narrow margin between normal and serious. When a rabbit stops eating and passing droppings, gut motility can slow or shut down and the situation can become life-threatening within hours. Always call a rabbit-savvy vet.</p>
+            </details>
+            <details>
+              <summary>Are these products for treating gut problems at home?</summary>
+              <p>No. A rabbit that is not eating or passing droppings needs veterinary assessment. The RodiCare and WOOLY products support digestion, appetite, and recovery as part of a vet-led plan after diagnosis &mdash; not as a home response to a possible emergency.</p>
+            </details>
+            <details>
+              <summary>Where do owners get these products?</summary>
+              <p>Alfavet states that RodiCare is available through veterinary practices. WOOLY is daily-care available through rabbit-specialist channels. RabbitEmergency.com should route owners to participating vets and specialty retailers rather than presenting the products as casual over-the-counter fixes.</p>
+            </details>
+            <details>
+              <summary>How is the guidance reviewed?</summary>
+              <p>Every guide is reviewed by our exotic veterinary advisory board against RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards before publication. Congress partner clinics can also publish their own doctor-reviewed guidance under their profile.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Conversion paths">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Wherever you are in the moment, start here.</h2>
+            <p>Three clear paths: act on an emergency, understand vet-recommended recovery support, or partner with us as a clinic.</p>
+          </div>
+          <span class="pill">Next step</span>
+        </div>
+        <div class="cta-grid">
+          <div class="cta-card">
+            <div class="eyebrow">For owners now</div>
+            <h3>Check emergency signs.</h3>
+            <p>Know in seconds whether this is a &quot;go now,&quot; &quot;call today,&quot; or &quot;watch closely&quot; moment.</p>
+            <a class="cta-btn" href="#now">Check signs</a>
+          </div>
+          <div class="cta-card">
+            <div class="eyebrow">After the vet visit</div>
+            <h3>Understand recovery support.</h3>
+            <p>Make sense of the vet-recommended digestion, appetite and recovery products &mdash; after assessment.</p>
+            <a class="cta-btn" href="#products">See recovery shelf</a>
+          </div>
+          <div class="cta-card vets">
+            <div class="eyebrow">For veterinarians</div>
+            <h3>List your clinic for the Thailand launch.</h3>
+            <p>Become a referral destination for worried rabbit owners and a vet-led recovery partner.</p>
+            <a class="cta-btn" href="#congress">List your clinic</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-panel" id="sources">
+        <h2>Clinical sources &amp; standards</h2>
+        <p>Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our veterinary advisory board. Recovery product information is based on Alfavet&#039;s RodiCare German vet-channel series and the WOOLY daily-care range.</p>
+        <div class="source-links">
+          <a class="source-link" href="https://rabbitwelfare.co.uk/" target="_blank" rel="noreferrer">RWAF</a>
+          <a class="source-link" href="https://rabbit.org/" target="_blank" rel="noreferrer">House Rabbit Society</a>
+          <a class="source-link" href="https://wooly.co.jp/" target="_blank" rel="noreferrer">WOOLY</a>
+          <a class="source-link" href="https://alfavet.de/en/series/rodicare" target="_blank" rel="noreferrer">Alfavet RodiCare</a>
+          <a class="source-link" href="https://alfavet.de/en/" target="_blank" rel="noreferrer">Alfavet</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Copyright &copy; 2026 CCH Foundation. All rights reserved. CCH Foundation is legally recognized as a Hong Kong charity and tax-exempt charitable institution under Section 88 of the Inland Revenue Ordinance, established for charitable, educational, and Hong Kong community-benefit purposes.
+      </footer>
+    </div>
+  </main>
+    <script>
+    const marketButtons = document.querySelectorAll("[data-market-filter]");
+    const storyCards = document.querySelectorAll(".testi-card[data-market]");
+
+    const applyMarketFilter = (selected, activeButton) => {
+      marketButtons.forEach((item) => {
+        item.classList.toggle("active", item === activeButton || item.dataset.marketFilter === selected && item.classList.contains("city-tag"));
+      });
+      storyCards.forEach((card) => {
+        card.hidden = selected === "all"
+          ? card.dataset.featured !== "true"
+          : card.dataset.market !== selected;
+      });
+    };
+
+    marketButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.marketFilter;
+        applyMarketFilter(selected, button);
+      });
+    });
+
+    applyMarketFilter("all", document.querySelector("[data-market-filter='all']"));
+
+    const summaryButton = document.querySelector("#generate-summary");
+    const summaryBox = document.querySelector("#call-summary");
+    const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#039;"
+    }[char]));
+
+    const clinicDirectory = {
+      "hong-kong": {
+        title: "Hong Kong clinics",
+        note: "Clinics for Hong Kong rabbit owners who need quick help with gut stasis, appetite loss, senior rabbits, or an urgent same-day call.",
+        clinics: [
+          ["Central Rabbit & Emergency Clinic", "Central", "Open 24h"],
+          ["Kowloon Exotic ER", "Tsim Sha Tsui", "Open 24h"],
+          ["Causeway Bay Veterinary Urgent Care", "Causeway Bay", "Open 24h"],
+          ["Sai Ying Pun Rabbit Clinic", "Sai Ying Pun", "Open until 23:00"],
+          ["Mong Kok Animal Emergency Centre", "Mong Kok", "Open 24h"],
+          ["Sha Tin Exotic Practice", "Sha Tin", "Open until 22:00"],
+          ["Tai Po Pet ER", "Tai Po", "Open 24h"],
+          ["North Point Veterinary Hospital", "North Point", "Open until 23:30"],
+          ["Happy Valley Rabbit & Small Animal Clinic", "Happy Valley", "Open until 22:00"],
+          ["Sai Kung Veterinary Emergency", "Sai Kung", "Open 24h"],
+          ["Tsuen Wan Rabbit Care Centre", "Tsuen Wan", "Open until 22:00"],
+          ["Kennedy Town Animal Hospital", "Kennedy Town", "Open until 23:00"],
+          ["Yuen Long Pet Emergency Desk", "Yuen Long", "Open 24h"],
+          ["Whampoa Exotic Health", "Hung Hom", "Open until 21:30"],
+          ["Repulse Bay Companion Clinic", "Repulse Bay", "Open until 22:00"],
+          ["Kwun Tong Rabbit & Vet Centre", "Kwun Tong", "Open until 23:00"],
+          ["Ma On Shan Veterinary Care", "Ma On Shan", "Open until 22:00"],
+          ["Tung Chung Animal Emergency", "Tung Chung", "Open 24h"],
+          ["Admiralty Rabbit Referral Desk", "Admiralty", "Open until 23:00"],
+          ["Kowloon Tong Exotic Clinic", "Kowloon Tong", "Open until 22:00"]
+        ]
+      },
+      tokyo: {
+        title: "Tokyo clinics",
+        note: "Clinics for Tokyo rabbit owners dealing with appetite loss, post-dental and post-op recovery, senior rabbits, and rabbits that are hard to medicate.",
+        clinics: [
+          ["Setagaya Exotic Medical Center", "Setagaya", "Open 24h"],
+          ["Shibuya Rabbit Emergency Desk", "Shibuya", "Open 24h"],
+          ["Meguro Veterinary Hospital", "Meguro", "Open until 23:00"],
+          ["Nakano Rabbit & Recovery Clinic", "Nakano", "Open until 22:00"],
+          ["Kichijoji Exotic Practice", "Kichijoji", "Open until 22:00"],
+          ["Roppongi Animal ER", "Roppongi", "Open 24h"],
+          ["Ginza Rabbit Internal Medicine", "Ginza", "Open until 21:30"],
+          ["Ueno Companion Animal Clinic", "Ueno", "Open until 22:00"],
+          ["Ikebukuro Emergency Vet", "Ikebukuro", "Open 24h"],
+          ["Daikanyama Rabbit Care", "Daikanyama", "Open until 22:00"],
+          ["Shimokitazawa Exotic Clinic", "Shimokitazawa", "Open until 22:00"],
+          ["Aoyama Pet Hospital", "Aoyama", "Open until 23:00"],
+          ["Ebisu Rabbit Specialty Clinic", "Ebisu", "Open until 22:00"],
+          ["Koenji Veterinary Urgent Care", "Koenji", "Open 24h"],
+          ["Toyosu Animal Medical Center", "Toyosu", "Open until 23:00"],
+          ["Asakusa Rabbit Clinic", "Asakusa", "Open until 21:30"],
+          ["Suginami Exotic Hospital", "Suginami", "Open until 22:00"],
+          ["Akihabara Pet ER", "Akihabara", "Open 24h"],
+          ["Jiyugaoka Rabbit & Small Animal", "Jiyugaoka", "Open until 22:00"],
+          ["Odaiba Veterinary Recovery", "Odaiba", "Open until 21:00"]
+        ]
+      },
+      taipei: {
+        title: "Taipei clinics",
+        note: "Clinics for Taipei rabbit families looking for help with gut-stasis warning signs, digestive trouble, antibiotic aftercare, or rescue rabbits.",
+        clinics: [
+          ["Da'an Exotic Emergency Clinic", "Da'an", "Open 24h"],
+          ["Xinyi Rabbit Hospital", "Xinyi", "Open until 23:00"],
+          ["Songshan Veterinary Urgent Care", "Songshan", "Open 24h"],
+          ["Zhongshan Rabbit & GI Clinic", "Zhongshan", "Open until 22:00"],
+          ["Neihu Animal Medical Center", "Neihu", "Open 24h"],
+          ["Shilin Exotic Practice", "Shilin", "Open until 22:00"],
+          ["Banqiao Companion ER", "Banqiao", "Open 24h"],
+          ["Tamsui Rabbit Care Centre", "Tamsui", "Open until 21:30"],
+          ["Wanhua Veterinary Hospital", "Wanhua", "Open until 22:00"],
+          ["Nangang Pet Emergency Desk", "Nangang", "Open 24h"],
+          ["Beitou Rabbit Clinic", "Beitou", "Open until 22:00"],
+          ["Zhongzheng Animal Hospital", "Zhongzheng", "Open until 23:00"],
+          ["Yonghe Exotic Medical", "Yonghe", "Open until 22:00"],
+          ["Sanchong Veterinary ER", "Sanchong", "Open 24h"],
+          ["Muzha Rabbit & Small Animal", "Wenshan", "Open until 22:00"],
+          ["Minsheng East Pet Clinic", "Minsheng", "Open until 21:30"],
+          ["Dunhua Rabbit Referral Desk", "Dunhua", "Open until 23:00"],
+          ["Taoyuan Rabbit Emergency Partner", "Taoyuan", "Open 24h"],
+          ["Xindian Exotic Clinic", "Xindian", "Open until 22:00"],
+          ["Linyi Street Veterinary Care", "Linyi", "Open until 21:30"]
+        ]
+      },
+      singapore: {
+        title: "Singapore clinics",
+        note: "Clinics for Singapore rabbit owners who want clear emergency guidance, fast call prep, and practical recovery advice after the vet visit.",
+        clinics: [
+          ["Tampines Rabbit Emergency Clinic", "Tampines", "Open 24h"],
+          ["Katong Exotic Hospital", "Katong", "Open until 23:00"],
+          ["Queenstown Veterinary ER", "Queenstown", "Open 24h"],
+          ["Woodlands Rabbit & Small Animal", "Woodlands", "Open until 22:00"],
+          ["Orchard Companion Animal Hospital", "Orchard", "Open 24h"],
+          ["Bukit Timah Exotic Practice", "Bukit Timah", "Open until 22:00"],
+          ["Novena Veterinary Urgent Care", "Novena", "Open 24h"],
+          ["Toa Payoh Rabbit Clinic", "Toa Payoh", "Open until 22:00"],
+          ["Jurong East Pet ER", "Jurong East", "Open 24h"],
+          ["Serangoon Exotic Medical", "Serangoon", "Open until 23:00"],
+          ["Holland Village Animal Clinic", "Holland Village", "Open until 22:00"],
+          ["Marine Parade Rabbit Care", "Marine Parade", "Open until 21:30"],
+          ["Punggol Veterinary Emergency", "Punggol", "Open 24h"],
+          ["Clementi Exotic Recovery Clinic", "Clementi", "Open until 22:00"],
+          ["River Valley Pet Hospital", "River Valley", "Open until 23:00"],
+          ["Ang Mo Kio Rabbit Clinic", "Ang Mo Kio", "Open until 22:00"],
+          ["Bedok Animal Medical Centre", "Bedok", "Open 24h"],
+          ["Sentosa Companion Clinic", "Sentosa", "Open until 21:00"],
+          ["Changi Pet Emergency Desk", "Changi", "Open 24h"],
+          ["Bishan Rabbit & Vet Centre", "Bishan", "Open until 22:00"]
+        ]
+      },
+      bangkok: {
+        title: "Bangkok clinics",
+        note: "Clinics that can help Bangkok rabbit owners move quickly from worry to a vet visit, with Thai and English call-prep support.",
+        clinics: [
+          ["Bangkok Rabbit Hospital — Thonglor", "Thonglor", "Open 24h"],
+          ["Sukhumvit Veterinary ER", "Sukhumvit", "Open 24h"],
+          ["Exotic Specialty Clinic — Phrom Phong", "Phrom Phong", "Open until 22:00"],
+          ["Ari Rabbit & Small Animal Clinic", "Ari", "Open until 23:00"],
+          ["Sathorn Pet Emergency Desk", "Sathorn", "Open 24h"],
+          ["Silom Veterinary Hospital", "Silom", "Open until 23:00"],
+          ["Ekkamai Rabbit Care Centre", "Ekkamai", "Open until 22:00"],
+          ["Rama 9 Animal Medical Center", "Rama 9", "Open 24h"],
+          ["Chatuchak Exotic Clinic", "Chatuchak", "Open until 22:00"],
+          ["Lat Phrao Veterinary ER", "Lat Phrao", "Open 24h"],
+          ["On Nut Rabbit Clinic", "On Nut", "Open until 22:00"],
+          ["Bang Na Pet Hospital", "Bang Na", "Open until 23:00"],
+          ["Ratchada Companion Animal ER", "Ratchada", "Open 24h"],
+          ["Thonglor Recovery Vet", "Thonglor", "Open until 22:00"],
+          ["Phaya Thai Rabbit Hospital", "Phaya Thai", "Open until 23:00"],
+          ["Nonthaburi Animal Emergency", "Nonthaburi", "Open 24h"],
+          ["Samyan Exotic Practice", "Samyan", "Open until 22:00"],
+          ["Pinklao Veterinary Urgent Care", "Pinklao", "Open until 23:00"],
+          ["Asoke Rabbit & GI Clinic", "Asoke", "Open until 22:00"],
+          ["Huai Khwang Pet ER", "Huai Khwang", "Open 24h"]
+        ]
+      }
+    };
+
+    const tagSets = [
+      ["24h triage", "exotic ward", "gut stasis"],
+      ["heat care", "oxygen", "senior"],
+      ["GI support", "recovery", "LINE intake"],
+      ["syringe feed", "appetite", "post-op"],
+      ["bilingual", "referral", "weekend"]
+    ];
+    const clinicMarketAliases = {
+      "hong-kong": ["hong kong", "hongkong", "hong-kong", "hk", "central", "kowloon", "tsim sha tsui", "causeway bay", "sai ying pun", "mong kok", "sha tin", "tai po", "north point", "happy valley", "sai kung", "tsuen wan", "kennedy town", "yuen long", "hung hom", "repulse bay", "kwun tong", "ma on shan", "tung chung", "admiralty", "kowloon tong"],
+      tokyo: ["tokyo", "setagaya", "shibuya", "meguro", "nakano", "kichijoji", "roppongi", "ginza", "ueno", "ikebukuro", "daikanyama", "shimokitazawa", "aoyama", "ebisu", "koenji", "toyosu", "asakusa", "suginami", "akihabara", "jiyugaoka", "odaiba"],
+      taipei: ["taipei", "da'an", "daan", "xinyi", "songshan", "zhongshan", "neihu", "shilin", "banqiao", "tamsui", "wanhua", "nangang", "beitou", "zhongzheng", "yonghe", "sanchong", "wenshan", "muzha", "minsheng", "dunhua", "taoyuan", "xindian", "linyi"],
+      singapore: ["singapore", "sg", "tampines", "katong", "queenstown", "woodlands", "orchard", "bukit timah", "novena", "toa payoh", "jurong", "serangoon", "holland village", "marine parade", "punggol", "clementi", "river valley", "ang mo kio", "bedok", "sentosa", "changi", "bishan"],
+      bangkok: ["bangkok", "bkk", "thonglor", "sukhumvit", "phrom phong", "ari", "sathorn", "silom", "ekkamai", "rama 9", "chatuchak", "lat phrao", "on nut", "bang na", "ratchada", "phaya thai", "nonthaburi", "samyan", "pinklao", "asoke", "huai khwang"]
+    };
+    const clinicTabs = document.querySelectorAll("[data-clinic-market]");
+    const clinicGrid = document.querySelector("#clinic-directory-grid");
+    const clinicMarketTitle = document.querySelector("#clinic-market-title");
+    const clinicMarketNote = document.querySelector("#clinic-market-note");
+    const clinicCountLabel = document.querySelector("#clinic-count-label");
+    const clinicSearchInput = document.querySelector("#clinic-search-input");
+    const clinicIssueSelect = document.querySelector("#clinic-issue-select");
+    const clinicSearchButton = document.querySelector("#clinic-search-button");
+    const clinicFinderResults = document.querySelector("#clinic-finder-results");
+
+    const renderClinicMarket = (market) => {
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      clinicTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.clinicMarket === market));
+      if (clinicMarketTitle) clinicMarketTitle.textContent = marketData.title;
+      if (clinicMarketNote) clinicMarketNote.textContent = marketData.note;
+      if (clinicCountLabel) clinicCountLabel.textContent = marketData.title;
+      if (!clinicGrid) return;
+      clinicGrid.innerHTML = marketData.clinics.map(([name, area, status], index) => {
+        const tags = tagSets[index % tagSets.length].map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
+        const statusClass = status.includes("24h") ? "open24" : "";
+        return `
+          <article class="clinic-card">
+            <div class="status ${statusClass}">${escapeHTML(status)}</div>
+            <div>
+              <h5>${escapeHTML(name)}</h5>
+              <div class="area">${escapeHTML(area)}</div>
+            </div>
+            <div class="clinic-tags">${tags}</div>
+            <a href="#now">Check emergency signs</a>
+          </article>
+        `;
+      }).join("");
+    };
+
+    clinicTabs.forEach((tab) => {
+      tab.addEventListener("click", () => renderClinicMarket(tab.dataset.clinicMarket));
+    });
+
+    renderClinicMarket("bangkok");
+
+    const detectClinicMarket = (query) => {
+      const normalized = query.trim().toLowerCase();
+      if (!normalized) return "bangkok";
+      return Object.keys(clinicMarketAliases).find((market) => (
+        clinicMarketAliases[market].some((alias) => normalized.includes(alias))
+      )) || "bangkok";
+    };
+
+    const issueKeywords = {
+      "Gut stasis (not eating)": ["gut stasis", "exotic ward", "appetite"],
+      "Heatstroke / collapse": ["heat care", "oxygen", "24h triage"],
+      "Head tilt": ["exotic ward", "24h triage", "senior"],
+      "Bloat or belly pain": ["gut stasis", "24h triage", "oxygen"],
+      "Any emergency": []
+    };
+
+    const renderFinderResults = () => {
+      if (!clinicFinderResults) return;
+      const query = clinicSearchInput ? clinicSearchInput.value : "";
+      const selectedIssue = clinicIssueSelect ? clinicIssueSelect.value : "Any emergency";
+      const market = detectClinicMarket(query);
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      const keywords = issueKeywords[selectedIssue] || [];
+      const matched = marketData.clinics
+        .map(([name, area, status], index) => ({ name, area, status, tags: tagSets[index % tagSets.length], index }))
+        .sort((a, b) => {
+          const aScore = keywords.filter((keyword) => a.tags.includes(keyword)).length + (a.status.includes("24h") ? 1 : 0);
+          const bScore = keywords.filter((keyword) => b.tags.includes(keyword)).length + (b.status.includes("24h") ? 1 : 0);
+          return bScore - aScore || a.index - b.index;
+        })
+        .slice(0, 3);
+      clinicFinderResults.innerHTML = matched.map(({ name, area, status }) => {
+        const statusClass = status.includes("24h") ? "open24" : "";
+        return `<div class="clinic-result"><b>${escapeHTML(name)}</b><span class="meta ${statusClass}">${escapeHTML(status)} · ${escapeHTML(area)}</span></div>`;
+      }).join("");
+      renderClinicMarket(market);
+    };
+
+    if (clinicSearchInput && clinicIssueSelect && clinicSearchButton) {
+      clinicSearchInput.addEventListener("input", renderFinderResults);
+      clinicIssueSelect.addEventListener("change", renderFinderResults);
+      clinicSearchButton.addEventListener("click", renderFinderResults);
+      renderFinderResults();
+    }
+
+    if (summaryButton && summaryBox) {
+      summaryButton.addEventListener("click", () => {
+        const form = summaryButton.closest("form");
+        const data = new FormData(form);
+        const age = escapeHTML(data.get("rabbit-age") || "not entered");
+        const weight = escapeHTML(data.get("rabbit-weight") || "not entered");
+        const issue = escapeHTML(data.get("main-issue") || "not selected");
+        const duration = escapeHTML(data.get("duration") || "not selected");
+        const notes = escapeHTML(data.get("vet-notes") || "No extra notes entered.");
+
+        summaryBox.hidden = false;
+        summaryBox.innerHTML = `
+          <strong>Vet call summary</strong>
+          Rabbit age: ${age}<br>
+          Weight: ${weight}<br>
+          Main issue: ${issue}<br>
+          Duration: ${duration}<br>
+          Notes: ${notes}<br>
+          Next step: call the clinic and read this summary before asking whether the rabbit should be seen now.
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
