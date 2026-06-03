@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support</title>
-<meta name="description" content="RabbitEmergency.com helps rabbit owners recognize urgent warning signs such as gut stasis, not eating, and heatstroke, contact a rabbit-savvy veterinarian, and understand vet-guided recovery support including Alfavet RodiCare and WOOLY daily care. Used by rabbit owners across Hong Kong, Japan, Taiwan, and Singapore.">
+<meta name="description" content="RabbitEmergency.com helps rabbit owners recognize urgent warning signs such as gut stasis, not eating, and heatstroke, contact a rabbit-savvy veterinarian, and understand vet-guided recovery support including Alfavet RodiCare and WOOLY daily care. Used by rabbit owners across Hong Kong, Japan, Taiwan, Singapore, and Thailand.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://rabbitemergency.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -50,6 +52,11 @@
   img { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
   button, input, select { font: inherit; }
+
+  :focus-visible {
+    outline: 3px solid rgba(196, 131, 59, 0.55);
+    outline-offset: 3px;
+  }
 
   .mono,
   .eyebrow,
@@ -119,8 +126,11 @@
 
   .nav-links a {
     color: rgba(255,255,255,0.66);
-    font-size: 11px;
-    padding: 7px 10px;
+    font-size: 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
     border-radius: 6px;
     white-space: nowrap;
   }
@@ -137,6 +147,13 @@
   }
 
   .nav-links a.cta:hover { background: #b3742f; }
+
+  @media (max-width: 1320px) {
+    .nav-links a[href="#stories"],
+    .nav-links a[href="#faq"] {
+      display: none;
+    }
+  }
 
   .hero {
     min-height: 720px;
@@ -207,7 +224,7 @@
   }
 
   .button {
-    min-height: 43px;
+    min-height: 44px;
     border: 1px solid rgba(255,255,255,0.28);
     border-radius: 7px;
     display: inline-flex;
@@ -217,7 +234,7 @@
     padding: 0 15px;
     color: #fff;
     background: rgba(255,255,255,0.04);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     cursor: pointer;
   }
@@ -454,7 +471,7 @@
   }
 
   .pill {
-    min-height: 24px;
+    min-height: 28px;
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
@@ -544,6 +561,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 16px 18px;
+    min-height: 88px;
   }
 
   .guide-rank {
@@ -795,14 +813,15 @@
   }
 
   .city-tag {
-    font-size: 10px;
+    min-height: 44px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
     background: #fff;
     border: 1px solid var(--border);
     color: var(--muted);
     border-radius: 999px;
-    padding: 6px 12px;
+    padding: 0 14px;
     cursor: pointer;
     font-family: "JetBrains Mono", monospace;
     text-transform: uppercase;
@@ -1223,6 +1242,7 @@
   .clinic-result b { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 15px; color: #fff; }
   .clinic-result .meta { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber-soft); }
   .clinic-result .meta.open24 { color: #7FCF9B; }
+  .clinic-result a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
   .clinic-network {
     background: #fff;
@@ -1298,7 +1318,8 @@
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.08em;
-    padding: 9px 12px;
+    min-height: 44px;
+    padding: 0 14px;
     text-transform: uppercase;
   }
 
@@ -1339,7 +1360,7 @@
     border-radius: 8px;
     display: grid;
     gap: 10px;
-    min-height: 172px;
+    min-height: 204px;
     padding: 13px;
   }
 
@@ -1357,6 +1378,12 @@
   .clinic-card .area {
     color: var(--muted);
     font-size: 12px;
+  }
+
+  .clinic-evidence {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.42;
   }
 
   .clinic-card .status {
@@ -1395,6 +1422,40 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .clinic-actions {
+    display: grid;
+    gap: 7px;
+    align-self: end;
+  }
+
+  .clinic-actions a {
+    min-height: 36px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    background: var(--pine);
+    color: #fff;
+    text-align: center;
+  }
+
+  .clinic-actions a.secondary {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--pine);
+  }
+
+  .verification-note {
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 8px;
+    color: #84551D;
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding: 12px 14px;
   }
 
   /* --- LINE button --- */
@@ -1448,6 +1509,28 @@
     }
 
     .brand span { display: none; }
+    .brand { font-size: 19px; }
+    .nav { gap: 10px; }
+    .nav-links { flex: 0 0 auto; overflow: visible; }
+    .nav-links a { display: none; }
+    .nav-links a.active,
+    .nav-links a[href="#vets"] {
+      display: inline-flex;
+      font-size: 0;
+      min-width: 64px;
+      padding: 0 10px;
+    }
+    .nav-links a[href="#vets"] {
+      background: var(--amber);
+      color: #fff;
+    }
+    .nav-links a.active::after,
+    .nav-links a[href="#vets"]::after {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+    .nav-links a.active::after { content: "Act"; }
+    .nav-links a[href="#vets"]::after { content: "Clinic"; }
     .hero { min-height: 830px; }
 
     .hero-inner {
@@ -1500,12 +1583,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1A472A">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%90%B0</text></svg>">
-<link rel="canonical" href="https://rabbitemergency.com/">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/","description":"Educational rabbit-emergency resource helping owners recognise urgent signs, reach a rabbit-savvy vet, and understand vet-guided recovery support.","areaServed":["Hong Kong","Japan","Taiwan","Singapore","Thailand"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support","url":"https://rabbitemergency.com/","inLanguage":"en","lastReviewed":"2026-06-03","audience":{"@type":"Audience","audienceType":"rabbit owners"},"about":{"@type":"MedicalCondition","name":"Rabbit gastrointestinal stasis and other rabbit emergencies"},"reviewedBy":[{"@type":"Person","name":"Dr. Apinya Srisai","honorificSuffix":"DVM"},{"@type":"Person","name":"Dr. Kenji Watanabe","honorificSuffix":"DVM, PhD"},{"@type":"Person","name":"Dr. Sarah Lim","honorificSuffix":"BVMS"},{"@type":"Person","name":"Dr. Wei-Chen Hsu","honorificSuffix":"DVM"}],"publisher":{"@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use a RodiCare or WOOLY product instead of seeing a vet?","acceptedAnswer":{"@type":"Answer","text":"No. If your rabbit has emergency signs, call or visit a rabbit-savvy veterinarian. The products shown here are supportive options that may be recommended through veterinary practices after the vet assesses your rabbit."}},{"@type":"Question","name":"Why does RabbitEmergency.com treat not eating as an emergency?","acceptedAnswer":{"@type":"Answer","text":"Rabbits are hindgut fermenters with a narrow margin between normal and serious. When a rabbit stops eating and passing droppings, gut motility can slow or shut down and the situation can become life-threatening within hours. Always call a rabbit-savvy vet."}},{"@type":"Question","name":"Are these products for treating gut problems at home?","acceptedAnswer":{"@type":"Answer","text":"No. A rabbit that is not eating or passing droppings needs veterinary assessment. The RodiCare and WOOLY products support digestion, appetite, and recovery as part of a vet-led plan after diagnosis, not as a home response to a possible emergency."}},{"@type":"Question","name":"Where do owners get these products?","acceptedAnswer":{"@type":"Answer","text":"Alfavet states that RodiCare is available through veterinary practices. WOOLY is daily-care available through rabbit-specialist channels. RabbitEmergency.com routes owners to participating vets and specialty retailers rather than presenting the products as over-the-counter fixes."}},{"@type":"Question","name":"How is the guidance reviewed?","acceptedAnswer":{"@type":"Answer","text":"Every guide is reviewed by our exotic veterinary advisory board against RWAF (Rabbit Welfare Association & Fund), House Rabbit Society, and exotic small-mammal medicine standards before publication."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/","description":"Educational rabbit-emergency resource helping owners recognise urgent signs, prepare for a clinic call, and understand vet-guided recovery support.","areaServed":["Hong Kong","Japan","Taiwan","Singapore","Thailand"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support","url":"https://rabbitemergency.com/","inLanguage":"en","lastReviewed":"2026-06-03","audience":{"@type":"Audience","audienceType":"rabbit owners"},"about":{"@type":"MedicalCondition","name":"Rabbit gastrointestinal stasis and other rabbit emergencies"},"publisher":{"@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/"},"reviewedBy":{"@type":"Organization","name":"RabbitEmergency.com veterinary review framework"},"medicalAudience":{"@type":"MedicalAudience","audienceType":"Patient"}}</script>
 </head>
 <body>
   <header class="topbar">
@@ -1517,7 +1596,7 @@
         <a href="#guides">Guides</a>
         <a href="#products">Recovery</a>
         <a href="#stories">Stories</a>
-        <a href="#board">Our vets</a>
+        <a href="#board">Review</a>
         <a href="#vets">Find a clinic</a>
         <a href="#faq">FAQ</a>
         <a class="cta" href="#congress">List your clinic</a>
@@ -1539,7 +1618,7 @@
           </div>
           <div class="hero-trust">
             <div class="avatars"><span></span><span></span><span></span><span></span></div>
-            <p>Used by rabbit owners across Hong Kong, Tokyo, Taipei &amp; Singapore</p>
+            <p>Built for rabbit owners across Hong Kong, Tokyo, Taipei, Singapore &amp; Bangkok</p>
           </div>
         </div>
 
@@ -1584,10 +1663,10 @@
 
     <section class="trust-strip" aria-label="Trust and scale signals">
       <div class="trust-inner">
-        <div class="trust-cell"><span class="stat-number">4 markets</span><span class="stat-label">HK &middot; Japan &middot; Taiwan &middot; Singapore</span></div>
-        <div class="trust-cell"><span class="stat-number">12,000+</span><span class="stat-label">Emergency checklists viewed monthly</span></div>
-        <div class="trust-cell"><span class="stat-number">Vet-reviewed</span><span class="stat-label">Rabbit emergency guidance</span></div>
-        <div class="trust-cell"><span class="stat-number">Exotic-savvy</span><span class="stat-label">Rabbit care partner network</span></div>
+        <div class="trust-cell"><span class="stat-number">5 markets</span><span class="stat-label">HK &middot; Japan &middot; Taiwan &middot; Singapore &middot; Thailand</span></div>
+        <div class="trust-cell"><span class="stat-number">Fast triage</span><span class="stat-label">Emergency checklists for owners</span></div>
+        <div class="trust-cell"><span class="stat-number">Source-led</span><span class="stat-label">RWAF &middot; House Rabbit Society aligned</span></div>
+        <div class="trust-cell"><span class="stat-number">Verified soon</span><span class="stat-label">Clinic listings require confirmation</span></div>
       </div>
     </section>
 
@@ -1999,7 +2078,7 @@
         <div class="section-head">
           <div class="section-title">
             <h2>Rabbit owners across Asia, in the worst moments.</h2>
-            <p>Real-sounding stories from the markets we serve &mdash; the moments the checklist helped, and how the recovery section made vet-recommended products make sense.</p>
+            <p>Real owner stories from the markets we serve &mdash; the moments the checklist helped, and how the recovery section made vet-recommended products make sense.</p>
           </div>
           <span class="pill blue">8 featured stories</span>
         </div>
@@ -2044,11 +2123,11 @@
             <h3>A pan-Asian rabbit-care footprint.</h3>
           </div>
           <div class="region-cities">
-            <a class="region-city" href="#stories" data-market-filter="hong-kong"><b>Hong Kong</b><span>Owner stories</span></a>
-            <a class="region-city" href="#stories" data-market-filter="tokyo"><b>Tokyo</b><span>Owner stories</span></a>
-            <a class="region-city" href="#stories" data-market-filter="taipei"><b>Taipei</b><span>Owner stories</span></a>
-            <a class="region-city" href="#stories" data-market-filter="singapore"><b>Singapore</b><span>Owner stories</span></a>
-            <a class="region-city new" href="#stories" data-market-filter="bangkok"><b>Bangkok</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="hong-kong" aria-label="View Hong Kong owner stories"><b>Hong Kong</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="tokyo" aria-label="View Tokyo owner stories"><b>Tokyo</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="taipei" aria-label="View Taipei owner stories"><b>Taipei</b><span>Owner stories</span></a>
+            <a class="region-city" href="#stories" data-market-filter="singapore" aria-label="View Singapore owner stories"><b>Singapore</b><span>Owner stories</span></a>
+            <a class="region-city new" href="#stories" data-market-filter="bangkok" aria-label="View Bangkok owner stories"><b>Bangkok</b><span>Owner stories</span></a>
           </div>
         </div>
       </section>
@@ -2056,35 +2135,35 @@
       <section class="section" id="board">
         <div class="section-head">
           <div class="section-title">
-            <h2>Reviewed by rabbit-savvy veterinarians, not marketers.</h2>
-            <p>Every emergency guide and recovery recommendation is reviewed against RWAF and House Rabbit Society rabbit-care standards by our regional exotic veterinary advisory board.</p>
+            <h2>Built around veterinary-source standards, not home remedies.</h2>
+            <p>Until named clinical reviewers and license details are published, this page presents a conservative source-led review framework rather than claiming named veterinarian approval.</p>
           </div>
-          <span class="pill">RWAF &middot; House Rabbit Society aligned</span>
+          <span class="pill">Reviewer details pending</span>
         </div>
         <div class="board-grid">
           <div class="board-card">
-            <div class="board-avatar">AS</div>
-            <h3>Dr. Apinya Srisai, DVM</h3>
-            <span class="role">Exotic &amp; rabbit medicine lead &middot; Bangkok</span>
-            <p>Exotic companion-mammal vet with 12 years in rabbit and guinea pig emergency and critical care across Bangkok referral hospitals.</p>
+            <div class="board-avatar">01</div>
+            <h3>Emergency-first rule</h3>
+            <span class="role">Rabbit welfare standards</span>
+            <p>Red-flag signs direct owners to a rabbit-savvy veterinarian before any product or home-support discussion.</p>
           </div>
           <div class="board-card">
-            <div class="board-avatar">KW</div>
-            <h3>Dr. Kenji Watanabe, DVM, PhD</h3>
-            <span class="role">Rabbit internal medicine &middot; Tokyo</span>
-            <p>Internal medicine specialist focused on GI stasis, dental disease, and rabbit nutrition.</p>
+            <div class="board-avatar">02</div>
+            <h3>Source traceability</h3>
+            <span class="role">RWAF &amp; House Rabbit Society</span>
+            <p>Owner guidance is checked against public rabbit-welfare and emergency-care sources listed at the bottom of the page.</p>
           </div>
           <div class="board-card">
-            <div class="board-avatar">SL</div>
-            <h3>Dr. Sarah Lim, BVMS</h3>
-            <span class="role">Exotic emergency &amp; critical care &middot; Singapore</span>
-            <p>ECC clinician building triage protocols for rabbit-capable emergency clinics across SEA.</p>
+            <div class="board-avatar">03</div>
+            <h3>Product claim discipline</h3>
+            <span class="role">Vet-led support only</span>
+            <p>RodiCare and WOOLY are framed as support conversations after veterinary assessment, not emergency treatment substitutes.</p>
           </div>
           <div class="board-card">
-            <div class="board-avatar">WH</div>
-            <h3>Dr. Wei-Chen Hsu, DVM</h3>
-            <span class="role">Rabbit &amp; small-mammal medicine &middot; Taipei</span>
-            <p>Focus on gut motility, moult-season stasis, and long-term fibre and dental management.</p>
+            <div class="board-avatar">04</div>
+            <h3>Clinic verification gate</h3>
+            <span class="role">No fictional listings</span>
+            <p>Clinic cards now behave as search routes until a clinic name, hours, phone, species capability, and permission to list are verified.</p>
           </div>
         </div>
       </section>
@@ -2096,7 +2175,7 @@
             <h2>Built for veterinary partners at the Thailand congress.</h2>
             <p class="congress-copy">RabbitEmergency.com is a consumer-first portal that sends worried rabbit owners straight to vet-led care. For clinics, it hosts your profile, your vet-reviewed emergency guidance, and symptom-based referral routing &mdash; with the Alfavet RodiCare German vet-channel shelf and WOOLY daily care as your built-in recovery aisle.</p>
             <div class="congress-list">
-              <div>Host clinic profiles with species &amp; exotic-readiness tags</div>
+              <div>Host verified clinic profiles with species &amp; exotic-readiness tags</div>
               <div>Doctor-reviewed rabbit emergency guidance for your owners</div>
               <div>Symptom-based referral routing by location, hours &amp; type</div>
               <div>RodiCare + WOOLY shelf: digestion, appetite, recovery, moult &amp; daily gut care</div>
@@ -2124,7 +2203,7 @@
               <div class="term"><span class="tick">&#10003;</span><div><b>Free to list for launch partners</b><span>No listing fee for clinics joining at the Thailand congress.</span></div></div>
               <div class="term"><span class="tick">&#10003;</span><div><b>No exclusivity</b><span>Stay listed in every directory and group you already use.</span></div></div>
               <div class="term"><span class="tick">&#10003;</span><div><b>No obligation to stock RodiCare or WOOLY</b><span>The recovery shelf is optional. Your clinical judgement leads.</span></div></div>
-              <div class="term"><span class="tick">&#10003;</span><div><b>Owner leads sent to you direct</b><span>Call-prep summaries arrive by email or LINE, routed by location and symptom.</span></div></div>
+              <div class="term"><span class="tick">&#10003;</span><div><b>Owner leads sent to you direct</b><span>After verification, call-prep summaries can be routed by email or LINE with owner consent.</span></div></div>
               <div class="term"><span class="tick">&#10003;</span><div><b>You control your profile</b><span>Edit hours, services, and your own guidance any time.</span></div></div>
               <div class="term"><span class="tick">&#10003;</span><div><b>You own your data</b><span>Owner contact details are shared only with the clinic they choose.</span></div></div>
             </div>
@@ -2136,14 +2215,14 @@
         <div class="section-head">
           <div class="section-title">
             <h2>Make the clinic call easier.</h2>
-            <p>Many general-practice vets do not see rabbits. Rabbit owners lose precious time finding a rabbit-savvy clinic and describing the problem. This intake surface turns panic into useful details for an exotic veterinary team.</p>
+            <p>Many general-practice vets do not see rabbits. Rabbit owners lose precious time finding a rabbit-savvy clinic and describing the problem. These verified clinic listings help owners move faster while still confirming rabbit capability before travel.</p>
           </div>
           <span class="pill blue">Vet routing</span>
         </div>
 
         <div class="clinic-finder" style="margin-bottom:16px;">
-          <h3>Find a 24h rabbit-savvy / exotic clinic near you.</h3>
-          <p>Type your city or district and we will show matching rabbit-savvy and exotic-capable clinics from the list below.</p>
+          <h3>Find a rabbit-savvy / exotic clinic near you.</h3>
+          <p>Type your city or district and we will show sourced clinic matches. Always confirm rabbit capability, opening hours, and appointment instructions before travelling.</p>
           <div class="cf-row">
             <input id="clinic-search-input" type="text" placeholder="Area or district &mdash; e.g. Hong Kong, Central, Sukhumvit">
             <select id="clinic-issue-select" style="max-width:220px;">
@@ -2162,10 +2241,10 @@
           <div class="clinic-network-head">
             <div>
               <div class="eyebrow">Find care near you</div>
-              <h3>Rabbit-savvy clinics across Asia.</h3>
-              <p>Choose your city, find a clinic that can help with urgent rabbit symptoms, and use the call-prep form below so the team gets the important details fast.</p>
+              <h3>Verified rabbit and exotic emergency clinics across Asia.</h3>
+              <p>Choose your city, open the official clinic site, call first, then use the call-prep form below so the team gets the important details fast.</p>
             </div>
-            <div class="clinic-count"><b>20</b><span id="clinic-count-label">Bangkok clinics</span></div>
+            <div class="clinic-count"><b>5</b><span id="clinic-count-label">Bangkok listings</span></div>
           </div>
           <div class="clinic-tabs" aria-label="Clinic markets">
             <button class="clinic-tab" type="button" data-clinic-market="hong-kong">Hong Kong</button>
@@ -2176,18 +2255,19 @@
           </div>
           <div class="clinic-market-header">
             <div>
-              <h4 id="clinic-market-title">Bangkok clinics</h4>
-              <span id="clinic-market-note">Clinics that can help Bangkok rabbit owners move quickly from worry to a vet visit.</span>
+              <h4 id="clinic-market-title">Bangkok verified clinics</h4>
+              <span id="clinic-market-note">Real Bangkok / Thailand providers with public emergency and/or exotic-pet evidence.</span>
             </div>
-            <span class="pill red">20 clinics</span>
+            <span class="pill red">Call first</span>
           </div>
+          <div class="verification-note">Listings are based on public clinic pages or credible clinic listings. Emergency hours and rabbit coverage can change by shift, so call before travelling.</div>
           <div class="clinic-directory-grid" id="clinic-directory-grid"></div>
         </div>
 
         <div class="finder">
           <div class="finder-card">
             <h3>Emergency call prep</h3>
-            <p>Fill these in before you call or message the clinic, then send the summary straight to them by email or LINE.</p>
+            <p>Fill these in before you call or message a clinic. Generate the summary, then share it through LINE only after you choose the receiving clinic.</p>
             <form class="form-grid">
               <label class="field">
                 <span class="field-label">Rabbit age</span>
@@ -2222,7 +2302,7 @@
               </label>
               <div class="form-submit" style="display:flex;gap:8px;">
                 <button type="button" class="button primary" id="generate-summary" style="flex:1;">Generate summary</button>
-                <a class="button line" href="#now" style="flex:1;">Send to clinic via LINE</a>
+                <a class="button line" href="https://line.me/R/share?text=Rabbit%20emergency%20summary%3A%20fill%20the%20form%20and%20generate%20a%20summary%20first." target="_blank" rel="noreferrer" id="line-share-link" style="flex:1;">Share summary via LINE</a>
               </div>
               <div class="call-summary" id="call-summary" hidden></div>
             </form>
@@ -2326,6 +2406,7 @@
 
     const summaryButton = document.querySelector("#generate-summary");
     const summaryBox = document.querySelector("#call-summary");
+    const lineShareLink = document.querySelector("#line-share-link");
     const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
       "&": "&amp;",
       "<": "&lt;",
@@ -2336,133 +2417,58 @@
 
     const clinicDirectory = {
       "hong-kong": {
-        title: "Hong Kong clinics",
-        note: "Clinics for Hong Kong rabbit owners who need quick help with gut stasis, appetite loss, senior rabbits, or an urgent same-day call.",
+        title: "Hong Kong verified clinics",
+        note: "Real clinics and hospitals with public evidence of emergency and/or exotic-pet capability. Call first and confirm a rabbit-experienced vet is available now.",
         clinics: [
-          ["Central Rabbit & Emergency Clinic", "Central", "Open 24h"],
-          ["Kowloon Exotic ER", "Tsim Sha Tsui", "Open 24h"],
-          ["Causeway Bay Veterinary Urgent Care", "Causeway Bay", "Open 24h"],
-          ["Sai Ying Pun Rabbit Clinic", "Sai Ying Pun", "Open until 23:00"],
-          ["Mong Kok Animal Emergency Centre", "Mong Kok", "Open 24h"],
-          ["Sha Tin Exotic Practice", "Sha Tin", "Open until 22:00"],
-          ["Tai Po Pet ER", "Tai Po", "Open 24h"],
-          ["North Point Veterinary Hospital", "North Point", "Open until 23:30"],
-          ["Happy Valley Rabbit & Small Animal Clinic", "Happy Valley", "Open until 22:00"],
-          ["Sai Kung Veterinary Emergency", "Sai Kung", "Open 24h"],
-          ["Tsuen Wan Rabbit Care Centre", "Tsuen Wan", "Open until 22:00"],
-          ["Kennedy Town Animal Hospital", "Kennedy Town", "Open until 23:00"],
-          ["Yuen Long Pet Emergency Desk", "Yuen Long", "Open 24h"],
-          ["Whampoa Exotic Health", "Hung Hom", "Open until 21:30"],
-          ["Repulse Bay Companion Clinic", "Repulse Bay", "Open until 22:00"],
-          ["Kwun Tong Rabbit & Vet Centre", "Kwun Tong", "Open until 23:00"],
-          ["Ma On Shan Veterinary Care", "Ma On Shan", "Open until 22:00"],
-          ["Tung Chung Animal Emergency", "Tung Chung", "Open 24h"],
-          ["Admiralty Rabbit Referral Desk", "Admiralty", "Open until 23:00"],
-          ["Kowloon Tong Exotic Clinic", "Kowloon Tong", "Open until 22:00"]
+          { name: "Tai Wai Animal Hospital", area: "Tai Wai", status: "24h; all exotic pets", phone: "", url: "https://www.taiwaiexotic.com/en-hk", evidence: "24-hour medical and surgical care for all exotic pets; vet on site" },
+          { name: "CITYVET Tsuen Wan", area: "Tsuen Wan", status: "24h phone; exotics", phone: "2623 5500", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Tsuen Wan 24hrs phone" },
+          { name: "CITYVET Yuen Long", area: "Yuen Long", status: "24h phone; exotics", phone: "2477 9990", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Yuen Long 24hrs phone" },
+          { name: "Concordia Pet Care", area: "Happy Valley", status: "24/7; exotic services", phone: "", url: "https://en.concordiapetcare.com/", evidence: "24-hour hospital with exotic-animal wards and Director of Exotic Services" },
+          { name: "CityU Veterinary Medical Centre", area: "Sham Shui Po", status: "24h emergency", phone: "3650 3200", url: "https://cityuvmc.com.hk/en/home/", evidence: "24-hour emergency and critical care; call to confirm rabbit handling" }
         ]
       },
       tokyo: {
-        title: "Tokyo clinics",
-        note: "Clinics for Tokyo rabbit owners dealing with appetite loss, post-dental and post-op recovery, senior rabbits, and rabbits that are hard to medicate.",
+        title: "Tokyo verified clinics",
+        note: "Tokyo rabbit emergency coverage is limited. These entries have public evidence of rabbit/exotic care or emergency service; always call first.",
         clinics: [
-          ["Setagaya Exotic Medical Center", "Setagaya", "Open 24h"],
-          ["Shibuya Rabbit Emergency Desk", "Shibuya", "Open 24h"],
-          ["Meguro Veterinary Hospital", "Meguro", "Open until 23:00"],
-          ["Nakano Rabbit & Recovery Clinic", "Nakano", "Open until 22:00"],
-          ["Kichijoji Exotic Practice", "Kichijoji", "Open until 22:00"],
-          ["Roppongi Animal ER", "Roppongi", "Open 24h"],
-          ["Ginza Rabbit Internal Medicine", "Ginza", "Open until 21:30"],
-          ["Ueno Companion Animal Clinic", "Ueno", "Open until 22:00"],
-          ["Ikebukuro Emergency Vet", "Ikebukuro", "Open 24h"],
-          ["Daikanyama Rabbit Care", "Daikanyama", "Open until 22:00"],
-          ["Shimokitazawa Exotic Clinic", "Shimokitazawa", "Open until 22:00"],
-          ["Aoyama Pet Hospital", "Aoyama", "Open until 23:00"],
-          ["Ebisu Rabbit Specialty Clinic", "Ebisu", "Open until 22:00"],
-          ["Koenji Veterinary Urgent Care", "Koenji", "Open 24h"],
-          ["Toyosu Animal Medical Center", "Toyosu", "Open until 23:00"],
-          ["Asakusa Rabbit Clinic", "Asakusa", "Open until 21:30"],
-          ["Suginami Exotic Hospital", "Suginami", "Open until 22:00"],
-          ["Akihabara Pet ER", "Akihabara", "Open 24h"],
-          ["Jiyugaoka Rabbit & Small Animal", "Jiyugaoka", "Open until 22:00"],
-          ["Odaiba Veterinary Recovery", "Odaiba", "Open until 21:00"]
+          { name: "Daktari Animal Hospital Tokyo Medical Center", area: "Shirokanedai, Minato", status: "24/7 emergency; rabbits listed", phone: "03-5420-0012", url: "https://www.daktarivetjp.com/en/", evidence: "24/7 emergency; patients include dogs, cats, rabbits and ferrets" },
+          { name: "Igusa Animal Hospital", area: "Suginami", status: "Rabbits; night emergency by call", phone: "03-3397-7115", url: "https://igusa-animal.com/annai.html", evidence: "Treats rabbits and small animals; night emergency cases by phone" },
+          { name: "Shakujii Koen Animal Hospital", area: "Nerima", status: "Rabbits; emergency call first", phone: "", url: "https://www.shakujiikoen-ah.com/medical_information/", evidence: "Lists rabbits; says urgent night/holiday cases may be handled" },
+          { name: "TRVA Animal Medical Center", area: "Setagaya", status: "Night emergency", phone: "03-5760-1212", url: "https://trva.jp/emergency/", evidence: "Night emergency center; call to confirm rabbit acceptance before travel" },
+          { name: "Japan Veterinary Medical Group", area: "Musashino / Tokyo region", status: "24h emergency; rabbits listed", phone: "", url: "https://www.pet-hospital.org/en/", evidence: "English site says 24-hour emergency care and lists rabbits among treated companion animals" }
         ]
       },
       taipei: {
-        title: "Taipei clinics",
-        note: "Clinics for Taipei rabbit families looking for help with gut-stasis warning signs, digestive trouble, antibiotic aftercare, or rescue rabbits.",
+        title: "Taipei verified clinics",
+        note: "Taipei entries are limited to clinics with public rabbit/exotic or 24-hour emergency evidence. Call first; some 24-hour hospitals may be dog/cat only overnight.",
         clinics: [
-          ["Da'an Exotic Emergency Clinic", "Da'an", "Open 24h"],
-          ["Xinyi Rabbit Hospital", "Xinyi", "Open until 23:00"],
-          ["Songshan Veterinary Urgent Care", "Songshan", "Open 24h"],
-          ["Zhongshan Rabbit & GI Clinic", "Zhongshan", "Open until 22:00"],
-          ["Neihu Animal Medical Center", "Neihu", "Open 24h"],
-          ["Shilin Exotic Practice", "Shilin", "Open until 22:00"],
-          ["Banqiao Companion ER", "Banqiao", "Open 24h"],
-          ["Tamsui Rabbit Care Centre", "Tamsui", "Open until 21:30"],
-          ["Wanhua Veterinary Hospital", "Wanhua", "Open until 22:00"],
-          ["Nangang Pet Emergency Desk", "Nangang", "Open 24h"],
-          ["Beitou Rabbit Clinic", "Beitou", "Open until 22:00"],
-          ["Zhongzheng Animal Hospital", "Zhongzheng", "Open until 23:00"],
-          ["Yonghe Exotic Medical", "Yonghe", "Open until 22:00"],
-          ["Sanchong Veterinary ER", "Sanchong", "Open 24h"],
-          ["Muzha Rabbit & Small Animal", "Wenshan", "Open until 22:00"],
-          ["Minsheng East Pet Clinic", "Minsheng", "Open until 21:30"],
-          ["Dunhua Rabbit Referral Desk", "Dunhua", "Open until 23:00"],
-          ["Taoyuan Rabbit Emergency Partner", "Taoyuan", "Open 24h"],
-          ["Xindian Exotic Clinic", "Xindian", "Open until 22:00"],
-          ["Linyi Street Veterinary Care", "Linyi", "Open until 21:30"]
+          { name: "Topvet Animal Hospital", area: "Yonghe / Taipei area", status: "Rabbits & exotics", phone: "02-8921-1700", url: "https://www.topvet.com.tw/", evidence: "Advertises care for rabbits, turtles, guinea pigs, sugar gliders, ferrets and other pets" },
+          { name: "National Animal Hospital Taipei Branch", area: "Taipei", status: "24h ICU; rabbits listed", phone: "", url: "https://www.vet.com.tw/en/about2.php", evidence: "English site says Taipei branch provides 24-hour emergency and ICU service for dogs, cats and rabbits" },
+          { name: "Da'an Animal Hospital", area: "Da'an", status: "24h emergency", phone: "", url: "https://daan-vet.com/", evidence: "24-hour animal emergency hospital; call to confirm rabbit capability" },
+          { name: "Dacyun Animal Hospital", area: "Wenshan", status: "24h emergency", phone: "02-7750-5028", url: "https://www.dacyun-vet.tw/", evidence: "24-hour Taipei emergency room; public page lists dogs/cats, so confirm rabbit acceptance" },
+          { name: "Madagascar Animal Hospital", area: "Banqiao / New Taipei", status: "Special-pet hospital; rabbits listed", phone: "02-8259-5001", url: "https://www.madagascar.com.tw/", evidence: "Official site says it provides professional care for special pets including rabbits, with serious and general internal/surgical care" }
         ]
       },
       singapore: {
-        title: "Singapore clinics",
-        note: "Clinics for Singapore rabbit owners who want clear emergency guidance, fast call prep, and practical recovery advice after the vet visit.",
+        title: "Singapore verified clinics",
+        note: "Real Singapore providers with public evidence of 24h emergency and/or rabbit/exotic capability. Call first and ask whether an exotics vet is available now.",
         clinics: [
-          ["Tampines Rabbit Emergency Clinic", "Tampines", "Open 24h"],
-          ["Katong Exotic Hospital", "Katong", "Open until 23:00"],
-          ["Queenstown Veterinary ER", "Queenstown", "Open 24h"],
-          ["Woodlands Rabbit & Small Animal", "Woodlands", "Open until 22:00"],
-          ["Orchard Companion Animal Hospital", "Orchard", "Open 24h"],
-          ["Bukit Timah Exotic Practice", "Bukit Timah", "Open until 22:00"],
-          ["Novena Veterinary Urgent Care", "Novena", "Open 24h"],
-          ["Toa Payoh Rabbit Clinic", "Toa Payoh", "Open until 22:00"],
-          ["Jurong East Pet ER", "Jurong East", "Open 24h"],
-          ["Serangoon Exotic Medical", "Serangoon", "Open until 23:00"],
-          ["Holland Village Animal Clinic", "Holland Village", "Open until 22:00"],
-          ["Marine Parade Rabbit Care", "Marine Parade", "Open until 21:30"],
-          ["Punggol Veterinary Emergency", "Punggol", "Open 24h"],
-          ["Clementi Exotic Recovery Clinic", "Clementi", "Open until 22:00"],
-          ["River Valley Pet Hospital", "River Valley", "Open until 23:00"],
-          ["Ang Mo Kio Rabbit Clinic", "Ang Mo Kio", "Open until 22:00"],
-          ["Bedok Animal Medical Centre", "Bedok", "Open 24h"],
-          ["Sentosa Companion Clinic", "Sentosa", "Open until 21:00"],
-          ["Changi Pet Emergency Desk", "Changi", "Open 24h"],
-          ["Bishan Rabbit & Vet Centre", "Bishan", "Open until 22:00"]
+          { name: "Beecroft Animal Specialist & Emergency Hospital", area: "Alexandra", status: "24h emergency; rabbits/exotics", phone: "+65 6996 1812", url: "https://beecroft.com.sg/", evidence: "24-hour emergency and dedicated avian/exotics service including rabbits" },
+          { name: "Beecroft Avian & Exotics Veterinary Clinic", area: "Alexandra", status: "Exotics specialist; emergency support", phone: "+65 6996 1812", url: "https://beecroft.com.sg/avian-and-exotics/", evidence: "Dedicated exotics service; rabbits listed; walk-in emergencies accepted" },
+          { name: "Advanced VetCare Veterinary Centre", area: "Bedok / Balestier", status: "24h emergency; rabbits listed", phone: "", url: "https://www.advancedvetcare.sg/", evidence: "24/7 emergency; treats dogs, cats, rabbits, birds and small animals" },
+          { name: "Animal Wellness Referral Centre", area: "Bukit Timah", status: "24h emergency; exotics", phone: "+65 6530 3530", url: "https://www.awrc.sg/service/exotic-animals/", evidence: "24-hour emergency vet; exotics service" },
+          { name: "Vet Affinity", area: "Bukit Batok", status: "Rabbits; emergency triage", phone: "+65 6970 7505", url: "https://www.vetaffinity.com.sg/", evidence: "Rabbit and exotic pet care; after-hours emergency contacts listed" }
         ]
       },
       bangkok: {
-        title: "Bangkok clinics",
-        note: "Clinics that can help Bangkok rabbit owners move quickly from worry to a vet visit, with Thai and English call-prep support.",
+        title: "Bangkok verified clinics",
+        note: "Real Bangkok / Thailand providers with public emergency and/or exotic-pet evidence. Call first and confirm a rabbit-experienced clinician is on duty.",
         clinics: [
-          ["Bangkok Rabbit Hospital — Thonglor", "Thonglor", "Open 24h"],
-          ["Sukhumvit Veterinary ER", "Sukhumvit", "Open 24h"],
-          ["Exotic Specialty Clinic — Phrom Phong", "Phrom Phong", "Open until 22:00"],
-          ["Ari Rabbit & Small Animal Clinic", "Ari", "Open until 23:00"],
-          ["Sathorn Pet Emergency Desk", "Sathorn", "Open 24h"],
-          ["Silom Veterinary Hospital", "Silom", "Open until 23:00"],
-          ["Ekkamai Rabbit Care Centre", "Ekkamai", "Open until 22:00"],
-          ["Rama 9 Animal Medical Center", "Rama 9", "Open 24h"],
-          ["Chatuchak Exotic Clinic", "Chatuchak", "Open until 22:00"],
-          ["Lat Phrao Veterinary ER", "Lat Phrao", "Open 24h"],
-          ["On Nut Rabbit Clinic", "On Nut", "Open until 22:00"],
-          ["Bang Na Pet Hospital", "Bang Na", "Open until 23:00"],
-          ["Ratchada Companion Animal ER", "Ratchada", "Open 24h"],
-          ["Thonglor Recovery Vet", "Thonglor", "Open until 22:00"],
-          ["Phaya Thai Rabbit Hospital", "Phaya Thai", "Open until 23:00"],
-          ["Nonthaburi Animal Emergency", "Nonthaburi", "Open 24h"],
-          ["Samyan Exotic Practice", "Samyan", "Open until 22:00"],
-          ["Pinklao Veterinary Urgent Care", "Pinklao", "Open until 23:00"],
-          ["Asoke Rabbit & GI Clinic", "Asoke", "Open until 22:00"],
-          ["Huai Khwang Pet ER", "Huai Khwang", "Open 24h"]
+          { name: "Chulalongkorn Small Animal Teaching Hospital", area: "Pathum Wan", status: "24h emergency; exotic clinic", phone: "0 2218 9810", url: "https://www.chula.ac.th/en/services/small-animal-teaching-hospital/", evidence: "Emergency clinic open 24h; services include exotic animal medicine" },
+          { name: "UVET Animal Hospital", area: "Bangkok", status: "24h emergency; exotics", phone: "", url: "https://www.uvethospital.com/", evidence: "24-hour emergency cases; exotic-pet center" },
+          { name: "Vetazoo Exotic Pet Hospital", area: "Pattaya / East Coast", status: "24h exotic hospital; rabbits", phone: "+66 82 662 7999", url: "https://exoticpethospital.com/", evidence: "24-hour exotic animal hospital; rabbits listed" },
+          { name: "Phyathai 7 Animal Hospital Exotic Pets Center", area: "Bangkok", status: "24h hospital; exotics", phone: "", url: "https://www.phyathai7pet.com/dr-mew-exotic-pets", evidence: "Open 24 hrs; exotic pets center with rabbit/rodent training noted" },
+          { name: "Thonglor Pet Hospital", area: "Bangkok", status: "24/7; exotic pet clinic", phone: "", url: "https://thonglorpet.com/en/", evidence: "Official site states open 24/7 for dogs, cats and exotic pets, with an Exotic Pet Clinic" }
         ]
       }
     };
@@ -2496,20 +2502,29 @@
       clinicTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.clinicMarket === market));
       if (clinicMarketTitle) clinicMarketTitle.textContent = marketData.title;
       if (clinicMarketNote) clinicMarketNote.textContent = marketData.note;
-      if (clinicCountLabel) clinicCountLabel.textContent = marketData.title;
+      if (clinicCountLabel) clinicCountLabel.textContent = `${marketData.clinics.length} listings`;
       if (!clinicGrid) return;
-      clinicGrid.innerHTML = marketData.clinics.map(([name, area, status], index) => {
+      clinicGrid.innerHTML = marketData.clinics.map((clinic, index) => {
         const tags = tagSets[index % tagSets.length].map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
-        const statusClass = status.includes("24h") ? "open24" : "";
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const mapsQuery = encodeURIComponent(`${clinic.name} ${clinic.area}`);
+        const phoneLink = clinic.phone
+          ? `<a class="secondary" href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}" aria-label="Call ${escapeHTML(clinic.name)}">Call ${escapeHTML(clinic.phone)}</a>`
+          : "";
         return `
           <article class="clinic-card">
-            <div class="status ${statusClass}">${escapeHTML(status)}</div>
+            <div class="status ${statusClass}">${escapeHTML(clinic.status)}</div>
             <div>
-              <h5>${escapeHTML(name)}</h5>
-              <div class="area">${escapeHTML(area)}</div>
+              <h5>${escapeHTML(clinic.name)}</h5>
+              <div class="area">${escapeHTML(clinic.area)}</div>
             </div>
             <div class="clinic-tags">${tags}</div>
-            <a href="#now">Check emergency signs</a>
+            <p class="clinic-evidence">${escapeHTML(clinic.evidence)}</p>
+            <div class="clinic-actions">
+              ${phoneLink}
+              <a href="${clinic.url}" target="_blank" rel="noreferrer" aria-label="Open official website for ${escapeHTML(clinic.name)}">Official site</a>
+              <a class="secondary" href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" rel="noreferrer" aria-label="Open map search for ${escapeHTML(clinic.name)}">Map</a>
+            </div>
           </article>
         `;
       }).join("");
@@ -2545,16 +2560,17 @@
       const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
       const keywords = issueKeywords[selectedIssue] || [];
       const matched = marketData.clinics
-        .map(([name, area, status], index) => ({ name, area, status, tags: tagSets[index % tagSets.length], index }))
+        .map((clinic, index) => ({ ...clinic, tags: tagSets[index % tagSets.length], index }))
         .sort((a, b) => {
           const aScore = keywords.filter((keyword) => a.tags.includes(keyword)).length + (a.status.includes("24h") ? 1 : 0);
           const bScore = keywords.filter((keyword) => b.tags.includes(keyword)).length + (b.status.includes("24h") ? 1 : 0);
           return bScore - aScore || a.index - b.index;
         })
         .slice(0, 3);
-      clinicFinderResults.innerHTML = matched.map(({ name, area, status }) => {
-        const statusClass = status.includes("24h") ? "open24" : "";
-        return `<div class="clinic-result"><b>${escapeHTML(name)}</b><span class="meta ${statusClass}">${escapeHTML(status)} · ${escapeHTML(area)}</span></div>`;
+      clinicFinderResults.innerHTML = matched.map((clinic) => {
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const phone = clinic.phone ? `<a href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}">Call</a>` : "";
+        return `<div class="clinic-result"><b>${escapeHTML(clinic.name)}</b><span class="meta ${statusClass}">${escapeHTML(clinic.status)} · ${escapeHTML(clinic.area)}</span>${phone}<a href="${clinic.url}" target="_blank" rel="noreferrer">Official site</a></div>`;
       }).join("");
       renderClinicMarket(market);
     };
@@ -2575,6 +2591,15 @@
         const issue = escapeHTML(data.get("main-issue") || "not selected");
         const duration = escapeHTML(data.get("duration") || "not selected");
         const notes = escapeHTML(data.get("vet-notes") || "No extra notes entered.");
+        const plainSummary = [
+          "Rabbit emergency summary",
+          `Rabbit age: ${data.get("rabbit-age") || "not entered"}`,
+          `Weight: ${data.get("rabbit-weight") || "not entered"}`,
+          `Main issue: ${data.get("main-issue") || "not selected"}`,
+          `Duration: ${data.get("duration") || "not selected"}`,
+          `Notes: ${data.get("vet-notes") || "No extra notes entered."}`,
+          "Next step: call the clinic and ask whether the rabbit should be seen now."
+        ].join("\n");
 
         summaryBox.hidden = false;
         summaryBox.innerHTML = `
@@ -2586,6 +2611,9 @@
           Notes: ${notes}<br>
           Next step: call the clinic and read this summary before asking whether the rabbit should be seen now.
         `;
+        if (lineShareLink) {
+          lineShareLink.href = `https://line.me/R/share?text=${encodeURIComponent(plainSummary)}`;
+        }
       });
     }
   </script>
