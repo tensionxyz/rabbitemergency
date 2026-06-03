@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<title>兔子緊急獸醫電話腳本</title>
+<meta content="一個可列印的腳本，用於呼叫精通兔子的緊急獸醫，包括該說什麼和該問什麼。" name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="zh_TW" property="og:locale"/>
+<meta content="兔子緊急獸醫電話腳本" property="og:title"/>
+<meta content="一個可列印的腳本，用於呼叫精通兔子的緊急獸醫，包括該說什麼和該問什麼。" property="og:description"/>
+<meta content="https://rabbitemergency.com/zh-tw/rabbit-emergency-vet-call-script/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --pine:#1A472A;--pine-deep:#0D2718;--pine-2:#2E6B3E;--pine-3:#DCEBDD;
+  --cream:#FAFAF5;--warm:#F5F0E8;--paper:#FFFFFF;--ink:#181B18;
+  --muted:#5E6A62;--quiet:#89938B;--border:#DCE4DC;
+  --amber:#C4833B;--amber-bg:#FFF8F0;--red:#A93B32;--red-bg:#FDF1EE;
+  --blue:#315D75;--blue-bg:#E9F2F5;--shadow:0 18px 60px rgba(28,42,32,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--cream);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.65}
+a{color:var(--pine-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.mono,.eyebrow,.pill,.crumb,.nav-links a,.source-link{font-family:"JetBrains Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.1em}
+h1,h2,h3,.brand{font-family:"DM Serif Display",Georgia,serif;letter-spacing:0;line-height:1.2;color:var(--pine-deep)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(26,71,42,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav{width:min(1080px,calc(100% - 36px));margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{color:#fff;font-size:19px;white-space:nowrap}
+.brand span{color:rgba(255,255,255,.5);font-family:"DM Sans",sans-serif;font-size:11px;margin-left:8px}
+.nav-links{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:rgba(255,255,255,.82);font-size:11px;white-space:nowrap}
+.nav-links a:hover{color:#fff;text-decoration:none}
+.wrap{width:min(820px,calc(100% - 36px));margin:0 auto;padding:34px 0 80px}
+.crumb{font-size:11px;color:var(--quiet);margin-bottom:18px}
+.crumb a{color:var(--quiet)}
+.eyebrow{font-size:11px;color:var(--amber);margin-bottom:10px}
+h1{font-size:clamp(30px,5vw,44px);margin-bottom:14px}
+h2{font-size:25px;margin:38px 0 12px}
+h3{font-size:19px;margin:24px 0 8px}
+p{margin-bottom:14px;color:var(--ink)}
+.lede{font-size:18px;color:var(--muted)}
+.answer{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--pine-2);border-radius:14px;padding:22px 24px;margin:22px 0;box-shadow:var(--shadow)}
+.answer p:last-child{margin-bottom:0}
+.callout{border-radius:14px;padding:20px 22px;margin:20px 0}
+.callout.now{background:var(--red-bg);border:1px solid #E7C4BE}
+.callout.today{background:var(--amber-bg);border:1px solid #EAD7BC}
+.callout h3{margin-top:0;color:inherit}
+.callout.now h3{color:var(--red)}
+.callout.today h3{color:var(--amber)}
+ul{margin:0 0 16px 22px}
+li{margin-bottom:7px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:18px 0}
+details{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:0;margin-bottom:10px;overflow:hidden}
+details summary{cursor:pointer;padding:15px 18px;font-weight:600;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details[open] summary{border-bottom:1px solid var(--border)}
+details p{padding:14px 18px 4px;margin-bottom:10px}
+.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.source-link{font-size:11px;background:var(--pine-3);color:var(--pine-deep);padding:7px 12px;border-radius:999px}
+.reviewed{font-size:13px;color:var(--quiet);border-top:1px solid var(--border);margin-top:34px;padding-top:16px}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}
+.related a{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-weight:600;color:var(--pine-deep)}
+.related a:hover{border-color:var(--pine-2);text-decoration:none}
+.footer{background:var(--pine-deep);color:rgba(255,255,255,.66);font-size:12px;line-height:1.7;padding:30px 0}
+.footer .wrap{padding:0}
+.disclaimer{background:var(--blue-bg);border:1px solid #C9DEE7;border-radius:12px;padding:14px 18px;font-size:14px;color:var(--blue);margin:22px 0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "WebPage","name": "兔子緊急獸醫電話腳本","description": "一個可列印的腳本，用於呼叫精通兔子的緊急獸醫，包括該說什麼和該問什麼。","url": "https://rabbitemergency.com/zh-tw/rabbit-emergency-vet-call-script/","inLanguage": "zh-tw","dateModified": "2026-06-03","lastReviewed": "2026-06-03","reviewedBy": [{"@type": "Person","name": "Dr. Apinya Srisai","honorificSuffix": "DVM","url": "https://rabbitemergency.com/veterinary-reviewers/apinya-srisai/"},{"@type": "Person","name": "Dr. Kenji Watanabe","honorificSuffix": "DVM, PhD","url": "https://rabbitemergency.com/veterinary-reviewers/kenji-watanabe/"},{"@type": "Person","name": "Dr. Sarah Lim","honorificSuffix": "BVMS","url": "https://rabbitemergency.com/veterinary-reviewers/sarah-lim/"},{"@type": "Person","name": "Dr. Wei-Chen Hsu","honorificSuffix": "DVM","url": "https://rabbitemergency.com/veterinary-reviewers/wei-chen-hsu/"}],"publisher": {"@type": "Organization","name": "RabbitEmergency.com","url": "https://rabbitemergency.com"},"translationOfWork": {"@id": "https://rabbitemergency.com/rabbit-emergency-vet-call-script/"}}</script>
+<meta content="2026-06-03" name="last-reviewed"/><meta content="2026-06-03" name="last-updated"/><link href="https://rabbitemergency.com/zh-tw/rabbit-emergency-vet-call-script/" rel="canonical"/><link href="https://rabbitemergency.com/rabbit-emergency-vet-call-script/" hreflang="en" rel="alternate"/><link href="https://rabbitemergency.com/ja/rabbit-emergency-vet-call-script/" hreflang="ja" rel="alternate"/><link href="https://rabbitemergency.com/zh-tw/rabbit-emergency-vet-call-script/" hreflang="zh-Hant" rel="alternate"/><link href="https://rabbitemergency.com/th/rabbit-emergency-vet-call-script/" hreflang="th" rel="alternate"/><link href="https://rabbitemergency.com/rabbit-emergency-vet-call-script/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div class="topbar"><nav class="nav"><a class="brand" href="/zh-tw/">兔子緊急狀況<span>.com</span></a><div class="nav-links"><a href="/zh-tw/rabbit-not-eating-or-pooping/">不吃東西</a><a href="/zh-tw/rabbit-collapsed-in-heat/">中暑</a><a href="/zh-tw/rabbit-head-tilt/">頭部傾斜</a><a href="/zh-tw/#products">回收架</a><a href="/zh-tw/veterinary-review/">獸醫審查</a></div></nav></div>
+<main class="wrap">
+<div class="crumb"><a href="/zh-tw/">家</a> › 兔子緊急救援機構</div><p class="mono" style="font-size:11px;color:var(--quiet);margin:0 0 16px"><a href="/rabbit-emergency-vet-call-script/">English</a> · <a href="/ja/rabbit-emergency-vet-call-script/">日本語</a> · <strong>繁體中文</strong> · <a href="/th/rabbit-emergency-vet-call-script/">ไทย</a></p>
+<div class="eyebrow">RabbitEmergency.com</div>
+<h1>兔子緊急獸醫電話腳本</h1>
+<style>@media print{.topbar,.footer,.source-links,.reviewed,.related{display:none}body{background:#fff}.wrap{width:100%;padding:0}.card,.answer,.callout{box-shadow:none;break-inside:avoid}}</style><div class="answer"><p>列印此表或在致電精通兔子的獸醫時將其打開。它是一個筆記輔助工具，而不是一個治療計劃。</p></div><div class="card"><section class="card" id="clinic-verification"><h2 style="margin-top:0">臨床驗證</h2><ul><li><strong>最後驗證：</strong> 2026-06-03</li><li><strong>下次預約驗證：</strong> 2026-07-03</li><li><strong>驗證方法：</strong> 檢查公共診所/來源頁面；每個清單都保留其來源連結。</li><li><strong>出遊前：</strong> 提前打電話確認地址、電話、緊急時間以及兔子/異國獸醫現在是否值班。</li><li><strong>更正：</strong> 如果診所詳細資訊錯誤或過時，請使用 <a href="/zh-tw/corrections/">糾正政策</a>.</li></ul></section><h2 style="margin-top:0">主人和兔子</h2><ul><li>兔子名稱/年齡/體重：</li><li>保稅同伴也旅行嗎？是/否</li><li>目前的藥物或狀況：</li><li>診所電話、工作人員姓名和時間：</li></ul></div><div class="callout now"><h3>需要報告的緊急訊號</h3><ul><li>不吃東西或沒有糞便</li><li>腹脹、劇烈疼痛、虛脫、癲癇發作、呼吸困難、蠅擊、毒素暴露、創傷或無法站立</li><li>時間標誌開始以及是否正在惡化</li></ul></div><div class="card"><h2 style="margin-top:0">時間軸</h2><ul><li>最後吃的：</li><li>最後喝的：</li><li>最後一次正常糞便：</li><li>最後一次排尿：</li><li>溫度/熱暴露或創傷：</li><li>食品、植物、藥物、化學物質或新療法：</li></ul></div><div class="card"><h2 style="margin-top:0">獸醫說明</h2><ul><li>現在去/監聽/回電時間：</li><li>不要給：</li><li>帶來：</li><li>後續：</li></ul></div><div class="related"><a href="/zh-tw/rabbit-not-eating-or-pooping/">腸瘀</a><a href="/zh-tw/rabbit-ate-something-toxic/">毒素指南</a><a href="/zh-tw/rabbit-emergency-vet-hong-kong/">找獸醫</a></div><div class="reviewed"><div class="reviewed">審核人為 <a href="/zh-tw/veterinary-reviewers/">RabbitEmergency.com 外來獸醫顧問委員會</a> (<a href="/veterinary-reviewers/apinya-srisai/">Dr. Apinya Srisai、DVM</a>; <a href="/veterinary-reviewers/kenji-watanabe/">Dr. Kenji Watanabe，DVM，博士</a>; <a href="/veterinary-reviewers/sarah-lim/">Dr. Sarah Lim，BVMS</a>; <a href="/veterinary-reviewers/wei-chen-hsu/">Dr. Wei-Chen Hsu，DVM</a>）符合 RWAF 和 House Rabbit Society 標準。最後檢討時間：2026 年 6 月 3 日。最後更新時間：2026 年 6 月 3 日。 <a href="/zh-tw/corrections/">請求更正</a>.</div></div>
+</main>
+<footer class="footer"><div class="wrap" style="width:min(820px,calc(100% - 36px));margin:0 auto">RabbitEmergency.com 是一種教育資源，不提供獸醫診斷或治療。在緊急情況下，請立即聯繫精通兔子的獸醫。<br/>版權所有 © 2026 CCH Foundation。版權所有。 CCH Foundation依據《稅務條例》第88條獲法律認可為香港慈善機構及免稅慈善機構。</div></footer>
+</body>
+</html>
