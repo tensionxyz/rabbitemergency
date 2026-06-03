@@ -209,10 +209,6 @@
   - 繁體中文: https://rabbitemergency.com/zh-tw/veterinary-review/
   - ไทย: https://rabbitemergency.com/th/veterinary-review/
 
-## Veterinary review board
-- Review policy: https://rabbitemergency.com/veterinary-review/
-- Board: Dr. Srisai, Dr. Watanabe, Dr. Lim, Dr. Hsu. Last reviewed: 2026-06-03.
-
 ## Rabbit emergency signs hub
 - [Rabbit Emergency Signs: 100 Warning Signs and When to Go Now](https://rabbitemergency.com/rabbit-emergency-signs/): 100 source-cited sign-specific triage pages for rabbit owners.
 - [うさぎの救急サイン: 今すぐ受診すべき100の警告](https://rabbitemergency.com/ja/rabbit-emergency-signs/): 100 source-cited sign-specific triage pages for rabbit owners.

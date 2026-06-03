@@ -940,11 +940,15 @@ def scrub_unverified_review_claims():
         text = text.replace("is reviewed by an exotic veterinary advisory board", "is source-cited and pending named veterinary review")
         text = text.replace("reviewed by an exotic veterinary advisory board against RWAF, House Rabbit Society, and exotic small-mammal medicine standards", "source-cited and pending named veterinary review against RWAF, House Rabbit Society, and exotic small-mammal medicine standards")
         text = text.replace("reviewed against ISFM, AAFP, and AAHA cat-care standards by our regional veterinary advisory board", "source-cited and pending named veterinary review")
+        text = text.replace("reviewed by the RabbitEmergency.com Veterinary Review Board", "source-cited and pending named veterinary review")
+        text = text.replace("reviewed by our RabbitEmergency.com Veterinary Review Board", "source-cited and pending named veterinary review")
+        text = text.replace("RabbitEmergency.com Veterinary Review Board", "RabbitEmergency.com review policy")
         text = re.sub(r'<a href="/veterinary-reviewers/">.*?</a>', '<a href="/veterinary-review/">Review policy</a>', text)
         text = re.sub(r'<a href="/ja/veterinary-reviewers/">.*?</a>', '<a href="/ja/veterinary-review/">レビューポリシー</a>', text)
         text = re.sub(r'<a href="/zh-tw/veterinary-reviewers/">.*?</a>', '<a href="/zh-tw/veterinary-review/">審閱政策</a>', text)
         text = re.sub(r'<a href="/th/veterinary-reviewers/">.*?</a>', '<a href="/th/veterinary-review/">นโยบายการตรวจทาน</a>', text)
         text = re.sub(r'<div class="reviewed">.*?</div>', f'<div class="reviewed">Review status: {escape(REVIEW)}</div>', text, flags=re.S)
+        text = re.sub(r'<p class="reviewed">Reviewed by .*?</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text, flags=re.S)
         text = re.sub(r'<p class="reviewed">Veterinary review: pending\..*?</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text, flags=re.S)
         text = re.sub(r'<h2>Review status</h2>\s*<p class="reviewed">Source-cited guidance; pending named veterinary review\.</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text)
         text = re.sub(r'Reviewed by the RabbitEmergency\.com exotic veterinary advisory board.*?Last reviewed: 2026-06-03\.', f'Review status: {REVIEW}', text)
@@ -1012,6 +1016,7 @@ def update_llms():
     )
     text = re.sub(r"\n## Rabbit emergency signs hub\n.*?(?=\n## |\Z)", "", text, flags=re.S)
     text = re.sub(r"\n## All current indexable pages\n.*?(?=\n## |\Z)", "", text, flags=re.S)
+    text = re.sub(r"\n## Veterinary review board\n.*?(?=\n## |\Z)", "", text, flags=re.S)
     text = text.rstrip() + "\n" + section + all_pages
     path.write_text(text, encoding="utf-8")
 
@@ -1057,6 +1062,14 @@ def polish_homepages():
         text = text.replace(
             "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our veterinary advisory board.",
             "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards, with source-cited pages pending named veterinary review.",
+        )
+        text = text.replace(
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our RabbitEmergency.com Veterinary Review Board.",
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards, with source-cited pages pending named veterinary review.",
+        )
+        text = text.replace(
+            "Every guide is reviewed by the RabbitEmergency.com Veterinary Review Board against RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards before publication.",
+            "Every guide follows RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards, with source-cited pages pending named veterinary review.",
         )
         text = text.replace(
             "Vet-reviewed guides written for the moments owners panic-search.",
