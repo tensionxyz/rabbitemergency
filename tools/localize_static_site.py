@@ -65,10 +65,6 @@ PROTECT_TERMS = [
     "VCA Hospitals",
     "E. cuniculi",
     "CCH Foundation",
-    "Dr. Apinya Srisai",
-    "Dr. Kenji Watanabe",
-    "Dr. Sarah Lim",
-    "Dr. Wei-Chen Hsu",
 ]
 
 NO_TRANSLATE_TEXT = {
@@ -130,7 +126,6 @@ JSON_KEYS_NEVER_TRANSLATE = {
     "image",
     "telephone",
     "address",
-    "lastReviewed",
     "dateModified",
     "datePublished",
     "honorificSuffix",
