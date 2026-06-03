@@ -487,6 +487,45 @@
   .pill.blue { background: var(--blue-bg); color: var(--blue); }
   .pill.lav { background: var(--lav-bg); color: var(--lav); }
 
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hub-card {
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--pine-deep);
+  }
+
+  .hub-card:hover {
+    border-color: rgba(46, 107, 62, 0.45);
+    box-shadow: 0 14px 34px rgba(28, 42, 32, 0.08);
+    text-decoration: none;
+  }
+
+  .hub-card strong {
+    display: block;
+    color: var(--pine-deep);
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .hub-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .triage-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1487,6 +1526,7 @@
     .region-band { flex-direction: column; align-items: flex-start; }
     .board-grid { grid-template-columns: repeat(2, 1fr); }
     .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .clinic-network-head { grid-template-columns: 1fr; }
     .terms-grid { grid-template-columns: 1fr; }
   }
@@ -1495,6 +1535,8 @@
     .board-grid { grid-template-columns: 1fr; }
     .cf-row { flex-direction: column; }
     .clinic-directory-grid { grid-template-columns: 1fr; }
+    .hub-grid { grid-template-columns: 1fr; }
+    .hub-card { min-height: 112px; padding: 16px; }
     .clinic-market-header { align-items: flex-start; flex-direction: column; }
     .clinic-finder select { max-width: none !important; }
     .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
@@ -2321,6 +2363,26 @@
 </div>
 </div>
 </section>
+<section aria-label="Rabbit emergency hubs" class="section" id="emergency-hubs">
+<div class="section-head">
+<div class="section-title">
+<p class="eyebrow">緊急クラスター</p>
+<h2>ウサギの緊急拠点</h2>
+<p>情報源となる回答をすぐに必要とするオーナーやクリニック向けに、条件クラスター、印刷可能なツール、レビュー担当者による校正、および修正ルートを提供します。</p>
+</div>
+<span class="pill blue">調達可能な資産</span>
+</div>
+<div class="hub-grid">
+<a class="hub-card" href="/ja/rabbit-gut-stasis-emergency-hub/"><strong>腸うっ滞ハブ</strong><span>食べない、膨満感、脱水症状、便の変化、回復経路。</span></a>
+<a class="hub-card" href="/ja/rabbit-poisoning-emergency-hub/"><strong>中毒ハブ</strong><span>毒素、安全でない食品、緊急摂取のトリアージ。</span></a>
+<a class="hub-card" href="/ja/rabbit-breathing-emergency-hub/"><strong>呼吸ハブ</strong><span>苦しそうな呼吸、熱の虚脱、窒息、鼻を鳴らした音、そしてショック。</span></a>
+<a class="hub-card" href="/ja/rabbit-urinary-emergency-hub/"><strong>尿路ハブ</strong><span>血液、いきみ、痛みの兆候、脱水、および段階的閾値。</span></a>
+<a class="hub-card" href="/ja/rabbit-injury-trauma-emergency-hub/"><strong>怪我の拠点</strong><span>転倒、傷、目の怪我、後ろ足の脱力、ハエの攻撃、しこり。</span></a>
+<a class="hub-card" href="/ja/rabbit-emergency-printables/"><strong>印刷可能なチェックリスト</strong><span>獣医師の診察台本、毒素摂取シート、輸送記録、回復記録。</span></a>
+<a class="hub-card" href="/ja/veterinary-review/"><strong>レビューポリシー</strong><span>目に見える資格情報、レビュー範囲、編集責任。</span></a>
+<a class="hub-card" href="/ja/corrections/"><strong>是正方針</strong><span>クリニックの更新、ソースの変更、翻訳の修正、安全性の修正。</span></a>
+</div>
+</section>
 <section class="source-panel" id="sources">
 <h2>臨床情報源と基準</h2>
 <p>緊急時のガイドラインは、RWAF、House Rabbit Society、および外来小型哺乳類の基準に従い、獣医諮問委員会によって審査されます。リカバリー製品情報は、Alfavet の RodiCare ドイツ獣医チャンネル シリーズおよび WOOLY デイリーケア シリーズに基づいています。</p>
@@ -2336,7 +2398,7 @@
         著作権 © 2026 CCH Foundation.無断転載を禁じます。 CCH Foundation は、内国歳入条例第 88 条に基づき、香港の慈善団体および非課税慈善団体として法的に認められており、慈善、教育、香港地域社会の利益を目的として設立されました。
       </footer>
 </div>
-<section class="section"><div class="section-head"><p class="eyebrow">緊急クラスター</p><h2>ウサギの緊急拠点</h2></div><div class="related"><a href="/ja/rabbit-gut-stasis-emergency-hub/">腸うっ滞ハブ</a><a href="/ja/rabbit-poisoning-emergency-hub/">中毒ハブ</a><a href="/ja/rabbit-breathing-emergency-hub/">呼吸ハブ</a><a href="/ja/rabbit-urinary-emergency-hub/">尿路ハブ</a><a href="/ja/rabbit-injury-trauma-emergency-hub/">怪我の拠点</a><a href="/ja/rabbit-emergency-printables/">印刷可能なチェックリスト</a><a href="/ja/veterinary-review/">レビューポリシー</a><a href="/ja/corrections/">是正方針</a></div></section></main>
+</main>
 <script>
     const marketButtons = document.querySelectorAll("[data-market-filter]");
     const storyCards = document.querySelectorAll(".testi-card[data-market]");

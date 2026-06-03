@@ -487,6 +487,45 @@
   .pill.blue { background: var(--blue-bg); color: var(--blue); }
   .pill.lav { background: var(--lav-bg); color: var(--lav); }
 
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hub-card {
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--pine-deep);
+  }
+
+  .hub-card:hover {
+    border-color: rgba(46, 107, 62, 0.45);
+    box-shadow: 0 14px 34px rgba(28, 42, 32, 0.08);
+    text-decoration: none;
+  }
+
+  .hub-card strong {
+    display: block;
+    color: var(--pine-deep);
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .hub-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .triage-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1487,6 +1526,7 @@
     .region-band { flex-direction: column; align-items: flex-start; }
     .board-grid { grid-template-columns: repeat(2, 1fr); }
     .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .clinic-network-head { grid-template-columns: 1fr; }
     .terms-grid { grid-template-columns: 1fr; }
   }
@@ -1495,6 +1535,8 @@
     .board-grid { grid-template-columns: 1fr; }
     .cf-row { flex-direction: column; }
     .clinic-directory-grid { grid-template-columns: 1fr; }
+    .hub-grid { grid-template-columns: 1fr; }
+    .hub-card { min-height: 112px; padding: 16px; }
     .clinic-market-header { align-items: flex-start; flex-direction: column; }
     .clinic-finder select { max-width: none !important; }
     .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
@@ -2321,6 +2363,26 @@
 </div>
 </div>
 </section>
+<section aria-label="Rabbit emergency hubs" class="section" id="emergency-hubs">
+<div class="section-head">
+<div class="section-title">
+<p class="eyebrow">กลุ่มฉุกเฉิน</p>
+<h2>ศูนย์ฉุกเฉินของกระต่าย</h2>
+<p>กลุ่มอาการ เครื่องมือที่พิมพ์ได้ หลักฐานของผู้ตรวจสอบ และเส้นทางการแก้ไขสำหรับเจ้าของและคลินิกที่ต้องการคำตอบที่มาจากแหล่งที่มาได้อย่างรวดเร็ว</p>
+</div>
+<span class="pill blue">สินทรัพย์ที่หาได้</span>
+</div>
+<div class="hub-grid">
+<a class="hub-card" href="/th/rabbit-gut-stasis-emergency-hub/"><strong>ศูนย์กลางภาวะหยุดนิ่งในลำไส้</strong><span>การไม่รับประทานอาหาร ท้องอืด ภาวะขาดน้ำ อุจจาระเปลี่ยนแปลง และเส้นทางการฟื้นตัว</span></a>
+<a class="hub-card" href="/th/rabbit-poisoning-emergency-hub/"><strong>ศูนย์กลางพิษ</strong><span>สารพิษ อาหารที่ไม่ปลอดภัย และการกลืนกินอย่างเร่งด่วน</span></a>
+<a class="hub-card" href="/th/rabbit-breathing-emergency-hub/"><strong>ศูนย์กลางการหายใจ</strong><span>หายใจลำบาก ร้อนวูบวาบ สำลัก หายใจไม่ออก และช็อก</span></a>
+<a class="hub-card" href="/th/rabbit-urinary-emergency-hub/"><strong>ศูนย์กลางปัสสาวะ</strong><span>เลือด อาการตึง อาการเจ็บปวด ภาวะขาดน้ำ และระดับขีดจำกัดที่เพิ่มขึ้น</span></a>
+<a class="hub-card" href="/th/rabbit-injury-trauma-emergency-hub/"><strong>ศูนย์กลางการบาดเจ็บ</strong><span>การล้ม บาดแผล อาการบาดเจ็บที่ดวงตา ขาหลังอ่อนแรง ฟลายสไตรค์ และก้อนเนื้อ</span></a>
+<a class="hub-card" href="/th/rabbit-emergency-printables/"><strong>รายการตรวจสอบที่พิมพ์ได้</strong><span>สคริปต์เรียกสัตวแพทย์ เอกสารการรับสารพิษ บันทึกการขนส่ง และบันทึกการกู้คืน</span></a>
+<a class="hub-card" href="/th/veterinary-review/"><strong>นโยบายการตรวจทาน</strong><span>ข้อมูลรับรองที่มองเห็นได้ ขอบเขตการตรวจสอบ และความรับผิดชอบของบรรณาธิการ</span></a>
+<a class="hub-card" href="/th/corrections/"><strong>นโยบายการแก้ไข</strong><span>การอัปเดตทางคลินิก การเปลี่ยนแปลงแหล่งที่มา การแก้ไขการแปล และการแก้ไขด้านความปลอดภัย</span></a>
+</div>
+</section>
 <section class="source-panel" id="sources">
 <h2>แหล่งที่มาและมาตรฐานทางคลินิก</h2>
 <p>คำแนะนำในกรณีฉุกเฉินเป็นไปตาม RWAF, House Rabbit Society และมาตรฐานสำหรับสัตว์เลี้ยงลูกด้วยนมขนาดเล็กที่แปลกใหม่ และได้รับการตรวจสอบโดยคณะกรรมการที่ปรึกษาด้านสัตวแพทย์ของเรา ข้อมูลผลิตภัณฑ์เพื่อการฟื้นตัวอิงตามซีรีส์ช่องสัตวแพทย์เยอรมัน RodiCare ของ Alfavet และกลุ่มผลิตภัณฑ์ดูแลรายวัน WOOLY</p>
@@ -2336,7 +2398,7 @@
         ลิขสิทธิ์ © 2026 CCH Foundation. สงวนลิขสิทธิ์. CCH Foundation ได้รับการยอมรับตามกฎหมายว่าเป็นองค์กรการกุศลในฮ่องกงและสถาบันการกุศลที่ได้รับการยกเว้นภาษีภายใต้มาตรา 88 ของกฎหมายสรรพากรภายในประเทศ ซึ่งก่อตั้งขึ้นเพื่อวัตถุประสงค์ด้านการกุศล การศึกษา และผลประโยชน์ของชุมชนในฮ่องกง
       </footer>
 </div>
-<section class="section"><div class="section-head"><p class="eyebrow">กลุ่มฉุกเฉิน</p><h2>ศูนย์ฉุกเฉินของกระต่าย</h2></div><div class="related"><a href="/th/rabbit-gut-stasis-emergency-hub/">ศูนย์กลางภาวะหยุดนิ่งในลำไส้</a><a href="/th/rabbit-poisoning-emergency-hub/">ศูนย์กลางพิษ</a><a href="/th/rabbit-breathing-emergency-hub/">ศูนย์กลางการหายใจ</a><a href="/th/rabbit-urinary-emergency-hub/">ศูนย์กลางปัสสาวะ</a><a href="/th/rabbit-injury-trauma-emergency-hub/">ศูนย์กลางการบาดเจ็บ</a><a href="/th/rabbit-emergency-printables/">รายการตรวจสอบที่พิมพ์ได้</a><a href="/th/veterinary-review/">นโยบายการตรวจทาน</a><a href="/th/corrections/">นโยบายการแก้ไข</a></div></section></main>
+</main>
 <script>
     const marketButtons = document.querySelectorAll("[data-market-filter]");
     const storyCards = document.querySelectorAll(".testi-card[data-market]");

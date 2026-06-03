@@ -488,6 +488,45 @@
   .pill.blue { background: var(--blue-bg); color: var(--blue); }
   .pill.lav { background: var(--lav-bg); color: var(--lav); }
 
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hub-card {
+    min-height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--pine-deep);
+  }
+
+  .hub-card:hover {
+    border-color: rgba(46, 107, 62, 0.45);
+    box-shadow: 0 14px 34px rgba(28, 42, 32, 0.08);
+    text-decoration: none;
+  }
+
+  .hub-card strong {
+    display: block;
+    color: var(--pine-deep);
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .hub-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .triage-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1488,6 +1527,7 @@
     .region-band { flex-direction: column; align-items: flex-start; }
     .board-grid { grid-template-columns: repeat(2, 1fr); }
     .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .clinic-network-head { grid-template-columns: 1fr; }
     .terms-grid { grid-template-columns: 1fr; }
   }
@@ -1496,6 +1536,8 @@
     .board-grid { grid-template-columns: 1fr; }
     .cf-row { flex-direction: column; }
     .clinic-directory-grid { grid-template-columns: 1fr; }
+    .hub-grid { grid-template-columns: 1fr; }
+    .hub-card { min-height: 112px; padding: 16px; }
     .clinic-market-header { align-items: flex-start; flex-direction: column; }
     .clinic-finder select { max-width: none !important; }
     .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
@@ -2322,6 +2364,26 @@
 </div>
 </div>
 </section>
+<section aria-label="Rabbit emergency hubs" class="section" id="emergency-hubs">
+<div class="section-head">
+<div class="section-title">
+<p class="eyebrow">Emergency clusters</p>
+<h2>Rabbit emergency hubs</h2>
+<p>Condition clusters, printable tools, reviewer proof, and correction routes for owners and clinics who need sourceable answers fast.</p>
+</div>
+<span class="pill blue">Sourceable assets</span>
+</div>
+<div class="hub-grid">
+<a class="hub-card" href="/rabbit-gut-stasis-emergency-hub/"><strong>Gut stasis hub</strong><span>Not eating, bloat, dehydration, stool changes, and recovery routing.</span></a>
+<a class="hub-card" href="/rabbit-poisoning-emergency-hub/"><strong>Poisoning hub</strong><span>Toxin, unsafe-food, and urgent ingestion triage.</span></a>
+<a class="hub-card" href="/rabbit-breathing-emergency-hub/"><strong>Breathing hub</strong><span>Laboured breathing, heat collapse, choking, snuffles, and shock.</span></a>
+<a class="hub-card" href="/rabbit-urinary-emergency-hub/"><strong>Urinary hub</strong><span>Blood, straining, pain signs, dehydration, and escalation thresholds.</span></a>
+<a class="hub-card" href="/rabbit-injury-trauma-emergency-hub/"><strong>Injury hub</strong><span>Falls, wounds, eye injuries, hind-leg weakness, flystrike, and lumps.</span></a>
+<a class="hub-card" href="/rabbit-emergency-printables/"><strong>Printable checklists</strong><span>Vet-call scripts, toxin intake sheets, transport notes, and recovery logs.</span></a>
+<a class="hub-card" href="/veterinary-review/"><strong>Review policy</strong><span>Visible credentials, review scope, and editorial accountability.</span></a>
+<a class="hub-card" href="/corrections/"><strong>Correction policy</strong><span>Clinic updates, source changes, translation fixes, and safety corrections.</span></a>
+</div>
+</section>
 <section class="source-panel" id="sources">
 <h2>Clinical sources &amp; standards</h2>
 <p>Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our veterinary advisory board. Recovery product information is based on Alfavet's RodiCare German vet-channel series and the WOOLY daily-care range.</p>
@@ -2337,7 +2399,7 @@
         Copyright © 2026 CCH Foundation. All rights reserved. CCH Foundation is legally recognized as a Hong Kong charity and tax-exempt charitable institution under Section 88 of the Inland Revenue Ordinance, established for charitable, educational, and Hong Kong community-benefit purposes.
       </footer>
 </div>
-<section class="section"><div class="section-head"><p class="eyebrow">Emergency clusters</p><h2>Rabbit emergency hubs</h2></div><div class="related"><a href="/rabbit-gut-stasis-emergency-hub/">Gut stasis hub</a><a href="/rabbit-poisoning-emergency-hub/">Poisoning hub</a><a href="/rabbit-breathing-emergency-hub/">Breathing hub</a><a href="/rabbit-urinary-emergency-hub/">Urinary hub</a><a href="/rabbit-injury-trauma-emergency-hub/">Injury hub</a><a href="/rabbit-emergency-printables/">Printable checklists</a><a href="/veterinary-review/">Review policy</a><a href="/corrections/">Correction policy</a></div></section></main>
+</main>
 <script>
     const marketButtons = document.querySelectorAll("[data-market-filter]");
     const storyCards = document.querySelectorAll(".testi-card[data-market]");
