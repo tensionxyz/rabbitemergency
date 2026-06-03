@@ -129,6 +129,22 @@ def visible_text(html: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html)).strip()
 
 
+def content_word_count(text: str, path: Path) -> int:
+    """Count useful page length across languages.
+
+    Japanese and Traditional Chinese do not use spaces between most words, so a
+    whitespace-only word count under-reports localized pages. Count Latin/Thai
+    style tokens normally and add a conservative CJK character allowance.
+    """
+    words = re.findall(r"\b[\w'-]+\b", text)
+    rel = path.relative_to(ROOT)
+    locale = rel.parts[0] if rel.parts and rel.parts[0] in {"ja", "zh-tw"} else ""
+    if locale:
+        cjk_chars = re.findall(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]", text)
+        return len(words) + len(cjk_chars) // 2
+    return len(words)
+
+
 def page_kind(path: Path, html: str) -> str:
     slug = path.parent.name
     if slug in HUB_SLUGS:
@@ -285,9 +301,9 @@ def main() -> int:
             if kind == "emergency":
                 if not any(term.lower() in lower_text for term in RED_FLAG_TERMS):
                     issue(issues, "red_flag_missing", str(path.relative_to(ROOT)))
-                words = re.findall(r"\b[\w'-]+\b", text)
-                if len(words) < 600:
-                    issue(issues, "thin_emergency_page", f"{path.relative_to(ROOT)}: {len(words)} words")
+                words = content_word_count(text, path)
+                if words < 600:
+                    issue(issues, "thin_emergency_page", f"{path.relative_to(ROOT)}: {words} words")
                 if not any(term.lower() in lower_text for term in TELL_VET_TERMS):
                     issue(issues, "tell_vet_missing", str(path.relative_to(ROOT)))
 
