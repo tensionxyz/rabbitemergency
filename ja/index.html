@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RabbitEmergency.com |ウサギの緊急救援、外来獣医師の指導、回復サポート</title>
+<meta content="RabbitEmergency.com は、ウサギの飼い主が腸のうっ滞、食欲不振、熱中症などの緊急の警告サインを認識し、ウサギに精通した獣医師に連絡し、Alfavet RodiCare および WOOLY の毎日のケアを含む獣医師の指導による回復サポートを理解するのに役立ちます。香港、日本、台湾、シンガポール、タイのウサギの飼い主によって使用されています。" name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --pine: #1A472A;
+    --pine-deep: #0D2718;
+    --pine-2: #2E6B3E;
+    --pine-3: #DCEBDD;
+    --cream: #FAFAF5;
+    --warm: #F5F0E8;
+    --paper: #FFFFFF;
+    --ink: #181B18;
+    --muted: #5E6A62;
+    --quiet: #89938B;
+    --border: #DCE4DC;
+    --amber: #C4833B;
+    --amber-soft: #E3B36F;
+    --amber-bg: #FFF8F0;
+    --red: #A93B32;
+    --red-bg: #FDF1EE;
+    --blue: #315D75;
+    --blue-bg: #E9F2F5;
+    --lav: #6B5B83;
+    --lav-bg: #F2EEF7;
+    --shadow: 0 18px 60px rgba(28, 42, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button, input, select { font: inherit; }
+
+  :focus-visible {
+    outline: 3px solid rgba(196, 131, 59, 0.55);
+    outline-offset: 3px;
+  }
+
+  .mono,
+  .eyebrow,
+  .pill,
+  .button,
+  .risk-label,
+  .field-label,
+  .nav-links a,
+  .product-meta,
+  .source-link,
+  .stat-label,
+  .city-tag,
+  .feed-tag,
+  .ribbon,
+  th {
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  h1, h2, h3, .brand, .stat-number {
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(26, 71, 42, 0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .brand {
+    color: #fff;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .brand span {
+    color: rgba(255,255,255,0.48);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.66);
+    font-size: 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .nav-links a.cta {
+    background: var(--amber);
+    color: #fff;
+  }
+
+  .nav-links a.cta:hover { background: #b3742f; }
+
+  @media (max-width: 1320px) {
+    .nav-links a[href="#stories"],
+    .nav-links a[href="#faq"] {
+      display: none;
+    }
+  }
+
+  .hero {
+    min-height: 720px;
+    position: relative;
+    overflow: hidden;
+    background: var(--pine);
+    color: #fff;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(13, 39, 24, 0.96) 0%, rgba(13, 39, 24, 0.88) 38%, rgba(13, 39, 24, 0.36) 72%, rgba(13, 39, 24, 0.16) 100%),
+      linear-gradient(180deg, rgba(13, 39, 24, 0.1) 0%, rgba(13, 39, 24, 0.72) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1200px, calc(100% - 36px));
+    min-height: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(330px, 430px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+    padding: 62px 0 74px;
+  }
+
+  .eyebrow {
+    color: var(--amber-soft);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(43px, 6.2vw, 76px);
+    line-height: 0.96;
+    max-width: 640px;
+    margin-bottom: 22px;
+  }
+
+  .hero-copy {
+    color: rgba(255,255,255,0.86);
+    font-size: 18px;
+    max-width: 590px;
+    margin-bottom: 26px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .button {
+    min-height: 44px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    color: #fff;
+    background: rgba(255,255,255,0.04);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .button.primary {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #fff;
+  }
+
+  .button.dark {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .avatars { display: flex; }
+
+  .avatars span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--pine-deep);
+    margin-left: -10px;
+  }
+
+  .avatars span:first-child { margin-left: 0; }
+  .avatars span:nth-child(1) { background: var(--amber); }
+  .avatars span:nth-child(2) { background: var(--blue); }
+  .avatars span:nth-child(3) { background: var(--lav); }
+  .avatars span:nth-child(4) { background: var(--pine-2); }
+
+  .hero-trust p {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
+  }
+
+  .hero-card {
+    background: rgba(250,250,245,0.96);
+    color: var(--ink);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-card h2 {
+    color: var(--pine);
+    font-size: 28px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .hero-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .emergency-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .emergency-row {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--red-bg);
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .emergency-row:nth-child(2) .mark { background: var(--amber-bg); color: var(--amber); }
+  .emergency-row:nth-child(3) .mark { background: var(--blue-bg); color: var(--blue); }
+  .emergency-row:nth-child(4) .mark { background: var(--pine-3); color: var(--pine); }
+
+  .row-title {
+    color: var(--pine);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .row-note {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .risk-label {
+    border-radius: 999px;
+    background: var(--red-bg);
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .risk-label.amber { background: var(--amber-bg); color: #84551D; }
+
+  /* trust strip */
+  .trust-strip {
+    background: var(--pine);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .trust-inner {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-cell {
+    padding: 22px 16px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .trust-cell:last-child { border-right: none; }
+
+  .trust-cell .stat-number {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .trust-cell:first-child .stat-number { color: var(--amber-soft); }
+
+  .stat-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  .wrap {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 54px 0 82px;
+  }
+
+  .alert-band {
+    margin-top: -52px;
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.58fr);
+    gap: 14px;
+  }
+
+  .callout {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+  }
+
+  .callout.red {
+    border-left-color: var(--red);
+    background: var(--red-bg);
+  }
+
+  .callout.amber {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+
+  .callout h3 {
+    color: var(--pine);
+    font-size: 23px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .callout p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .section {
+    margin-top: 58px;
+    scroll-margin-top: 76px;
+  }
+
+  .hero-card,
+  .source-panel {
+    scroll-margin-top: 76px;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title h2 {
+    color: var(--pine);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.04;
+  }
+
+  .section-title p {
+    color: var(--muted);
+    max-width: 760px;
+    margin-top: 8px;
+  }
+
+  .pill {
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0 10px;
+    background: var(--pine-3);
+    color: var(--pine);
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .pill.red { background: var(--red-bg); color: var(--red); }
+  .pill.amber { background: var(--amber-bg); color: #84551D; }
+  .pill.blue { background: var(--blue-bg); color: var(--blue); }
+  .pill.lav { background: var(--lav-bg); color: var(--lav); }
+
+  .triage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .triage-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .triage-top {
+    padding: 16px;
+    color: #fff;
+    background: var(--pine);
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .triage-card.urgent .triage-top { background: var(--red); }
+  .triage-card.digestive .triage-top { background: var(--amber); }
+  .triage-card.recovery .triage-top { background: var(--blue); }
+  .triage-card.urinary .triage-top { background: var(--lav); }
+
+  .triage-top .pill {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    width: fit-content;
+  }
+
+  .triage-top h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.05;
+  }
+
+  .triage-card-body {
+    padding: 16px;
+  }
+
+  .triage-card-body ul {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .triage-card-body li { margin-bottom: 5px; }
+
+  /* guides + activity */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .guide-list { display: grid; gap: 10px; }
+
+  .guide-row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    min-height: 88px;
+  }
+
+  .guide-rank {
+    font-family: "DM Serif Display", serif;
+    font-size: 26px;
+    color: var(--pine);
+  }
+
+  .guide-row:nth-child(1) .guide-rank { color: var(--red); }
+  .guide-row:nth-child(2) .guide-rank { color: var(--amber); }
+  .guide-row:nth-child(3) .guide-rank { color: var(--blue); }
+  .guide-row:nth-child(4) .guide-rank { color: var(--lav); }
+  .guide-row:nth-child(5) .guide-rank { color: var(--pine-2); }
+
+  .guide-row h3 {
+    color: var(--pine);
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .guide-row p { color: var(--muted); font-size: 12px; }
+
+  .reviewed {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--pine-3);
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .feed {
+    background: var(--pine);
+    border-radius: 8px;
+    padding: 22px;
+    color: #fff;
+  }
+
+  .feed-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #7FCF9B;
+  }
+
+  .feed-head span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+  }
+
+  .feed-sub { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+
+  .feed-items { display: grid; gap: 10px; }
+
+  .feed-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 7px;
+    padding: 11px 13px;
+  }
+
+  .feed-tag {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--amber-soft);
+    background: rgba(196,131,59,0.2);
+    border-radius: 4px;
+    padding: 3px 7px;
+    white-space: nowrap;
+  }
+
+  .feed-item p { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+  .feed-note {
+    margin-top: 14px;
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .care-path {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .path-panel {
+    background: var(--pine);
+    color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 78px;
+  }
+
+  .path-panel h3 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.04;
+    margin-bottom: 12px;
+  }
+
+  .path-panel p {
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 18px;
+  }
+
+  .path-steps {
+    display: grid;
+    gap: 10px;
+  }
+
+  .path-step {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+
+  .step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .path-step strong {
+    display: block;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .path-step span {
+    color: rgba(255,255,255,0.66);
+    font-size: 12px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+    min-height: 250px;
+  }
+
+  .product-head {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+  }
+
+  .product-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 8px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0)),
+      var(--pine-3);
+    display: grid;
+    place-items: center;
+    color: var(--pine);
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    overflow: hidden;
+  }
+
+  .product-card:nth-child(2) .product-icon { background-color: var(--amber-bg); color: var(--amber); }
+  .product-card:nth-child(3) .product-icon { background-color: var(--blue-bg); color: var(--blue); }
+  .product-card:nth-child(4) .product-icon { background-color: var(--lav-bg); color: var(--lav); }
+  .product-card:nth-child(5) .product-icon { background-color: var(--red-bg); color: var(--red); }
+  .product-card:nth-child(6) .product-icon { background-color: #F2EEE3; color: #6A5635; }
+
+  .product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 7px;
+    mix-blend-mode: multiply;
+  }
+
+  .product-card h3 {
+    color: var(--pine);
+    font-size: 22px;
+    line-height: 1.08;
+  }
+
+  .product-meta {
+    color: var(--quiet);
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+
+  .product-card p {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .product-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .product-note {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* testimonials */
+  .city-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .city-tag {
+    min-height: 44px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 0 14px;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+  }
+
+  .city-tag.active { background: var(--pine); color: #fff; border-color: var(--pine); }
+
+  .testi-card[hidden] { display: none; }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testi-bar { height: 6px; background: var(--pine); }
+  .testi-card:nth-child(2) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(3) .testi-bar { background: var(--blue); }
+  .testi-card:nth-child(4) .testi-bar { background: var(--lav); }
+  .testi-card:nth-child(5) .testi-bar { background: var(--red); }
+  .testi-card:nth-child(6) .testi-bar { background: var(--pine-2); }
+  .testi-card:nth-child(7) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(8) .testi-bar { background: var(--blue); }
+
+  .testi-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .testi-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  .testi-body blockquote {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .testi-name { font-size: 12px; font-weight: 700; color: var(--pine); }
+
+  /* regional network */
+  .region-band {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .region-lead { flex-shrink: 0; }
+  .region-lead .eyebrow { color: var(--amber); margin-bottom: 6px; }
+  .region-lead h3 { color: var(--pine); font-size: 28px; line-height: 1.05; max-width: 280px; }
+
+  .region-cities { flex: 1; display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .region-city {
+    flex: 1;
+    min-width: 120px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .region-city:hover,
+  .region-city:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--pine-2);
+    box-shadow: 0 12px 28px rgba(28, 42, 32, 0.1);
+    outline: none;
+  }
+
+  .region-city b {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--pine);
+  }
+
+  .region-city span {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    margin-top: 4px;
+  }
+
+  .region-city.new { background: var(--pine); border-color: var(--pine); }
+  .region-city.new b { color: #fff; }
+  .region-city.new span { color: var(--amber-soft); }
+
+  /* congress */
+  .congress {
+    background: var(--pine-deep);
+    border-radius: 12px;
+    padding: 40px 44px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.78fr;
+    gap: 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .congress::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(196,131,59,0.14);
+    pointer-events: none;
+  }
+
+  .congress .eyebrow { color: var(--amber-soft); }
+  .congress h2 { color: #fff; font-size: clamp(30px, 3.4vw, 38px); line-height: 1.05; margin-bottom: 16px; max-width: 520px; }
+  .congress > div > .congress-copy { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 24px; }
+
+  .congress-list { display: grid; gap: 10px; margin-bottom: 26px; }
+  .congress-list div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 7px;
+    padding: 12px 14px;
+    color: rgba(255,255,255,0.86);
+    font-size: 14px;
+  }
+  .congress-list div::before {
+    content: "";
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--amber-soft);
+    flex-shrink: 0;
+  }
+
+  .congress-shelf {
+    background: rgba(250,250,245,0.97);
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .congress-shelf h3 { color: var(--pine); font-size: 22px; margin-bottom: 4px; }
+  .congress-shelf .shelf-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+
+  .shelf-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E2D2;
+    padding: 9px 0;
+  }
+  .shelf-row:last-of-type { border-bottom: none; }
+  .shelf-row .label { font-size: 13px; color: var(--ink); }
+  .shelf-row .skus { font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700; color: var(--pine); }
+
+  .shelf-disclaimer {
+    margin-top: 16px;
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: #84551D;
+    line-height: 1.5;
+  }
+
+  /* finder */
+  .finder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .finder-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .finder-card h3 {
+    color: var(--pine);
+    font-size: 26px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+  }
+
+  .finder-card p {
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .field {
+    display: grid;
+    gap: 6px;
+  }
+
+  .field.full { grid-column: 1 / -1; }
+
+  .field-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--cream);
+    color: var(--ink);
+    padding: 0 11px;
+    outline: none;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: var(--pine-2);
+    box-shadow: 0 0 0 3px rgba(46,107,62,0.12);
+  }
+
+  .form-submit { grid-column: 1 / -1; }
+
+  .call-summary {
+    grid-column: 1 / -1;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine-2);
+    border-radius: 8px;
+    background: var(--cream);
+    color: var(--muted);
+    padding: 14px;
+    font-size: 13px;
+  }
+
+  .call-summary strong {
+    display: block;
+    color: var(--pine);
+    margin-bottom: 6px;
+  }
+
+  .faq {
+    display: grid;
+    gap: 10px;
+  }
+
+  details {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 16px;
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 0;
+    color: var(--pine);
+    font-weight: 700;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  details p {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 0 16px;
+  }
+
+  /* final cta */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .cta-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-card:nth-child(2) { border-top-color: var(--blue); }
+  .cta-card.vets { background: var(--pine-deep); border-color: var(--pine-deep); border-top-color: var(--amber); }
+
+  .cta-card .eyebrow { margin-bottom: 0; color: var(--red); }
+  .cta-card:nth-child(2) .eyebrow { color: var(--blue); }
+  .cta-card.vets .eyebrow { color: var(--amber-soft); }
+
+  .cta-card h3 { color: var(--pine); font-size: 26px; line-height: 1.05; }
+  .cta-card.vets h3 { color: #fff; }
+  .cta-card p { color: var(--muted); font-size: 13px; line-height: 1.55; flex: 1; }
+  .cta-card.vets p { color: rgba(255,255,255,0.78); }
+
+  .cta-btn {
+    background: var(--red);
+    border-radius: 7px;
+    padding: 12px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .cta-card:nth-child(2) .cta-btn { background: var(--blue); }
+  .cta-card.vets .cta-btn { background: var(--amber); }
+
+  .source-panel {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 52px;
+  }
+
+  .source-panel h2 {
+    color: var(--pine);
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .source-panel p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .source-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .source-link {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .footer {
+    color: var(--muted);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 32px;
+  }
+
+  /* --- emergency mark emphasis --- */
+  .hero-card .emergency-row .mark { background: var(--red-bg); color: var(--red); }
+  .hero-card .emergency-row.warn .mark { background: var(--amber-bg); color: var(--amber); }
+
+  /* --- veterinary advisory board --- */
+  .board-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .board-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .board-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--pine-3); color: var(--pine); display: grid; place-items: center; font-family: "DM Serif Display", serif; font-size: 20px; margin-bottom: 12px; }
+  .board-card:nth-child(2) .board-avatar { background: var(--amber-bg); color: var(--amber); }
+  .board-card:nth-child(3) .board-avatar { background: var(--blue-bg); color: var(--blue); }
+  .board-card:nth-child(4) .board-avatar { background: var(--lav-bg); color: var(--lav); }
+  .board-card h3 { color: var(--pine); font-size: 18px; line-height: 1.12; }
+  .board-card .role { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 5px; display: block; }
+  .board-card p { color: var(--muted); font-size: 12px; margin-top: 10px; line-height: 1.5; }
+
+  /* --- clinic finder --- */
+  .clinic-finder { background: var(--pine); color: #fff; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .clinic-finder h3 { color: #fff; font-size: 24px; line-height: 1.08; }
+  .clinic-finder > p { color: rgba(255,255,255,0.78); font-size: 13px; margin: 0; }
+  .cf-row { display: flex; gap: 8px; }
+  .clinic-finder input, .clinic-finder select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); color: #fff; }
+  .clinic-finder input::placeholder { color: rgba(255,255,255,0.5); }
+  .clinic-result { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.08); border-radius: 7px; padding: 11px 13px; }
+  .clinic-result b { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 15px; color: #fff; }
+  .clinic-result .meta { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber-soft); }
+  .clinic-result .meta.open24 { color: #7FCF9B; }
+  .clinic-result a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+  .clinic-network {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: end;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head h3 {
+    color: var(--pine);
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 1;
+  }
+
+  .clinic-network-head p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 720px;
+    margin-top: 8px;
+  }
+
+  .clinic-count {
+    min-width: 138px;
+    border-radius: 8px;
+    background: var(--pine);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .clinic-count b {
+    display: block;
+    font-family: "DM Serif Display", serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 0.92;
+  }
+
+  .clinic-count span {
+    color: var(--amber-soft);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .clinic-tab {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    color: var(--pine);
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    min-height: 44px;
+    padding: 0 14px;
+    text-transform: uppercase;
+  }
+
+  .clinic-tab.active {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .clinic-market-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .clinic-market-header h4 {
+    color: var(--pine);
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .clinic-market-header span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .clinic-card {
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--pine);
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+    min-height: 204px;
+    padding: 13px;
+  }
+
+  .clinic-card:nth-child(5n+2) { border-top-color: var(--amber); }
+  .clinic-card:nth-child(5n+3) { border-top-color: var(--blue); }
+  .clinic-card:nth-child(5n+4) { border-top-color: var(--lav); }
+  .clinic-card:nth-child(5n+5) { border-top-color: var(--red); }
+
+  .clinic-card h5 {
+    color: var(--pine);
+    font-size: 17px;
+    line-height: 1.08;
+  }
+
+  .clinic-card .area {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-evidence {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.42;
+  }
+
+  .clinic-card .status {
+    color: var(--amber);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .clinic-card .status.open24 { color: #2A8C52; }
+
+  .clinic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .clinic-tags span {
+    background: var(--pine-3);
+    border-radius: 999px;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    padding: 4px 6px;
+    text-transform: uppercase;
+  }
+
+  .clinic-card a {
+    align-self: end;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-actions {
+    display: grid;
+    gap: 7px;
+    align-self: end;
+  }
+
+  .clinic-actions a {
+    min-height: 36px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    background: var(--pine);
+    color: #fff;
+    text-align: center;
+  }
+
+  .clinic-actions a.secondary {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--pine);
+  }
+
+  .verification-note {
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 8px;
+    color: #84551D;
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding: 12px 14px;
+  }
+
+  /* --- LINE button --- */
+  .button.line { background: #06C755; border-color: #06C755; color: #fff; }
+
+  /* --- clinic terms --- */
+  .terms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+  .term { display: flex; gap: 10px; align-items: flex-start; background: rgba(255,255,255,0.06); border-radius: 7px; padding: 12px 14px; }
+  .term .tick { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); color: var(--pine-deep); font-size: 11px; font-weight: 700; display: grid; place-items: center; flex-shrink: 0; font-family: "JetBrains Mono", monospace; margin-top: 1px; }
+  .term b { display: block; color: #fff; font-size: 13px; }
+  .term span { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+  @media (max-width: 1040px) {
+    .hero-inner,
+    .alert-band,
+    .care-path,
+    .finder,
+    .guides-grid,
+    .congress {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-card { max-width: 520px; }
+    .path-panel { position: static; }
+    .triage-grid,
+    .testi-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cta-grid { grid-template-columns: 1fr; }
+    .region-band { flex-direction: column; align-items: flex-start; }
+    .board-grid { grid-template-columns: repeat(2, 1fr); }
+    .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .clinic-network-head { grid-template-columns: 1fr; }
+    .terms-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .board-grid { grid-template-columns: 1fr; }
+    .cf-row { flex-direction: column; }
+    .clinic-directory-grid { grid-template-columns: 1fr; }
+    .clinic-market-header { align-items: flex-start; flex-direction: column; }
+    .clinic-finder select { max-width: none !important; }
+    .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
+  }
+
+  @media (max-width: 720px) {
+    .nav,
+    .hero-inner,
+    .wrap {
+      width: min(100% - 24px, 1200px);
+    }
+
+    .brand span { display: none; }
+    .brand { font-size: 19px; }
+    .nav { gap: 10px; }
+    .nav-links { flex: 0 0 auto; overflow: visible; }
+    .nav-links a { display: none; }
+    .nav-links a.active,
+    .nav-links a[href="#vets"] {
+      display: inline-flex;
+      font-size: 0;
+      min-width: 64px;
+      padding: 0 10px;
+    }
+    .nav-links a[href="#vets"] {
+      background: var(--amber);
+      color: #fff;
+    }
+    .nav-links a.active::after,
+    .nav-links a[href="#vets"]::after {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+    .nav-links a.active::after { content: "Act"; }
+    .nav-links a[href="#vets"]::after { content: "Clinic"; }
+    .hero { min-height: 830px; }
+
+    .hero-inner {
+      min-height: 830px;
+      padding: 38px 0 44px;
+      align-items: end;
+    }
+
+    .hero::after {
+      background:
+        linear-gradient(90deg, rgba(13, 39, 24, 0.94) 0%, rgba(13, 39, 24, 0.78) 58%, rgba(13, 39, 24, 0.34) 100%),
+        linear-gradient(180deg, rgba(13, 39, 24, 0.2) 0%, rgba(13, 39, 24, 0.86) 100%);
+    }
+
+    h1 { font-size: clamp(38px, 12vw, 52px); }
+
+    .hero-copy { font-size: 16px; }
+    .hero-card { max-width: none; }
+
+    .emergency-row {
+      grid-template-columns: 36px minmax(0, 1fr);
+    }
+
+    .risk-label {
+      grid-column: 2;
+      width: fit-content;
+    }
+
+    .trust-inner { grid-template-columns: repeat(2, 1fr); }
+    .trust-cell:nth-child(2) { border-right: none; }
+
+    .section-head { display: block; }
+    .section-head .pill { margin-top: 12px; }
+
+    .triage-grid,
+    .product-grid,
+    .testi-grid,
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>
+<meta content="RabbitEmergency.com |ウサギの緊急援助と獣医師主導の回復" property="og:title"/>
+<meta content="消化管うっ滞や熱中症などのウサギの緊急事態を認識し、ウサギに精通した獣医師を見つけ、獣医師の指導によるアジア全域の WOOLY および Alfavet RodiCare 回復サポートについて理解します。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://rabbitemergency.com/ja/" property="og:url"/>
+<meta content="https://rabbitemergency.com/assets/hero-rabbit.jpg" property="og:image"/>
+<meta content="https://rabbitemergency.com/assets/hero-rabbit.jpg" name="twitter:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#1A472A" name="theme-color"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;%F0%9F%90%B0&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "RabbitEmergency.com","url": "https://rabbitemergency.com/","description": "飼い主が緊急の兆候を認識し、クリニックへの連絡に備え、獣医師の指導による回復サポートを理解するのに役立つ教育用ウサギ緊急リソース。","areaServed": ["Hong Kong","Japan","Taiwan","Singapore","Thailand"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "MedicalWebPage","name": "RabbitEmergency.com |ウサギの緊急救援、外来獣医師の指導、回復サポート","url": "https://rabbitemergency.com/ja/","inLanguage": "ja","lastReviewed": "2026-06-03","audience": {"@type": "Audience","audienceType": "ウサギの飼い主"},"about": {"@type": "MedicalCondition","name": "ウサギの胃腸うっ滞およびその他のウサギの緊急事態"},"publisher": {"@type": "Organization","name": "RabbitEmergency.com","url": "https://rabbitemergency.com/"},"reviewedBy": {"@type": "Organization","name": "RabbitEmergency.com 獣医審査フレームワーク"},"medicalAudience": {"@type": "MedicalAudience","audienceType": "忍耐強い"},"translationOfWork": {"@id": "https://rabbitemergency.com/"}}</script>
+<link href="https://rabbitemergency.com/ja/" rel="canonical"/><link href="https://rabbitemergency.com/" hreflang="en" rel="alternate"/><link href="https://rabbitemergency.com/ja/" hreflang="ja" rel="alternate"/><link href="https://rabbitemergency.com/zh-tw/" hreflang="zh-Hant" rel="alternate"/><link href="https://rabbitemergency.com/th/" hreflang="th" rel="alternate"/><link href="https://rabbitemergency.com/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<header class="topbar">
+<nav class="nav">
+<a class="brand" href="/ja/">RabbitEmergency.com<span>ウサギファーストの救急医療</span></a>
+<div aria-label="Primary navigation" class="nav-links">
+<a class="active" href="#now">今すぐ行動しましょう</a>
+<a href="#symptoms">症状</a>
+<a href="#guides">ガイド</a>
+<a href="#products">回復</a>
+<a href="#stories">ストーリー</a>
+<a href="#board">レビュー</a>
+<a href="#vets">クリニックを探す</a>
+<a href="#faq">よくある質問</a>
+<a class="cta" href="#congress">あなたのクリニックをリストアップしてください</a>
+</div>
+</nav>
+</header>
+<main id="top">
+<section aria-label="Rabbit emergency homepage" class="hero">
+<img alt="A baby rabbit cradled gently in a person's hands" class="hero-image" src="assets/hero-rabbit.jpg"/>
+<div class="hero-inner">
+<div>
+<div class="eyebrow">ウサギ主導の緊急誘導と獣医師主導の回復サポート</div>
+<p class="mono" style="font-size:11px;color:var(--quiet);margin:0 0 16px"><a href="/">English</a> · <strong>日本語</strong> · <a href="/zh-tw/">繁體中文</a> · <a href="/th/">ไทย</a></p><h1>ウサギが餌を食べなくなったら、一時間一秒が大切です。</h1>
+<p class="hero-copy">RabbitEmergency.com は、緊急の警告サインを認識し、クリニックへの電話の準備をし、消化、食欲、腸内リズム、脱皮、回復に関する Alfavet RodiCare および WOOLY の毎日のケアによる獣医師の指導によるサポートを理解するのに役立ちます。</p>
+<div class="button-row">
+<a class="button primary" href="#now">緊急標識を確認する</a>
+<a class="button" href="#products">復旧サポートを理解する</a>
+</div>
+<div class="hero-trust">
+<div class="avatars"><span></span><span></span><span></span><span></span></div>
+<p>香港、東京、台北、シンガポール、バンコクのウサギの飼い主向けに構築</p>
+</div>
+</div>
+<aside class="hero-card" id="now">
+<h2>これを見た場合は、すぐに獣医師に連絡してください。</h2>
+<p>ウサギは病気を隠して急速に衰退します。あなたのウサギにこれらの兆候が見られる場合は、サプリメント、ホーム庭療法、またはオンラインでの回答を待たないでください。</p>
+<div class="emergency-list">
+<div class="emergency-row">
+<div class="mark">!</div>
+<div><div class="row-title">食べず、糞もしない</div><div class="row-note">腸のうっ滞：ウサギは食事をとったり、排泄したりしなくなり、数時間以内に衰弱する可能性があります。</div></div>
+<div class="risk-label">緊急</div>
+</div>
+<div class="emergency-row">
+<div class="mark">B</div>
+<div><div class="row-title">膨満感または腹痛</div><div class="row-note">猫背、歯ぎしり、お腹を床に押し付け、おなかが硬かったり腫れたり。</div></div>
+<div class="risk-label">緊急</div>
+</div>
+<div class="emergency-row">
+<div class="mark">H</div>
+<div><div class="row-title">熱中症やオーバーヒート</div><div class="row-note">アジアの夏、ウサギは急激に暑くなり、体が平らになり、呼吸が速くなり、鼻が濡れます。ゆっくり冷やしてから行ってください。</div></div>
+<div class="risk-label">緊急</div>
+</div>
+<div class="emergency-row">
+<div class="mark">F</div>
+<div><div class="row-title">フライストライクまたは開いた傷</div><div class="row-note">暖かい気候で汚れた底の近くにウジ虫が発生すると、まさに緊急事態です。</div></div>
+<div class="risk-label">緊急</div>
+</div>
+<div class="emergency-row warn">
+<div class="mark">T</div>
+<div><div class="row-title">斜頸やバランスの崩れ</div><div class="row-note">突然目が傾いたり、回転したり、ちらついたりする。即日ウサギに詳しい獣医師の診察が必要です。</div></div>
+<div class="risk-label amber">今すぐお電話ください</div>
+</div>
+<div class="emergency-row warn">
+<div class="mark">G</div>
+<div><div class="row-title">下痢または壊死栄養がない</div><div class="row-note">若いウサギの本当の下痢は緊急事態です。軟便または排便がない場合は、即日連絡が必要です。</div></div>
+<div class="risk-label amber">今すぐお電話ください</div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<section aria-label="Trust and scale signals" class="trust-strip">
+<div class="trust-inner">
+<div class="trust-cell"><span class="stat-number">5つの市場</span><span class="stat-label">香港・日本・台湾・シンガポール・タイ</span></div>
+<div class="trust-cell"><span class="stat-number">迅速なトリアージ</span><span class="stat-label">飼い主のための緊急チェックリスト</span></div>
+<div class="trust-cell"><span class="stat-number">ソース主導</span><span class="stat-label">RWAF・House Rabbit Society整列</span></div>
+<div class="trust-cell"><span class="stat-number">すぐに確認済み</span><span class="stat-label">クリニックの掲載には確認が必要です</span></div>
+</div>
+</section>
+<div class="wrap">
+<section class="section" id="symptoms">
+<div class="section-head">
+<div class="section-title">
+<h2>あなたのウサギがあなたを怖がらせることは何ですか?</h2>
+<p>すべての道は獣医師の評価から始まります。以下の製品に関する提案は、獣医師とのサポートに関する会話であり、自宅で緊急事態を治療するための指示ではありません。</p>
+</div>
+<span class="pill red">飼い主のトリアージ</span>
+</div>
+<div class="triage-grid">
+<article class="triage-card urgent">
+<div class="triage-top">
+<span class="pill">今すぐ行きましょう</span>
+<h3>赤旗緊急事態</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>食べず、糞もしない（腸うっ滞）</li>
+<li>膨満感または明らかな腹痛</li>
+<li>熱中症、倒れたり、けいれんを起こしたりする</li>
+<li>フライストライクまたは新たな開いた傷</li>
+<li>突然の斜頸、回転、または外傷</li>
+</ul>
+<a class="button dark" href="#vets">24時間営業の異国情緒あふれるクリニックを探す</a>
+</div>
+</article>
+<article class="triage-card digestive">
+<div class="triage-top">
+<span class="pill">消化器系</span>
+<h3>便が柔らかい、腸が遅い、糞が少ない</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>糞が小さくなる、少ない、または形が崩れる</li>
+<li>柔らかく粘液性の便または粘着性の壊死菌</li>
+<li>食生活の変更、ストレス、または抗生物質の投与後</li>
+<li>若いウサギの真性下痢には緊急治療が必要です</li>
+</ul>
+<a class="button dark" href="#digestion">GIサポートシェルフ</a>
+</div>
+</article>
+<article class="triage-card recovery">
+<div class="triage-top">
+<span class="pill">回復</span>
+<h3>食べていない、衰弱している、クリニック後</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>食欲不振または食べ物の拒否</li>
+<li>歯科治療後、手術後、または病気の回復後</li>
+<li>注射器による栄養補給または水分補給のサポートが必要</li>
+<li>腸停滞の回復について早急に議論する必要がある</li>
+</ul>
+<a class="button dark" href="#recovery">復旧サポート</a>
+</div>
+</article>
+<article class="triage-card urinary">
+<div class="triage-top">
+<span class="pill">定期的なサポート</span>
+<h3>脱皮、水分補給、シニア、投薬</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>重度の脱皮または便内毛のリスク</li>
+<li>暑い季節には飲酒量を減らす</li>
+<li>高齢または衰弱したウサギ</li>
+<li>ウサギは粉末を拒否し、口に合う形式を必要とします</li>
+</ul>
+<a class="button dark" href="#products">日常のお手入れ棚</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="guides">
+<div class="section-head">
+<div class="section-title">
+<h2>今週ウサギの飼い主によって最も検索されたもの。</h2>
+<p>飼い主が慌てて検索する瞬間のために書かれた獣医師のレビュー済みガイド。それぞれの実験は同じルールで終わります。まず緊急性を評価し、次にウサギに精通した獣医師に相談してください。</p>
+</div>
+<span class="pill amber">トレンド</span>
+</div>
+<div class="guides-grid">
+<div class="guide-list">
+<a class="guide-row" href="#now">
+<div class="guide-rank">01</div>
+<div><h3>ウサギが食べず、うんちもしない</h3><p>ウサギにとって腸のうっ滞はなぜ一刻を争う真の緊急事態なのか。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+<a class="guide-row" href="#now">
+<div class="guide-rank">02</div>
+<div><h3>ウサギが暑さで倒れた</h3><p>熱中症を認識し、クリニックに向かう途中でうさぎを安全に冷却しました。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+<a class="guide-row" href="#digestion">
+<div class="guide-rank">03</div>
+<div><h3>便が柔らかい、または壊死栄養剤がない</h3><p>獣医師の診察が必要な下痢と通常の壊死栄養を区別します。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+<a class="guide-row" href="#now">
+<div class="guide-rank">04</div>
+<div><h3>ウサギの首の傾き</h3><p>突然の傾き、横揺れ、バランスの崩れ - まず何をすべきか。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+<a class="guide-row" href="#products">
+<div class="guide-rank">05</div>
+<div><h3>腸内の脱皮と毛</h3><p>ウサギは毛玉を咳き込むことができない - 換毛期の腸の働きが鈍くなるためだ。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+<a class="guide-row" href="#recovery">
+<div class="guide-rank">06</div>
+<div><h3>歯科治療後および手術後の回復</h3><p>食欲、注射器による授乳、獣医の診察後の回復期。</p></div>
+<span class="reviewed">獣医師によるレビュー済み</span>
+</a>
+</div>
+<aside class="feed">
+<div class="feed-head"><span class="live-dot"></span><span>生きた地域活動</span></div>
+<div class="feed-items">
+<div class="feed-item"><span class="feed-tag">台北</span><p>飼い主が腸内うっ滞チェックリストを閲覧した</p></div>
+<div class="feed-item"><span class="feed-tag">シンガポール</span><p>飼い主が獣医への電話の準備を保存</p></div>
+<div class="feed-item"><span class="feed-tag">東京</span><p>飼い主さんが「ウサギが食べない」ガイドを公開</p></div>
+<div class="feed-item"><span class="feed-tag">香港</span><p>飼い主はウサギに詳しいクリニックに案内された</p></div>
+<div class="feed-item"><span class="feed-tag">BKK</span><p>飼い主さんは熱中症ガイドを読んでください</p></div>
+</div>
+</aside>
+</div>
+</section>
+<section aria-label="Prevention" class="section">
+<div style="position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+<img alt="A healthy, alert rabbit sitting in fresh grass" src="assets/rabbit-grass.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;"/>
+<div style="position:relative;background:linear-gradient(90deg, rgba(13,39,24,0.95) 0%, rgba(13,39,24,0.80) 46%, rgba(13,39,24,0.30) 100%);padding:clamp(32px,5vw,56px) clamp(20px,4vw,46px);min-height:300px;display:flex;flex-direction:column;justify-content:center;">
+<div class="eyebrow" style="color:var(--amber-soft);margin-bottom:8px;">予防こそが最良の緊急時対策だ</div>
+<h2 style="color:#fff;border:none;padding:0;margin:0;max-width:580px;font-size:clamp(28px,3.6vw,40px);line-height:1.04;">ウサギが健康であることは、幸運な偶然ではなく、毎日の習慣です。</h2>
+<p style="color:rgba(255,255,255,0.86);max-width:540px;margin:12px 0 0;font-size:15px;">適切な干し草、水分補給、腸のバランス、脱皮のケアがあれば、ほとんどの緊急事態は起こらなくなります。それが、WOOLY の毎日の基礎の目的であり、以下の回復棚が予防から始まる理由でもあります。</p>
+<div class="button-row" style="margin-top:20px;">
+<a class="button primary" href="#products">デイリーケアの棚を見る</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="products">
+<div class="section-head">
+<div class="section-title">
+<h2>ウサギのフルシェルフ: WOOLY デイリーケア + Alfavet RodiCare。</h2>
+<p>2 つの層、1 つの旅。 WOOLY は、腸内バランス、換毛、水分補給、状態、年齢に応じた栄養など、日本産ウサギの専門ホームによる毎日の基礎です。 Alfavet RodiCare は、毎日のケアでは十分ではなくなった場合に使用する、ドイツの獣医チャネルの急性期および回復層です。</p>
+<p>ここにあるものはすべて飼い主のサイン主導で、主張に基づいて管理されています。獣医師主導の計画の一環として、消化、食欲、水分補給、回復をサポートします。救急医療に代わるものではありません。</p>
+</div>
+<span class="pill">獣医師の指導を受けた製品</span>
+</div>
+<div style="margin:6px 0 16px;">
+<div class="eyebrow" style="color:var(--pine-2);margin-bottom:6px;">レイヤー1・毎日のファンデーション</div>
+<h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">WOOLY — 日本ウサギの毎日の世話</h3>
+<p style="color:var(--muted);max-width:760px;margin-top:6px;">飼い主が目に見える日常的なレイヤー: 腸のバランス、脱皮、水分補給、コンディション、年齢に応じた栄養管理 - ウサギ専門の日本人専門ホームによって構築されています。これはウサギを救急治療室に入れないための日課です。</p>
+</div>
+<div class="product-grid">
+<article class="product-card" id="moult">
+<div class="product-head">
+<div class="product-icon">AE</div>
+<div>
+<h3>WOOLY アクティブ E</h3>
+<div class="product-meta">脱皮＆便毛・ヒーロー</div>
+</div>
+</div>
+<p>パイナップル酵素（ブロメライン）とパパインに国産リンゴ繊維を加えました。 WOOLY は、脱皮、便中の毛、長毛のウサギ、および脱皮中の食欲の変化にアクティブ E を配置します。</p>
+<div class="product-pills">
+<span class="pill amber">換毛期</span>
+<span class="pill">便の中の毛</span>
+<span class="pill blue">食欲</span>
+</div>
+<div class="product-note">ウサギは毛玉を咳き込むことはできません。WOOLY の最も明確な兆候から解決策までの SKU であり、ほとんどの飼い主が脱皮が始まると最初に手を伸ばす SKU です。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ラ</div>
+<div>
+<h3>ラビットラクト / ソフトラクト / ラクトLAB</h3>
+<div class="product-meta">腸バランスプロバイオティックラダー</div>
+</div>
+</div>
+<p>3 層のプロバイオティクス ラダー: クラシックなラビット ラクト、高齢者および歯に敏感なウサギ向けのソフト ラクト、日本獣医生命科学大学と開発したウサギ由来株を使用したラクト ラボ。毎日の腸内リズムと便の質のために。</p>
+<div class="product-pills">
+<span class="pill amber">腸バランス</span>
+<span class="pill">3段</span>
+<span class="pill lav">シニアに優しい</span>
+</div>
+<div class="product-note">ウサギが病気になる前の毎日の消化ルーチン — ソフトフォーマットは、競合他社がオンパックで答えられないウサギの歯の問題を解決します。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">BW</div>
+<div>
+<h3>WOOLY バランスウォーター</h3>
+<div class="product-meta">水分補給・カテゴリー第一位</div>
+</div>
+</div>
+<p>飲酒量が少ない、暑い気候、旅行、便が硬くなるなどの悩みに対応するウサギ専用のバランスの取れた飲料水サプリメントです。このカテゴリーに直接競合する製品のない水分補給 SKU です。</p>
+<div class="product-pills">
+<span class="pill blue">水分補給</span>
+<span class="pill amber">暑い天気</span>
+<span class="pill">毎日</span>
+</div>
+<div class="product-note">アジアの夏には重要です。これは、水分補給の手がかりとして便の硬さを読み取ることを飼い主に教えます。本当の熱中症の救急治療に代わるものではありません。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">えん</div>
+<div>
+<h3>WOOLY エンハンサー</h3>
+<div class="product-meta">コンディション＆回復ブースター</div>
+</div>
+</div>
+<p>ブリーダー由来（ハイノルド系統）のカロリーと栄養を強化するものです。 WOOLY は、成長、高齢期の状態、脱皮、妊娠と授乳、および避妊/去勢後の回復サポートのためのエンハンサーを位置づけています。</p>
+<div class="product-pills">
+<span class="pill blue">回復</span>
+<span class="pill">状態</span>
+<span class="pill lav">シニア</span>
+</div>
+<div class="product-note">回復への毎日の架け橋：成長期、老化期、脱皮期、または術後のウサギにとって特別な状態です。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">RP</div>
+<div>
+<h3>ウサギの力・活力の源の力</h3>
+<div class="product-meta">シニアの活力</div>
+</div>
+</div>
+<p>プレミアム シニア バイタリティおよび長期コンディション タブレット — WOOLY の高齢ウサギ、衰弱ウサギ、またはストレス後のウサギのための毎日のケアのエントリー ポイントであり、より上位の Vitality Source のパワー オプションを備えています。</p>
+<div class="product-pills">
+<span class="pill lav">シニア</span>
+<span class="pill">活力</span>
+<span class="pill amber">毎日</span>
+</div>
+<div class="product-note">すでに高齢ウサギの予防にお金をかけている真剣な飼い主のためのトラストアンカーです。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">BL</div>
+<div>
+<h3>WOOLY ブルームラボ</h3>
+<div class="product-meta">年齢段階に応じた完全なフィード</div>
+</div>
+</div>
+<p>モリンガとスピルリナを含むウサギ由来の乳酸菌プラットフォームに基づいて構築された、より咀嚼し、粘り気を少なくするように設計された、年齢に合わせて調整された 4 つの完全飼料 (≤ 2 / 2 ～ 5 / 5 ～ 8 / 8 歳以上)。</p>
+<div class="product-pills">
+<span class="pill">完全なフィード</span>
+<span class="pill blue">年齢段階別</span>
+<span class="pill amber">デイリーベース</span>
+</div>
+<div class="product-note">あらゆるライフステージに対応した毎日の栄養ベース — シニア向けおよび特別なフォーミュラにより、高齢者ケアのサポートがさらに追加されます。</div>
+</article>
+</div>
+<div style="margin:38px 0 16px;">
+<div class="eyebrow" style="color:var(--amber);margin-bottom:6px;">レイヤー 2 · 獣医チャネルの急性期および回復期</div>
+<h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">Alfavet RodiCare — ドイツ語の拡張子</h3>
+<p style="color:var(--muted);max-width:760px;margin-top:6px;">ウサギ、モルモット、小型齧歯動物用の獣医チャネルの胃腸および回復層 - 毎日のケアでは十分ではなくなり、獣医師が計画を主導する場合に備えて。</p>
+</div>
+<div class="care-path">
+<aside class="path-panel">
+<h3>パニックから回復へ。</h3>
+<p>RodiCare は、消化調節、食欲、回復形式などの幅広いカタログではなく、コンディション ジャーニーの棚としてここで最適に機能します。WOOLY のデイリーケア基盤の上にあります。</p>
+<div class="path-steps">
+<div class="path-step">
+<div class="step-num">1</div>
+<div><strong>緊急性を評価する</strong><span>食べない、糞をしない、お腹が張る、熱が下がる、首が傾く。</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">2</div>
+<div><strong>獣医師の診察を受けて安定させる</strong><span>検査、水分補給、腸の運動性、痛みの軽減、注射器による栄養補給。</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">3</div>
+<div><strong>移行をサポートする</strong><span>消化、食欲、水分補給、腸のリズム、回復。</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">4</div>
+<div><strong>エピソードの繰り返しを防ぐ</strong><span>WOOLY 食事、繊維、脱皮、水分補給、腸のバランスに関する毎日の計画。</span></div>
+</div>
+</div>
+</aside>
+<div class="product-grid">
+<article class="product-card" id="digestion">
+<div class="product-head">
+<div class="product-icon">Rk</div>
+<div>
+<h3>RodiCare アクート</h3>
+<div class="product-meta">消化調整剤・15ml</div>
+</div>
+</div>
+<p>Alfavet は、RodiCare がウサギ、モルモット、小型げっ歯類の消化プロセスの調節に適していると位置づけており、重要な腸内フローラをサポートし、食欲と腸の活動を刺激します。砂糖は加えていません。</p>
+<div class="product-pills">
+<span class="pill amber">消化サポート</span>
+<span class="pill">15mlシリンジ</span>
+<span class="pill blue">食器棚の定番</span>
+</div>
+<div class="product-note">食器棚に常備しておきたい消化調整剤。腸の衰えの最初の兆候に備えて、獣医師の代わりではなく、獣医師に電話をかけている間に対応します。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ディ</div>
+<div>
+<h3>RodiCare径</h3>
+<div class="product-meta">異常便サポート</div>
+</div>
+</div>
+<p>Alfavet は、ベントナイト、酪酸ナトリウム、酪酸やプロピオン酸などの短鎖脂肪酸を使用した、矮性ウサギおよびモルモットの生理学的消化に RodiCare Dia を位置付けています。まずは獣医師に相談するのが最善です。</p>
+<div class="product-pills">
+<span class="pill amber">マイクロバイオーム</span>
+<span class="pill blue">12ml×3本</span>
+<span class="pill red">獣医師主導</span>
+</div>
+<div class="product-note">最も安全なルートは獣医師の指導による異常便の状況に対する的を絞ったサポートです。ホーム庭での推測ではなく、獣医師が指導する必要があります。</div>
+</article>
+<article class="product-card" id="recovery">
+<div class="product-head">
+<div class="product-icon">AP</div>
+<div>
+<h3>RodiCare 食欲</h3>
+<div class="product-meta">食欲が落ちる瞬間・15ml</div>
+</div>
+</div>
+<p>Alfavet は、食欲のないウサギ、モルモット、小型齧歯動物向けに、ショウガとショウガを加えた RodiCare アペティトを位置づけています。これは、食欲不振の瞬間に対する、飼い主が認識できるシンプルな答えです。</p>
+<div class="product-pills">
+<span class="pill blue">食欲不振</span>
+<span class="pill">15ml</span>
+<span class="pill amber">回復の英雄</span>
+</div>
+<div class="product-note">食欲が落ちる瞬間：獣医師に電話し、ウサギの状態を診断したら再び食事をするようサポートする強力な理由です。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">パー</div>
+<div>
+<h3>RodiCare ペッペルペースト</h3>
+<div class="product-meta">回復と回復期</div>
+</div>
+</div>
+<p>Alfavet は、RodiCare Päppelpaste を、ウサギとモルモット用のすぐに使用できる回復および回復期ペーストであると説明しています。対象を絞った給餌で、混ぜずにすぐに使用でき、2 つの便利な 30 ml インジェクターで非常に好評です。</p>
+<div class="product-pills">
+<span class="pill blue">回復期</span>
+<span class="pill lav">術後/歯科</span>
+<span class="pill">シリンジ対応</span>
+</div>
+<div class="product-note">回復のヒーロー: 術後、歯科、および自分で餌を食べない衰弱状態のウサギ用のすぐに使えるペーストです。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">Hb</div>
+<div>
+<h3>RodiCare 毛玉</h3>
+<div class="product-meta">脱皮と便中の毛</div>
+</div>
+</div>
+<p>Alfavetは、ドワーフウサギとモルモットの脱皮と便中毛のリスクに対して、ラクツロース、オオバコハスク、フェンネル、カモミール、ペパーミントを配合したRodiCareヘアボールを位置づけています。砂糖やシリアルはありません。</p>
+<div class="product-pills">
+<span class="pill lav">換毛期</span>
+<span class="pill">ソフトフォーミュラ</span>
+<span class="pill amber">ファイバーサポート</span>
+</div>
+<div class="product-note">ウサギは毛玉を咳き込むことができません。毎日の WOOLY アクティブ E およびファイバーケアと自然に組み合わせた、換毛期の腸のサポートです。</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">私は</div>
+<div>
+<h3>RodiCare 免疫</h3>
+<div class="product-meta">免疫力と回復力のサポート</div>
+</div>
+</div>
+<p>Alfavet の RodiCare シリーズには、ウサギや小型げっ歯類のストレス、季節の変化、回復期を支援する免疫サポート オプションが含まれています。回復計画の一環として獣医師に相談してください。</p>
+<div class="product-pills">
+<span class="pill blue">免疫サポート</span>
+<span class="pill">回復力</span>
+<span class="pill red">獣医師主導</span>
+</div>
+<div class="product-note">病気から回復しているウサギ、またはストレスの多い移行期および復帰中のウサギのための、獣医師主導の回復力オプション。</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="stories">
+<div class="section-head">
+<div class="section-title">
+<h2>最悪の瞬間を迎えたアジア各地のウサギの飼い主たち。</h2>
+<p>私たちがサービスを提供している市場での実際のオーナーの物語 - チェックリストが役に立った瞬間、そして回復セクションが獣医師推奨の製品をどのように理にかなったものにしたのか。</p>
+</div>
+<span class="pill blue">8つの特集記事</span>
+</div>
+<div class="city-filter">
+<button class="city-tag active" data-market-filter="all" type="button">すべての市場</button>
+<button class="city-tag" data-market-filter="hong-kong" type="button">香港</button>
+<button class="city-tag" data-market-filter="tokyo" type="button">東京</button>
+<button class="city-tag" data-market-filter="taipei" type="button">台北</button>
+<button class="city-tag" data-market-filter="singapore" type="button">シンガポール</button>
+<button class="city-tag" data-market-filter="bangkok" type="button">バンコク</button>
+</div>
+<div class="testi-grid">
+<article class="testi-card" data-featured="true" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">香港・ホームウサギ</span><blockquote>チェックリストによれば、食事をとらないことと排泄物がないことは緊急事態であることが明らかでした。私たちは1時間以内にエキゾチックな獣医のところに着きました。</blockquote><div class="testi-name">メイ・L・九龍</div></div></article>
+<article class="testi-card" data-featured="true" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">東京都・初めてオーナー様</span><blockquote>ウサギがこんなに早く病気になるとは知りませんでした。このページを読んだ私はその夜、ウサギに詳しい獣医師に電話しました。</blockquote><div class="testi-name">はるか S.・世田谷</div></div></article>
+<article class="testi-card" data-featured="true" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">台北・絆ペア</span><blockquote>ページは単刀直入だった。うんちをやめたウサギは待つことができない。私たちはすぐに救急治療に向かいました。</blockquote><div class="testi-name">チェン・W・ダーアン</div></div></article>
+<article class="testi-card" data-featured="true" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">シンガポール・シニアウサギ</span><blockquote>獣医の診察の後、回復セクションを読んで、推奨されている RodiCare ペーストを理解することができました。売り込みのようなものは何もありませんでした。</blockquote><div class="testi-name">プリヤ R. · タンピネス</div></div></article>
+<article class="testi-card" data-featured="true" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">バンコク・駐在員オーナー</span><blockquote>この街に初めて来たので、ウサギが熱くなりすぎているのではないかと心配していました。電話準備フィールドのおかげで、言葉の壁があってもすべてを説明できました。</blockquote><div class="testi-name">ジェームス T. · スクンビット</div></div></article>
+<article class="testi-card" data-featured="true" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">香港・多頭ウサギのホーム</span><blockquote>三匹のウサギと一緒に、これをブックマークしました。換毛期の腸の速度低下のガイドは、後に獣医師が説明した内容と正確に一致しました。</blockquote><div class="testi-name">アンソン C. · 沙田</div></div></article>
+<article class="testi-card" data-featured="true" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">東京・歯科後</span><blockquote>我がホームのウサギは歯の治療後は食事をしませんでした。注射器による栄養補給による回復支援を理解することで、大きな不安がなくなりました。</blockquote><div class="testi-name">ユキ・マサノ・ナカノ</div></div></article>
+<article class="testi-card" data-featured="true" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">台北・初めてのオーナー様</span><blockquote>それは獣医師の代わりにはならないことを思い出させてくれました。その誠実さこそが、私がこのページの他のすべてを信頼した理由です。</blockquote><div class="testi-name">リン・H・シンイー</div></div></article>
+<article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">香港・若ウサギ</span><blockquote>赤ちゃんウサギの柔らかくて臭い便は私たちを怖がらせました。ガイドさんは、若いウサギの下痢は緊急性があるとのことでしたので、すぐに電話しました。</blockquote><div class="testi-name">ナタリー F. · セントラル</div></div></article>
+<article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">香港・レスキューウサギ</span><blockquote>バイリンガルのレイアウトが役に立ちました。すべてを書き直すことなく、同じ概要をヘルパーとクリニックに送信できました。</blockquote><div class="testi-name">デレク・N・サイ・クン</div></div></article>
+<article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">東京・シニアレスキュー</span><blockquote>私のウサギは背中を丸めて歯ぎしりをしていました。腹痛が緊急であると判断したため、悪化する前に予約を入れました。</blockquote><div class="testi-name">ミナ・K・吉祥寺</div></div></article>
+<article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">東京・慢性腸内環境</span><blockquote>回復棚を見て、なぜ獣医師が不調時だけでなく治療後の腸のサポートについて話したのかを理解するのに役立ちました。</blockquote><div class="testi-name">レン・A・目黒</div></div></article>
+<article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">台北・LINEグループ紹介</span><blockquote>誰かが私たちのウサギのグループで腸内うっ滞のセクションを共有しました。それは待つこととクリニックに行くことの違いをもたらしました。</blockquote><div class="testi-name">アイビー C. · ソンシャン</div></div></article>
+<article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">台北・換毛期</span><blockquote>激しい脱皮の最中に、私たちのウサギはすぐに速度を落としました。便の中の毛についてのガイドは、獣医師に尋ねるべき適切な質問を私に与えてくれました。</blockquote><div class="testi-name">ウェン・イー・中山</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">シンガポール・新オーナー</span><blockquote>タクシーを待っている間に獣医の電話の概要を利用しました。それは私を落ち着かせ、看護師に必要な詳細を与えてくれました。</blockquote><div class="testi-name">アリシア T. · クイーンズタウン</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">シンガポール・暑さの恐怖</span><blockquote>このページには、ウサギがここでどれだけ早く過熱するかについて明確でした。それはまさに暑い午後に私が必要としていたものでした。</blockquote><div class="testi-name">マーカス・L・カトン</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">シンガポール・術後</span><blockquote>手術後、私のウサギは餌を拒否しました。回復セクションのおかげで、劇的に聞こえることなく注射器による栄養について質問することができました。</blockquote><div class="testi-name">Nur A. · ウッドランズ</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">バンコク・タイ人オーナー</span><blockquote>電話準備形式は、特にウサギが糞をしなくなったときの症状を明確に説明するのに役立ちました。</blockquote><div class="testi-name">ニチャP.・アリ</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">バンコク・新規採用者</span><blockquote>隠れて食事をしないことが緊急とみなされるかどうかはわかりませんでした。このページを見て、さらに 1 時間探す代わりに電話することができました。</blockquote><div class="testi-name">ピム S.・トンロー</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">バンコク・クリニック紹介</span><blockquote>クリニックは私たちをトリアージする際に、私の要約と同じ言葉を使いました。プロセス全体の混乱が軽減されました。</blockquote><div class="testi-name">アルン K.・サトーン</div></div></article>
+</div>
+</section>
+<section aria-label="Regional network" class="section" id="markets">
+<div class="region-band">
+<div class="region-lead">
+<div class="eyebrow">地域ネットワーク</div>
+<h3>汎アジアのウサギ飼育の足跡。</h3>
+</div>
+<div class="region-cities">
+<a aria-label="View Hong Kong owner stories" class="region-city" data-market-filter="hong-kong" href="#stories"><b>香港</b><span>オーナーストーリー</span></a>
+<a aria-label="View Tokyo owner stories" class="region-city" data-market-filter="tokyo" href="#stories"><b>東京</b><span>オーナーストーリー</span></a>
+<a aria-label="View Taipei owner stories" class="region-city" data-market-filter="taipei" href="#stories"><b>台北</b><span>オーナーストーリー</span></a>
+<a aria-label="View Singapore owner stories" class="region-city" data-market-filter="singapore" href="#stories"><b>シンガポール</b><span>オーナーストーリー</span></a>
+<a aria-label="View Bangkok owner stories" class="region-city new" data-market-filter="bangkok" href="#stories"><b>バンコク</b><span>オーナーストーリー</span></a>
+</div>
+</div>
+</section>
+<section class="section" id="board">
+<div class="section-head">
+<div class="section-title">
+<h2>ホーム庭薬ではなく、獣医師の基準に基づいて構築されています。</h2>
+<p>指名された臨床審査員とライセンスの詳細が公開されるまで、このページでは指名された獣医師の承認を主張するのではなく、保守的な情報源主導の審査枠組みを提示します。</p>
+</div>
+<span class="pill">査読者の詳細は保留中</span>
+</div>
+<div class="board-grid">
+<div class="board-card">
+<div class="board-avatar">01</div>
+<h3>緊急事態第一のルール</h3>
+<span class="role">ウサギの福祉基準</span>
+<p>危険信号のサインは、製品やホームサポートについて話し合う前に、飼い主にウサギに精通した獣医師に連絡するよう指示します。</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">02</div>
+<h3>ソースのトレーサビリティ</h3>
+<span class="role">RWAF &amp; House Rabbit Society</span>
+<p>飼い主のガイダンスは、ページの下部にリストされている公共のウサギ福祉および救急医療の情報源と照合されます。</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">03</div>
+<h3>製品クレームの規律</h3>
+<span class="role">獣医師主導のサポートのみ</span>
+<p>RodiCare と WOOLY は、緊急治療の代替ではなく、獣医師による評価後のサポート会話として構成されています。</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">04</div>
+<h3>クリニック認証ゲート</h3>
+<span class="role">架空のリストはありません</span>
+<p>クリニックカードは、クリニック名、営業時間、電話番号、種の能力、およびリストへの許可が確認されるまで、検索ルートとして機能するようになりました。</p>
+</div>
+</div>
+</section>
+<section class="section" id="congress">
+<div class="congress">
+<div>
+<div class="eyebrow">獣医師パートナー向け・タイ会議</div>
+<h2>タイ会議の獣医師パートナー向けに構築されました。</h2>
+<p class="congress-copy">RabbitEmergency.com は、心配しているウサギの飼い主を獣医師主導のケアに直接送る、消費者第一のポータルです。クリニックの場合、Alfavet RodiCare ドイツの獣医チャネル シェルフと WOOLY のデイリーケアを内蔵の回復通路として使用して、あなたのプロフィール、獣医師が確認した緊急ガイダンス、症状ベースの紹介ルーティングをホストします。</p>
+<div class="congress-list">
+<div>種とエキゾチック対応タグを備えたホスト検証済みクリニックプロファイル</div>
+<div>医師が審査した飼い主向けのうさぎ救急ガイド</div>
+<div>場所、時間、種類別の症状ベースの紹介ルーティング</div>
+<div>RodiCare + WOOLY シェルフ: 消化、食欲、回復、脱皮、毎日の腸のケア</div>
+</div>
+<div class="button-row">
+<a class="button primary" href="#vets">クリニックのリストの詳細を準備する</a>
+<a class="button" href="#sources">臨床ソースを確認する</a>
+</div>
+</div>
+<aside class="congress-shelf">
+<h3>獣医主導のリカバリーシェルフ</h3>
+<p class="shelf-sub">クリニックが処方する回復通路。</p>
+<div class="shelf-row"><span class="label">日々の基礎</span><span class="skus">WOOLY ラクト・アクティブE</span></div>
+<div class="shelf-row"><span class="label">消化</span><span class="skus">RodiCare アクト・ディア</span></div>
+<div class="shelf-row"><span class="label">食欲と回復</span><span class="skus">RodiCare アペティ / ペペルペースト</span></div>
+<div class="shelf-row"><span class="label">換羽サポート</span><span class="skus">RodiCare 毛玉</span></div>
+<div class="shelf-row"><span class="label">投与が難しいウサギ</span><span class="skus">すぐに使えるシリンジ</span></div>
+</aside>
+</div>
+<div class="congress" style="margin-top:14px;grid-template-columns:1fr;">
+<div>
+<div class="eyebrow">クリニックの場合・規約は前払い</div>
+<h2 style="font-size:clamp(26px,3vw,32px);">キャッチはありません。数分であなたのクリニックをリストアップします。</h2>
+<div class="terms-grid">
+<div class="term"><span class="tick">✓</span><div><b>立ち上げパートナーのリストは無料です</b><span>タイ会議に参加するクリニックには掲載料はかかりません。</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>独占性なし</b><span>すでに使用しているすべてのディレクトリとグループにリストが表示されます。</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>RodiCare または WOOLY を在庫する義務はありません</b><span>回復サポートはオプションです。あなたの臨床判断が導きます。</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>オーナーのリードがあなたに直接送信されます</b><span>検証後、オーナーの同意を得て、通話準備の概要をメールまたは LINE で送信できます。</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>自分のプロフィールをコントロールするのはあなたです</b><span>営業時間、サービス、独自のガイダンスをいつでも編集できます。</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>データの所有者はあなたです</b><span>所有者の連絡先の詳細は、選択したクリニックとのみ共有されます。</span></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="vets">
+<div class="section-head">
+<div class="section-title">
+<h2>クリニックへの電話をもっと簡単に。</h2>
+<p>一般開業獣医師の多くはウサギを診察しません。ウサギの飼い主は、ウサギに精通したクリニックを見つけて問題を説明することで貴重な時間を失います。これらの検証済みクリニックのリストは、飼い主が旅行前にウサギの能力を確認しながら、より迅速に移動するのに役立ちます。</p>
+</div>
+<span class="pill blue">獣医によるルーティング</span>
+</div>
+<div class="clinic-finder" style="margin-bottom:16px;">
+<h3>お近くのウサギに精通した/エキゾチックなクリニックを見つけてください。</h3>
+<p>あなたの都市または地区を入力すると、一致する情報源のクリニックが表示されます。ご旅行前に、ウサギの能力、営業時間、予約方法を必ずご確認ください。</p>
+<div class="cf-row">
+<input id="clinic-search-input" placeholder="Area or district — e.g. Hong Kong, Central, Sukhumvit" type="text"/>
+<select id="clinic-issue-select" style="max-width:220px;">
+<option>あらゆる緊急事態</option>
+<option>腸のうっ滞（食事をしない）</option>
+<option>熱中症・倒れる</option>
+<option>斜頸</option>
+<option>膨満感または腹痛</option>
+</select>
+<button class="button primary" id="clinic-search-button" style="white-space:nowrap;" type="button">クリニックを探す</button>
+</div>
+<div aria-live="polite" id="clinic-finder-results"></div>
+</div>
+<div class="clinic-network" id="clinic-network">
+<div class="clinic-network-head">
+<div>
+<div class="eyebrow">近くのケアを探す</div>
+<h3>アジア全土で検証済みのウサギおよびエキゾチックな救急クリニック。</h3>
+<p>あなたの都市を選択し、クリニックの公式サイトを開いて、まず電話してから、以下の電話準備フォームを使用して、チームが重要な詳細をすぐに入手できるようにします。</p>
+</div>
+<div class="clinic-count"><b>5</b><span id="clinic-count-label">バンコクのリスト</span></div>
+</div>
+<div aria-label="Clinic markets" class="clinic-tabs">
+<button class="clinic-tab" data-clinic-market="hong-kong" type="button">香港</button>
+<button class="clinic-tab" data-clinic-market="tokyo" type="button">東京</button>
+<button class="clinic-tab" data-clinic-market="taipei" type="button">台北</button>
+<button class="clinic-tab" data-clinic-market="singapore" type="button">シンガポール</button>
+<button class="clinic-tab active" data-clinic-market="bangkok" type="button">バンコク</button>
+</div>
+<div class="clinic-market-header">
+<div>
+<h4 id="clinic-market-title">バンコクの認証済みクリニック</h4>
+<span id="clinic-market-note">公共の緊急事態やエキゾチックなペットの証拠を備えた本物のバンコク/タイのプロバイダー。</span>
+</div>
+<span class="pill red">まずはお電話ください</span>
+</div>
+<div class="verification-note">リストは、公開されているクリニックのページまたは信頼できるクリニックのリストに基づいています。緊急対応時間とウサギの対応時間はシフトによって変更される場合があるため、旅行前に電話してください。</div>
+<div class="clinic-directory-grid" id="clinic-directory-grid"></div>
+</div>
+<div class="finder">
+<div class="finder-card">
+<h3>緊急通報の準備</h3>
+<p>クリニックに電話またはメッセージを送信する前に、これらを記入してください。概要を作成し、受け取り先のクリニックを選択してからLINEで共有します。</p>
+<form class="form-grid">
+<label class="field">
+<span class="field-label">ウサギの年齢</span>
+<input name="rabbit-age" placeholder="e.g. 3 years" type="text"/>
+</label>
+<label class="field">
+<span class="field-label">重さ</span>
+<input name="rabbit-weight" placeholder="e.g. 1.8 kg" type="text"/>
+</label>
+<label class="field">
+<span class="field-label">主な問題</span>
+<select name="main-issue">
+<option>食べない・糞をしない</option>
+<option>軟便または下痢</option>
+<option>膨満感または腹痛</option>
+<option>呼吸困難または熱による苦痛</option>
+<option>斜頸、怪我、またはハエとの衝突</option>
+</select>
+</label>
+<label class="field">
+<span class="field-label">どのぐらいの間</span>
+<select name="duration">
+<option>6時間未満</option>
+<option>6～12時間</option>
+<option>12～24時間</option>
+<option>24時間以上</option>
+</select>
+</label>
+<label class="field full">
+<span class="field-label">獣医師に伝えるべきこと</span>
+<input name="vet-notes" placeholder="Last time eating &amp; pooping, diet, recent changes, medications, known conditions" type="text"/>
+</label>
+<div class="form-submit" style="display:flex;gap:8px;">
+<button class="button primary" id="generate-summary" style="flex:1;" type="button">概要の生成</button>
+<a class="button line" href="https://line.me/R/share?text=Rabbit%20emergency%20summary%3A%20fill%20the%20form%20and%20generate%20a%20summary%20first." id="line-share-link" rel="noreferrer" style="flex:1;" target="_blank">LINEでまとめをシェア</a>
+</div>
+<div class="call-summary" hidden="" id="call-summary"></div>
+</form>
+</div>
+<div class="faq" id="faq">
+<details open="">
+<summary>獣医師の診察を受ける代わりに、RodiCare または WOOLY 製品を使用できますか?</summary>
+<p>いいえ。ウサギに緊急の兆候がある場合は、ウサギに詳しい獣医師に電話するか訪問してください。ここに示されている製品は、獣医師がウサギを評価した後、獣医師の診療を通じて推奨される可能性のある補助的なオプションです。</p>
+</details>
+<details>
+<summary>なぜ RabbitEmergency.com は食事をとらないことを緊急事態として扱うのでしょうか?</summary>
+<p>ウサギは後腸発酵動物であり、正常なものと重篤なものの間の限界は狭い。ウサギが餌を食べたり、糞をしなくなったりすると、腸の運動が遅くなったり機能が停止したりする可能性があり、数時間以内に生命を脅かす状況になる可能性があります。必ずウサギに詳しい獣医師に相談してください。</p>
+</details>
+<details>
+<summary>これらの製品は自宅で腸の問題を治療するためのものですか?</summary>
+<p>いいえ、ウサギが食べなかったり、糞をしなかったりする場合は、獣医師の診断が必要です。 RodiCare および WOOLY 製品は、起こり得る緊急事態に対するホーム庭での対応としてではなく、診断後の獣医師主導の計画の一環として、消化、食欲、回復をサポートします。</p>
+</details>
+<details>
+<summary>所有者はこれらの製品をどこで入手しますか?</summary>
+<p>Alfavet は、RodiCare は獣医の診療を通じて入手可能であると述べています。 WOOLY はウサギ専門チャンネルを通じて毎日のケアをご利用いただけます。 RabbitEmergency.com は、製品を店頭での簡単な修理品として提示するのではなく、飼い主を参加獣医師や専門小売店に誘導する必要があります。</p>
+</details>
+<details>
+<summary>ガイダンスはどのようにレビューされますか?</summary>
+<p>すべてのガイドは、発行前に、RWAF (ウサギ福祉協会および基金)、House Rabbit Society、およびエキゾチックな小型哺乳動物の医学基準に照らして、当社のエキゾチック獣医諮問委員会によって審査されます。議会パートナークリニックは、医師が審査した独自のガイダンスをプロフィールの下に公開することもできます。</p>
+</details>
+</div>
+</div>
+</section>
+<section aria-label="Conversion paths" class="section">
+<div class="section-head">
+<div class="section-title">
+<h2>今どこにいても、ここから始めてください。</h2>
+<p>3 つの明確な道: 緊急事態に対処する、獣医師が推奨する回復サポートを理解する、クリニックとして私たちと提携する。</p>
+</div>
+<span class="pill">次のステップ</span>
+</div>
+<div class="cta-grid">
+<div class="cta-card">
+<div class="eyebrow">今すぐオーナー様へ</div>
+<h3>緊急標識を確認してください。</h3>
+<p>今が「すぐに行く」、「今日電話する」、または「注意深く監視する」瞬間であるかどうかを数秒で判断します。</p>
+<a class="cta-btn" href="#now">標識を確認してください</a>
+</div>
+<div class="cta-card">
+<div class="eyebrow">獣医師の診察後</div>
+<h3>復興支援について理解する。</h3>
+<p>獣医師が推奨する消化、食欲、回復のための製品を評価後に理解してください。</p>
+<a class="cta-btn" href="#products">回復サポートを参照</a>
+</div>
+<div class="cta-card vets">
+<div class="eyebrow">獣医師向け</div>
+<h3>タイでの立ち上げに向けてクリニックをリストしてください。</h3>
+<p>心配しているウサギの飼い主の紹介先となり、獣医師主導の回復パートナーとなります。</p>
+<a class="cta-btn" href="#congress">あなたのクリニックをリストアップしてください</a>
+</div>
+</div>
+</section>
+<section class="source-panel" id="sources">
+<h2>臨床情報源と基準</h2>
+<p>緊急時のガイドラインは、RWAF、House Rabbit Society、および外来小型哺乳類の基準に従い、獣医諮問委員会によって審査されます。リカバリー製品情報は、Alfavet の RodiCare ドイツ獣医チャンネル シリーズおよび WOOLY デイリーケア シリーズに基づいています。</p>
+<div class="source-links">
+<a class="source-link" href="https://rabbitwelfare.co.uk/" rel="noreferrer" target="_blank">RWAF</a>
+<a class="source-link" href="https://rabbit.org/" rel="noreferrer" target="_blank">House Rabbit Society</a>
+<a class="source-link" href="https://wooly.co.jp/" rel="noreferrer" target="_blank">WOOLY</a>
+<a class="source-link" href="https://alfavet.de/en/series/rodicare" rel="noreferrer" target="_blank">アルファベット RodiCare</a>
+<a class="source-link" href="https://alfavet.de/en/" rel="noreferrer" target="_blank">アルファヴェット</a>
+</div>
+</section>
+<footer class="footer">
+        著作権 © 2026 CCH Foundation.無断転載を禁じます。 CCH Foundation は、内国歳入条例第 88 条に基づき、香港の慈善団体および非課税慈善団体として法的に認められており、慈善、教育、香港地域社会の利益を目的として設立されました。
+      </footer>
+</div>
+</main>
+<script>
+    const marketButtons = document.querySelectorAll("[data-market-filter]");
+    const storyCards = document.querySelectorAll(".testi-card[data-market]");
+
+    const applyMarketFilter = (selected, activeButton) => {
+      marketButtons.forEach((item) => {
+        item.classList.toggle("active", item === activeButton || item.dataset.marketFilter === selected && item.classList.contains("city-tag"));
+      });
+      storyCards.forEach((card) => {
+        card.hidden = selected === "all"
+          ? card.dataset.featured !== "true"
+          : card.dataset.market !== selected;
+      });
+    };
+
+    marketButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.marketFilter;
+        applyMarketFilter(selected, button);
+      });
+    });
+
+    applyMarketFilter("all", document.querySelector("[data-market-filter='all']"));
+
+    const summaryButton = document.querySelector("#generate-summary");
+    const summaryBox = document.querySelector("#call-summary");
+    const lineShareLink = document.querySelector("#line-share-link");
+    const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#039;"
+    }[char]));
+
+    const clinicDirectory = {
+      "hong-kong": {
+        title: "Hong Kong verified clinics",
+        note: "Real clinics and hospitals with public evidence of emergency and/or exotic-pet capability. Call first and confirm a rabbit-experienced vet is available now.",
+        clinics: [
+          { name: "Tai Wai Animal Hospital", area: "Tai Wai", status: "24h; all exotic pets", phone: "", url: "https://www.taiwaiexotic.com/en-hk", evidence: "24-hour medical and surgical care for all exotic pets; vet on site" },
+          { name: "CITYVET Tsuen Wan", area: "Tsuen Wan", status: "24h phone; exotics", phone: "2623 5500", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Tsuen Wan 24hrs phone" },
+          { name: "CITYVET Yuen Long", area: "Yuen Long", status: "24h phone; exotics", phone: "2477 9990", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Yuen Long 24hrs phone" },
+          { name: "Concordia Pet Care", area: "Happy Valley", status: "24/7; exotic services", phone: "", url: "https://en.concordiapetcare.com/", evidence: "24-hour hospital with exotic-animal wards and Director of Exotic Services" },
+          { name: "CityU Veterinary Medical Centre", area: "Sham Shui Po", status: "24h emergency", phone: "3650 3200", url: "https://cityuvmc.com.hk/en/home/", evidence: "24-hour emergency and critical care; call to confirm rabbit handling" }
+        ]
+      },
+      tokyo: {
+        title: "Tokyo verified clinics",
+        note: "Tokyo rabbit emergency coverage is limited. These entries have public evidence of rabbit/exotic care or emergency service; always call first.",
+        clinics: [
+          { name: "Daktari Animal Hospital Tokyo Medical Center", area: "Shirokanedai, Minato", status: "24/7 emergency; rabbits listed", phone: "03-5420-0012", url: "https://www.daktarivetjp.com/en/", evidence: "24/7 emergency; patients include dogs, cats, rabbits and ferrets" },
+          { name: "Igusa Animal Hospital", area: "Suginami", status: "Rabbits; night emergency by call", phone: "03-3397-7115", url: "https://igusa-animal.com/annai.html", evidence: "Treats rabbits and small animals; night emergency cases by phone" },
+          { name: "Shakujii Koen Animal Hospital", area: "Nerima", status: "Rabbits; emergency call first", phone: "", url: "https://www.shakujiikoen-ah.com/medical_information/", evidence: "Lists rabbits; says urgent night/holiday cases may be handled" },
+          { name: "TRVA Animal Medical Center", area: "Setagaya", status: "Night emergency", phone: "03-5760-1212", url: "https://trva.jp/emergency/", evidence: "Night emergency center; call to confirm rabbit acceptance before travel" },
+          { name: "Japan Veterinary Medical Group", area: "Musashino / Tokyo region", status: "24h emergency; rabbits listed", phone: "", url: "https://www.pet-hospital.org/en/", evidence: "English site says 24-hour emergency care and lists rabbits among treated companion animals" }
+        ]
+      },
+      taipei: {
+        title: "Taipei verified clinics",
+        note: "Taipei entries are limited to clinics with public rabbit/exotic or 24-hour emergency evidence. Call first; some 24-hour hospitals may be dog/cat only overnight.",
+        clinics: [
+          { name: "Topvet Animal Hospital", area: "Yonghe / Taipei area", status: "Rabbits & exotics", phone: "02-8921-1700", url: "https://www.topvet.com.tw/", evidence: "Advertises care for rabbits, turtles, guinea pigs, sugar gliders, ferrets and other pets" },
+          { name: "National Animal Hospital Taipei Branch", area: "Taipei", status: "24h ICU; rabbits listed", phone: "", url: "https://www.vet.com.tw/en/about2.php", evidence: "English site says Taipei branch provides 24-hour emergency and ICU service for dogs, cats and rabbits" },
+          { name: "Da'an Animal Hospital", area: "Da'an", status: "24h emergency", phone: "", url: "https://daan-vet.com/", evidence: "24-hour animal emergency hospital; call to confirm rabbit capability" },
+          { name: "Dacyun Animal Hospital", area: "Wenshan", status: "24h emergency", phone: "02-7750-5028", url: "https://www.dacyun-vet.tw/", evidence: "24-hour Taipei emergency room; public page lists dogs/cats, so confirm rabbit acceptance" },
+          { name: "Madagascar Animal Hospital", area: "Banqiao / New Taipei", status: "Special-pet hospital; rabbits listed", phone: "02-8259-5001", url: "https://www.madagascar.com.tw/", evidence: "Official site says it provides professional care for special pets including rabbits, with serious and general internal/surgical care" }
+        ]
+      },
+      singapore: {
+        title: "Singapore verified clinics",
+        note: "Real Singapore providers with public evidence of 24h emergency and/or rabbit/exotic capability. Call first and ask whether an exotics vet is available now.",
+        clinics: [
+          { name: "Beecroft Animal Specialist & Emergency Hospital", area: "Alexandra", status: "24h emergency; rabbits/exotics", phone: "+65 6996 1812", url: "https://beecroft.com.sg/", evidence: "24-hour emergency and dedicated avian/exotics service including rabbits" },
+          { name: "Beecroft Avian & Exotics Veterinary Clinic", area: "Alexandra", status: "Exotics specialist; emergency support", phone: "+65 6996 1812", url: "https://beecroft.com.sg/avian-and-exotics/", evidence: "Dedicated exotics service; rabbits listed; walk-in emergencies accepted" },
+          { name: "Advanced VetCare Veterinary Centre", area: "Bedok / Balestier", status: "24h emergency; rabbits listed", phone: "", url: "https://www.advancedvetcare.sg/", evidence: "24/7 emergency; treats dogs, cats, rabbits, birds and small animals" },
+          { name: "Animal Wellness Referral Centre", area: "Bukit Timah", status: "24h emergency; exotics", phone: "+65 6530 3530", url: "https://www.awrc.sg/service/exotic-animals/", evidence: "24-hour emergency vet; exotics service" },
+          { name: "Vet Affinity", area: "Bukit Batok", status: "Rabbits; emergency triage", phone: "+65 6970 7505", url: "https://www.vetaffinity.com.sg/", evidence: "Rabbit and exotic pet care; after-hours emergency contacts listed" }
+        ]
+      },
+      bangkok: {
+        title: "Bangkok verified clinics",
+        note: "Real Bangkok / Thailand providers with public emergency and/or exotic-pet evidence. Call first and confirm a rabbit-experienced clinician is on duty.",
+        clinics: [
+          { name: "Chulalongkorn Small Animal Teaching Hospital", area: "Pathum Wan", status: "24h emergency; exotic clinic", phone: "0 2218 9810", url: "https://www.chula.ac.th/en/services/small-animal-teaching-hospital/", evidence: "Emergency clinic open 24h; services include exotic animal medicine" },
+          { name: "UVET Animal Hospital", area: "Bangkok", status: "24h emergency; exotics", phone: "", url: "https://www.uvethospital.com/", evidence: "24-hour emergency cases; exotic-pet center" },
+          { name: "Vetazoo Exotic Pet Hospital", area: "Pattaya / East Coast", status: "24h exotic hospital; rabbits", phone: "+66 82 662 7999", url: "https://exoticpethospital.com/", evidence: "24-hour exotic animal hospital; rabbits listed" },
+          { name: "Phyathai 7 Animal Hospital Exotic Pets Center", area: "Bangkok", status: "24h hospital; exotics", phone: "", url: "https://www.phyathai7pet.com/dr-mew-exotic-pets", evidence: "Open 24 hrs; exotic pets center with rabbit/rodent training noted" },
+          { name: "Thonglor Pet Hospital", area: "Bangkok", status: "24/7; exotic pet clinic", phone: "", url: "https://thonglorpet.com/en/", evidence: "Official site states open 24/7 for dogs, cats and exotic pets, with an Exotic Pet Clinic" }
+        ]
+      }
+    };
+
+    const tagSets = [
+      ["24h triage", "exotic ward", "gut stasis"],
+      ["heat care", "oxygen", "senior"],
+      ["GI support", "recovery", "LINE intake"],
+      ["syringe feed", "appetite", "post-op"],
+      ["bilingual", "referral", "weekend"]
+    ];
+    const clinicMarketAliases = {
+      "hong-kong": ["hong kong", "hongkong", "hong-kong", "hk", "central", "kowloon", "tsim sha tsui", "causeway bay", "sai ying pun", "mong kok", "sha tin", "tai po", "north point", "happy valley", "sai kung", "tsuen wan", "kennedy town", "yuen long", "hung hom", "repulse bay", "kwun tong", "ma on shan", "tung chung", "admiralty", "kowloon tong"],
+      tokyo: ["tokyo", "setagaya", "shibuya", "meguro", "nakano", "kichijoji", "roppongi", "ginza", "ueno", "ikebukuro", "daikanyama", "shimokitazawa", "aoyama", "ebisu", "koenji", "toyosu", "asakusa", "suginami", "akihabara", "jiyugaoka", "odaiba"],
+      taipei: ["taipei", "da'an", "daan", "xinyi", "songshan", "zhongshan", "neihu", "shilin", "banqiao", "tamsui", "wanhua", "nangang", "beitou", "zhongzheng", "yonghe", "sanchong", "wenshan", "muzha", "minsheng", "dunhua", "taoyuan", "xindian", "linyi"],
+      singapore: ["singapore", "sg", "tampines", "katong", "queenstown", "woodlands", "orchard", "bukit timah", "novena", "toa payoh", "jurong", "serangoon", "holland village", "marine parade", "punggol", "clementi", "river valley", "ang mo kio", "bedok", "sentosa", "changi", "bishan"],
+      bangkok: ["bangkok", "bkk", "thonglor", "sukhumvit", "phrom phong", "ari", "sathorn", "silom", "ekkamai", "rama 9", "chatuchak", "lat phrao", "on nut", "bang na", "ratchada", "phaya thai", "nonthaburi", "samyan", "pinklao", "asoke", "huai khwang"]
+    };
+    const clinicTabs = document.querySelectorAll("[data-clinic-market]");
+    const clinicGrid = document.querySelector("#clinic-directory-grid");
+    const clinicMarketTitle = document.querySelector("#clinic-market-title");
+    const clinicMarketNote = document.querySelector("#clinic-market-note");
+    const clinicCountLabel = document.querySelector("#clinic-count-label");
+    const clinicSearchInput = document.querySelector("#clinic-search-input");
+    const clinicIssueSelect = document.querySelector("#clinic-issue-select");
+    const clinicSearchButton = document.querySelector("#clinic-search-button");
+    const clinicFinderResults = document.querySelector("#clinic-finder-results");
+
+    const renderClinicMarket = (market) => {
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      clinicTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.clinicMarket === market));
+      if (clinicMarketTitle) clinicMarketTitle.textContent = marketData.title;
+      if (clinicMarketNote) clinicMarketNote.textContent = marketData.note;
+      if (clinicCountLabel) clinicCountLabel.textContent = `${marketData.clinics.length} listings`;
+      if (!clinicGrid) return;
+      clinicGrid.innerHTML = marketData.clinics.map((clinic, index) => {
+        const tags = tagSets[index % tagSets.length].map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const mapsQuery = encodeURIComponent(`${clinic.name} ${clinic.area}`);
+        const phoneLink = clinic.phone
+          ? `<a class="secondary" href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}" aria-label="Call ${escapeHTML(clinic.name)}">Call ${escapeHTML(clinic.phone)}</a>`
+          : "";
+        return `
+          <article class="clinic-card">
+            <div class="status ${statusClass}">${escapeHTML(clinic.status)}</div>
+            <div>
+              <h5>${escapeHTML(clinic.name)}</h5>
+              <div class="area">${escapeHTML(clinic.area)}</div>
+            </div>
+            <div class="clinic-tags">${tags}</div>
+            <p class="clinic-evidence">${escapeHTML(clinic.evidence)}</p>
+            <div class="clinic-actions">
+              ${phoneLink}
+              <a href="${clinic.url}" target="_blank" rel="noreferrer" aria-label="Open official website for ${escapeHTML(clinic.name)}">Official site</a>
+              <a class="secondary" href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" rel="noreferrer" aria-label="Open map search for ${escapeHTML(clinic.name)}">Map</a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    };
+
+    clinicTabs.forEach((tab) => {
+      tab.addEventListener("click", () => renderClinicMarket(tab.dataset.clinicMarket));
+    });
+
+    renderClinicMarket("bangkok");
+
+    const detectClinicMarket = (query) => {
+      const normalized = query.trim().toLowerCase();
+      if (!normalized) return "bangkok";
+      return Object.keys(clinicMarketAliases).find((market) => (
+        clinicMarketAliases[market].some((alias) => normalized.includes(alias))
+      )) || "bangkok";
+    };
+
+    const issueKeywords = {
+      "Gut stasis (not eating)": ["gut stasis", "exotic ward", "appetite"],
+      "Heatstroke / collapse": ["heat care", "oxygen", "24h triage"],
+      "Head tilt": ["exotic ward", "24h triage", "senior"],
+      "Bloat or belly pain": ["gut stasis", "24h triage", "oxygen"],
+      "Any emergency": []
+    };
+
+    const renderFinderResults = () => {
+      if (!clinicFinderResults) return;
+      const query = clinicSearchInput ? clinicSearchInput.value : "";
+      const selectedIssue = clinicIssueSelect ? clinicIssueSelect.value : "Any emergency";
+      const market = detectClinicMarket(query);
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      const keywords = issueKeywords[selectedIssue] || [];
+      const matched = marketData.clinics
+        .map((clinic, index) => ({ ...clinic, tags: tagSets[index % tagSets.length], index }))
+        .sort((a, b) => {
+          const aScore = keywords.filter((keyword) => a.tags.includes(keyword)).length + (a.status.includes("24h") ? 1 : 0);
+          const bScore = keywords.filter((keyword) => b.tags.includes(keyword)).length + (b.status.includes("24h") ? 1 : 0);
+          return bScore - aScore || a.index - b.index;
+        })
+        .slice(0, 3);
+      clinicFinderResults.innerHTML = matched.map((clinic) => {
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const phone = clinic.phone ? `<a href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}">Call</a>` : "";
+        return `<div class="clinic-result"><b>${escapeHTML(clinic.name)}</b><span class="meta ${statusClass}">${escapeHTML(clinic.status)} · ${escapeHTML(clinic.area)}</span>${phone}<a href="${clinic.url}" target="_blank" rel="noreferrer">Official site</a></div>`;
+      }).join("");
+      renderClinicMarket(market);
+    };
+
+    if (clinicSearchInput && clinicIssueSelect && clinicSearchButton) {
+      clinicSearchInput.addEventListener("input", renderFinderResults);
+      clinicIssueSelect.addEventListener("change", renderFinderResults);
+      clinicSearchButton.addEventListener("click", renderFinderResults);
+      renderFinderResults();
+    }
+
+    if (summaryButton && summaryBox) {
+      summaryButton.addEventListener("click", () => {
+        const form = summaryButton.closest("form");
+        const data = new FormData(form);
+        const age = escapeHTML(data.get("rabbit-age") || "not entered");
+        const weight = escapeHTML(data.get("rabbit-weight") || "not entered");
+        const issue = escapeHTML(data.get("main-issue") || "not selected");
+        const duration = escapeHTML(data.get("duration") || "not selected");
+        const notes = escapeHTML(data.get("vet-notes") || "No extra notes entered.");
+        const plainSummary = [
+          "Rabbit emergency summary",
+          `Rabbit age: ${data.get("rabbit-age") || "not entered"}`,
+          `Weight: ${data.get("rabbit-weight") || "not entered"}`,
+          `Main issue: ${data.get("main-issue") || "not selected"}`,
+          `Duration: ${data.get("duration") || "not selected"}`,
+          `Notes: ${data.get("vet-notes") || "No extra notes entered."}`,
+          "Next step: call the clinic and ask whether the rabbit should be seen now."
+        ].join("\n");
+
+        summaryBox.hidden = false;
+        summaryBox.innerHTML = `
+          <strong>Vet call summary</strong>
+          Rabbit age: ${age}<br>
+          Weight: ${weight}<br>
+          Main issue: ${issue}<br>
+          Duration: ${duration}<br>
+          Notes: ${notes}<br>
+          Next step: call the clinic and read this summary before asking whether the rabbit should be seen now.
+        `;
+        if (lineShareLink) {
+          lineShareLink.href = `https://line.me/R/share?text=${encodeURIComponent(plainSummary)}`;
+        }
+      });
+    }
+  </script>
+</body>
+</html>

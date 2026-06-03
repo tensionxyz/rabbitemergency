@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RabbitEmergency.com | ความช่วยเหลือฉุกเฉินของแรบบิท คำแนะนำจากสัตวแพทย์แปลกใหม่ และการสนับสนุนในการฟื้นฟู</title>
+<meta content="RabbitEmergency.com ช่วยให้เจ้าของกระต่ายรับรู้สัญญาณเตือนเร่งด่วน เช่น อาการลำไส้หยุดนิ่ง การไม่กินอาหาร และโรคลมแดด ติดต่อสัตวแพทย์ผู้ชำนาญเรื่องกระต่าย และทำความเข้าใจความช่วยเหลือในการฟื้นฟูโดยสัตวแพทย์ รวมถึงการดูแลรายวันของ Alfavet RodiCare และ WOOLY ใช้โดยเจ้าของกระต่ายทั่วฮ่องกง ญี่ปุ่น ไต้หวัน สิงคโปร์ และไทย" name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --pine: #1A472A;
+    --pine-deep: #0D2718;
+    --pine-2: #2E6B3E;
+    --pine-3: #DCEBDD;
+    --cream: #FAFAF5;
+    --warm: #F5F0E8;
+    --paper: #FFFFFF;
+    --ink: #181B18;
+    --muted: #5E6A62;
+    --quiet: #89938B;
+    --border: #DCE4DC;
+    --amber: #C4833B;
+    --amber-soft: #E3B36F;
+    --amber-bg: #FFF8F0;
+    --red: #A93B32;
+    --red-bg: #FDF1EE;
+    --blue: #315D75;
+    --blue-bg: #E9F2F5;
+    --lav: #6B5B83;
+    --lav-bg: #F2EEF7;
+    --shadow: 0 18px 60px rgba(28, 42, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button, input, select { font: inherit; }
+
+  :focus-visible {
+    outline: 3px solid rgba(196, 131, 59, 0.55);
+    outline-offset: 3px;
+  }
+
+  .mono,
+  .eyebrow,
+  .pill,
+  .button,
+  .risk-label,
+  .field-label,
+  .nav-links a,
+  .product-meta,
+  .source-link,
+  .stat-label,
+  .city-tag,
+  .feed-tag,
+  .ribbon,
+  th {
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  h1, h2, h3, .brand, .stat-number {
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(26, 71, 42, 0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .brand {
+    color: #fff;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .brand span {
+    color: rgba(255,255,255,0.48);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.66);
+    font-size: 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .nav-links a.cta {
+    background: var(--amber);
+    color: #fff;
+  }
+
+  .nav-links a.cta:hover { background: #b3742f; }
+
+  @media (max-width: 1320px) {
+    .nav-links a[href="#stories"],
+    .nav-links a[href="#faq"] {
+      display: none;
+    }
+  }
+
+  .hero {
+    min-height: 720px;
+    position: relative;
+    overflow: hidden;
+    background: var(--pine);
+    color: #fff;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(13, 39, 24, 0.96) 0%, rgba(13, 39, 24, 0.88) 38%, rgba(13, 39, 24, 0.36) 72%, rgba(13, 39, 24, 0.16) 100%),
+      linear-gradient(180deg, rgba(13, 39, 24, 0.1) 0%, rgba(13, 39, 24, 0.72) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1200px, calc(100% - 36px));
+    min-height: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(330px, 430px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+    padding: 62px 0 74px;
+  }
+
+  .eyebrow {
+    color: var(--amber-soft);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(43px, 6.2vw, 76px);
+    line-height: 0.96;
+    max-width: 640px;
+    margin-bottom: 22px;
+  }
+
+  .hero-copy {
+    color: rgba(255,255,255,0.86);
+    font-size: 18px;
+    max-width: 590px;
+    margin-bottom: 26px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .button {
+    min-height: 44px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    color: #fff;
+    background: rgba(255,255,255,0.04);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .button.primary {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #fff;
+  }
+
+  .button.dark {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .avatars { display: flex; }
+
+  .avatars span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--pine-deep);
+    margin-left: -10px;
+  }
+
+  .avatars span:first-child { margin-left: 0; }
+  .avatars span:nth-child(1) { background: var(--amber); }
+  .avatars span:nth-child(2) { background: var(--blue); }
+  .avatars span:nth-child(3) { background: var(--lav); }
+  .avatars span:nth-child(4) { background: var(--pine-2); }
+
+  .hero-trust p {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
+  }
+
+  .hero-card {
+    background: rgba(250,250,245,0.96);
+    color: var(--ink);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-card h2 {
+    color: var(--pine);
+    font-size: 28px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .hero-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .emergency-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .emergency-row {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--red-bg);
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .emergency-row:nth-child(2) .mark { background: var(--amber-bg); color: var(--amber); }
+  .emergency-row:nth-child(3) .mark { background: var(--blue-bg); color: var(--blue); }
+  .emergency-row:nth-child(4) .mark { background: var(--pine-3); color: var(--pine); }
+
+  .row-title {
+    color: var(--pine);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .row-note {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .risk-label {
+    border-radius: 999px;
+    background: var(--red-bg);
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .risk-label.amber { background: var(--amber-bg); color: #84551D; }
+
+  /* trust strip */
+  .trust-strip {
+    background: var(--pine);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .trust-inner {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-cell {
+    padding: 22px 16px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .trust-cell:last-child { border-right: none; }
+
+  .trust-cell .stat-number {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .trust-cell:first-child .stat-number { color: var(--amber-soft); }
+
+  .stat-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+
+  .wrap {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 54px 0 82px;
+  }
+
+  .alert-band {
+    margin-top: -52px;
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.58fr);
+    gap: 14px;
+  }
+
+  .callout {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+  }
+
+  .callout.red {
+    border-left-color: var(--red);
+    background: var(--red-bg);
+  }
+
+  .callout.amber {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+
+  .callout h3 {
+    color: var(--pine);
+    font-size: 23px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .callout p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .section {
+    margin-top: 58px;
+    scroll-margin-top: 76px;
+  }
+
+  .hero-card,
+  .source-panel {
+    scroll-margin-top: 76px;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title h2 {
+    color: var(--pine);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.04;
+  }
+
+  .section-title p {
+    color: var(--muted);
+    max-width: 760px;
+    margin-top: 8px;
+  }
+
+  .pill {
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0 10px;
+    background: var(--pine-3);
+    color: var(--pine);
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .pill.red { background: var(--red-bg); color: var(--red); }
+  .pill.amber { background: var(--amber-bg); color: #84551D; }
+  .pill.blue { background: var(--blue-bg); color: var(--blue); }
+  .pill.lav { background: var(--lav-bg); color: var(--lav); }
+
+  .triage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .triage-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .triage-top {
+    padding: 16px;
+    color: #fff;
+    background: var(--pine);
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .triage-card.urgent .triage-top { background: var(--red); }
+  .triage-card.digestive .triage-top { background: var(--amber); }
+  .triage-card.recovery .triage-top { background: var(--blue); }
+  .triage-card.urinary .triage-top { background: var(--lav); }
+
+  .triage-top .pill {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    width: fit-content;
+  }
+
+  .triage-top h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.05;
+  }
+
+  .triage-card-body {
+    padding: 16px;
+  }
+
+  .triage-card-body ul {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .triage-card-body li { margin-bottom: 5px; }
+
+  /* guides + activity */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .guide-list { display: grid; gap: 10px; }
+
+  .guide-row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    min-height: 88px;
+  }
+
+  .guide-rank {
+    font-family: "DM Serif Display", serif;
+    font-size: 26px;
+    color: var(--pine);
+  }
+
+  .guide-row:nth-child(1) .guide-rank { color: var(--red); }
+  .guide-row:nth-child(2) .guide-rank { color: var(--amber); }
+  .guide-row:nth-child(3) .guide-rank { color: var(--blue); }
+  .guide-row:nth-child(4) .guide-rank { color: var(--lav); }
+  .guide-row:nth-child(5) .guide-rank { color: var(--pine-2); }
+
+  .guide-row h3 {
+    color: var(--pine);
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .guide-row p { color: var(--muted); font-size: 12px; }
+
+  .reviewed {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--pine-3);
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .feed {
+    background: var(--pine);
+    border-radius: 8px;
+    padding: 22px;
+    color: #fff;
+  }
+
+  .feed-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #7FCF9B;
+  }
+
+  .feed-head span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+  }
+
+  .feed-sub { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+
+  .feed-items { display: grid; gap: 10px; }
+
+  .feed-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 7px;
+    padding: 11px 13px;
+  }
+
+  .feed-tag {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--amber-soft);
+    background: rgba(196,131,59,0.2);
+    border-radius: 4px;
+    padding: 3px 7px;
+    white-space: nowrap;
+  }
+
+  .feed-item p { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+  .feed-note {
+    margin-top: 14px;
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .care-path {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .path-panel {
+    background: var(--pine);
+    color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 78px;
+  }
+
+  .path-panel h3 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.04;
+    margin-bottom: 12px;
+  }
+
+  .path-panel p {
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 18px;
+  }
+
+  .path-steps {
+    display: grid;
+    gap: 10px;
+  }
+
+  .path-step {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+
+  .step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .path-step strong {
+    display: block;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .path-step span {
+    color: rgba(255,255,255,0.66);
+    font-size: 12px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+    min-height: 250px;
+  }
+
+  .product-head {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+  }
+
+  .product-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 8px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0)),
+      var(--pine-3);
+    display: grid;
+    place-items: center;
+    color: var(--pine);
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    overflow: hidden;
+  }
+
+  .product-card:nth-child(2) .product-icon { background-color: var(--amber-bg); color: var(--amber); }
+  .product-card:nth-child(3) .product-icon { background-color: var(--blue-bg); color: var(--blue); }
+  .product-card:nth-child(4) .product-icon { background-color: var(--lav-bg); color: var(--lav); }
+  .product-card:nth-child(5) .product-icon { background-color: var(--red-bg); color: var(--red); }
+  .product-card:nth-child(6) .product-icon { background-color: #F2EEE3; color: #6A5635; }
+
+  .product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 7px;
+    mix-blend-mode: multiply;
+  }
+
+  .product-card h3 {
+    color: var(--pine);
+    font-size: 22px;
+    line-height: 1.08;
+  }
+
+  .product-meta {
+    color: var(--quiet);
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+
+  .product-card p {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .product-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .product-note {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* testimonials */
+  .city-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .city-tag {
+    min-height: 44px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 0 14px;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+  }
+
+  .city-tag.active { background: var(--pine); color: #fff; border-color: var(--pine); }
+
+  .testi-card[hidden] { display: none; }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testi-bar { height: 6px; background: var(--pine); }
+  .testi-card:nth-child(2) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(3) .testi-bar { background: var(--blue); }
+  .testi-card:nth-child(4) .testi-bar { background: var(--lav); }
+  .testi-card:nth-child(5) .testi-bar { background: var(--red); }
+  .testi-card:nth-child(6) .testi-bar { background: var(--pine-2); }
+  .testi-card:nth-child(7) .testi-bar { background: var(--amber); }
+  .testi-card:nth-child(8) .testi-bar { background: var(--blue); }
+
+  .testi-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .testi-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  .testi-body blockquote {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .testi-name { font-size: 12px; font-weight: 700; color: var(--pine); }
+
+  /* regional network */
+  .region-band {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .region-lead { flex-shrink: 0; }
+  .region-lead .eyebrow { color: var(--amber); margin-bottom: 6px; }
+  .region-lead h3 { color: var(--pine); font-size: 28px; line-height: 1.05; max-width: 280px; }
+
+  .region-cities { flex: 1; display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .region-city {
+    flex: 1;
+    min-width: 120px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .region-city:hover,
+  .region-city:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--pine-2);
+    box-shadow: 0 12px 28px rgba(28, 42, 32, 0.1);
+    outline: none;
+  }
+
+  .region-city b {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--pine);
+  }
+
+  .region-city span {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--quiet);
+    margin-top: 4px;
+  }
+
+  .region-city.new { background: var(--pine); border-color: var(--pine); }
+  .region-city.new b { color: #fff; }
+  .region-city.new span { color: var(--amber-soft); }
+
+  /* congress */
+  .congress {
+    background: var(--pine-deep);
+    border-radius: 12px;
+    padding: 40px 44px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.78fr;
+    gap: 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .congress::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(196,131,59,0.14);
+    pointer-events: none;
+  }
+
+  .congress .eyebrow { color: var(--amber-soft); }
+  .congress h2 { color: #fff; font-size: clamp(30px, 3.4vw, 38px); line-height: 1.05; margin-bottom: 16px; max-width: 520px; }
+  .congress > div > .congress-copy { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 24px; }
+
+  .congress-list { display: grid; gap: 10px; margin-bottom: 26px; }
+  .congress-list div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 7px;
+    padding: 12px 14px;
+    color: rgba(255,255,255,0.86);
+    font-size: 14px;
+  }
+  .congress-list div::before {
+    content: "";
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--amber-soft);
+    flex-shrink: 0;
+  }
+
+  .congress-shelf {
+    background: rgba(250,250,245,0.97);
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .congress-shelf h3 { color: var(--pine); font-size: 22px; margin-bottom: 4px; }
+  .congress-shelf .shelf-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+
+  .shelf-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E2D2;
+    padding: 9px 0;
+  }
+  .shelf-row:last-of-type { border-bottom: none; }
+  .shelf-row .label { font-size: 13px; color: var(--ink); }
+  .shelf-row .skus { font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700; color: var(--pine); }
+
+  .shelf-disclaimer {
+    margin-top: 16px;
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: #84551D;
+    line-height: 1.5;
+  }
+
+  /* finder */
+  .finder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  .finder-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .finder-card h3 {
+    color: var(--pine);
+    font-size: 26px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+  }
+
+  .finder-card p {
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .field {
+    display: grid;
+    gap: 6px;
+  }
+
+  .field.full { grid-column: 1 / -1; }
+
+  .field-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--cream);
+    color: var(--ink);
+    padding: 0 11px;
+    outline: none;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: var(--pine-2);
+    box-shadow: 0 0 0 3px rgba(46,107,62,0.12);
+  }
+
+  .form-submit { grid-column: 1 / -1; }
+
+  .call-summary {
+    grid-column: 1 / -1;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--pine-2);
+    border-radius: 8px;
+    background: var(--cream);
+    color: var(--muted);
+    padding: 14px;
+    font-size: 13px;
+  }
+
+  .call-summary strong {
+    display: block;
+    color: var(--pine);
+    margin-bottom: 6px;
+  }
+
+  .faq {
+    display: grid;
+    gap: 10px;
+  }
+
+  details {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 16px;
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 0;
+    color: var(--pine);
+    font-weight: 700;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  details p {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 0 16px;
+  }
+
+  /* final cta */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .cta-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-card:nth-child(2) { border-top-color: var(--blue); }
+  .cta-card.vets { background: var(--pine-deep); border-color: var(--pine-deep); border-top-color: var(--amber); }
+
+  .cta-card .eyebrow { margin-bottom: 0; color: var(--red); }
+  .cta-card:nth-child(2) .eyebrow { color: var(--blue); }
+  .cta-card.vets .eyebrow { color: var(--amber-soft); }
+
+  .cta-card h3 { color: var(--pine); font-size: 26px; line-height: 1.05; }
+  .cta-card.vets h3 { color: #fff; }
+  .cta-card p { color: var(--muted); font-size: 13px; line-height: 1.55; flex: 1; }
+  .cta-card.vets p { color: rgba(255,255,255,0.78); }
+
+  .cta-btn {
+    background: var(--red);
+    border-radius: 7px;
+    padding: 12px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .cta-card:nth-child(2) .cta-btn { background: var(--blue); }
+  .cta-card.vets .cta-btn { background: var(--amber); }
+
+  .source-panel {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 52px;
+  }
+
+  .source-panel h2 {
+    color: var(--pine);
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .source-panel p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .source-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .source-link {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--pine);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .footer {
+    color: var(--muted);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 32px;
+  }
+
+  /* --- emergency mark emphasis --- */
+  .hero-card .emergency-row .mark { background: var(--red-bg); color: var(--red); }
+  .hero-card .emergency-row.warn .mark { background: var(--amber-bg); color: var(--amber); }
+
+  /* --- veterinary advisory board --- */
+  .board-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .board-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .board-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--pine-3); color: var(--pine); display: grid; place-items: center; font-family: "DM Serif Display", serif; font-size: 20px; margin-bottom: 12px; }
+  .board-card:nth-child(2) .board-avatar { background: var(--amber-bg); color: var(--amber); }
+  .board-card:nth-child(3) .board-avatar { background: var(--blue-bg); color: var(--blue); }
+  .board-card:nth-child(4) .board-avatar { background: var(--lav-bg); color: var(--lav); }
+  .board-card h3 { color: var(--pine); font-size: 18px; line-height: 1.12; }
+  .board-card .role { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 5px; display: block; }
+  .board-card p { color: var(--muted); font-size: 12px; margin-top: 10px; line-height: 1.5; }
+
+  /* --- clinic finder --- */
+  .clinic-finder { background: var(--pine); color: #fff; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .clinic-finder h3 { color: #fff; font-size: 24px; line-height: 1.08; }
+  .clinic-finder > p { color: rgba(255,255,255,0.78); font-size: 13px; margin: 0; }
+  .cf-row { display: flex; gap: 8px; }
+  .clinic-finder input, .clinic-finder select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); color: #fff; }
+  .clinic-finder input::placeholder { color: rgba(255,255,255,0.5); }
+  .clinic-result { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.08); border-radius: 7px; padding: 11px 13px; }
+  .clinic-result b { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 15px; color: #fff; }
+  .clinic-result .meta { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber-soft); }
+  .clinic-result .meta.open24 { color: #7FCF9B; }
+  .clinic-result a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+  .clinic-network {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: end;
+    margin-bottom: 16px;
+  }
+
+  .clinic-network-head h3 {
+    color: var(--pine);
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 1;
+  }
+
+  .clinic-network-head p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 720px;
+    margin-top: 8px;
+  }
+
+  .clinic-count {
+    min-width: 138px;
+    border-radius: 8px;
+    background: var(--pine);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .clinic-count b {
+    display: block;
+    font-family: "DM Serif Display", serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 0.92;
+  }
+
+  .clinic-count span {
+    color: var(--amber-soft);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .clinic-tab {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    color: var(--pine);
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    min-height: 44px;
+    padding: 0 14px;
+    text-transform: uppercase;
+  }
+
+  .clinic-tab.active {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+
+  .clinic-market-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .clinic-market-header h4 {
+    color: var(--pine);
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .clinic-market-header span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .clinic-card {
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--pine);
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+    min-height: 204px;
+    padding: 13px;
+  }
+
+  .clinic-card:nth-child(5n+2) { border-top-color: var(--amber); }
+  .clinic-card:nth-child(5n+3) { border-top-color: var(--blue); }
+  .clinic-card:nth-child(5n+4) { border-top-color: var(--lav); }
+  .clinic-card:nth-child(5n+5) { border-top-color: var(--red); }
+
+  .clinic-card h5 {
+    color: var(--pine);
+    font-size: 17px;
+    line-height: 1.08;
+  }
+
+  .clinic-card .area {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .clinic-evidence {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.42;
+  }
+
+  .clinic-card .status {
+    color: var(--amber);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .clinic-card .status.open24 { color: #2A8C52; }
+
+  .clinic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .clinic-tags span {
+    background: var(--pine-3);
+    border-radius: 999px;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    padding: 4px 6px;
+    text-transform: uppercase;
+  }
+
+  .clinic-card a {
+    align-self: end;
+    color: var(--pine);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-actions {
+    display: grid;
+    gap: 7px;
+    align-self: end;
+  }
+
+  .clinic-actions a {
+    min-height: 36px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    background: var(--pine);
+    color: #fff;
+    text-align: center;
+  }
+
+  .clinic-actions a.secondary {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--pine);
+  }
+
+  .verification-note {
+    background: var(--amber-bg);
+    border: 1px solid #F0E2CE;
+    border-radius: 8px;
+    color: #84551D;
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding: 12px 14px;
+  }
+
+  /* --- LINE button --- */
+  .button.line { background: #06C755; border-color: #06C755; color: #fff; }
+
+  /* --- clinic terms --- */
+  .terms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+  .term { display: flex; gap: 10px; align-items: flex-start; background: rgba(255,255,255,0.06); border-radius: 7px; padding: 12px 14px; }
+  .term .tick { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); color: var(--pine-deep); font-size: 11px; font-weight: 700; display: grid; place-items: center; flex-shrink: 0; font-family: "JetBrains Mono", monospace; margin-top: 1px; }
+  .term b { display: block; color: #fff; font-size: 13px; }
+  .term span { color: rgba(255,255,255,0.7); font-size: 12px; }
+
+  @media (max-width: 1040px) {
+    .hero-inner,
+    .alert-band,
+    .care-path,
+    .finder,
+    .guides-grid,
+    .congress {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-card { max-width: 520px; }
+    .path-panel { position: static; }
+    .triage-grid,
+    .testi-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cta-grid { grid-template-columns: 1fr; }
+    .region-band { flex-direction: column; align-items: flex-start; }
+    .board-grid { grid-template-columns: repeat(2, 1fr); }
+    .clinic-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .clinic-network-head { grid-template-columns: 1fr; }
+    .terms-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .board-grid { grid-template-columns: 1fr; }
+    .cf-row { flex-direction: column; }
+    .clinic-directory-grid { grid-template-columns: 1fr; }
+    .clinic-market-header { align-items: flex-start; flex-direction: column; }
+    .clinic-finder select { max-width: none !important; }
+    .clinic-result { align-items: flex-start; flex-direction: column; gap: 4px; }
+  }
+
+  @media (max-width: 720px) {
+    .nav,
+    .hero-inner,
+    .wrap {
+      width: min(100% - 24px, 1200px);
+    }
+
+    .brand span { display: none; }
+    .brand { font-size: 19px; }
+    .nav { gap: 10px; }
+    .nav-links { flex: 0 0 auto; overflow: visible; }
+    .nav-links a { display: none; }
+    .nav-links a.active,
+    .nav-links a[href="#vets"] {
+      display: inline-flex;
+      font-size: 0;
+      min-width: 64px;
+      padding: 0 10px;
+    }
+    .nav-links a[href="#vets"] {
+      background: var(--amber);
+      color: #fff;
+    }
+    .nav-links a.active::after,
+    .nav-links a[href="#vets"]::after {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+    .nav-links a.active::after { content: "Act"; }
+    .nav-links a[href="#vets"]::after { content: "Clinic"; }
+    .hero { min-height: 830px; }
+
+    .hero-inner {
+      min-height: 830px;
+      padding: 38px 0 44px;
+      align-items: end;
+    }
+
+    .hero::after {
+      background:
+        linear-gradient(90deg, rgba(13, 39, 24, 0.94) 0%, rgba(13, 39, 24, 0.78) 58%, rgba(13, 39, 24, 0.34) 100%),
+        linear-gradient(180deg, rgba(13, 39, 24, 0.2) 0%, rgba(13, 39, 24, 0.86) 100%);
+    }
+
+    h1 { font-size: clamp(38px, 12vw, 52px); }
+
+    .hero-copy { font-size: 16px; }
+    .hero-card { max-width: none; }
+
+    .emergency-row {
+      grid-template-columns: 36px minmax(0, 1fr);
+    }
+
+    .risk-label {
+      grid-column: 2;
+      width: fit-content;
+    }
+
+    .trust-inner { grid-template-columns: repeat(2, 1fr); }
+    .trust-cell:nth-child(2) { border-right: none; }
+
+    .section-head { display: block; }
+    .section-head .pill { margin-top: 12px; }
+
+    .triage-grid,
+    .product-grid,
+    .testi-grid,
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>
+<meta content="RabbitEmergency.com | ความช่วยเหลือฉุกเฉินของแรบบิทและการฟื้นตัวที่นำโดยสัตวแพทย์" property="og:title"/>
+<meta content="รับรู้ถึงภาวะฉุกเฉินของกระต่าย เช่น อาการลำไส้หยุดชะงักและลมแดด ค้นหาสัตวแพทย์ที่เชี่ยวชาญเรื่องกระต่าย และทำความเข้าใจการสนับสนุนการฟื้นฟู WOOLY และ Alfavet RodiCare ที่ได้รับคำแนะนำจากสัตวแพทย์ทั่วเอเชีย" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://rabbitemergency.com/th/" property="og:url"/>
+<meta content="https://rabbitemergency.com/assets/hero-rabbit.jpg" property="og:image"/>
+<meta content="https://rabbitemergency.com/assets/hero-rabbit.jpg" name="twitter:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#1A472A" name="theme-color"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;%F0%9F%90%B0&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "RabbitEmergency.com","url": "https://rabbitemergency.com/","description": "แหล่งข้อมูลเพื่อการศึกษาสำหรับกรณีฉุกเฉินสำหรับกระต่ายช่วยให้เจ้าของทราบสัญญาณเร่งด่วน เตรียมความพร้อมสำหรับการโทรติดต่อคลินิก และทำความเข้าใจการสนับสนุนการฟื้นฟูโดยสัตวแพทย์แนะนำ","areaServed": ["Hong Kong","Japan","Taiwan","Singapore","Thailand"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "MedicalWebPage","name": "RabbitEmergency.com | ความช่วยเหลือฉุกเฉินของแรบบิท คำแนะนำจากสัตวแพทย์แปลกใหม่ และการสนับสนุนในการฟื้นฟู","url": "https://rabbitemergency.com/th/","inLanguage": "th","lastReviewed": "2026-06-03","audience": {"@type": "Audience","audienceType": "เจ้าของกระต่าย"},"about": {"@type": "MedicalCondition","name": "ภาวะหยุดนิ่งในทางเดินอาหารของกระต่าย และภาวะฉุกเฉินอื่นๆ ของกระต่าย"},"publisher": {"@type": "Organization","name": "RabbitEmergency.com","url": "https://rabbitemergency.com/"},"reviewedBy": {"@type": "Organization","name": "กรอบการทบทวนสัตวแพทย์ RabbitEmergency.com"},"medicalAudience": {"@type": "MedicalAudience","audienceType": "อดทน"},"translationOfWork": {"@id": "https://rabbitemergency.com/"}}</script>
+<link href="https://rabbitemergency.com/th/" rel="canonical"/><link href="https://rabbitemergency.com/" hreflang="en" rel="alternate"/><link href="https://rabbitemergency.com/ja/" hreflang="ja" rel="alternate"/><link href="https://rabbitemergency.com/zh-tw/" hreflang="zh-Hant" rel="alternate"/><link href="https://rabbitemergency.com/th/" hreflang="th" rel="alternate"/><link href="https://rabbitemergency.com/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<header class="topbar">
+<nav class="nav">
+<a class="brand" href="/th/">RabbitEmergency.com<span>การดูแลฉุกเฉินโดยกระต่ายเป็นครั้งแรก</span></a>
+<div aria-label="Primary navigation" class="nav-links">
+<a class="active" href="#now">ลงมือเลย</a>
+<a href="#symptoms">อาการ</a>
+<a href="#guides">คำแนะนำ</a>
+<a href="#products">การกู้คืน</a>
+<a href="#stories">เรื่องราว</a>
+<a href="#board">ทบทวน</a>
+<a href="#vets">ค้นหาคลินิก</a>
+<a href="#faq">คำถามที่พบบ่อย</a>
+<a class="cta" href="#congress">รายชื่อคลินิกของคุณ</a>
+</div>
+</nav>
+</header>
+<main id="top">
+<section aria-label="Rabbit emergency homepage" class="hero">
+<img alt="A baby rabbit cradled gently in a person's hands" class="hero-image" src="assets/hero-rabbit.jpg"/>
+<div class="hero-inner">
+<div>
+<div class="eyebrow">คำแนะนำฉุกเฉินที่นำโดยแรบบิทและการสนับสนุนการฟื้นฟูที่นำโดยสัตวแพทย์</div>
+<p class="mono" style="font-size:11px;color:var(--quiet);margin:0 0 16px"><a href="/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <strong>ไทย</strong></p><h1>เมื่อกระต่ายของคุณหยุดกิน ทุกชั่วโมงจะมีความหมาย</h1>
+<p class="hero-copy">RabbitEmergency.com ช่วยให้คุณรับรู้สัญญาณเตือนเร่งด่วน เตรียมพร้อมสำหรับการโทรติดต่อของคลินิก และทำความเข้าใจการสนับสนุนจากสัตวแพทย์จาก Alfavet RodiCare และ WOOLY การดูแลประจำวันสำหรับการย่อยอาหาร ความอยากอาหาร จังหวะของลำไส้ การลอกคราบ และการฟื้นตัว</p>
+<div class="button-row">
+<a class="button primary" href="#now">ตรวจสอบสัญญาณฉุกเฉิน</a>
+<a class="button" href="#products">ทำความเข้าใจการสนับสนุนการกู้คืน</a>
+</div>
+<div class="hero-trust">
+<div class="avatars"><span></span><span></span><span></span><span></span></div>
+<p>สร้างขึ้นสำหรับเจ้าของกระต่ายทั่วฮ่องกง โตเกียว ไทเป สิงคโปร์ และกรุงเทพฯ</p>
+</div>
+</div>
+<aside class="hero-card" id="now">
+<h2>โทรหาสัตวแพทย์ทันทีหากคุณเห็นสิ่งนี้</h2>
+<p>กระต่ายซ่อนความเจ็บป่วยและเสื่อมลงอย่างรวดเร็ว อย่ารออาหารเสริม ยาสามัญประจำบ้าน หรือคำตอบออนไลน์หากกระต่ายของคุณมีอาการเหล่านี้</p>
+<div class="emergency-list">
+<div class="emergency-row">
+<div class="mark">!</div>
+<div><div class="row-title">ไม่กินและไม่มีมูล</div><div class="row-note">อาการลำไส้ชะงักงัน: กระต่ายที่หยุดกินและส่งมูลสามารถลดลงได้ภายในไม่กี่ชั่วโมง</div></div>
+<div class="risk-label">ภาวะฉุกเฉิน</div>
+</div>
+<div class="emergency-row">
+<div class="mark">บี</div>
+<div><div class="row-title">ท้องอืดหรือปวดท้อง</div><div class="row-note">โค้งงอ กัดฟัน กดท้องลงพื้น ท้องแข็งหรือบวม</div></div>
+<div class="risk-label">ภาวะฉุกเฉิน</div>
+</div>
+<div class="emergency-row">
+<div class="mark">ชม</div>
+<div><div class="row-title">โรคลมแดดหรือความร้อนสูงเกินไป</div><div class="row-note">กระต่ายจะร้อนมากเกินไปอย่างรวดเร็วในช่วงฤดูร้อนในเอเชีย: แบนราบ หายใจเร็ว จมูกเปียก ใจเย็นๆ แล้วไปได้เลย</div></div>
+<div class="risk-label">ภาวะฉุกเฉิน</div>
+</div>
+<div class="emergency-row">
+<div class="mark">เอฟ</div>
+<div><div class="row-title">ฟลายสไตรค์หรือแผลเปิด</div><div class="row-note">หนอนที่อยู่ใกล้ก้นสกปรกในสภาพอากาศอบอุ่นถือเป็นเหตุฉุกเฉินที่เคลื่อนไหวรวดเร็วอย่างแท้จริง</div></div>
+<div class="risk-label">ภาวะฉุกเฉิน</div>
+</div>
+<div class="emergency-row warn">
+<div class="mark">ต</div>
+<div><div class="row-title">เอียงศีรษะหรือสูญเสียการทรงตัว</div><div class="row-note">สายตาเอียง กลอก หรือกะพริบกะทันหัน ต้องการสัตวแพทย์ที่เชี่ยวชาญเรื่องกระต่ายในวันเดียวกัน</div></div>
+<div class="risk-label amber">โทรเลยวันนี้</div>
+</div>
+<div class="emergency-row warn">
+<div class="mark">ช</div>
+<div><div class="row-title">ท้องเสียหรือไม่มีซีโคโทรฟ</div><div class="row-note">อาการท้องเสียที่แท้จริงในกระต่ายตัวเล็กถือเป็นภาวะฉุกเฉิน มูลที่อ่อนหรือขาดหายไปจำเป็นต้องโทรภายในวันเดียวกัน</div></div>
+<div class="risk-label amber">โทรเลยวันนี้</div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<section aria-label="Trust and scale signals" class="trust-strip">
+<div class="trust-inner">
+<div class="trust-cell"><span class="stat-number">5 ตลาด</span><span class="stat-label">ฮ่องกง · ญี่ปุ่น · ไต้หวัน · สิงคโปร์ · ไทย</span></div>
+<div class="trust-cell"><span class="stat-number">คัดแยกอย่างรวดเร็ว</span><span class="stat-label">รายการตรวจสอบฉุกเฉินสำหรับเจ้าของ</span></div>
+<div class="trust-cell"><span class="stat-number">แหล่งที่มาที่นำ</span><span class="stat-label">RWAF · House Rabbit Society อยู่ในแนวเดียวกัน</span></div>
+<div class="trust-cell"><span class="stat-number">ยืนยันแล้วเร็วๆ นี้</span><span class="stat-label">รายชื่อคลินิกจำเป็นต้องได้รับการยืนยัน</span></div>
+</div>
+</section>
+<div class="wrap">
+<section class="section" id="symptoms">
+<div class="section-head">
+<div class="section-title">
+<h2>กระต่ายของคุณทำอะไรที่ทำให้คุณกลัว?</h2>
+<p>ทุกเส้นทางเริ่มต้นด้วยการประเมินโดยสัตวแพทย์ คำแนะนำผลิตภัณฑ์ด้านล่างนี้เป็นการสนทนาเพื่อขอความช่วยเหลือกับสัตวแพทย์ของคุณ ไม่ใช่คำแนะนำในการรักษาเหตุฉุกเฉินที่บ้าน</p>
+</div>
+<span class="pill red">การคัดแยกเจ้าของ</span>
+</div>
+<div class="triage-grid">
+<article class="triage-card urgent">
+<div class="triage-top">
+<span class="pill">ไปตอนนี้</span>
+<h3>ฉุกเฉินธงแดง</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>ไม่กินอาหารและไม่มีมูล (ภาวะลำไส้ชะงักงัน)</li>
+<li>ท้องอืดหรือปวดท้องอย่างเห็นได้ชัด</li>
+<li>ภาวะลมแดด การล่มสลาย หรืออาการชัก</li>
+<li>Flystrike หรือแผลเปิดสด</li>
+<li>การเอียงศีรษะ การกลิ้ง หรือการบาดเจ็บอย่างกะทันหัน</li>
+</ul>
+<a class="button dark" href="#vets">ค้นหาคลินิกที่แปลกใหม่ตลอด 24 ชั่วโมง</a>
+</div>
+</article>
+<article class="triage-card digestive">
+<div class="triage-top">
+<span class="pill">ย่อยอาหาร</span>
+<h3>อุจจาระนิ่ม ลำไส้ช้า อุจจาระน้อยลง</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>มูลสัตว์มีขนาดเล็กลง น้อยลง หรือมีรูปร่างผิดปกติ</li>
+<li>อุจจาระอ่อนหรือเมือกหรือซีโคโทรฟเหนียว</li>
+<li>หลังจากเปลี่ยนอาหาร ความเครียด หรือใช้ยาปฏิชีวนะ</li>
+<li>อาการท้องร่วงที่แท้จริงในกระต่ายตัวน้อยจำเป็นต้องได้รับการดูแลอย่างเร่งด่วน</li>
+</ul>
+<a class="button dark" href="#digestion">ชั้นวางสนับสนุน GI</a>
+</div>
+</article>
+<article class="triage-card recovery">
+<div class="triage-top">
+<span class="pill">การกู้คืน</span>
+<h3>กินไม่ได้ อ่อนแอ หลังคลินิก</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>ความอยากอาหารไม่ดีหรือการปฏิเสธอาหาร</li>
+<li>หลังทำฟัน หลังผ่าตัด หรือการฟื้นตัวจากการเจ็บป่วย</li>
+<li>ต้องการการให้อาหารจากเข็มฉีดยาหรือการสนับสนุนการให้น้ำ</li>
+<li>ควรพูดคุยเรื่องการฟื้นตัวของภาวะลำไส้หยุดชะงักอย่างรวดเร็ว</li>
+</ul>
+<a class="button dark" href="#recovery">การสนับสนุนการกู้คืน</a>
+</div>
+</article>
+<article class="triage-card urinary">
+<div class="triage-top">
+<span class="pill">การสนับสนุนที่เกิดขึ้นเป็นประจำ</span>
+<h3>ลอกคราบ การให้น้ำ อาวุโส &amp; การให้ยา</h3>
+</div>
+<div class="triage-card-body">
+<ul>
+<li>เสี่ยงต่อการลอกคราบหนักหรือมีขนในอุจจาระ</li>
+<li>ดื่มน้อยในช่วงอากาศร้อน</li>
+<li>กระต่ายอาวุโสหรืออ่อนแอ</li>
+<li>แรบบิทปฏิเสธแป้งและต้องการรูปแบบที่น่ารับประทาน</li>
+</ul>
+<a class="button dark" href="#products">ชั้นวางการดูแลรายวัน</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="guides">
+<div class="section-head">
+<div class="section-title">
+<h2>เจ้าของกระต่ายค้นหามากที่สุดในสัปดาห์นี้</h2>
+<p>คำแนะนำที่ได้รับการตรวจสอบโดยสัตวแพทย์ซึ่งเขียนขึ้นสำหรับช่วงเวลาที่เจ้าของต้องค้นหาอย่างตื่นตระหนก แต่ละข้อจบลงด้วยกฎเดียวกัน: ประเมินความเร่งด่วนก่อน จากนั้นจึงถามสัตวแพทย์ผู้ชำนาญเรื่องกระต่าย</p>
+</div>
+<span class="pill amber">กำลังมาแรง</span>
+</div>
+<div class="guides-grid">
+<div class="guide-list">
+<a class="guide-row" href="#now">
+<div class="guide-rank">01</div>
+<div><h3>กระต่ายไม่กินหรืออึ</h3><p>เหตุใดภาวะลำไส้ชะงักงันจึงเป็นภาวะฉุกเฉินที่สำคัญและเกิดขึ้นจริงในกระต่าย</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+<a class="guide-row" href="#now">
+<div class="guide-rank">02</div>
+<div><h3>กระต่ายทรุดตัวลงท่ามกลางความร้อน</h3><p>รู้จักโรคลมแดดและความเย็นของกระต่ายอย่างปลอดภัยระหว่างทางไปคลินิก</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+<a class="guide-row" href="#digestion">
+<div class="guide-rank">03</div>
+<div><h3>อุจจาระนิ่มหรือไม่มีซีโคโทรฟ</h3><p>บอก Caecotrophs ปกติ นอกเหนือจากอาการท้องร่วงที่ต้องพบสัตวแพทย์วันนี้</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+<a class="guide-row" href="#now">
+<div class="guide-rank">04</div>
+<div><h3>การเอียงศีรษะในกระต่าย</h3><p>การเอียง การกลิ้ง และการสูญเสียการทรงตัวอย่างกะทันหัน — จะทำอย่างไรก่อน</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+<a class="guide-row" href="#products">
+<div class="guide-rank">05</div>
+<div><h3>การลอกคราบและขนในลำไส้</h3><p>กระต่ายไม่สามารถไอเป็นก้อนขนได้ - ลำไส้จะช้าลงในช่วงฤดูลอกคราบ</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+<a class="guide-row" href="#recovery">
+<div class="guide-rank">06</div>
+<div><h3>การพักฟื้นหลังทันตกรรมและหลังการผ่าตัด</h3><p>ความอยากอาหาร การให้อาหารด้วยเข็มฉีดยา และการพักฟื้นหลังจากไปพบสัตวแพทย์</p></div>
+<span class="reviewed">ตรวจสอบโดยสัตวแพทย์</span>
+</a>
+</div>
+<aside class="feed">
+<div class="feed-head"><span class="live-dot"></span><span>กิจกรรมถ่ายทอดสดระดับภูมิภาค</span></div>
+<div class="feed-items">
+<div class="feed-item"><span class="feed-tag">ไทเป</span><p>เจ้าของดูรายการตรวจสอบภาวะหยุดนิ่งของลำไส้</p></div>
+<div class="feed-item"><span class="feed-tag">เอสจี</span><p>เจ้าของบันทึกการเตรียมการโทรจากสัตวแพทย์แล้ว</p></div>
+<div class="feed-item"><span class="feed-tag">โตเกียว</span><p>เจ้าของเปิดคู่มือ “กระต่ายไม่กิน”</p></div>
+<div class="feed-item"><span class="feed-tag">ฮ่องกง</span><p>เจ้าของถูกส่งไปยังคลินิกเข้าใจกระต่าย</p></div>
+<div class="feed-item"><span class="feed-tag">กทม</span><p>เจ้าของอ่านคู่มือฮีทสโตรกแล้ว</p></div>
+</div>
+</aside>
+</div>
+</section>
+<section aria-label="Prevention" class="section">
+<div style="position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+<img alt="A healthy, alert rabbit sitting in fresh grass" src="assets/rabbit-grass.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;"/>
+<div style="position:relative;background:linear-gradient(90deg, rgba(13,39,24,0.95) 0%, rgba(13,39,24,0.80) 46%, rgba(13,39,24,0.30) 100%);padding:clamp(32px,5vw,56px) clamp(20px,4vw,46px);min-height:300px;display:flex;flex-direction:column;justify-content:center;">
+<div class="eyebrow" style="color:var(--amber-soft);margin-bottom:8px;">การป้องกันเป็นแผนฉุกเฉินที่ดีที่สุด</div>
+<h2 style="color:#fff;border:none;padding:0;margin:0;max-width:580px;font-size:clamp(28px,3.6vw,40px);line-height:1.04;">กระต่ายที่มีสุขภาพดีเป็นกิจวัตรประจำวัน ไม่ใช่อุบัติเหตุที่โชคดี</h2>
+<p style="color:rgba(255,255,255,0.86);max-width:540px;margin:12px 0 0;font-size:15px;">หญ้าแห้งที่ดี การให้น้ำ ความสมดุลของลำไส้ และการดูแลขนลอกคราบ ช่วยป้องกันเหตุฉุกเฉินส่วนใหญ่ไม่ให้เกิดขึ้น นั่นคือสิ่งที่รองพื้นรายวันของ WOOLY มีไว้ — และเหตุใดชั้นฟื้นฟูด้านล่างจึงเริ่มต้นด้วยการป้องกัน</p>
+<div class="button-row" style="margin-top:20px;">
+<a class="button primary" href="#products">ดูชั้นวางการดูแลรายวัน</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="products">
+<div class="section-head">
+<div class="section-title">
+<h2>ชั้นวางกระต่ายแบบเต็ม: ดูแลทุกวัน WOOLY + Alfavet RodiCare</h2>
+<p>สองชั้น หนึ่งการเดินทาง WOOLY เป็นมูลนิธิสำหรับกระต่ายชาวญี่ปุ่นโดยเฉพาะ — ความสมดุลของลำไส้ การลอกคราบ ความชุ่มชื้น สภาพร่างกาย และโภชนาการตามช่วงอายุ Alfavet RodiCare เป็นสุนัขระยะเฉียบพลันและการฟื้นตัวของสัตวแพทย์ชาวเยอรมัน สำหรับกรณีที่การดูแลประจำวันไม่เพียงพออีกต่อไป</p>
+<p>ทุกอย่างที่นี่มีเจ้าของลงนามและปฏิบัติตามคำกล่าวอ้าง: ช่วยเรื่องการย่อยอาหาร ความอยากอาหาร การให้น้ำ และการฟื้นตัว ซึ่งเป็นส่วนหนึ่งของแผนงานที่นำโดยสัตวแพทย์ ไม่ได้แทนที่การดูแลฉุกเฉิน</p>
+</div>
+<span class="pill">ผลิตภัณฑ์แนะนำโดยสัตวแพทย์</span>
+</div>
+<div style="margin:6px 0 16px;">
+<div class="eyebrow" style="color:var(--pine-2);margin-bottom:6px;">ชั้นที่ 1 · รองพื้นรายวัน</div>
+<h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">WOOLY — การดูแลกระต่ายญี่ปุ่นทุกวัน</h3>
+<p style="color:var(--muted);max-width:760px;margin-top:6px;">ชั้นที่เจ้าของมองเห็นได้ทุกวัน: ความสมดุลของลำไส้ การลอกคราบ ความชุ่มชื้น สภาพและโภชนาการตามช่วงอายุ สร้างขึ้นโดยผู้เชี่ยวชาญเฉพาะสำหรับกระต่ายชาวญี่ปุ่น นี่เป็นกิจวัตรที่จะกันกระต่ายออกจากห้องฉุกเฉิน</p>
+</div>
+<div class="product-grid">
+<article class="product-card" id="moult">
+<div class="product-head">
+<div class="product-icon">เออี</div>
+<div>
+<h3>WOOLY แอคทีฟอี</h3>
+<div class="product-meta">ลอกคราบและขนในอุจจาระ · ฮีโร่</div>
+</div>
+</div>
+<p>เอนไซม์สับปะรด (โบรมีเลน) และปาเปน พร้อมใยแอปเปิ้ลญี่ปุ่น WOOLY วางตำแหน่ง Active E สำหรับการลอกคราบ ผมในอุจจาระ กระต่ายผมยาว และความอยากอาหารเปลี่ยนแปลงไปในระหว่างการหลั่ง</p>
+<div class="product-pills">
+<span class="pill amber">ฤดูลอกคราบ</span>
+<span class="pill">ผมอยู่ในอุจจาระ</span>
+<span class="pill blue">ความอยากอาหาร</span>
+</div>
+<div class="product-note">กระต่ายไม่สามารถพ่นก้อนขนได้ — SKU การลงชื่อเข้าใช้โซลูชันที่ชัดเจนที่สุดของ WOOLY และเป็นรายการที่เจ้าของส่วนใหญ่เข้าถึงก่อนเมื่อเริ่มขน</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ลา</div>
+<div>
+<h3>Rabbit's Lact / Soft Lact / Lact LAB</h3>
+<div class="product-meta">บันไดโปรไบโอติกปรับสมดุลลำไส้</div>
+</div>
+</div>
+<p>บันไดโปรไบโอติกสามชั้น: Rabbit's Lact แบบคลาสสิก, Soft Lact สำหรับผู้สูงอายุและกระต่ายที่ไวต่อฟัน และ Lact LAB ที่มีสายพันธุ์ที่ได้มาจากกระต่าย พัฒนาโดย Nippon Veterinary &amp; Life Science University เพื่อจังหวะการทำงานของลำไส้และคุณภาพอุจจาระในแต่ละวัน</p>
+<div class="product-pills">
+<span class="pill amber">ลำไส้สมดุล</span>
+<span class="pill">3 ชั้น</span>
+<span class="pill lav">เป็นมิตรกับผู้อาวุโส</span>
+</div>
+<div class="product-note">กิจวัตรการย่อยอาหารในแต่ละวันก่อนที่กระต่ายจะป่วย รูปแบบที่นุ่มนวลช่วยแก้ปัญหาเรื่องฟันและกระต่ายโดยไม่มีคู่แข่งตอบในกล่อง</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">บีดับเบิลยู</div>
+<div>
+<h3>WOOLY บาลานซ์น้ำ</h3>
+<div class="product-meta">การให้ความชุ่มชื้น · หมวดหมู่แรก</div>
+</div>
+</div>
+<p>ผลิตภัณฑ์เสริมน้ำดื่มที่สมดุลสำหรับกระต่ายโดยเฉพาะสำหรับการดื่มน้อย อากาศร้อน การเดินทาง และปัญหาเรื่องอุจจาระแข็ง — SKU การให้น้ำที่ไม่มีคู่แข่งโดยตรงในหมวดหมู่นี้</p>
+<div class="product-pills">
+<span class="pill blue">การให้ความชุ่มชื้น</span>
+<span class="pill amber">อากาศร้อน</span>
+<span class="pill">รายวัน</span>
+</div>
+<div class="product-note">สิ่งสำคัญในฤดูร้อนของเอเชีย: มันสอนให้เจ้าของอ่านความแข็งของอุจจาระเพื่อเป็นเบาะแสเรื่องความชุ่มชื้น ไม่สามารถทดแทนการดูแลฉุกเฉินในภาวะลมแดดได้อย่างแท้จริง</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ภาษาอังกฤษ</div>
+<div>
+<h3>สารเพิ่มประสิทธิภาพ WOOLY</h3>
+<div class="product-meta">บูสเตอร์สภาพและการฟื้นตัว</div>
+</div>
+</div>
+<p>แคลอรี่และสารอาหารจากต้นกำเนิดของพ่อแม่พันธุ์ (เชื้อสายไฮโนลด์) WOOLY วางตำแหน่งสารเพิ่มประสิทธิภาพสำหรับการเจริญเติบโต สภาพผู้สูงอายุ การลอกคราบ การตั้งครรภ์และให้นมบุตร และการสนับสนุนการฟื้นฟูหลังการทำหมัน/การทำหมัน</p>
+<div class="product-pills">
+<span class="pill blue">การกู้คืน</span>
+<span class="pill">เงื่อนไข</span>
+<span class="pill lav">อาวุโส</span>
+</div>
+<div class="product-note">สะพานเชื่อมสู่การฟื้นตัวในแต่ละวัน: สภาวะพิเศษสำหรับการเจริญเติบโต การแก่ การลอกคราบ หรือหลังการผ่าตัด</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">รป</div>
+<div>
+<h3>พลังของกระต่าย / พลังแห่งพลังแห่งพลัง</h3>
+<div class="product-meta">ความมีชีวิตชีวาอาวุโส</div>
+</div>
+</div>
+<p>ยาเม็ดสำหรับผู้สูงอายุและผู้มีภาวะระยะยาวระดับพรีเมียม - จุดเริ่มต้นการดูแลรายวันของ WOOLY สำหรับกระต่ายสูงอายุ อ่อนแอกว่า หรือหลังความเครียด พร้อมตัวเลือกพลังงานของ Vitality Source ในระดับที่สูงกว่า</p>
+<div class="product-pills">
+<span class="pill lav">อาวุโส</span>
+<span class="pill">ความมีชีวิตชีวา</span>
+<span class="pill amber">รายวัน</span>
+</div>
+<div class="product-note">จุดยึดความไว้วางใจสำหรับเจ้าของที่จริงจังซึ่งทุ่มเวลาในการป้องกันการแก่กระต่ายอยู่แล้ว</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">บีแอล</div>
+<div>
+<h3>WOOLY บลูมแล็บ</h3>
+<div class="product-meta">ฟีดที่สมบูรณ์ตามช่วงอายุ</div>
+</div>
+</div>
+<p>อาหารสำเร็จรูปที่ปรับเทียบตามอายุสี่มื้อ (≤ 2 / 2–5 / 5–8 / 8+ ปี) สร้างขึ้นบนแพลตฟอร์มแบคทีเรียกรดแลคติคที่มาจากกระต่าย พร้อมด้วยมะรุมและสาหร่ายสไปรูลิน่า ออกแบบมาเพื่อให้เคี้ยวมากขึ้นและเหนียวน้อยลง</p>
+<div class="product-pills">
+<span class="pill">ฟีดที่สมบูรณ์</span>
+<span class="pill blue">แบ่งตามอายุ</span>
+<span class="pill amber">ฐานรายวัน</span>
+</div>
+<div class="product-note">ฐานโภชนาการประจำวันสำหรับทุกช่วงชีวิต — สูตรสำหรับผู้สูงอายุและสูตรพิเศษช่วยเพิ่มความช่วยเหลือในการดูแลผู้สูงอายุเป็นพิเศษ</div>
+</article>
+</div>
+<div style="margin:38px 0 16px;">
+<div class="eyebrow" style="color:var(--amber);margin-bottom:6px;">เลเยอร์ 2 · สัตวแพทย์ช่องเฉียบพลันและการฟื้นตัว</div>
+<h3 style="color:var(--pine);font-size:clamp(24px,3vw,32px);line-height:1.04;">Alfavet RodiCare - ส่วนขยายภาษาเยอรมัน</h3>
+<p style="color:var(--muted);max-width:760px;margin-top:6px;">ค่า GI ของสัตวแพทย์และชั้นพักฟื้นสำหรับกระต่าย หนูตะเภา และสัตว์ฟันแทะตัวเล็ก เมื่อการดูแลในแต่ละวันไม่เพียงพออีกต่อไป และสัตวแพทย์เป็นผู้นำในแผน</p>
+</div>
+<div class="care-path">
+<aside class="path-panel">
+<h3>จากความตื่นตระหนกไปสู่การฟื้นตัว</h3>
+<p>RodiCare ทำงานได้ดีที่สุดที่นี่ในฐานะเป็นชั้นวางสำหรับเดินทางตามเงื่อนไขมากกว่าแค็ตตาล็อกแบบกว้างๆ: การควบคุมการย่อยอาหาร ความอยากอาหาร และรูปแบบการฟื้นฟู - อยู่เหนือมูลนิธิการดูแลประจำวันของ WOOLY</p>
+<div class="path-steps">
+<div class="path-step">
+<div class="step-num">1</div>
+<div><strong>ประเมินความเร่งด่วน</strong><span>ไม่กินอาหาร ไม่มีมูล ท้องอืด ร้อนยุบ ศีรษะเอียง</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">2</div>
+<div><strong>รักษาเสถียรภาพกับสัตวแพทย์</strong><span>การตรวจ ของเหลว การเคลื่อนไหวของลำไส้ การบรรเทาอาการปวด การป้อนเข็มฉีดยา</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">3</div>
+<div><strong>สนับสนุนการเปลี่ยนแปลง</strong><span>การย่อยอาหาร ความอยากอาหาร ความชุ่มชื้น จังหวะของลำไส้ การฟื้นตัว</span></div>
+</div>
+<div class="path-step">
+<div class="step-num">4</div>
+<div><strong>ป้องกันไม่ให้เกิดตอนซ้ำ</strong><span>แผนรายวัน WOOLY สำหรับการรับประทานอาหาร เส้นใย ลอกคราบ ความชุ่มชื้น และความสมดุลของลำไส้</span></div>
+</div>
+</div>
+</aside>
+<div class="product-grid">
+<article class="product-card" id="digestion">
+<div class="product-head">
+<div class="product-icon">ร</div>
+<div>
+<h3>RodiCare ออกแล้ว</h3>
+<div class="product-meta">เครื่องควบคุมการย่อยอาหาร · 15 ml</div>
+</div>
+</div>
+<p>Alfavet วางตำแหน่ง RodiCare akut เพื่อควบคุมกระบวนการย่อยอาหารในกระต่าย หนูตะเภา และสัตว์ฟันแทะตัวเล็ก ซึ่งสนับสนุนพืชในลำไส้ที่สำคัญและกระตุ้นความอยากอาหารและกิจกรรมในลำไส้ ไม่มีน้ำตาลเพิ่ม</p>
+<div class="product-pills">
+<span class="pill amber">การสนับสนุนการย่อยอาหาร</span>
+<span class="pill">เข็มฉีดยา 15 มล</span>
+<span class="pill blue">ลวดเย็บกระดาษของตู้</span>
+</div>
+<div class="product-note">เครื่องควบคุมการย่อยอาหารที่มีรวมอยู่ในตู้เสมอสำหรับสัญญาณแรกของลำไส้ช้าลง - ในขณะที่คุณโทรหาสัตวแพทย์ ไม่ใช่แทนที่จะโทรไป</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ดิ</div>
+<div>
+<h3>เส้นผ่านศูนย์กลาง RodiCare</h3>
+<div class="product-meta">การรองรับอุจจาระผิดปกติ</div>
+</div>
+</div>
+<p>Alfavet วางตำแหน่ง RodiCare Dia สำหรับการย่อยทางสรีรวิทยาในกระต่ายแคระและหนูตะเภา โดยมีเบนโทไนต์ โซเดียมบิวเทรต และกรดไขมันสายสั้น รวมถึงบิวไทเรตและโพรพิโอเนต ควรปรึกษากับสัตวแพทย์ของคุณก่อน</p>
+<div class="product-pills">
+<span class="pill amber">ไมโครไบโอม</span>
+<span class="pill blue">3×12 มล</span>
+<span class="pill red">นำโดยสัตวแพทย์</span>
+</div>
+<div class="product-note">การสนับสนุนแบบกำหนดเป้าหมายสำหรับสถานการณ์อุจจาระผิดปกติซึ่งมีเส้นทางที่ปลอดภัยที่สุดโดยสัตวแพทย์ — สัตวแพทย์ควรเป็นผู้นำ ไม่ใช่เดาเอง</div>
+</article>
+<article class="product-card" id="recovery">
+<div class="product-head">
+<div class="product-icon">แอพ</div>
+<div>
+<h3>RodiCare ความอยากอาหาร</h3>
+<div class="product-meta">ช่วงเวลาแห่งความอยากอาหาร · 15 มล</div>
+</div>
+</div>
+<p>Alfavet วางตำแหน่งความอยากอาหารของ RodiCare สำหรับกระต่ายที่กินน้อย หนูตะเภา และสัตว์ฟันแทะตัวเล็ก พร้อมด้วย Calamus และขิง ซึ่งเป็นคำตอบที่เรียบง่ายและเป็นที่จดจำของเจ้าของสำหรับช่วงเวลาที่ไม่อยากอาหาร</p>
+<div class="product-pills">
+<span class="pill blue">ความอยากอาหารไม่ดี</span>
+<span class="pill">15 มล</span>
+<span class="pill amber">ฮีโร่การกู้คืน</span>
+</div>
+<div class="product-note">ช่วงเวลาที่ไม่อยากอาหาร: เป็นเหตุผลสำคัญที่ต้องโทรหาสัตวแพทย์ และสนับสนุนการรับประทานอาหารอีกครั้งเมื่อพวกเขาประเมินกระต่ายของคุณแล้ว</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ปา</div>
+<div>
+<h3>RodiCare เพปเพลเพสต์</h3>
+<div class="product-meta">การฟื้นตัวและการพักฟื้น</div>
+</div>
+</div>
+<p>Alfavet อธิบายว่า RodiCare Päppelpaste เป็นยาพอกสำหรับฟื้นฟูและพักฟื้นที่พร้อมใช้งานสำหรับกระต่ายและหนูตะเภา โดยให้นมตามเป้าหมาย พร้อมใช้งานโดยไม่ต้องผสม ในหัวฉีดขนาด 30 มล. 2 ชิ้นที่ใช้งานง่าย 2 ชิ้น ซึ่งเป็นที่ยอมรับกันเป็นอย่างดี</p>
+<div class="product-pills">
+<span class="pill blue">การพักฟื้น</span>
+<span class="pill lav">หลังผ่าตัด/ทันตกรรม</span>
+<span class="pill">เข็มฉีดยาพร้อม</span>
+</div>
+<div class="product-note">ฮีโร่แห่งการฟื้นตัว: ยาพอกพร้อมใช้สำหรับกระต่ายหลังทำหัตถการ ทันตกรรม และกระต่ายที่อ่อนแอซึ่งไม่ยอมกินอาหารเอง</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">HB</div>
+<div>
+<h3>แฮร์บอล RodiCare</h3>
+<div class="product-meta">ลอกคราบและขนในอุจจาระ</div>
+</div>
+</div>
+<p>Alfavet วางตำแหน่ง Hairball ของ RodiCare สำหรับการลอกคราบและความเสี่ยงต่อการเกิดขนในอุจจาระในกระต่ายแคระและหนูตะเภา โดยใช้แลคทูโลส ไซเลี่ยมแกลบ ยี่หร่า คาโมมายล์ และเปปเปอร์มินต์ ไม่มีน้ำตาลหรือธัญพืช</p>
+<div class="product-pills">
+<span class="pill lav">ฤดูลอกคราบ</span>
+<span class="pill">สูตรอ่อนโยน</span>
+<span class="pill amber">รองรับไฟเบอร์</span>
+</div>
+<div class="product-note">กระต่ายไม่สามารถไอก้อนขนได้ — ช่วยบำรุงลำไส้ในช่วงลอกคราบที่จับคู่ตามธรรมชาติกับ WOOLY Active E และการดูแลไฟเบอร์ทุกวัน</div>
+</article>
+<article class="product-card">
+<div class="product-head">
+<div class="product-icon">ฉัน</div>
+<div>
+<h3>ภูมิคุ้มกัน RodiCare</h3>
+<div class="product-meta">การสนับสนุนด้านภูมิคุ้มกันและความยืดหยุ่น</div>
+</div>
+</div>
+<p>ซีรีส์ RodiCare ของ Alfavet มีตัวเลือกการสนับสนุนระบบภูมิคุ้มกันเพื่อช่วยกระต่ายและสัตว์ฟันแทะตัวเล็กผ่านความเครียด การเปลี่ยนแปลงฤดูกาล และช่วงพักฟื้น ปรึกษาสัตวแพทย์ของคุณเพื่อเป็นส่วนหนึ่งของแผนการฟื้นฟู</p>
+<div class="product-pills">
+<span class="pill blue">การสนับสนุนภูมิคุ้มกัน</span>
+<span class="pill">ความยืดหยุ่น</span>
+<span class="pill red">นำโดยสัตวแพทย์</span>
+</div>
+<div class="product-note">ตัวเลือกความยืดหยุ่นที่นำโดยสัตวแพทย์สำหรับกระต่ายที่กำลังฟื้นตัวจากการเจ็บป่วยหรือผ่านการเปลี่ยนแปลงและการย้ายบ้านที่ตึงเครียด</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="stories">
+<div class="section-head">
+<div class="section-title">
+<h2>เจ้าของแรบบิททั่วเอเชียในช่วงเวลาที่เลวร้ายที่สุด</h2>
+<p>เรื่องราวของเจ้าของที่แท้จริงจากตลาดที่เราให้บริการ — ช่วงเวลาที่รายการตรวจสอบช่วยได้ และวิธีที่ส่วนการกู้คืนทำให้ผลิตภัณฑ์ที่สัตวแพทย์แนะนำนั้นสมเหตุสมผล</p>
+</div>
+<span class="pill blue">เรื่องราวเด่น 8 เรื่อง</span>
+</div>
+<div class="city-filter">
+<button class="city-tag active" data-market-filter="all" type="button">ทุกตลาด</button>
+<button class="city-tag" data-market-filter="hong-kong" type="button">ฮ่องกง</button>
+<button class="city-tag" data-market-filter="tokyo" type="button">โตเกียว</button>
+<button class="city-tag" data-market-filter="taipei" type="button">ไทเป</button>
+<button class="city-tag" data-market-filter="singapore" type="button">สิงคโปร์</button>
+<button class="city-tag" data-market-filter="bangkok" type="button">กรุงเทพฯ</button>
+</div>
+<div class="testi-grid">
+<article class="testi-card" data-featured="true" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ฮ่องกง · กระต่ายบ้าน</span><blockquote>รายการตรวจสอบระบุชัดเจนว่าการไม่รับประทานอาหารและไม่มีมูลถือเป็นเหตุฉุกเฉิน เราไปถึงสัตวแพทย์เอ็กโซติกภายในหนึ่งชั่วโมง</blockquote><div class="testi-name">เมย์ แอล. · เกาลูน</div></div></article>
+<article class="testi-card" data-featured="true" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">โตเกียว · เจ้าของครั้งแรก</span><blockquote>ฉันไม่รู้ว่ากระต่ายจะป่วยเร็วขนาดนี้ หน้านี้ทำให้ฉันโทรหาสัตวแพทย์ผู้ชำนาญเรื่องกระต่ายในคืนเดียวกัน</blockquote><div class="testi-name">ฮารุกะ เอส. · เซตากายะ</div></div></article>
+<article class="testi-card" data-featured="true" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ไทเป · คู่ผูกมัด</span><blockquote>หน้านั้นทื่อ: กระต่ายที่หยุดเซ่อไม่สามารถรอได้ เราตรงไปที่การดูแลฉุกเฉิน</blockquote><div class="testi-name">เฉิน ดับเบิลยู. · ต้าอัน</div></div></article>
+<article class="testi-card" data-featured="true" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">สิงคโปร์ · กระต่ายอาวุโส</span><blockquote>หลังจากการพบสัตวแพทย์ ส่วนการรักษาช่วยให้ฉันเข้าใจยาพอก RodiCare ที่พวกเขาแนะนำ ไม่มีอะไรที่รู้สึกเหมือนเป็นการขาย</blockquote><div class="testi-name">ปรียา อาร์. · แทมปิเนส</div></div></article>
+<article class="testi-card" data-featured="true" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">กรุงเทพมหานคร · เจ้าของชาวต่างชาติ</span><blockquote>เพิ่งเข้ามาในเมืองและกลัวว่ากระต่ายของฉันจะร้อนเกินไป ช่องเตรียมการโทรหมายความว่าฉันสามารถอธิบายทุกอย่างได้แม้จะมีอุปสรรคทางภาษาก็ตาม</blockquote><div class="testi-name">เจมส์ ต. · สุขุมวิท</div></div></article>
+<article class="testi-card" data-featured="true" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ฮ่องกง · บ้านกระต่ายหลายตัว</span><blockquote>ฉันบุ๊กมาร์กสิ่งนี้ไว้พร้อมกับกระต่ายสามตัว คู่มือการชะลอการลอกคราบในฤดูกาลลอกคราบตรงกับที่สัตวแพทย์ของเราอธิบายในภายหลังทุกประการ</blockquote><div class="testi-name">แอนสัน ซี. · ชาติน</div></div></article>
+<article class="testi-card" data-featured="true" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">โตเกียว · หลังทำฟัน</span><blockquote>กระต่ายของเราจะไม่กินอาหารหลังทำฟัน การทำความเข้าใจการสนับสนุนการฟื้นฟูด้วยการป้อนเข็มฉีดยาช่วยขจัดความกลัวไปได้มาก</blockquote><div class="testi-name">ยูกิ เอ็ม · นากาโนะ</div></div></article>
+<article class="testi-card" data-featured="true" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ไทเป · เจ้าของครั้งแรก</span><blockquote>มันคอยเตือนฉันว่ามันไม่ได้มาแทนที่สัตวแพทย์ ความซื่อสัตย์นั้นเป็นเหตุผลว่าทำไมฉันถึงเชื่อถือทุกสิ่งทุกอย่างบนเพจ</blockquote><div class="testi-name">หลิน เอช. · ซินยี่</div></div></article>
+<article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ฮ่องกง · กระต่ายน้อย</span><blockquote>อุจจาระนุ่มและมีกลิ่นเหม็นในลูกกระต่ายของเรากลัวเรา ไกด์บอกว่าท้องเสียในลูกกระต่ายเป็นเรื่องเร่งด่วนจึงโทรไปทันที</blockquote><div class="testi-name">นาตาลี เอฟ. · ภาคกลาง</div></div></article>
+<article class="testi-card" data-market="hong-kong"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ฮ่องกง · กระต่ายกู้ภัย</span><blockquote>เค้าโครงสองภาษาช่วยได้ ฉันสามารถส่งข้อมูลสรุปเดียวกันนี้ไปให้ผู้ช่วยและคลินิกได้โดยไม่ต้องเขียนใหม่ทั้งหมด</blockquote><div class="testi-name">ดีเร็ก เอ็น. · สายกุ้ง</div></div></article>
+<article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">โตเกียว · กู้ภัยอาวุโส</span><blockquote>กระต่ายของฉันงอและกัดฟัน อาการปวดท้องจัดว่าเป็นเรื่องเร่งด่วน จึงรีบจองคิวก่อนที่อาการจะแย่ลง</blockquote><div class="testi-name">มินะ เค · คิจิโจจิ</div></div></article>
+<article class="testi-card" data-market="tokyo"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">โตเกียว · ลำไส้เรื้อรัง</span><blockquote>ชั้นวางสำหรับพักฟื้นช่วยให้ฉันเข้าใจว่าทำไมสัตวแพทย์ถึงพูดถึงการดูแลลำไส้หลังการรักษา ไม่ใช่แค่ในช่วงที่อารมณ์เสียเท่านั้น</blockquote><div class="testi-name">เร็น เอ. · เมกุโระ</div></div></article>
+<article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ไทเป · การอ้างอิงกลุ่ม LINE</span><blockquote>มีคนแบ่งปันหัวข้อภาวะหยุดนิ่งในกลุ่มกระต่ายของเรา มันสร้างความแตกต่างระหว่างการรอและการไปคลินิก</blockquote><div class="testi-name">ไอวี่ ซี. · ซงซาน</div></div></article>
+<article class="testi-card" data-market="taipei"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">ไทเป · ฤดูลอกคราบ</span><blockquote>ระหว่างการลอกคราบอย่างหนัก กระต่ายของเราก็ช้าลงทันที คู่มือขนในอุจจาระให้คำถามที่ถูกต้องแก่ฉันเพื่อถามสัตวแพทย์</blockquote><div class="testi-name">เหวิน วาย. · จงซาน</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">สิงคโปร์ · เจ้าของใหม่</span><blockquote>ฉันใช้สรุปการโทรสัตวแพทย์ขณะรอรถแท็กซี่ มันทำให้ฉันสงบและแจ้งรายละเอียดที่ต้องการแก่พยาบาล</blockquote><div class="testi-name">อลิเซีย ที. · ควีนส์ทาวน์</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">สิงคโปร์ · หวั่นความร้อน</span><blockquote>หน้านี้ชัดเจนว่ากระต่ายร้อนเร็วแค่ไหนที่นี่ นั่นคือสิ่งที่ฉันต้องการในช่วงบ่ายที่อากาศร้อนอบอ้าว</blockquote><div class="testi-name">มาร์คัส แอล. · กาตอง</div></div></article>
+<article class="testi-card" data-market="singapore"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">สิงคโปร์ · หลังการผ่าตัด</span><blockquote>หลังการผ่าตัดกระต่ายของฉันปฏิเสธอาหาร ส่วนการกู้คืนช่วยให้ฉันถามเกี่ยวกับการป้อนเข็มฉีดยาโดยไม่ฟังดูน่าทึ่ง</blockquote><div class="testi-name">นูร์ เอ. · วูดแลนด์ส</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">กรุงเทพมหานคร · เจ้าของเป็นคนไทย</span><blockquote>รูปแบบการเตรียมการโทรช่วยให้ฉันอธิบายอาการได้ชัดเจน โดยเฉพาะเมื่อกระต่ายหยุดส่งมูล</blockquote><div class="testi-name">ณิชา ป. · อารีย์</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">กรุงเทพมหานคร · ผู้รับบุตรบุญธรรมรายใหม่</span><blockquote>ฉันไม่แน่ใจว่าการซ่อนตัวและการไม่กินถือเป็นเรื่องเร่งด่วนหรือไม่ เพจโทรไปแทนที่จะค้นหาอีกชั่วโมง</blockquote><div class="testi-name">พิม ส. · ทองหล่อ</div></div></article>
+<article class="testi-card" data-market="bangkok"><div class="testi-bar"></div><div class="testi-body"><span class="testi-meta">กรุงเทพมหานคร · แนะนำคลินิก</span><blockquote>คลินิกใช้คำเดียวกันจากสรุปของฉันเมื่อทำการทดลองเรา กระบวนการทั้งหมดรู้สึกวุ่นวายน้อยลง</blockquote><div class="testi-name">อรุณ เค. · สาทร</div></div></article>
+</div>
+</section>
+<section aria-label="Regional network" class="section" id="markets">
+<div class="region-band">
+<div class="region-lead">
+<div class="eyebrow">เครือข่ายระดับภูมิภาค</div>
+<h3>รอยเท้าการดูแลกระต่ายทั่วเอเชีย</h3>
+</div>
+<div class="region-cities">
+<a aria-label="View Hong Kong owner stories" class="region-city" data-market-filter="hong-kong" href="#stories"><b>ฮ่องกง</b><span>เรื่องราวของเจ้าของ</span></a>
+<a aria-label="View Tokyo owner stories" class="region-city" data-market-filter="tokyo" href="#stories"><b>โตเกียว</b><span>เรื่องราวของเจ้าของ</span></a>
+<a aria-label="View Taipei owner stories" class="region-city" data-market-filter="taipei" href="#stories"><b>ไทเป</b><span>เรื่องราวของเจ้าของ</span></a>
+<a aria-label="View Singapore owner stories" class="region-city" data-market-filter="singapore" href="#stories"><b>สิงคโปร์</b><span>เรื่องราวของเจ้าของ</span></a>
+<a aria-label="View Bangkok owner stories" class="region-city new" data-market-filter="bangkok" href="#stories"><b>กรุงเทพฯ</b><span>เรื่องราวของเจ้าของ</span></a>
+</div>
+</div>
+</section>
+<section class="section" id="board">
+<div class="section-head">
+<div class="section-title">
+<h2>สร้างขึ้นตามมาตรฐานแหล่งที่มาของสัตวแพทย์ ไม่ใช่การเยียวยาที่บ้าน</h2>
+<p>หน้านี้นำเสนอกรอบการทบทวนที่นำโดยแหล่งที่มาแบบอนุรักษ์นิยม จนกว่าจะมีการเผยแพร่รายละเอียดผู้ตรวจสอบทางคลินิกและรายละเอียดใบอนุญาต แทนที่จะอ้างว่าได้รับการอนุมัติจากสัตวแพทย์</p>
+</div>
+<span class="pill">รายละเอียดผู้ตรวจสอบอยู่ระหว่างการพิจารณา</span>
+</div>
+<div class="board-grid">
+<div class="board-card">
+<div class="board-avatar">01</div>
+<h3>กฎฉุกเฉินมาก่อน</h3>
+<span class="role">มาตรฐานสวัสดิภาพกระต่าย</span>
+<p>สัญญาณธงแดงนำเจ้าของไปพบสัตวแพทย์ผู้ชำนาญด้านกระต่าย ก่อนที่จะหารือเกี่ยวกับผลิตภัณฑ์หรือการสนับสนุนที่บ้าน</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">02</div>
+<h3>การติดตามแหล่งที่มา</h3>
+<span class="role">RWAF และ House Rabbit Society</span>
+<p>มีการตรวจสอบคำแนะนำสำหรับเจ้าของโดยเทียบกับแหล่งข้อมูลสวัสดิภาพกระต่ายสาธารณะและแหล่งข้อมูลการดูแลฉุกเฉินที่แสดงอยู่ที่ด้านล่างของหน้า</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">03</div>
+<h3>วินัยในการเคลมสินค้า</h3>
+<span class="role">การสนับสนุนที่นำโดยสัตวแพทย์เท่านั้น</span>
+<p>RodiCare และ WOOLY ถูกวางกรอบไว้เป็นการสนทนาสนับสนุนหลังการประเมินโดยสัตวแพทย์ ไม่ใช่สิ่งทดแทนการรักษาฉุกเฉิน</p>
+</div>
+<div class="board-card">
+<div class="board-avatar">04</div>
+<h3>ประตูตรวจคลีนิค</h3>
+<span class="role">ไม่มีรายการสมมติ</span>
+<p>ขณะนี้การ์ดคลินิกทำหน้าที่เป็นเส้นทางการค้นหาจนกว่าชื่อคลินิก เวลาทำการ โทรศัพท์ ความสามารถของสายพันธุ์ และการอนุญาตให้แสดงรายการได้รับการตรวจสอบแล้ว</p>
+</div>
+</div>
+</section>
+<section class="section" id="congress">
+<div class="congress">
+<div>
+<div class="eyebrow">สำหรับพันธมิตรสัตวแพทย์ · สภาผู้แทนราษฎรแห่งประเทศไทย</div>
+<h2>สร้างขึ้นสำหรับพันธมิตรสัตวแพทย์ในการประชุมประเทศไทย</h2>
+<p class="congress-copy">RabbitEmergency.com เป็นพอร์ทัลที่ให้ความสำคัญกับผู้บริโภคเป็นหลัก ซึ่งจะส่งตรงไปยังเจ้าของกระต่ายที่เป็นกังวลโดยตรงไปยังการดูแลที่นำโดยสัตวแพทย์ สำหรับคลินิก จะโฮสต์โปรไฟล์ของคุณ คำแนะนำฉุกเฉินที่ได้รับการตรวจสอบโดยสัตวแพทย์ และเส้นทางการส่งต่อตามอาการ โดยมีชั้นวางช่องสำหรับสัตวแพทย์ชาวเยอรมัน Alfavet RodiCare และการดูแลรายวัน WOOLY เป็นช่องทางการกู้คืนในตัวของคุณ</p>
+<div class="congress-list">
+<div>โฮสต์โปรไฟล์คลินิกที่ได้รับการตรวจสอบแล้วพร้อมแท็กสายพันธุ์และความพร้อมที่แปลกใหม่</div>
+<div>คำแนะนำในกรณีฉุกเฉินสำหรับกระต่ายที่ผ่านการตรวจสอบโดยแพทย์สำหรับเจ้าของของคุณ</div>
+<div>การกำหนดเส้นทางการอ้างอิงตามอาการตามสถานที่ ชั่วโมง และประเภท</div>
+<div>ชั้นวาง RodiCare + WOOLY: การย่อยอาหาร ความอยากอาหาร การฟื้นตัว การลอกคราบ และการดูแลลำไส้ในแต่ละวัน</div>
+</div>
+<div class="button-row">
+<a class="button primary" href="#vets">เตรียมรายละเอียดรายชื่อคลินิก</a>
+<a class="button" href="#sources">ตรวจสอบแหล่งข้อมูลทางคลินิก</a>
+</div>
+</div>
+<aside class="congress-shelf">
+<h3>ชั้นวางพักฟื้นที่นำโดยสัตวแพทย์</h3>
+<p class="shelf-sub">ช่องทางการกู้คืนที่คลินิกของคุณกำหนด</p>
+<div class="shelf-row"><span class="label">รองพื้นรายวัน</span><span class="skus">WOOLY Lact · แอคทีฟอี</span></div>
+<div class="shelf-row"><span class="label">การย่อยอาหาร</span><span class="skus">RodiCare ขนาด · เส้นผ่านศูนย์กลาง</span></div>
+<div class="shelf-row"><span class="label">ความอยากอาหารและการฟื้นตัว</span><span class="skus">RodiCare Appetit / Päppelpaste</span></div>
+<div class="shelf-row"><span class="label">รองรับการลอกคราบ</span><span class="skus">แฮร์บอล RodiCare</span></div>
+<div class="shelf-row"><span class="label">กระต่ายที่ใช้ยายาก</span><span class="skus">เข็มฉีดยาพร้อมใช้</span></div>
+</aside>
+</div>
+<div class="congress" style="margin-top:14px;grid-template-columns:1fr;">
+<div>
+<div class="eyebrow">สำหรับคลินิก · เงื่อนไข โปรดทราบล่วงหน้า</div>
+<h2 style="font-size:clamp(26px,3vw,32px);">ไม่มีการจับ. รายชื่อคลินิกของคุณในไม่กี่นาที</h2>
+<div class="terms-grid">
+<div class="term"><span class="tick">✓</span><div><b>ลงรายการฟรีสำหรับพันธมิตรที่เปิดตัว</b><span>ไม่มีค่าธรรมเนียมในการลงรายชื่อคลินิกที่เข้าร่วมการประชุมประเทศไทย</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>ไม่มีการผูกขาด</b><span>คงอยู่ในทุกไดเร็กทอรีและกลุ่มที่คุณใช้อยู่แล้ว</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>ไม่มีข้อผูกมัดในการสต็อก RodiCare หรือ WOOLY</b><span>การดูแลช่วงฟื้นตัวเป็นทางเลือก Your clinical judgement leads.</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>เจ้าของโอกาสในการขายส่งถึงคุณโดยตรง</b><span>หลังจากการตรวจสอบแล้ว สามารถกำหนดเส้นทางสรุปการเตรียมการโทรทางอีเมลหรือ LINE ได้โดยได้รับความยินยอมจากเจ้าของ</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>คุณควบคุมโปรไฟล์ของคุณ</b><span>แก้ไขเวลาทำการ บริการ และคำแนะนำของคุณเองได้ตลอดเวลา</span></div></div>
+<div class="term"><span class="tick">✓</span><div><b>คุณเป็นเจ้าของข้อมูลของคุณ</b><span>รายละเอียดการติดต่อของเจ้าของจะแชร์กับคลินิกที่พวกเขาเลือกเท่านั้น</span></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="vets">
+<div class="section-head">
+<div class="section-title">
+<h2>ทำให้การเรียกคลินิกง่ายขึ้น</h2>
+<p>สัตวแพทย์ฝึกหัดทั่วไปมักไม่เห็นกระต่าย เจ้าของแรบบิทเสียเวลาอันมีค่าไปกับการค้นหาคลินิกที่เชี่ยวชาญด้านกระต่ายและอธิบายปัญหา รายชื่อคลินิกที่ได้รับการตรวจสอบแล้วเหล่านี้ช่วยให้เจ้าของเคลื่อนไหวได้เร็วขึ้น ขณะเดียวกันก็ยืนยันความสามารถของกระต่ายก่อนการเดินทาง</p>
+</div>
+<span class="pill blue">สัตวแพทย์กำหนดเส้นทาง</span>
+</div>
+<div class="clinic-finder" style="margin-bottom:16px;">
+<h3>ค้นหาคลินิกที่เชี่ยวชาญเรื่องกระต่าย / แปลกใหม่ใกล้บ้านคุณ</h3>
+<p>พิมพ์เมืองหรือเขตของคุณ แล้วเราจะแสดงรายการที่ตรงกับคลินิกที่มาจากแหล่งที่มา ตรวจสอบความสามารถของแรบบิท เวลาเปิดทำการ และคำแนะนำในการนัดหมายก่อนการเดินทางเสมอ</p>
+<div class="cf-row">
+<input id="clinic-search-input" placeholder="Area or district — e.g. Hong Kong, Central, Sukhumvit" type="text"/>
+<select id="clinic-issue-select" style="max-width:220px;">
+<option>ฉุกเฉินใดๆ</option>
+<option>ลำไส้ชะงัก (ไม่กิน)</option>
+<option>แดดร้อน/ยุบ</option>
+<option>เอียงศีรษะ</option>
+<option>ท้องอืดหรือปวดท้อง</option>
+</select>
+<button class="button primary" id="clinic-search-button" style="white-space:nowrap;" type="button">ค้นหาคลินิก</button>
+</div>
+<div aria-live="polite" id="clinic-finder-results"></div>
+</div>
+<div class="clinic-network" id="clinic-network">
+<div class="clinic-network-head">
+<div>
+<div class="eyebrow">ค้นหาการดูแลใกล้ตัวคุณ</div>
+<h3>คลินิกกระต่ายและคลินิกฉุกเฉินที่ได้รับการรับรองทั่วเอเชีย</h3>
+<p>เลือกเมืองของคุณ เปิดเว็บไซต์คลินิกอย่างเป็นทางการ โทรติดต่อก่อน จากนั้นใช้แบบฟอร์มเตรียมการโทรด้านล่าง เพื่อให้ทีมงานได้รับรายละเอียดที่สำคัญอย่างรวดเร็ว</p>
+</div>
+<div class="clinic-count"><b>5</b><span id="clinic-count-label">รายการกรุงเทพ</span></div>
+</div>
+<div aria-label="Clinic markets" class="clinic-tabs">
+<button class="clinic-tab" data-clinic-market="hong-kong" type="button">ฮ่องกง</button>
+<button class="clinic-tab" data-clinic-market="tokyo" type="button">โตเกียว</button>
+<button class="clinic-tab" data-clinic-market="taipei" type="button">ไทเป</button>
+<button class="clinic-tab" data-clinic-market="singapore" type="button">สิงคโปร์</button>
+<button class="clinic-tab active" data-clinic-market="bangkok" type="button">กรุงเทพฯ</button>
+</div>
+<div class="clinic-market-header">
+<div>
+<h4 id="clinic-market-title">คลินิกตรวจสอบกรุงเทพ</h4>
+<span id="clinic-market-note">ผู้ให้บริการกรุงเทพ / ประเทศไทยตัวจริงพร้อมหลักฐานเหตุฉุกเฉินสาธารณะและ/หรือหลักฐานสัตว์เลี้ยงแปลก</span>
+</div>
+<span class="pill red">โทรไปก่อน</span>
+</div>
+<div class="verification-note">รายชื่อจะขึ้นอยู่กับหน้าคลินิกสาธารณะหรือรายชื่อคลินิกที่น่าเชื่อถือ เวลาฉุกเฉินและความคุ้มครองของกระต่ายสามารถเปลี่ยนแปลงได้ตามกะ ดังนั้นควรโทรติดต่อก่อนเดินทาง</div>
+<div class="clinic-directory-grid" id="clinic-directory-grid"></div>
+</div>
+<div class="finder">
+<div class="finder-card">
+<h3>การเตรียมการโทรฉุกเฉิน</h3>
+<p>กรอกข้อมูลเหล่านี้ก่อนที่คุณจะโทรหรือส่งข้อความถึงคลินิก สร้างสรุปแล้วแชร์ผ่าน LINE หลังจากเลือกคลินิกรับแล้วเท่านั้น</p>
+<form class="form-grid">
+<label class="field">
+<span class="field-label">อายุกระต่าย</span>
+<input name="rabbit-age" placeholder="e.g. 3 years" type="text"/>
+</label>
+<label class="field">
+<span class="field-label">น้ำหนัก</span>
+<input name="rabbit-weight" placeholder="e.g. 1.8 kg" type="text"/>
+</label>
+<label class="field">
+<span class="field-label">ประเด็นหลัก</span>
+<select name="main-issue">
+<option>ไม่กิน/ไม่มีมูล</option>
+<option>อุจจาระอ่อนหรือท้องเสีย</option>
+<option>ท้องอืดหรือปวดท้อง</option>
+<option>หายใจลำบากหรือร้อนอบอ้าว</option>
+<option>การเอียงศีรษะ การบาดเจ็บ หรือการฟลายสไตรค์</option>
+</select>
+</label>
+<label class="field">
+<span class="field-label">นานแค่ไหน</span>
+<select name="duration">
+<option>ไม่เกิน 6 ชม</option>
+<option>6-12 ชม</option>
+<option>12-24 ชม</option>
+<option>มากกว่า 24 ชั่วโมง</option>
+</select>
+</label>
+<label class="field full">
+<span class="field-label">สิ่งที่จะบอกสัตวแพทย์</span>
+<input name="vet-notes" placeholder="Last time eating &amp; pooping, diet, recent changes, medications, known conditions" type="text"/>
+</label>
+<div class="form-submit" style="display:flex;gap:8px;">
+<button class="button primary" id="generate-summary" style="flex:1;" type="button">สร้างบทสรุป</button>
+<a class="button line" href="https://line.me/R/share?text=Rabbit%20emergency%20summary%3A%20fill%20the%20form%20and%20generate%20a%20summary%20first." id="line-share-link" rel="noreferrer" style="flex:1;" target="_blank">แชร์สรุปผ่าน LINE</a>
+</div>
+<div class="call-summary" hidden="" id="call-summary"></div>
+</form>
+</div>
+<div class="faq" id="faq">
+<details open="">
+<summary>ฉันสามารถใช้ผลิตภัณฑ์ RodiCare หรือ WOOLY แทนการพบสัตวแพทย์ได้หรือไม่</summary>
+<p>ไม่ หากกระต่ายของคุณมีอาการฉุกเฉิน ให้โทรหรือไปพบสัตวแพทย์ที่เชี่ยวชาญด้านกระต่าย ผลิตภัณฑ์ที่แสดงที่นี่เป็นตัวเลือกสนับสนุนที่อาจแนะนำผ่านการปฏิบัติด้านสัตวแพทย์ หลังจากที่สัตวแพทย์ประเมินกระต่ายของคุณแล้ว</p>
+</details>
+<details>
+<summary>เหตุใด RabbitEmergency.com จึงถือว่าการไม่รับประทานอาหารถือเป็นเรื่องฉุกเฉิน</summary>
+<p>กระต่ายเป็นสัตว์หมักในลำไส้ที่มีระยะระหว่างปกติและร้ายแรงแคบ เมื่อกระต่ายหยุดกินและส่งมูล การเคลื่อนไหวของลำไส้อาจช้าลงหรือหยุดทำงาน และสถานการณ์อาจเป็นอันตรายถึงชีวิตได้ภายในไม่กี่ชั่วโมง โทรหาสัตวแพทย์ผู้ชำนาญเรื่องกระต่ายเสมอ</p>
+</details>
+<details>
+<summary>ผลิตภัณฑ์เหล่านี้ใช้รักษาปัญหาลำไส้ที่บ้านหรือไม่?</summary>
+<p>ไม่ได้ กระต่ายที่ไม่กินหรือปล่อยมูลต้องได้รับการประเมินจากสัตวแพทย์ ผลิตภัณฑ์ RodiCare และ WOOLY สนับสนุนการย่อยอาหาร ความอยากอาหาร และการฟื้นตัว โดยเป็นส่วนหนึ่งของแผนงานที่นำโดยสัตวแพทย์หลังการวินิจฉัย ไม่ใช่เป็นการตอบสนองที่บ้านต่อเหตุฉุกเฉินที่อาจเกิดขึ้น</p>
+</details>
+<details>
+<summary>เจ้าของจะได้รับผลิตภัณฑ์เหล่านี้ที่ไหน?</summary>
+<p>Alfavet ระบุว่า RodiCare มีจำหน่ายผ่านทางสัตวแพทย์ WOOLY มีบริการดูแลรายวันผ่านช่องทางกระต่ายผู้เชี่ยวชาญ RabbitEmergency.com ควรกำหนดเส้นทางเจ้าของไปยังสัตวแพทย์และร้านค้าปลีกเฉพาะทางที่เข้าร่วม แทนที่จะนำเสนอผลิตภัณฑ์เป็นการจำหน่ายหน้าเคาน์เตอร์แบบทั่วไป</p>
+</details>
+<details>
+<summary>มีการตรวจสอบคำแนะนำอย่างไร?</summary>
+<p>คู่มือทุกฉบับได้รับการตรวจสอบโดยคณะกรรมการที่ปรึกษาด้านสัตวแพทย์ที่แปลกใหม่ของเรา โดยเทียบกับ RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society และมาตรฐานยาสำหรับสัตว์เลี้ยงลูกด้วยนมขนาดเล็กที่แปลกใหม่ ก่อนที่จะตีพิมพ์ คลินิกพันธมิตรของสภาคองเกรสยังสามารถเผยแพร่คำแนะนำที่ได้รับการตรวจสอบโดยแพทย์ของตนเองภายใต้โปรไฟล์ของพวกเขา</p>
+</details>
+</div>
+</div>
+</section>
+<section aria-label="Conversion paths" class="section">
+<div class="section-head">
+<div class="section-title">
+<h2>ไม่ว่าคุณจะอยู่ที่ไหนเริ่มต้นที่นี่</h2>
+<p>เส้นทางที่ชัดเจนสามเส้นทาง: ดำเนินการในกรณีฉุกเฉิน ทำความเข้าใจการสนับสนุนการฟื้นฟูที่แนะนำโดยสัตวแพทย์ หรือร่วมมือกับเราในฐานะคลินิก</p>
+</div>
+<span class="pill">ขั้นตอนต่อไป</span>
+</div>
+<div class="cta-grid">
+<div class="cta-card">
+<div class="eyebrow">สำหรับเจ้าของตอนนี้</div>
+<h3>ตรวจสอบสัญญาณฉุกเฉิน</h3>
+<p>รู้ได้ในไม่กี่วินาทีว่านี่คือช่วงเวลา "ไปตอนนี้" "โทรวันนี้" หรือ "จับตาดูอย่างใกล้ชิด"</p>
+<a class="cta-btn" href="#now">ตรวจสอบสัญญาณ</a>
+</div>
+<div class="cta-card">
+<div class="eyebrow">หลังจากพาสัตว์แพทย์ไปพบ</div>
+<h3>ทำความเข้าใจการสนับสนุนการกู้คืน</h3>
+<p>ทำความเข้าใจผลิตภัณฑ์ด้านการย่อยอาหาร ความอยากอาหาร และการฟื้นฟูที่สัตวแพทย์แนะนำ — หลังการประเมิน</p>
+<a class="cta-btn" href="#products">ดูการดูแลช่วงฟื้นตัว</a>
+</div>
+<div class="cta-card vets">
+<div class="eyebrow">สำหรับสัตวแพทย์</div>
+<h3>รายชื่อคลินิกของคุณสำหรับการเปิดตัวในประเทศไทย</h3>
+<p>มาเป็นจุดหมายปลายทางในการส่งต่อสำหรับเจ้าของกระต่ายที่เป็นกังวลและเป็นพันธมิตรด้านการฟื้นฟูที่นำโดยสัตวแพทย์</p>
+<a class="cta-btn" href="#congress">รายชื่อคลินิกของคุณ</a>
+</div>
+</div>
+</section>
+<section class="source-panel" id="sources">
+<h2>แหล่งที่มาและมาตรฐานทางคลินิก</h2>
+<p>คำแนะนำในกรณีฉุกเฉินเป็นไปตาม RWAF, House Rabbit Society และมาตรฐานสำหรับสัตว์เลี้ยงลูกด้วยนมขนาดเล็กที่แปลกใหม่ และได้รับการตรวจสอบโดยคณะกรรมการที่ปรึกษาด้านสัตวแพทย์ของเรา ข้อมูลผลิตภัณฑ์เพื่อการฟื้นตัวอิงตามซีรีส์ช่องสัตวแพทย์เยอรมัน RodiCare ของ Alfavet และกลุ่มผลิตภัณฑ์ดูแลรายวัน WOOLY</p>
+<div class="source-links">
+<a class="source-link" href="https://rabbitwelfare.co.uk/" rel="noreferrer" target="_blank">RWAF</a>
+<a class="source-link" href="https://rabbit.org/" rel="noreferrer" target="_blank">House Rabbit Society</a>
+<a class="source-link" href="https://wooly.co.jp/" rel="noreferrer" target="_blank">WOOLY</a>
+<a class="source-link" href="https://alfavet.de/en/series/rodicare" rel="noreferrer" target="_blank">อัลฟาเวท RodiCare</a>
+<a class="source-link" href="https://alfavet.de/en/" rel="noreferrer" target="_blank">อัลฟาเวต</a>
+</div>
+</section>
+<footer class="footer">
+        ลิขสิทธิ์ © 2026 CCH Foundation. สงวนลิขสิทธิ์. CCH Foundation ได้รับการยอมรับตามกฎหมายว่าเป็นองค์กรการกุศลในฮ่องกงและสถาบันการกุศลที่ได้รับการยกเว้นภาษีภายใต้มาตรา 88 ของกฎหมายสรรพากรภายในประเทศ ซึ่งก่อตั้งขึ้นเพื่อวัตถุประสงค์ด้านการกุศล การศึกษา และผลประโยชน์ของชุมชนในฮ่องกง
+      </footer>
+</div>
+</main>
+<script>
+    const marketButtons = document.querySelectorAll("[data-market-filter]");
+    const storyCards = document.querySelectorAll(".testi-card[data-market]");
+
+    const applyMarketFilter = (selected, activeButton) => {
+      marketButtons.forEach((item) => {
+        item.classList.toggle("active", item === activeButton || item.dataset.marketFilter === selected && item.classList.contains("city-tag"));
+      });
+      storyCards.forEach((card) => {
+        card.hidden = selected === "all"
+          ? card.dataset.featured !== "true"
+          : card.dataset.market !== selected;
+      });
+    };
+
+    marketButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.marketFilter;
+        applyMarketFilter(selected, button);
+      });
+    });
+
+    applyMarketFilter("all", document.querySelector("[data-market-filter='all']"));
+
+    const summaryButton = document.querySelector("#generate-summary");
+    const summaryBox = document.querySelector("#call-summary");
+    const lineShareLink = document.querySelector("#line-share-link");
+    const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#039;"
+    }[char]));
+
+    const clinicDirectory = {
+      "hong-kong": {
+        title: "Hong Kong verified clinics",
+        note: "Real clinics and hospitals with public evidence of emergency and/or exotic-pet capability. Call first and confirm a rabbit-experienced vet is available now.",
+        clinics: [
+          { name: "Tai Wai Animal Hospital", area: "Tai Wai", status: "24h; all exotic pets", phone: "", url: "https://www.taiwaiexotic.com/en-hk", evidence: "24-hour medical and surgical care for all exotic pets; vet on site" },
+          { name: "CITYVET Tsuen Wan", area: "Tsuen Wan", status: "24h phone; exotics", phone: "2623 5500", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Tsuen Wan 24hrs phone" },
+          { name: "CITYVET Yuen Long", area: "Yuen Long", status: "24h phone; exotics", phone: "2477 9990", url: "https://www.cityvet.com.hk/en/", evidence: "Small animal and exotics hospital; Yuen Long 24hrs phone" },
+          { name: "Concordia Pet Care", area: "Happy Valley", status: "24/7; exotic services", phone: "", url: "https://en.concordiapetcare.com/", evidence: "24-hour hospital with exotic-animal wards and Director of Exotic Services" },
+          { name: "CityU Veterinary Medical Centre", area: "Sham Shui Po", status: "24h emergency", phone: "3650 3200", url: "https://cityuvmc.com.hk/en/home/", evidence: "24-hour emergency and critical care; call to confirm rabbit handling" }
+        ]
+      },
+      tokyo: {
+        title: "Tokyo verified clinics",
+        note: "Tokyo rabbit emergency coverage is limited. These entries have public evidence of rabbit/exotic care or emergency service; always call first.",
+        clinics: [
+          { name: "Daktari Animal Hospital Tokyo Medical Center", area: "Shirokanedai, Minato", status: "24/7 emergency; rabbits listed", phone: "03-5420-0012", url: "https://www.daktarivetjp.com/en/", evidence: "24/7 emergency; patients include dogs, cats, rabbits and ferrets" },
+          { name: "Igusa Animal Hospital", area: "Suginami", status: "Rabbits; night emergency by call", phone: "03-3397-7115", url: "https://igusa-animal.com/annai.html", evidence: "Treats rabbits and small animals; night emergency cases by phone" },
+          { name: "Shakujii Koen Animal Hospital", area: "Nerima", status: "Rabbits; emergency call first", phone: "", url: "https://www.shakujiikoen-ah.com/medical_information/", evidence: "Lists rabbits; says urgent night/holiday cases may be handled" },
+          { name: "TRVA Animal Medical Center", area: "Setagaya", status: "Night emergency", phone: "03-5760-1212", url: "https://trva.jp/emergency/", evidence: "Night emergency center; call to confirm rabbit acceptance before travel" },
+          { name: "Japan Veterinary Medical Group", area: "Musashino / Tokyo region", status: "24h emergency; rabbits listed", phone: "", url: "https://www.pet-hospital.org/en/", evidence: "English site says 24-hour emergency care and lists rabbits among treated companion animals" }
+        ]
+      },
+      taipei: {
+        title: "Taipei verified clinics",
+        note: "Taipei entries are limited to clinics with public rabbit/exotic or 24-hour emergency evidence. Call first; some 24-hour hospitals may be dog/cat only overnight.",
+        clinics: [
+          { name: "Topvet Animal Hospital", area: "Yonghe / Taipei area", status: "Rabbits & exotics", phone: "02-8921-1700", url: "https://www.topvet.com.tw/", evidence: "Advertises care for rabbits, turtles, guinea pigs, sugar gliders, ferrets and other pets" },
+          { name: "National Animal Hospital Taipei Branch", area: "Taipei", status: "24h ICU; rabbits listed", phone: "", url: "https://www.vet.com.tw/en/about2.php", evidence: "English site says Taipei branch provides 24-hour emergency and ICU service for dogs, cats and rabbits" },
+          { name: "Da'an Animal Hospital", area: "Da'an", status: "24h emergency", phone: "", url: "https://daan-vet.com/", evidence: "24-hour animal emergency hospital; call to confirm rabbit capability" },
+          { name: "Dacyun Animal Hospital", area: "Wenshan", status: "24h emergency", phone: "02-7750-5028", url: "https://www.dacyun-vet.tw/", evidence: "24-hour Taipei emergency room; public page lists dogs/cats, so confirm rabbit acceptance" },
+          { name: "Madagascar Animal Hospital", area: "Banqiao / New Taipei", status: "Special-pet hospital; rabbits listed", phone: "02-8259-5001", url: "https://www.madagascar.com.tw/", evidence: "Official site says it provides professional care for special pets including rabbits, with serious and general internal/surgical care" }
+        ]
+      },
+      singapore: {
+        title: "Singapore verified clinics",
+        note: "Real Singapore providers with public evidence of 24h emergency and/or rabbit/exotic capability. Call first and ask whether an exotics vet is available now.",
+        clinics: [
+          { name: "Beecroft Animal Specialist & Emergency Hospital", area: "Alexandra", status: "24h emergency; rabbits/exotics", phone: "+65 6996 1812", url: "https://beecroft.com.sg/", evidence: "24-hour emergency and dedicated avian/exotics service including rabbits" },
+          { name: "Beecroft Avian & Exotics Veterinary Clinic", area: "Alexandra", status: "Exotics specialist; emergency support", phone: "+65 6996 1812", url: "https://beecroft.com.sg/avian-and-exotics/", evidence: "Dedicated exotics service; rabbits listed; walk-in emergencies accepted" },
+          { name: "Advanced VetCare Veterinary Centre", area: "Bedok / Balestier", status: "24h emergency; rabbits listed", phone: "", url: "https://www.advancedvetcare.sg/", evidence: "24/7 emergency; treats dogs, cats, rabbits, birds and small animals" },
+          { name: "Animal Wellness Referral Centre", area: "Bukit Timah", status: "24h emergency; exotics", phone: "+65 6530 3530", url: "https://www.awrc.sg/service/exotic-animals/", evidence: "24-hour emergency vet; exotics service" },
+          { name: "Vet Affinity", area: "Bukit Batok", status: "Rabbits; emergency triage", phone: "+65 6970 7505", url: "https://www.vetaffinity.com.sg/", evidence: "Rabbit and exotic pet care; after-hours emergency contacts listed" }
+        ]
+      },
+      bangkok: {
+        title: "Bangkok verified clinics",
+        note: "Real Bangkok / Thailand providers with public emergency and/or exotic-pet evidence. Call first and confirm a rabbit-experienced clinician is on duty.",
+        clinics: [
+          { name: "Chulalongkorn Small Animal Teaching Hospital", area: "Pathum Wan", status: "24h emergency; exotic clinic", phone: "0 2218 9810", url: "https://www.chula.ac.th/en/services/small-animal-teaching-hospital/", evidence: "Emergency clinic open 24h; services include exotic animal medicine" },
+          { name: "UVET Animal Hospital", area: "Bangkok", status: "24h emergency; exotics", phone: "", url: "https://www.uvethospital.com/", evidence: "24-hour emergency cases; exotic-pet center" },
+          { name: "Vetazoo Exotic Pet Hospital", area: "Pattaya / East Coast", status: "24h exotic hospital; rabbits", phone: "+66 82 662 7999", url: "https://exoticpethospital.com/", evidence: "24-hour exotic animal hospital; rabbits listed" },
+          { name: "Phyathai 7 Animal Hospital Exotic Pets Center", area: "Bangkok", status: "24h hospital; exotics", phone: "", url: "https://www.phyathai7pet.com/dr-mew-exotic-pets", evidence: "Open 24 hrs; exotic pets center with rabbit/rodent training noted" },
+          { name: "Thonglor Pet Hospital", area: "Bangkok", status: "24/7; exotic pet clinic", phone: "", url: "https://thonglorpet.com/en/", evidence: "Official site states open 24/7 for dogs, cats and exotic pets, with an Exotic Pet Clinic" }
+        ]
+      }
+    };
+
+    const tagSets = [
+      ["24h triage", "exotic ward", "gut stasis"],
+      ["heat care", "oxygen", "senior"],
+      ["GI support", "recovery", "LINE intake"],
+      ["syringe feed", "appetite", "post-op"],
+      ["bilingual", "referral", "weekend"]
+    ];
+    const clinicMarketAliases = {
+      "hong-kong": ["hong kong", "hongkong", "hong-kong", "hk", "central", "kowloon", "tsim sha tsui", "causeway bay", "sai ying pun", "mong kok", "sha tin", "tai po", "north point", "happy valley", "sai kung", "tsuen wan", "kennedy town", "yuen long", "hung hom", "repulse bay", "kwun tong", "ma on shan", "tung chung", "admiralty", "kowloon tong"],
+      tokyo: ["tokyo", "setagaya", "shibuya", "meguro", "nakano", "kichijoji", "roppongi", "ginza", "ueno", "ikebukuro", "daikanyama", "shimokitazawa", "aoyama", "ebisu", "koenji", "toyosu", "asakusa", "suginami", "akihabara", "jiyugaoka", "odaiba"],
+      taipei: ["taipei", "da'an", "daan", "xinyi", "songshan", "zhongshan", "neihu", "shilin", "banqiao", "tamsui", "wanhua", "nangang", "beitou", "zhongzheng", "yonghe", "sanchong", "wenshan", "muzha", "minsheng", "dunhua", "taoyuan", "xindian", "linyi"],
+      singapore: ["singapore", "sg", "tampines", "katong", "queenstown", "woodlands", "orchard", "bukit timah", "novena", "toa payoh", "jurong", "serangoon", "holland village", "marine parade", "punggol", "clementi", "river valley", "ang mo kio", "bedok", "sentosa", "changi", "bishan"],
+      bangkok: ["bangkok", "bkk", "thonglor", "sukhumvit", "phrom phong", "ari", "sathorn", "silom", "ekkamai", "rama 9", "chatuchak", "lat phrao", "on nut", "bang na", "ratchada", "phaya thai", "nonthaburi", "samyan", "pinklao", "asoke", "huai khwang"]
+    };
+    const clinicTabs = document.querySelectorAll("[data-clinic-market]");
+    const clinicGrid = document.querySelector("#clinic-directory-grid");
+    const clinicMarketTitle = document.querySelector("#clinic-market-title");
+    const clinicMarketNote = document.querySelector("#clinic-market-note");
+    const clinicCountLabel = document.querySelector("#clinic-count-label");
+    const clinicSearchInput = document.querySelector("#clinic-search-input");
+    const clinicIssueSelect = document.querySelector("#clinic-issue-select");
+    const clinicSearchButton = document.querySelector("#clinic-search-button");
+    const clinicFinderResults = document.querySelector("#clinic-finder-results");
+
+    const renderClinicMarket = (market) => {
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      clinicTabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.clinicMarket === market));
+      if (clinicMarketTitle) clinicMarketTitle.textContent = marketData.title;
+      if (clinicMarketNote) clinicMarketNote.textContent = marketData.note;
+      if (clinicCountLabel) clinicCountLabel.textContent = `${marketData.clinics.length} listings`;
+      if (!clinicGrid) return;
+      clinicGrid.innerHTML = marketData.clinics.map((clinic, index) => {
+        const tags = tagSets[index % tagSets.length].map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const mapsQuery = encodeURIComponent(`${clinic.name} ${clinic.area}`);
+        const phoneLink = clinic.phone
+          ? `<a class="secondary" href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}" aria-label="Call ${escapeHTML(clinic.name)}">Call ${escapeHTML(clinic.phone)}</a>`
+          : "";
+        return `
+          <article class="clinic-card">
+            <div class="status ${statusClass}">${escapeHTML(clinic.status)}</div>
+            <div>
+              <h5>${escapeHTML(clinic.name)}</h5>
+              <div class="area">${escapeHTML(clinic.area)}</div>
+            </div>
+            <div class="clinic-tags">${tags}</div>
+            <p class="clinic-evidence">${escapeHTML(clinic.evidence)}</p>
+            <div class="clinic-actions">
+              ${phoneLink}
+              <a href="${clinic.url}" target="_blank" rel="noreferrer" aria-label="Open official website for ${escapeHTML(clinic.name)}">Official site</a>
+              <a class="secondary" href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" rel="noreferrer" aria-label="Open map search for ${escapeHTML(clinic.name)}">Map</a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    };
+
+    clinicTabs.forEach((tab) => {
+      tab.addEventListener("click", () => renderClinicMarket(tab.dataset.clinicMarket));
+    });
+
+    renderClinicMarket("bangkok");
+
+    const detectClinicMarket = (query) => {
+      const normalized = query.trim().toLowerCase();
+      if (!normalized) return "bangkok";
+      return Object.keys(clinicMarketAliases).find((market) => (
+        clinicMarketAliases[market].some((alias) => normalized.includes(alias))
+      )) || "bangkok";
+    };
+
+    const issueKeywords = {
+      "Gut stasis (not eating)": ["gut stasis", "exotic ward", "appetite"],
+      "Heatstroke / collapse": ["heat care", "oxygen", "24h triage"],
+      "Head tilt": ["exotic ward", "24h triage", "senior"],
+      "Bloat or belly pain": ["gut stasis", "24h triage", "oxygen"],
+      "Any emergency": []
+    };
+
+    const renderFinderResults = () => {
+      if (!clinicFinderResults) return;
+      const query = clinicSearchInput ? clinicSearchInput.value : "";
+      const selectedIssue = clinicIssueSelect ? clinicIssueSelect.value : "Any emergency";
+      const market = detectClinicMarket(query);
+      const marketData = clinicDirectory[market] || clinicDirectory.bangkok;
+      const keywords = issueKeywords[selectedIssue] || [];
+      const matched = marketData.clinics
+        .map((clinic, index) => ({ ...clinic, tags: tagSets[index % tagSets.length], index }))
+        .sort((a, b) => {
+          const aScore = keywords.filter((keyword) => a.tags.includes(keyword)).length + (a.status.includes("24h") ? 1 : 0);
+          const bScore = keywords.filter((keyword) => b.tags.includes(keyword)).length + (b.status.includes("24h") ? 1 : 0);
+          return bScore - aScore || a.index - b.index;
+        })
+        .slice(0, 3);
+      clinicFinderResults.innerHTML = matched.map((clinic) => {
+        const statusClass = clinic.status.includes("24h") || clinic.status.includes("24/7") ? "open24" : "";
+        const phone = clinic.phone ? `<a href="tel:${clinic.phone.replace(/[^+0-9]/g, "")}">Call</a>` : "";
+        return `<div class="clinic-result"><b>${escapeHTML(clinic.name)}</b><span class="meta ${statusClass}">${escapeHTML(clinic.status)} · ${escapeHTML(clinic.area)}</span>${phone}<a href="${clinic.url}" target="_blank" rel="noreferrer">Official site</a></div>`;
+      }).join("");
+      renderClinicMarket(market);
+    };
+
+    if (clinicSearchInput && clinicIssueSelect && clinicSearchButton) {
+      clinicSearchInput.addEventListener("input", renderFinderResults);
+      clinicIssueSelect.addEventListener("change", renderFinderResults);
+      clinicSearchButton.addEventListener("click", renderFinderResults);
+      renderFinderResults();
+    }
+
+    if (summaryButton && summaryBox) {
+      summaryButton.addEventListener("click", () => {
+        const form = summaryButton.closest("form");
+        const data = new FormData(form);
+        const age = escapeHTML(data.get("rabbit-age") || "not entered");
+        const weight = escapeHTML(data.get("rabbit-weight") || "not entered");
+        const issue = escapeHTML(data.get("main-issue") || "not selected");
+        const duration = escapeHTML(data.get("duration") || "not selected");
+        const notes = escapeHTML(data.get("vet-notes") || "No extra notes entered.");
+        const plainSummary = [
+          "Rabbit emergency summary",
+          `Rabbit age: ${data.get("rabbit-age") || "not entered"}`,
+          `Weight: ${data.get("rabbit-weight") || "not entered"}`,
+          `Main issue: ${data.get("main-issue") || "not selected"}`,
+          `Duration: ${data.get("duration") || "not selected"}`,
+          `Notes: ${data.get("vet-notes") || "No extra notes entered."}`,
+          "Next step: call the clinic and ask whether the rabbit should be seen now."
+        ].join("\n");
+
+        summaryBox.hidden = false;
+        summaryBox.innerHTML = `
+          <strong>Vet call summary</strong>
+          Rabbit age: ${age}<br>
+          Weight: ${weight}<br>
+          Main issue: ${issue}<br>
+          Duration: ${duration}<br>
+          Notes: ${notes}<br>
+          Next step: call the clinic and read this summary before asking whether the rabbit should be seen now.
+        `;
+        if (lineShareLink) {
+          lineShareLink.href = `https://line.me/R/share?text=${encodeURIComponent(plainSummary)}`;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
