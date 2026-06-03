@@ -1247,12 +1247,19 @@
   }
 
   .footer {
-    color: var(--muted);
+    background: var(--pine-deep);
+    color: rgba(255,255,255,0.72);
     font-family: "JetBrains Mono", monospace;
     font-size: 11px;
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-    margin-top: 32px;
+    line-height: 1.75;
+    margin-top: 52px;
+    padding: 24px 0;
+  }
+
+  .footer-inner {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    color: rgba(255,255,255,0.72);
   }
 
   /* --- emergency mark emphasis --- */
@@ -1625,7 +1632,7 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1A472A" name="theme-color"/>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;%F0%9F%90%B0&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
-<meta content="2026-06-03" name="last-updated"/><link href="https://rabbitemergency.com/" rel="canonical"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/","description":"Educational rabbit-emergency resource helping owners recognise urgent signs, prepare for a clinic call, and understand vet-guided recovery support.","areaServed":["Hong Kong","Japan","Taiwan","Singapore","Thailand"],"dateModified":"2026-06-03","sameAs":[]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support","url":"https://rabbitemergency.com/","inLanguage":"en","audience":{"@type":"Audience","audienceType":"rabbit owners"},"about":{"@type":"MedicalCondition","name":"Rabbit gastrointestinal stasis and other rabbit emergencies"},"publisher":{"@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/"},"medicalAudience":{"@type":"MedicalAudience","audienceType":"Patient"},"dateModified":"2026-06-03","reviewedBy":[{"@type":"Person","name":"Dr. Srisai","jobTitle":"Veterinary reviewer","affiliation":{"@type":"Organization","name":"RabbitEmergency.com Veterinary Review Board"},"url":"https://rabbitemergency.com/veterinary-reviewers/#srisai","description":"Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline."},{"@type":"Person","name":"Dr. Watanabe","jobTitle":"Veterinary reviewer","affiliation":{"@type":"Organization","name":"RabbitEmergency.com Veterinary Review Board"},"url":"https://rabbitemergency.com/veterinary-reviewers/#watanabe","description":"Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline."},{"@type":"Person","name":"Dr. Lim","jobTitle":"Veterinary reviewer","affiliation":{"@type":"Organization","name":"RabbitEmergency.com Veterinary Review Board"},"url":"https://rabbitemergency.com/veterinary-reviewers/#lim","description":"Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline."},{"@type":"Person","name":"Dr. Hsu","jobTitle":"Veterinary reviewer","affiliation":{"@type":"Organization","name":"RabbitEmergency.com Veterinary Review Board"},"url":"https://rabbitemergency.com/veterinary-reviewers/#hsu","description":"Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline."}],"lastReviewed":"2026-06-03","dateReviewed":"2026-06-03"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rabbitemergency.com/"}]}</script><link href="https://rabbitemergency.com/" hreflang="en" rel="alternate"/><link href="https://rabbitemergency.com/ja/" hreflang="ja" rel="alternate"/><link href="https://rabbitemergency.com/zh-tw/" hreflang="zh-Hant" rel="alternate"/><link href="https://rabbitemergency.com/th/" hreflang="th" rel="alternate"/><link href="https://rabbitemergency.com/" hreflang="x-default" rel="alternate"/></head>
+<meta content="2026-06-03" name="last-updated"/><link href="https://rabbitemergency.com/" rel="canonical"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/","description":"Educational rabbit-emergency resource helping owners recognise urgent signs, prepare for a clinic call, and understand vet-guided recovery support.","areaServed":["Hong Kong","Japan","Taiwan","Singapore","Thailand"],"dateModified":"2026-06-03","sameAs":[]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"RabbitEmergency.com | Rabbit emergency help, exotic-vet guidance, and recovery support","url":"https://rabbitemergency.com/","inLanguage":"en","audience":{"@type":"Audience","audienceType":"rabbit owners"},"about":{"@type":"MedicalCondition","name":"Rabbit gastrointestinal stasis and other rabbit emergencies"},"publisher":{"@type":"Organization","name":"RabbitEmergency.com","url":"https://rabbitemergency.com/"},"medicalAudience":{"@type":"MedicalAudience","audienceType":"Patient"},"dateModified":"2026-06-03"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rabbitemergency.com/"}]}</script><link href="https://rabbitemergency.com/" hreflang="en" rel="alternate"/><link href="https://rabbitemergency.com/ja/" hreflang="ja" rel="alternate"/><link href="https://rabbitemergency.com/zh-tw/" hreflang="zh-Hant" rel="alternate"/><link href="https://rabbitemergency.com/th/" hreflang="th" rel="alternate"/><link href="https://rabbitemergency.com/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <header class="topbar">
 <nav class="nav">
@@ -1642,8 +1649,7 @@
 </div>
 </nav>
 </header>
-<main id="top"><div class="crumb"><a href="/">Home</a></div>
-<section aria-label="Rabbit emergency homepage" class="hero">
+<main id="top"><section aria-label="Rabbit emergency homepage" class="hero">
 <img alt="A baby rabbit cradled gently in a person's hands" class="hero-image" src="assets/hero-rabbit.jpg"/>
 <div class="hero-inner">
 <div>
@@ -1782,40 +1788,40 @@
 <div class="section-head">
 <div class="section-title">
 <h2>Most searched by rabbit owners this week.</h2>
-<p>Vet-reviewed guides written for the moments owners panic-search. Each one ends with the same rule: assess urgency first, then ask a rabbit-savvy veterinarian.</p>
+<p>Source-cited guides written for the moments owners panic-search. Each one ends with the same rule: assess urgency first, then ask a rabbit-savvy veterinarian.</p>
 </div>
 <span class="pill amber">Trending</span>
 </div>
 <div class="guides-grid">
 <div class="guide-list">
-<span class="reviewed">Vet-reviewed</span><a class="guide-row" href="#now">
+<span class="reviewed">Source-cited</span><a class="guide-row" href="#now">
 <div class="guide-rank">01</div>
 <div><h3>Rabbit not eating or pooping</h3><p>Why gut stasis is a true, time-critical emergency in rabbits.</p></div>
 </a>
 <a class="guide-row" href="#now">
 <div class="guide-rank">02</div>
 <div><h3>Rabbit collapsed in the heat</h3><p>Recognising heatstroke and cooling a rabbit safely on the way to the clinic.</p></div>
-<span class="reviewed">Vet-reviewed</span>
+<span class="reviewed">Source-cited</span>
 </a>
 <a class="guide-row" href="#digestion">
 <div class="guide-rank">03</div>
 <div><h3>Soft stool or no caecotrophs</h3><p>Telling normal caecotrophs apart from diarrhoea that needs a vet today.</p></div>
-<span class="reviewed">Vet-reviewed</span>
+<span class="reviewed">Source-cited</span>
 </a>
 <a class="guide-row" href="#now">
 <div class="guide-rank">04</div>
 <div><h3>Head tilt in rabbits</h3><p>Sudden tilt, rolling, and balance loss — what to do first.</p></div>
-<span class="reviewed">Vet-reviewed</span>
+<span class="reviewed">Source-cited</span>
 </a>
 <a class="guide-row" href="#products">
 <div class="guide-rank">05</div>
 <div><h3>Moulting and hair in the gut</h3><p>Rabbits can't cough up hairballs — moult-season gut slow-down.</p></div>
-<span class="reviewed">Vet-reviewed</span>
+<span class="reviewed">Source-cited</span>
 </a>
 <a class="guide-row" href="#recovery">
 <div class="guide-rank">06</div>
 <div><h3>Post-dental &amp; post-op recovery</h3><p>Appetite, syringe feeding and convalescence after the vet visit.</p></div>
-<span class="reviewed">Vet-reviewed</span>
+<span class="reviewed">Source-cited</span>
 </a>
 </div>
 <aside class="feed">
@@ -2142,10 +2148,10 @@
 <div>
 <div class="eyebrow">For veterinary partners · Thailand congress</div>
 <h2>Built for veterinary partners at the Thailand congress.</h2>
-<p class="congress-copy">RabbitEmergency.com is a consumer-first portal that sends worried rabbit owners straight to vet-led care. For clinics, it hosts your profile, your vet-reviewed emergency guidance, and symptom-based referral routing — with the Alfavet RodiCare German vet-channel shelf and WOOLY daily care as your built-in recovery aisle.</p>
+<p class="congress-copy">RabbitEmergency.com is a consumer-first portal that sends worried rabbit owners straight to vet-led care. For clinics, it hosts your profile, your named-reviewer emergency guidance, and symptom-based referral routing — with the Alfavet RodiCare German vet-channel shelf and WOOLY daily care as your built-in recovery aisle.</p>
 <div class="congress-list">
 <div>Host verified clinic profiles with species &amp; exotic-readiness tags</div>
-<div>Doctor-reviewed rabbit emergency guidance for your owners</div>
+<div>Named-reviewer rabbit emergency guidance for your owners</div>
 <div>Symptom-based referral routing by location, hours &amp; type</div>
 <div>RodiCare + WOOLY shelf: digestion, appetite, recovery, moult &amp; daily gut care</div>
 </div>
@@ -2356,11 +2362,8 @@
 <a class="source-link" href="https://alfavet.de/en/" rel="noreferrer" target="_blank">Alfavet</a>
 </div>
 </section>
-<footer class="footer">
-        Copyright © 2026 CCH Foundation. All rights reserved. CCH Foundation is legally recognized as a Hong Kong charity and tax-exempt charitable institution under Section 88 of the Inland Revenue Ordinance, established for charitable, educational, and Hong Kong community-benefit purposes.
-      </footer>
-</div>
-<section id="topic-hubs"><h2>Rabbit emergency topic hubs</h2><p>Start with the hub that matches the sign, then move to the specific guide before calling a rabbit-savvy veterinarian.</p><div class="related"><a href="/rabbit-gut-stasis-emergency-hub/">Gut stasis and digestive emergencies</a><a href="/rabbit-breathing-emergency-hub/">Breathing, choking, and airway emergencies</a><a href="/rabbit-poisoning-emergency-hub/">Poisoning, toxins, and unsafe ingestion</a><a href="/rabbit-injury-trauma-emergency-hub/">Injury, wounds, falls, and trauma</a><a href="/rabbit-urinary-emergency-hub/">Urinary and litter-box emergencies</a></div></section><h2>Review status</h2><p class="reviewed">Reviewed by <a href="/veterinary-reviewers/">RabbitEmergency.com Veterinary Review Board</a> (Dr. Srisai, Dr. Watanabe, Dr. Lim, Dr. Hsu). Last reviewed: 2026-06-03.</p></main>
+<footer class="footer"><div class="footer-inner">Copyright © 2026 CCH Foundation. All rights reserved. CCH Foundation is legally recognized as a Hong Kong charity and tax-exempt charitable institution under Section 88 of the Inland Revenue Ordinance, established for charitable, educational, and Hong Kong community-benefit purposes.</div></footer>
+</div></main>
 <script>
     const marketButtons = document.querySelectorAll("[data-market-filter]");
     const storyCards = document.querySelectorAll(".testi-card[data-market]");

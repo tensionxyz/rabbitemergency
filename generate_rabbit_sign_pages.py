@@ -7,7 +7,7 @@ import re
 ROOT = Path(__file__).parent
 BASE = "https://rabbitemergency.com"
 LASTMOD = date.today().isoformat()
-REVIEW = "Veterinary review: pending. Add real reviewer name, credentials, affiliation, and review date before making a reviewed-by claim."
+REVIEW = "Source-cited guidance; pending named veterinary review."
 UNVERIFIED_REVIEWER_PATTERNS = (
     "veterinary-reviewers",
     "Dr. Apinya",
@@ -704,7 +704,7 @@ SIGN_PAGES = [
     for slug, sign, category, go in (row.split("|", 3) for row in SIGN_ROWS.splitlines())
 ]
 
-STYLE = """:root{--pine:#1A472A;--pine-deep:#0D2718;--pine-2:#2E6B3E;--pine-3:#DCEBDD;--cream:#FAFAF5;--paper:#FFFFFF;--ink:#181B18;--muted:#5E6A62;--quiet:#89938B;--border:#DCE4DC;--amber:#C4833B;--amber-bg:#FFF8F0;--red:#A93B32;--red-bg:#FDF1EE;--blue:#315D75;--blue-bg:#E9F2F5;--shadow:0 18px 60px rgba(28,42,32,.12)}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65}a{color:var(--pine-2);text-decoration:none}a:hover{text-decoration:underline}.mono,.eyebrow,.pill,.crumb,.nav-links a,.source-link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.1em}h1,h2,h3,.brand{font-family:Georgia,serif;letter-spacing:0;line-height:1.2;color:var(--pine-deep)}.topbar{position:sticky;top:0;z-index:50;background:rgba(26,71,42,.97);border-bottom:1px solid rgba(255,255,255,.1)}.nav{width:min(1080px,calc(100% - 36px));margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{color:#fff;font-size:19px;white-space:nowrap}.brand span{color:rgba(255,255,255,.5);font-family:system-ui,sans-serif;font-size:11px;margin-left:8px}.nav-links{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}.nav-links a{color:rgba(255,255,255,.82);font-size:11px;white-space:nowrap}.wrap{width:min(900px,calc(100% - 36px));margin:0 auto;padding:34px 0 80px}.crumb{font-size:11px;color:var(--quiet);margin-bottom:18px}.eyebrow{font-size:11px;color:var(--amber);margin-bottom:10px}h1{font-size:clamp(30px,5vw,46px);margin-bottom:14px}h2{font-size:25px;margin:38px 0 12px}p{margin-bottom:14px}.lede{font-size:18px;color:var(--muted)}.answer{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--pine-2);border-radius:14px;padding:22px 24px;margin:22px 0;box-shadow:var(--shadow)}.callout{border-radius:14px;padding:20px 22px;margin:20px 0}.callout.now{background:var(--red-bg);border:1px solid #E7C4BE}.callout.today{background:var(--amber-bg);border:1px solid #EAD7BC}.callout h3{margin-top:0}.callout.now h3{color:var(--red)}.callout.today h3{color:var(--amber)}ul{margin:0 0 16px 22px}li{margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;list-style:none;margin-left:0}.cards li,.card{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:16px 18px}.cards a{font-weight:700;color:var(--pine-deep)}table{width:100%;border-collapse:collapse;background:#fff}td,th{border:1px solid var(--border);padding:12px;text-align:left;vertical-align:top}details{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:0;margin-bottom:10px;overflow:hidden}summary{cursor:pointer;padding:15px 18px;font-weight:700}details p{padding:14px 18px 4px}.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.source-link{font-size:11px;background:var(--pine-3);color:var(--pine-deep);padding:7px 12px;border-radius:999px}.reviewed{font-size:13px;color:var(--quiet);border-top:1px solid var(--border);margin-top:34px;padding-top:16px}.footer{background:var(--pine-deep);color:rgba(255,255,255,.66);font-size:12px;line-height:1.7;padding:30px 0}.disclaimer{background:var(--blue-bg);border:1px solid #C9DEE7;border-radius:12px;padding:14px 18px;font-size:14px;color:var(--blue);margin:22px 0}"""
+STYLE = """:root{--pine:#1A472A;--pine-deep:#0D2718;--pine-2:#2E6B3E;--pine-3:#DCEBDD;--cream:#FAFAF5;--paper:#FFFFFF;--ink:#181B18;--muted:#5E6A62;--quiet:#89938B;--border:#DCE4DC;--amber:#C4833B;--amber-bg:#FFF8F0;--red:#A93B32;--red-bg:#FDF1EE;--blue:#315D75;--blue-bg:#E9F2F5;--shadow:0 18px 60px rgba(28,42,32,.12)}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65}a{color:var(--pine-2);text-decoration:none}a:hover{text-decoration:underline}.mono,.eyebrow,.pill,.crumb,.nav-links a,.source-link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.1em}h1,h2,h3,.brand{font-family:Georgia,serif;letter-spacing:0;line-height:1.2;color:var(--pine-deep)}.topbar{position:sticky;top:0;z-index:50;background:rgba(26,71,42,.97);border-bottom:1px solid rgba(255,255,255,.1)}.nav{width:min(1080px,calc(100% - 36px));margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{color:#fff;font-size:19px;white-space:nowrap}.brand span{color:rgba(255,255,255,.5);font-family:system-ui,sans-serif;font-size:11px;margin-left:8px}.nav-links{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}.nav-links a{color:rgba(255,255,255,.82);font-size:11px;white-space:nowrap}.wrap{width:min(900px,calc(100% - 36px));margin:0 auto;padding:34px 0 80px}.crumb{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:10px;color:var(--quiet);margin-bottom:18px}.crumb a{color:var(--pine-2);font-weight:700}.eyebrow{font-size:11px;color:var(--amber);margin-bottom:10px}h1{font-size:clamp(30px,5vw,46px);margin-bottom:14px}h2{font-size:25px;margin:38px 0 12px}p{margin-bottom:14px}.lede{font-size:18px;color:var(--muted)}.answer{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--pine-2);border-radius:14px;padding:22px 24px;margin:22px 0;box-shadow:var(--shadow)}.callout{border-radius:14px;padding:20px 22px;margin:20px 0}.callout.now{background:var(--red-bg);border:1px solid #E7C4BE}.callout.today{background:var(--amber-bg);border:1px solid #EAD7BC}.callout h3{margin-top:0}.callout.now h3{color:var(--red)}.callout.today h3{color:var(--amber)}ul{margin:0 0 16px 22px}li{margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;list-style:none;margin-left:0}.cards li,.card{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:16px 18px}.cards a{font-weight:700;color:var(--pine-deep)}table{width:100%;border-collapse:collapse;background:#fff}td,th{border:1px solid var(--border);padding:12px;text-align:left;vertical-align:top}details{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:0;margin-bottom:10px;overflow:hidden}summary{cursor:pointer;padding:15px 18px;font-weight:700}details p{padding:14px 18px 4px}.related,.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.related a,.source-link{font-size:11px;background:var(--pine-3);color:var(--pine-deep);padding:7px 12px;border-radius:999px}.source-link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.1em}.reviewed{display:inline-flex;max-width:100%;font-size:12px;color:var(--pine-deep);background:var(--pine-3);border:1px solid #C9DDCB;border-radius:999px;margin-top:28px;padding:7px 12px}.footer{background:var(--pine-deep);color:rgba(255,255,255,.72);font-size:12px;line-height:1.7;padding:30px 0}.footer .wrap{padding:0}.disclaimer{background:var(--blue-bg);border:1px solid #C9DEE7;border-radius:12px;padding:14px 18px;font-size:14px;color:var(--blue);margin:22px 0}@media(max-width:640px){.nav{width:min(100% - 24px,1080px)}.brand span{display:none}.nav-links{gap:12px}.wrap{width:min(100% - 24px,900px);padding-top:24px}}"""
 
 
 def source_links(keys):
@@ -945,7 +945,10 @@ def scrub_unverified_review_claims():
         text = re.sub(r'<a href="/zh-tw/veterinary-reviewers/">.*?</a>', '<a href="/zh-tw/veterinary-review/">審閱政策</a>', text)
         text = re.sub(r'<a href="/th/veterinary-reviewers/">.*?</a>', '<a href="/th/veterinary-review/">นโยบายการตรวจทาน</a>', text)
         text = re.sub(r'<div class="reviewed">.*?</div>', f'<div class="reviewed">Review status: {escape(REVIEW)}</div>', text, flags=re.S)
+        text = re.sub(r'<p class="reviewed">Veterinary review: pending\..*?</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text, flags=re.S)
+        text = re.sub(r'<h2>Review status</h2>\s*<p class="reviewed">Source-cited guidance; pending named veterinary review\.</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text)
         text = re.sub(r'Reviewed by the RabbitEmergency\.com exotic veterinary advisory board.*?Last reviewed: 2026-06-03\.', f'Review status: {REVIEW}', text)
+        text = text.replace("is reviewed by our veterinary advisory board", "has source-cited pages pending named veterinary review")
         text = re.sub(r'\s+"reviewedBy"\s*:\s*\[.*?\]\s*,?', "", text, flags=re.S)
         text = re.sub(r'\s+"reviewedBy"\s*:\s*\{.*?\}\s*,?', "", text, flags=re.S)
         text = re.sub(r'\s+"lastReviewed"\s*:\s*"[^"]*"\s*,?', "", text)
@@ -1033,6 +1036,66 @@ def update_homepage_links():
         path.write_text(text, encoding="utf-8")
 
 
+def polish_homepages():
+    for locale in LOCALES:
+        path = ROOT / LOCALES[locale]["prefix"] / "index.html" if locale != "en" else ROOT / "index.html"
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        text = re.sub(
+            r'(<main id="top">)\s*<div class="crumb"><a href="[^"]+">(?:Home|首頁|ホーム|หน้าแรก)</a></div>\s*',
+            r"\1",
+            text,
+            count=1,
+        )
+        text = re.sub(
+            r'\s*<section id="topic-hubs">.*?</section>\s*<h2>Review status</h2>\s*<p class="reviewed">.*?</p>\s*(?=</main>)',
+            "",
+            text,
+            flags=re.S,
+        )
+        text = text.replace(
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our veterinary advisory board.",
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards, with source-cited pages pending named veterinary review.",
+        )
+        text = text.replace(
+            "Vet-reviewed guides written for the moments owners panic-search.",
+            "Source-cited guides written for the moments owners panic-search.",
+        )
+        text = text.replace(">Vet-reviewed<", ">Source-cited<")
+        text = text.replace(
+            "For clinics, it hosts your profile, your vet-reviewed emergency guidance, and symptom-based referral routing",
+            "For clinics, it hosts your profile, your named-reviewer emergency guidance, and symptom-based referral routing",
+        )
+        text = text.replace("Doctor-reviewed rabbit emergency guidance for your owners", "Named-reviewer rabbit emergency guidance for your owners")
+        text = re.sub(
+            r'(\s*\? card\.dataset\.featured !== "true"\n)\s*\? card\.dataset\.featured !== "true"\n',
+            r"\1",
+            text,
+        )
+        text = re.sub(
+            r'<footer class="footer">\s*(.*?)\s*</footer>',
+            lambda m: '<footer class="footer"><div class="footer-inner">' + re.sub(r"\s+", " ", m.group(1)).strip() + "</div></footer>",
+            text,
+            count=1,
+            flags=re.S,
+        )
+        footer_css = """
+  .footer-inner {
+    width: min(1200px, calc(100% - 36px));
+    margin: 0 auto;
+    color: rgba(255,255,255,0.72);
+  }
+"""
+        if ".footer-inner" not in text:
+            text = text.replace("\n  /* --- emergency mark emphasis --- */", footer_css + "\n  /* --- emergency mark emphasis --- */")
+        text = text.replace(
+            "  .footer {\n    color: var(--muted);\n    font-family: \"JetBrains Mono\", monospace;\n    font-size: 11px;\n    border-top: 1px solid var(--border);\n    padding-top: 24px;\n    margin-top: 32px;\n  }",
+            "  .footer {\n    background: var(--pine-deep);\n    color: rgba(255,255,255,0.72);\n    font-family: \"JetBrains Mono\", monospace;\n    font-size: 11px;\n    line-height: 1.75;\n    margin-top: 52px;\n    padding: 24px 0;\n  }",
+        )
+        path.write_text(text, encoding="utf-8")
+
+
 def main():
     if len(SIGN_PAGES) < 100:
         raise SystemExit(f"Need at least 100 sign pages, got {len(SIGN_PAGES)}")
@@ -1045,6 +1108,7 @@ def main():
     update_sitemap()
     update_llms()
     update_homepage_links()
+    polish_homepages()
 
 
 if __name__ == "__main__":
