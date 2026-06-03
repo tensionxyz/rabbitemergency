@@ -1,0 +1,29 @@
+# RabbitEmergency.com
+
+> Educational rabbit-emergency triage for owners across Asia: recognise urgent signs, reach a rabbit-savvy vet fast, and understand vet-guided recovery support. Not a substitute for veterinary care; products are recovery support used after a vet assesses the rabbit, never an emergency treatment.
+
+## Emergency guides
+- [Rabbit not eating or pooping](https://rabbitemergency.com/rabbit-not-eating-or-pooping/): A rabbit that stops eating and passing droppings may be in gut stasis (GI stasis), which can become life-threatening within hours. Learn the warning signs and what to tell your vet.
+- [Rabbit bloat / hard, tight belly](https://rabbitemergency.com/rabbit-bloat-hard-belly/): A bloated, tight, or painful abdomen in a rabbit can signal gastric bloat or blockage, which is a true emergency. Learn the red flags and what to tell your vet immediately.
+- [Rabbit collapsed in the heat](https://rabbitemergency.com/rabbit-collapsed-in-heat/): Rabbits overheat easily and heatstroke is a life-threatening emergency. Learn the warning signs, safe first steps while you reach a vet, and what not to do.
+- [Soft stool or no caecotrophs](https://rabbitemergency.com/rabbit-soft-stool-no-caecotrophs/): Soft, mushy stool or uneaten caecotrophs stuck to a rabbit can signal diet imbalance, dental disease, or illness. Learn when it's urgent and what to tell your vet.
+- [Head tilt in rabbits](https://rabbitemergency.com/rabbit-head-tilt/): A sudden head tilt (torticollis) in a rabbit can be caused by inner-ear infection, E. cuniculi, or other conditions. Learn why it needs prompt veterinary care.
+- [Flystrike in rabbits](https://rabbitemergency.com/rabbit-flystrike/): Flystrike (myiasis) is a rapidly life-threatening emergency in rabbits. Learn how to recognise it, what to do immediately, and how to prevent it.
+- [Rabbit not drinking / dehydrated](https://rabbitemergency.com/rabbit-not-drinking-dehydrated/): A rabbit that stops drinking can dehydrate quickly, which worsens gut stasis and other illness. Learn the signs of dehydration and what to tell your vet.
+- [Drooling or overgrown teeth](https://rabbitemergency.com/rabbit-overgrown-teeth-drooling/): Drooling, a wet chin, dropping food, or weight loss in a rabbit often signals dental disease. Learn when it's urgent and what your vet may check.
+- [Rabbit not eating after surgery](https://rabbitemergency.com/rabbit-post-op-not-eating/): It's common for rabbits to eat less right after surgery or a vet visit, but a rabbit that won't eat or pass droppings post-op can slip into gut stasis. Learn the warning line.
+- [Moulting and hair in the gut](https://rabbitemergency.com/rabbit-moulting-hairball-gut/): Heavy moults mean rabbits swallow more fur, which can contribute to gut slowdown. Learn how to support gut movement and recognise when a slow gut becomes an emergency.
+
+## Find a vet
+- [Rabbit emergency vet in Hong Kong](https://rabbitemergency.com/rabbit-emergency-vet-hong-kong/)
+- [Rabbit emergency vet in Tokyo](https://rabbitemergency.com/rabbit-emergency-vet-tokyo/)
+- [Rabbit emergency vet in Taipei](https://rabbitemergency.com/rabbit-emergency-vet-taipei/)
+- [Rabbit emergency vet in Singapore](https://rabbitemergency.com/rabbit-emergency-vet-singapore/)
+- [Rabbit emergency vet in Bangkok](https://rabbitemergency.com/rabbit-emergency-vet-bangkok/)
+
+## About & trust
+- [About RabbitEmergency.com](https://rabbitemergency.com/about/): RabbitEmergency.com is an educational rabbit-emergency resource that helps owners recognise urgent signs, reach a rabbit-savvy vet, and understand vet-guided recovery support.
+- [Editorial policy](https://rabbitemergency.com/editorial-policy/): How RabbitEmergency.com writes, reviews, and sources its rabbit-emergency guidance, and the claim discipline we apply to recovery products.
+- [Medical disclaimer](https://rabbitemergency.com/medical-disclaimer/): RabbitEmergency.com provides general educational information only and is not a substitute for professional veterinary advice, diagnosis, or treatment.
+- [How our guidance is reviewed](https://rabbitemergency.com/veterinary-review/): RabbitEmergency.com guidance is reviewed by an exotic veterinary advisory board against RWAF, House Rabbit Society, and exotic small-mammal medicine standards.
+- [Clinical sources & standards](https://rabbitemergency.com/sources/): The veterinary and rabbit-welfare sources and standards behind RabbitEmergency.com guidance.
