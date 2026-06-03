@@ -704,6 +704,19 @@ SIGN_PAGES = [
     for slug, sign, category, go in (row.split("|", 3) for row in SIGN_ROWS.splitlines())
 ]
 
+# --- consolidation guard: never (re)generate retired -emergency-signs intents ---
+# These slugs are permanent redirect stubs to canonical owners (keyword-
+# cannibalization fix). See tools/redirect_manifest.json. Do NOT remove this.
+import json as _json
+from pathlib import Path as _Path
+try:
+    _RETIRED = set(_json.loads(
+        (_Path(__file__).resolve().parent / "tools" / "redirect_manifest.json").read_text(encoding="utf-8")
+    )["redirects"])
+except Exception:
+    _RETIRED = set()
+SIGN_PAGES = [p for p in SIGN_PAGES if p["slug"] not in _RETIRED]
+
 STYLE = """:root{--pine:#1A472A;--pine-deep:#0D2718;--pine-2:#2E6B3E;--pine-3:#DCEBDD;--cream:#FAFAF5;--paper:#FFFFFF;--ink:#181B18;--muted:#5E6A62;--quiet:#89938B;--border:#DCE4DC;--amber:#C4833B;--amber-bg:#FFF8F0;--red:#A93B32;--red-bg:#FDF1EE;--blue:#315D75;--blue-bg:#E9F2F5;--shadow:0 18px 60px rgba(28,42,32,.12)}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65}a{color:var(--pine-2);text-decoration:none}a:hover{text-decoration:underline}.mono,.eyebrow,.pill,.crumb,.nav-links a,.source-link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.1em}h1,h2,h3,.brand{font-family:Georgia,serif;letter-spacing:0;line-height:1.2;color:var(--pine-deep)}.topbar{position:sticky;top:0;z-index:50;background:rgba(26,71,42,.97);border-bottom:1px solid rgba(255,255,255,.1)}.nav{width:min(1080px,calc(100% - 36px));margin:0 auto;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{color:#fff;font-size:19px;white-space:nowrap}.brand span{color:rgba(255,255,255,.5);font-family:system-ui,sans-serif;font-size:11px;margin-left:8px}.nav-links{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}.nav-links a{color:rgba(255,255,255,.82);font-size:11px;white-space:nowrap}.wrap{width:min(900px,calc(100% - 36px));margin:0 auto;padding:34px 0 80px}.crumb{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:10px;color:var(--quiet);margin-bottom:18px}.crumb a{color:var(--pine-2);font-weight:700}.eyebrow{font-size:11px;color:var(--amber);margin-bottom:10px}h1{font-size:clamp(30px,5vw,46px);margin-bottom:14px}h2{font-size:25px;margin:38px 0 12px}p{margin-bottom:14px}.lede{font-size:18px;color:var(--muted)}.answer{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--pine-2);border-radius:14px;padding:22px 24px;margin:22px 0;box-shadow:var(--shadow)}.callout{border-radius:14px;padding:20px 22px;margin:20px 0}.callout.now{background:var(--red-bg);border:1px solid #E7C4BE}.callout.today{background:var(--amber-bg);border:1px solid #EAD7BC}.callout h3{margin-top:0}.callout.now h3{color:var(--red)}.callout.today h3{color:var(--amber)}ul{margin:0 0 16px 22px}li{margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;list-style:none;margin-left:0}.cards li,.card{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:16px 18px}.cards a{font-weight:700;color:var(--pine-deep)}table{width:100%;border-collapse:collapse;background:#fff}td,th{border:1px solid var(--border);padding:12px;text-align:left;vertical-align:top}details{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:0;margin-bottom:10px;overflow:hidden}summary{cursor:pointer;padding:15px 18px;font-weight:700}details p{padding:14px 18px 4px}.related,.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.related a,.source-link{font-size:11px;background:var(--pine-3);color:var(--pine-deep);padding:7px 12px;border-radius:999px}.source-link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.1em}.reviewed{display:inline-flex;max-width:100%;font-size:12px;color:var(--pine-deep);background:var(--pine-3);border:1px solid #C9DDCB;border-radius:999px;margin-top:28px;padding:7px 12px}.footer{background:var(--pine-deep);color:rgba(255,255,255,.72);font-size:12px;line-height:1.7;padding:30px 0}.footer .wrap{padding:0}.disclaimer{background:var(--blue-bg);border:1px solid #C9DEE7;border-radius:12px;padding:14px 18px;font-size:14px;color:var(--blue);margin:22px 0}@media(max-width:640px){.nav{width:min(100% - 24px,1080px)}.brand span{display:none}.nav-links{gap:12px}.wrap{width:min(100% - 24px,900px);padding-top:24px}}"""
 
 
@@ -969,6 +982,8 @@ def update_sitemap():
         if ".git" in path.parts or any(pattern in path.as_posix() for pattern in UNVERIFIED_REVIEWER_PATTERNS):
             continue
         rel = path.parent.relative_to(ROOT).as_posix()
+        if rel.split("/")[-1] in _RETIRED:  # retired stubs stay out of the sitemap
+            continue
         urls.append(f"{BASE}/" if rel == "." else f"{BASE}/{rel}/")
     for locale in LOCALES:
         urls.append(local_url("rabbit-emergency-signs", locale))
@@ -1004,6 +1019,8 @@ def update_llms():
         if ".git" in page.parts or any(pattern in page.as_posix() for pattern in UNVERIFIED_REVIEWER_PATTERNS):
             continue
         rel = page.parent.relative_to(ROOT).as_posix()
+        if rel.split("/")[-1] in _RETIRED:  # retired stubs are noindex; not "indexable"
+            continue
         url = f"{BASE}/" if rel == "." else f"{BASE}/{rel}/"
         html = page.read_text(encoding="utf-8")
         title_match = re.search(r"<title>(.*?)</title>", html, flags=re.S)
