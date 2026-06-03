@@ -934,6 +934,7 @@ def scrub_unverified_review_claims():
         text = re.sub(r',?\s*"reviewedBy"\s*:\s*\[.*?\]', "", text, flags=re.S)
         text = re.sub(r',?\s*"reviewedBy"\s*:\s*\{.*?\}', "", text, flags=re.S)
         text = re.sub(r',?\s*"dateReviewed"\s*:\s*"[^"]*"', "", text)
+        text = re.sub(r'<meta[^>]+name=["\']last-reviewed["\'][^>]*>\s*', "", text)
         text = text.replace("reviewed by our exotic veterinary advisory board", "source-cited and pending named veterinary review")
         text = text.replace("reviewed by an exotic veterinary advisory board", "source-cited and pending named veterinary review")
         text = text.replace("is reviewed by an exotic veterinary advisory board", "is source-cited and pending named veterinary review")
@@ -956,17 +957,17 @@ def scrub_unverified_review_claims():
 
 def update_sitemap():
     sitemap_path = ROOT / "sitemap.xml"
-    text = sitemap_path.read_text(encoding="utf-8") if sitemap_path.exists() else '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'
-    existing = {
-        url for url in re.findall(r"<loc>(.*?)</loc>", text)
-        if not any(pattern in url for pattern in UNVERIFIED_REVIEWER_PATTERNS)
-    }
     urls = []
+    for path in ROOT.glob("**/index.html"):
+        if ".git" in path.parts or any(pattern in path.as_posix() for pattern in UNVERIFIED_REVIEWER_PATTERNS):
+            continue
+        rel = path.parent.relative_to(ROOT).as_posix()
+        urls.append(f"{BASE}/" if rel == "." else f"{BASE}/{rel}/")
     for locale in LOCALES:
         urls.append(local_url("rabbit-emergency-signs", locale))
         urls += [local_url(item["slug"], locale) for item in SIGN_PAGES[:100]]
     entries = []
-    for url in sorted(existing | set(urls)):
+    for url in sorted(set(urls)):
         priority = "0.9" if url.endswith("/rabbit-emergency-signs/") or url.endswith("-emergency-signs/") else ("1.0" if url == f"{BASE}/" else "0.8")
         changefreq = "weekly" if url == f"{BASE}/" else "monthly"
         entries.append(f"<url><loc>{url}</loc><lastmod>{LASTMOD}</lastmod><changefreq>{changefreq}</changefreq><priority>{priority}</priority></url>")
@@ -991,7 +992,24 @@ def update_llms():
         section += f"- [Rabbit {item['sign']}]({local_url(item['slug'], 'en')}): {item['go']}\n"
         for locale in ("ja", "zh-tw", "th"):
             section += f"  - {LOCALES[locale]['label']}: {local_url(item['slug'], locale)}\n"
-    text = re.sub(r"\n## Rabbit emergency signs hub\n.*?(?=\n## |\Z)", "", text, flags=re.S).rstrip() + "\n" + section
+    pages = []
+    for page in sorted(ROOT.glob("**/index.html")):
+        if ".git" in page.parts or any(pattern in page.as_posix() for pattern in UNVERIFIED_REVIEWER_PATTERNS):
+            continue
+        rel = page.parent.relative_to(ROOT).as_posix()
+        url = f"{BASE}/" if rel == "." else f"{BASE}/{rel}/"
+        html = page.read_text(encoding="utf-8")
+        title_match = re.search(r"<title>(.*?)</title>", html, flags=re.S)
+        h1_match = re.search(r"<h1[^>]*>(.*?)</h1>", html, flags=re.S)
+        label = title_match.group(1) if title_match else (h1_match.group(1) if h1_match else url)
+        label = re.sub(r"<.*?>", "", label).strip()
+        pages.append((url, label))
+    all_pages = "\n## All current indexable pages\n" + "".join(
+        f"- [{label}]({url})\n" for url, label in pages
+    )
+    text = re.sub(r"\n## Rabbit emergency signs hub\n.*?(?=\n## |\Z)", "", text, flags=re.S)
+    text = re.sub(r"\n## All current indexable pages\n.*?(?=\n## |\Z)", "", text, flags=re.S)
+    text = text.rstrip() + "\n" + section + all_pages
     path.write_text(text, encoding="utf-8")
 
 
