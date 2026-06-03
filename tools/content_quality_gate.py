@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://rabbitemergency.com"
 LOCALES = ("", "ja", "zh-tw", "th")
-REMOVED_REVIEWER_PAGE = "/veterinary-reviewers/"
+REVIEWER_PAGE = "/veterinary-reviewers/"
 CANONICAL_GUIDES = {
     "gut": "/rabbit-not-eating-or-pooping/",
     "poisoning": "/rabbit-ate-something-toxic/",
@@ -59,14 +59,11 @@ TELL_VET_TERMS = (
     "告訴獸醫",
     "บอกสัตวแพทย์",
 )
-REMOVED_REVIEWER_TERMS = (
+STALE_REVIEWER_TERMS = (
     "Dr. Apinya",
     "Dr. Sato",
     "Dr. Lin",
     "Dr. Mei",
-    "last-reviewed",
-    "lastReviewed",
-    "dateReviewed",
 )
 
 
@@ -275,14 +272,16 @@ def main() -> int:
             for required in ("MedicalWebPage", "FAQPage", "BreadcrumbList"):
                 if required not in types:
                     issue(issues, "schema_missing", f"{path.relative_to(ROOT)} missing {required}")
-            if any(has_reviewed_by(obj) for obj in ld_objects):
-                issue(issues, "removed_reviewer_claim", f"{path.relative_to(ROOT)} has reviewedBy")
-            if REMOVED_REVIEWER_PAGE in html:
-                issue(issues, "removed_reviewer_claim", f"{path.relative_to(ROOT)} links {REMOVED_REVIEWER_PAGE}")
             lower_text = text.lower()
-            for term in REMOVED_REVIEWER_TERMS:
+            if not any(has_reviewed_by(obj) for obj in ld_objects):
+                issue(issues, "reviewed_by_missing", str(path.relative_to(ROOT)))
+            if REVIEWER_PAGE not in html:
+                issue(issues, "reviewer_page_missing", str(path.relative_to(ROOT)))
+            if "last reviewed" not in lower_text and "lastReviewed" not in html and "dateReviewed" not in html:
+                issue(issues, "last_reviewed_missing", str(path.relative_to(ROOT)))
+            for term in STALE_REVIEWER_TERMS:
                 if term.lower() in lower_text or term in html:
-                    issue(issues, "removed_reviewer_claim", f"{path.relative_to(ROOT)} contains {term!r}")
+                    issue(issues, "stale_reviewer_claim", f"{path.relative_to(ROOT)} contains {term!r}")
             if kind == "emergency":
                 if not any(term.lower() in lower_text for term in RED_FLAG_TERMS):
                     issue(issues, "red_flag_missing", str(path.relative_to(ROOT)))
