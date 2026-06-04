@@ -1703,3 +1703,9 @@ details p{padding:14px 18px 4px;margin-bottom:10px}
 .u-style-027{margin-bottom:0}
 .u-style-028{margin-top:0}
 .u-style-029{width:min(820px,calc(100% - 36px));margin:0 auto}
+
+
+/* Printable outreach assets */
+.printable-asset .card h2:first-child{margin-top:0}
+.print-line{display:inline-block;min-width:180px;border-bottom:1px solid var(--quiet);height:1.2em;vertical-align:baseline}
+@media print{.topbar,.footer,.crumb,.related,.reviewed{display:none}.wrap{width:100%;padding:0 16px}.card,.answer,.callout{box-shadow:none;break-inside:avoid;border-radius:8px}body{background:#fff;font-size:12px}h1{font-size:28px}h2{font-size:18px;margin:18px 0 8px}.print-line{min-width:140px}}
