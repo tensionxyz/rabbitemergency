@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 
 from generate_rabbit_sign_pages import BASE, LOCALES, STYLE, local_path, local_url, alternate_head_links, scrub_unverified_review_claims
+from tools.html_sanitizer import sanitize_html
 
 ROOT = Path(__file__).parent
 LASTMOD = date.today().isoformat()
@@ -31,7 +32,7 @@ TEXT = {
         ],
         "sources": "Sources",
         "related": "Related city and region pages",
-        "review": "Review status: source-cited and pending named veterinary review.",
+        "review": "Source-cited clinic directory; veterinary review pending.",
         "footer": "RabbitEmergency.com is educational and does not provide veterinary diagnosis or treatment.",
     },
     "ja": {
@@ -56,7 +57,7 @@ TEXT = {
         ],
         "sources": "出典",
         "related": "関連する都市・地域ページ",
-        "review": "レビュー状況: 出典つき、実名の獣医レビューは保留中。",
+        "review": "出典つきのクリニック一覧。獣医師レビューは準備中です。",
         "footer": "RabbitEmergency.comは教育目的であり、獣医師による診断や治療を提供しません。",
     },
     "zh-tw": {
@@ -81,7 +82,7 @@ TEXT = {
         ],
         "sources": "來源",
         "related": "相關城市與地區頁面",
-        "review": "審閱狀態：有來源引用，實名獸醫審閱待定。",
+        "review": "有來源引用的診所目錄；獸醫審閱待定。",
         "footer": "RabbitEmergency.com為教育資訊，不提供獸醫診斷或治療。",
     },
     "th": {
@@ -106,7 +107,7 @@ TEXT = {
         ],
         "sources": "แหล่งข้อมูล",
         "related": "หน้าเมืองและภูมิภาคที่เกี่ยวข้อง",
-        "review": "สถานะการตรวจทาน: มีแหล่งอ้างอิง และรอการตรวจทานโดยสัตวแพทย์ชื่อจริง",
+        "review": "รายชื่อคลินิกอ้างอิงแหล่งข้อมูล; การตรวจทานโดยสัตวแพทย์อยู่ระหว่างดำเนินการ",
         "footer": "RabbitEmergency.comเป็นข้อมูลเพื่อการศึกษา ไม่ใช่การวินิจฉัยหรือการรักษาโดยสัตวแพทย์",
     },
 }
@@ -596,7 +597,7 @@ def page(slug, page_key, locale):
 
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    path.write_text(sanitize_html(text, path), encoding="utf-8")
 
 
 def main():

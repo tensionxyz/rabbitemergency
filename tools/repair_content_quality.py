@@ -14,6 +14,7 @@ import json
 import re
 
 from content_quality_gate import ROOT, BASE, content_word_count, ld_types, page_kind, visible_text
+from html_sanitizer import sanitize_html, scrub_review_schema
 
 LAST_REVIEWED = "2026-06-03"
 
@@ -21,12 +22,11 @@ REVIEWERS = {
     "@type": "Organization",
     "name": "RabbitEmergency.com source-led veterinary review process",
     "url": f"{BASE}/veterinary-review/",
-    "description": "Source-cited rabbit emergency guidance pending named clinical reviewer publication.",
+    "description": "Source-cited rabbit emergency guidance with veterinary review pending.",
 }
 
 VISIBLE_REVIEW = (
-    'Review status: <a href="/veterinary-review/">source-cited, pending named veterinary review</a>. '
-    f"Last reviewed: {LAST_REVIEWED}."
+    'Source-cited guidance; <a href="/veterinary-review/">veterinary review pending</a>.'
 )
 
 
@@ -187,16 +187,7 @@ def has_type(obj: object, schema_type: str) -> bool:
 
 
 def update_ld_review(obj: object) -> object:
-    if isinstance(obj, list):
-        return [update_ld_review(item) for item in obj]
-    if isinstance(obj, dict):
-        updated = {key: update_ld_review(value) for key, value in obj.items()}
-        if has_type(updated, "MedicalWebPage"):
-            updated["reviewedBy"] = REVIEWERS
-            updated["lastReviewed"] = LAST_REVIEWED
-            updated["dateReviewed"] = LAST_REVIEWED
-        return updated
-    return obj
+    return scrub_review_schema(obj)
 
 
 def update_json_ld_review(html: str) -> str:
@@ -217,7 +208,7 @@ def has_schema(html: str, schema_type: str) -> bool:
 
 
 def insert_before_review_or_main(html: str, block: str) -> str:
-    review = re.search(r"<h2>Review status</h2>", html)
+    review = re.search(r'<p class="reviewed">', html)
     if review:
         return html[: review.start()] + block + html[review.start() :]
     if "</main>" in html:
@@ -292,23 +283,20 @@ def medical_schema(path: Path, html: str, locale: str) -> dict:
         "url": page_url(path),
         "inLanguage": "zh-tw" if locale == "zh-tw" else locale,
         "publisher": {"@type": "Organization", "name": "RabbitEmergency.com", "url": f"{BASE}/"},
-        "reviewedBy": REVIEWERS,
-        "lastReviewed": LAST_REVIEWED,
-        "dateReviewed": LAST_REVIEWED,
     }
 
 
 def ensure_visible_review(html: str) -> str:
     html = re.sub(
-        r'<p class="reviewed">(?:Review status:\s*)?(?:Source-cited guidance; pending named veterinary review\.|source-cited and pending named veterinary review\.)</p>',
+        r'<p class="reviewed">.*?(?:pending named veterinary review|source-cited and pending named veterinary review|source-cited, pending named veterinary review).*?</p>',
         f'<p class="reviewed">{VISIBLE_REVIEW}</p>',
         html,
-        flags=re.I,
+        flags=re.I | re.S,
     )
     text = visible_text(html).lower()
-    if "/veterinary-review/" in html and "last reviewed" in text:
+    if "/veterinary-review/" in html and "veterinary review pending" in text:
         return html
-    return insert_before_review_or_main(html, f'<h2>Review status</h2><p class="reviewed">{VISIBLE_REVIEW}</p>')
+    return insert_before_review_or_main(html, f'<p class="reviewed">{VISIBLE_REVIEW}</p>')
 
 
 def repair_page(path: Path) -> bool:
@@ -341,7 +329,7 @@ def repair_page(path: Path) -> bool:
         html = insert_before_review_or_main(html, prep_block(locale))
 
     if html != original:
-        path.write_text(html, encoding="utf-8")
+        path.write_text(sanitize_html(html, path), encoding="utf-8")
         return True
     return False
 
@@ -388,7 +376,7 @@ def repair_reviewer_pages() -> int:
         html = html.replace('href="/zh-tw//"', 'href="/zh-tw/"')
         html = html.replace('href="/th//"', 'href="/th/"')
         if html != original:
-            path.write_text(html, encoding="utf-8")
+            path.write_text(sanitize_html(html, path), encoding="utf-8")
             changed += 1
     return changed
 

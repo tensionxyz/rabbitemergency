@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Guard: retired -emergency-signs intents must stay redirect stubs.
 Fails (exit 1) if any retired slug was regenerated as a full page or re-listed
-in the sitemap, or if the shared stylesheets vanished. Fail-open on internal
+in the sitemap, if the shared stylesheets vanished, or if scrubbed review/HTML
+artifacts reappear. Fail-open on internal
 errors (exit 0) so a script bug never locks out pushes."""
 import json, os, re, sys
+from html_sanitizer import find_policy_violations
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://rabbitemergency.com"
 try:
@@ -32,6 +34,9 @@ try:
     for css in ("styles.css", "styles-b.css"):
         if not os.path.isfile(os.path.join(ROOT, css)):
             problems.append(f"MISSING shared stylesheet: /{css} (CSS extraction reverted)")
+    # d) scrubbed artifacts must not reappear in generated HTML
+    for policy_problem in find_policy_violations():
+        problems.append(f"HTML POLICY: {policy_problem}")
     if problems:
         print("\n*** CONSOLIDATION GUARD FAILED ***")
         for p in problems[:40]:
@@ -41,7 +46,7 @@ try:
         print("\nFix: retired intents in tools/redirect_manifest.json must stay redirect")
         print("stubs (do NOT regenerate them). Re-run the consolidation or restore stubs.")
         sys.exit(1)
-    print(f"consolidation guard OK: {len(M)} intents x {len(LANGS)} langs intact; stylesheets present.")
+    print(f"consolidation guard OK: {len(M)} intents x {len(LANGS)} langs intact; stylesheets present; HTML policy clean.")
     sys.exit(0)
 except SystemExit:
     raise

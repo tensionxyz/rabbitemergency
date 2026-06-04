@@ -4,10 +4,12 @@ from datetime import date
 import json
 import re
 
+from tools.html_sanitizer import sanitize_html
+
 ROOT = Path(__file__).parent
 BASE = "https://rabbitemergency.com"
 LASTMOD = date.today().isoformat()
-REVIEW = "Source-cited guidance; pending named veterinary review."
+REVIEW = "Source-cited guidance; veterinary review pending."
 UNVERIFIED_REVIEWER_PATTERNS = (
     "veterinary-reviewers",
     "Dr. Apinya",
@@ -88,7 +90,7 @@ LOCALES = {
             "Posture, tooth grinding, belly feel, breathing, temperature, movement, and pain signs.",
             "Recent diet changes, heat, stress, moult, surgery, trauma, toxins, or medications.",
         ],
-        "review_status": "Review status",
+        "review_status": "Source status",
         "sources": "Sources & standards",
         "helpful": "Helpful next pages",
         "footer": "RabbitEmergency.com is an educational resource and does not provide veterinary diagnosis or treatment. In an emergency, contact a rabbit-savvy veterinarian immediately.",
@@ -907,7 +909,7 @@ def sign_page(item, locale="en"):
 <div class="callout today"><h3>{escape(data["call_today_if"])}</h3><ul>{localized_bullets("call_today_bullets", locale)}</ul></div>
 <h2>{escape(data["what_not"])}</h2><ul>{localized_bullets("what_not_bullets", locale)}</ul>
 <h2>{escape(data["tell_vet"])}</h2><div class="card"><ul>{localized_bullets("tell_vet_bullets", locale, sign)}</ul></div>
-<h2>{escape(data["review_status"])}</h2><p class="reviewed">{escape(data["review"])}</p>
+<p class="reviewed">{escape(data["review"])}</p>
 <h2>{escape(data["sources"])}</h2><div class="source-links">{source_links(source_keys)}</div>
 <h2>{escape(data["helpful"])}</h2><ul>{related}</ul>"""
     out = ROOT / LOCALES[locale]["prefix"] / item["slug"] / "index.html" if locale != "en" else ROOT / item["slug"] / "index.html"
@@ -928,7 +930,7 @@ def signs_hub(locale="en"):
 <div class="answer"><h2>{escape(data["short_answer"])}</h2><p>{escape(data["hub_answer"])}</p></div>
 <h2>{escape(data["go_now_signs"])}</h2><ul>{localized_bullets("go_now_bullets", locale)}</ul>
 <h2>{escape(data["hub_cards"])}</h2><ul class="cards">{cards}</ul>
-<h2>{escape(data["review_status"])}</h2><p class="reviewed">{escape(data["review"])}</p>
+<p class="reviewed">{escape(data["review"])}</p>
 <h2>{escape(data["sources"])}</h2><div class="source-links">{source_links(["rwaf", "hrs", "merck", "vca"])}</div>"""
     out = ROOT / LOCALES[locale]["prefix"] / "rabbit-emergency-signs" / "index.html" if locale != "en" else ROOT / "rabbit-emergency-signs" / "index.html"
     write(out, page_shell(title, meta, "rabbit-emergency-signs", body, schema, locale))
@@ -936,7 +938,7 @@ def signs_hub(locale="en"):
 
 def write(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8")
+    path.write_text(sanitize_html(content, path), encoding="utf-8")
 
 
 def scrub_unverified_review_claims():
@@ -948,31 +950,31 @@ def scrub_unverified_review_claims():
         text = re.sub(r',?\s*"reviewedBy"\s*:\s*\{.*?\}', "", text, flags=re.S)
         text = re.sub(r',?\s*"dateReviewed"\s*:\s*"[^"]*"', "", text)
         text = re.sub(r'<meta[^>]+name=["\']last-reviewed["\'][^>]*>\s*', "", text)
-        text = text.replace("reviewed by our exotic veterinary advisory board", "source-cited and pending named veterinary review")
-        text = text.replace("reviewed by an exotic veterinary advisory board", "source-cited and pending named veterinary review")
-        text = text.replace("is reviewed by an exotic veterinary advisory board", "is source-cited and pending named veterinary review")
-        text = text.replace("reviewed by an exotic veterinary advisory board against RWAF, House Rabbit Society, and exotic small-mammal medicine standards", "source-cited and pending named veterinary review against RWAF, House Rabbit Society, and exotic small-mammal medicine standards")
-        text = text.replace("reviewed against ISFM, AAFP, and AAHA cat-care standards by our regional veterinary advisory board", "source-cited and pending named veterinary review")
-        text = text.replace("reviewed by the RabbitEmergency.com Veterinary Review Board", "source-cited and pending named veterinary review")
-        text = text.replace("reviewed by our RabbitEmergency.com Veterinary Review Board", "source-cited and pending named veterinary review")
+        text = text.replace("reviewed by our exotic veterinary advisory board", "source-cited; veterinary review pending")
+        text = text.replace("reviewed by an exotic veterinary advisory board", "source-cited; veterinary review pending")
+        text = text.replace("is reviewed by an exotic veterinary advisory board", "is source-cited; veterinary review pending")
+        text = text.replace("reviewed by an exotic veterinary advisory board against RWAF, House Rabbit Society, and exotic small-mammal medicine standards", "source-cited; veterinary review pending against RWAF, House Rabbit Society, and exotic small-mammal medicine standards")
+        text = text.replace("reviewed against ISFM, AAFP, and AAHA cat-care standards by our regional veterinary advisory board", "source-cited; veterinary review pending")
+        text = text.replace("reviewed by the RabbitEmergency.com Veterinary Review Board", "source-cited; veterinary review pending")
+        text = text.replace("reviewed by our RabbitEmergency.com Veterinary Review Board", "source-cited; veterinary review pending")
         text = text.replace("RabbitEmergency.com Veterinary Review Board", "RabbitEmergency.com review policy")
         text = re.sub(r'<a href="/veterinary-reviewers/">.*?</a>', '<a href="/veterinary-review/">Review policy</a>', text)
         text = re.sub(r'<a href="/ja/veterinary-reviewers/">.*?</a>', '<a href="/ja/veterinary-review/">レビューポリシー</a>', text)
         text = re.sub(r'<a href="/zh-tw/veterinary-reviewers/">.*?</a>', '<a href="/zh-tw/veterinary-review/">審閱政策</a>', text)
         text = re.sub(r'<a href="/th/veterinary-reviewers/">.*?</a>', '<a href="/th/veterinary-review/">นโยบายการตรวจทาน</a>', text)
-        text = re.sub(r'<div class="reviewed">.*?</div>', f'<div class="reviewed">Review status: {escape(REVIEW)}</div>', text, flags=re.S)
+        text = re.sub(r'<div class="reviewed">.*?</div>', f'<div class="reviewed">{escape(REVIEW)}</div>', text, flags=re.S)
         text = re.sub(r'<p class="reviewed">Reviewed by .*?</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text, flags=re.S)
         text = re.sub(r'<p class="reviewed">Veterinary review: pending\..*?</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text, flags=re.S)
         text = re.sub(r'<h2>Review status</h2>\s*<p class="reviewed">Source-cited guidance; pending named veterinary review\.</p>', f'<p class="reviewed">{escape(REVIEW)}</p>', text)
-        text = re.sub(r'Reviewed by the RabbitEmergency\.com exotic veterinary advisory board.*?Last reviewed: 2026-06-03\.', f'Review status: {REVIEW}', text)
-        text = text.replace("is reviewed by our veterinary advisory board", "has source-cited pages pending named veterinary review")
+        text = re.sub(r'Reviewed by the RabbitEmergency\.com exotic veterinary advisory board.*?Last reviewed: 2026-06-03\.', REVIEW, text)
+        text = text.replace("is reviewed by our veterinary advisory board", "has source-cited pages; veterinary review is pending")
         text = re.sub(r'\s+"reviewedBy"\s*:\s*\[.*?\]\s*,?', "", text, flags=re.S)
         text = re.sub(r'\s+"reviewedBy"\s*:\s*\{.*?\}\s*,?', "", text, flags=re.S)
         text = re.sub(r'\s+"lastReviewed"\s*:\s*"[^"]*"\s*,?', "", text)
         text = re.sub(r'\s+"dateReviewed"\s*:\s*"[^"]*"\s*,?', "", text)
         text = re.sub(r',\s*([}\]])', r'\1', text)
         if text != original:
-            path.write_text(text, encoding="utf-8")
+            path.write_text(sanitize_html(text, path), encoding="utf-8")
 
 
 def update_sitemap():
@@ -1005,7 +1007,7 @@ def update_llms():
     ) + "\n"
     text = text.replace(
         "RabbitEmergency.com guidance is reviewed by an exotic veterinary advisory board against RWAF, House Rabbit Society, and exotic small-mammal medicine standards.",
-        "RabbitEmergency.com guidance is source-cited and pending named veterinary review against RWAF, House Rabbit Society, and exotic small-mammal medicine standards.",
+        "RabbitEmergency.com guidance is source-cited; veterinary review pending against RWAF, House Rabbit Society, and exotic small-mammal medicine standards.",
     )
     section = "\n## Rabbit emergency signs hub\n"
     for locale, data in LOCALES.items():
@@ -1055,7 +1057,7 @@ def update_homepage_links():
             rf'\1',
             text,
         )
-        path.write_text(text, encoding="utf-8")
+        path.write_text(sanitize_html(text, path), encoding="utf-8")
 
 
 def polish_homepages():
@@ -1078,15 +1080,15 @@ def polish_homepages():
         )
         text = text.replace(
             "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our veterinary advisory board.",
-            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards, with source-cited pages pending named veterinary review.",
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards; veterinary review is pending.",
         )
         text = text.replace(
             "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards and is reviewed by our RabbitEmergency.com Veterinary Review Board.",
-            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards, with source-cited pages pending named veterinary review.",
+            "Emergency guidance follows RWAF, House Rabbit Society, and exotic small-mammal standards; veterinary review is pending.",
         )
         text = text.replace(
             "Every guide is reviewed by the RabbitEmergency.com Veterinary Review Board against RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards before publication.",
-            "Every guide follows RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards, with source-cited pages pending named veterinary review.",
+            "Every guide follows RWAF (Rabbit Welfare Association &amp; Fund), House Rabbit Society, and exotic small-mammal medicine standards; veterinary review is pending.",
         )
         text = text.replace(
             "Vet-reviewed guides written for the moments owners panic-search.",
@@ -1095,9 +1097,9 @@ def polish_homepages():
         text = text.replace(">Vet-reviewed<", ">Source-cited<")
         text = text.replace(
             "For clinics, it hosts your profile, your vet-reviewed emergency guidance, and symptom-based referral routing",
-            "For clinics, it hosts your profile, your named-reviewer emergency guidance, and symptom-based referral routing",
+            "For clinics, it hosts your profile, source-cited emergency guidance, and symptom-based referral routing",
         )
-        text = text.replace("Doctor-reviewed rabbit emergency guidance for your owners", "Named-reviewer rabbit emergency guidance for your owners")
+        text = text.replace("Doctor-reviewed rabbit emergency guidance for your owners", "Source-cited rabbit emergency guidance for your owners")
         text = re.sub(
             r'(\s*\? card\.dataset\.featured !== "true"\n)\s*\? card\.dataset\.featured !== "true"\n',
             r"\1",
@@ -1123,7 +1125,7 @@ def polish_homepages():
             "  .footer {\n    color: var(--muted);\n    font-family: \"JetBrains Mono\", monospace;\n    font-size: 11px;\n    border-top: 1px solid var(--border);\n    padding-top: 24px;\n    margin-top: 32px;\n  }",
             "  .footer {\n    background: var(--pine-deep);\n    color: rgba(255,255,255,0.72);\n    font-family: \"JetBrains Mono\", monospace;\n    font-size: 11px;\n    line-height: 1.75;\n    margin-top: 52px;\n    padding: 24px 0;\n  }",
         )
-        path.write_text(text, encoding="utf-8")
+        path.write_text(sanitize_html(text, path), encoding="utf-8")
 
 
 def main():

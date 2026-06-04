@@ -21,6 +21,7 @@ from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup, NavigableString
 from deep_translator import GoogleTranslator
+from html_sanitizer import sanitize_html
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -581,8 +582,6 @@ def repair_urls_and_meta(soup: BeautifulSoup, slug: str, locale: str | None) -> 
 
 def render_html(soup: BeautifulSoup, locale: str | None) -> str:
     html = str(soup)
-    if not html.startswith("<!DOCTYPE html>"):
-        html = "<!DOCTYPE html>\n" + html
     if locale:
         for old, new in POST_REPLACEMENTS.get(locale, {}).items():
             html = html.replace(old, new)
@@ -603,7 +602,7 @@ def localize_page(slug: str, locale: str) -> None:
     repair_jsonld(soup, slug, locale)
     insert_language_switcher(soup, slug, locale)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(render_html(soup, locale), encoding="utf-8")
+    out_path.write_text(sanitize_html(render_html(soup, locale), out_path), encoding="utf-8")
 
 
 def repair_english_page(slug: str) -> None:
@@ -615,7 +614,7 @@ def repair_english_page(slug: str) -> None:
     repair_urls_and_meta(soup, slug, None)
     repair_jsonld(soup, slug, None)
     insert_language_switcher(soup, slug, None)
-    path.write_text(render_html(soup, None), encoding="utf-8")
+    path.write_text(sanitize_html(render_html(soup, None), path), encoding="utf-8")
 
 
 def scoped_slugs_for_locale(locale: str) -> list[str]:

@@ -20,6 +20,7 @@ import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, NavigableString
 from deep_translator import GoogleTranslator
+from html_sanitizer import sanitize_html
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -451,19 +452,13 @@ def repair_jsonld(soup: BeautifulSoup, slug: str, locale: str | None) -> None:
 def postprocess_locale_html(html: str, locale: str) -> str:
     for old, new in POST_REPLACEMENTS.get(locale, {}).items():
         html = html.replace(old, new)
-    html = re.sub(r"^html\s*\n", "", html)
-    if not html.startswith("<!DOCTYPE html>"):
-        html = "<!DOCTYPE html>\n" + html
     return html
 
 
 def render_html(soup: BeautifulSoup, locale: str | None = None) -> str:
     html = str(soup)
-    html = re.sub(r"^html\s*\n", "", html)
     if locale:
         return postprocess_locale_html(html, locale)
-    if not html.startswith("<!DOCTYPE html>"):
-        html = "<!DOCTYPE html>\n" + html
     return html
 
 
@@ -482,14 +477,14 @@ def localize_page(slug: str, source: Path, locale: str, localized_slugs: set[str
     repair_jsonld(soup, slug, locale)
     insert_language_switcher(soup, slug, locale)
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(render_html(soup, locale), encoding="utf-8")
+    out_path.write_text(sanitize_html(render_html(soup, locale), out_path), encoding="utf-8")
 
 
 def repair_english_page(slug: str, source: Path) -> None:
     soup = BeautifulSoup(source.read_text(encoding="utf-8"), "html.parser")
     set_head_links(soup, slug, None)
     insert_language_switcher(soup, slug, None)
-    source.write_text(render_html(soup), encoding="utf-8")
+    source.write_text(sanitize_html(render_html(soup), source), encoding="utf-8")
 
 
 def write_sitemap(pages: list[tuple[str, Path]]) -> None:

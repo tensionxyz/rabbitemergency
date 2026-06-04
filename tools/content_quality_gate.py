@@ -64,6 +64,14 @@ STALE_REVIEWER_TERMS = (
     "Dr. Sato",
     "Dr. Lin",
     "Dr. Mei",
+    "reviewedBy",
+    "lastReviewed",
+    "dateReviewed",
+    "pending named veterinary review",
+    "pending named clinical reviewer",
+    "source-cited, pending",
+    "named-reviewer",
+    "named reviewer",
 )
 
 
@@ -208,13 +216,13 @@ def ld_types(obj: object) -> list[str]:
     return found
 
 
-def has_reviewed_by(obj: object) -> bool:
+def has_bad_review_metadata(obj: object) -> bool:
     if isinstance(obj, list):
-        return any(has_reviewed_by(x) for x in obj)
+        return any(has_bad_review_metadata(x) for x in obj)
     if isinstance(obj, dict):
-        if "reviewedBy" in obj:
+        if any(key in obj for key in ("reviewedBy", "lastReviewed", "dateReviewed")):
             return True
-        return any(has_reviewed_by(v) for v in obj.values())
+        return any(has_bad_review_metadata(v) for v in obj.values())
     return False
 
 
@@ -295,12 +303,8 @@ def main() -> int:
                 if required not in types:
                     issue(issues, "schema_missing", f"{path.relative_to(ROOT)} missing {required}")
             lower_text = text.lower()
-            if not any(has_reviewed_by(obj) for obj in ld_objects):
-                issue(issues, "reviewed_by_missing", str(path.relative_to(ROOT)))
-            if REVIEWER_PAGE not in html:
-                issue(issues, "reviewer_page_missing", str(path.relative_to(ROOT)))
-            if "last reviewed" not in lower_text and "lastReviewed" not in html and "dateReviewed" not in html:
-                issue(issues, "last_reviewed_missing", str(path.relative_to(ROOT)))
+            if any(has_bad_review_metadata(obj) for obj in ld_objects):
+                issue(issues, "review_metadata_banned", str(path.relative_to(ROOT)))
             for term in STALE_REVIEWER_TERMS:
                 if term.lower() in lower_text or term in html:
                     issue(issues, "stale_reviewer_claim", f"{path.relative_to(ROOT)} contains {term!r}")
