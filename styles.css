@@ -104,6 +104,11 @@ details p{padding:14px 18px 4px;margin-bottom:10px}
     outline-offset: 3px;
   }
 
+  ::selection {
+    background: rgba(227, 179, 111, 0.32);
+    color: #fff;
+  }
+
   .mono,
   .eyebrow,
   .pill,
@@ -253,6 +258,29 @@ details p{padding:14px 18px 4px;margin-bottom:10px}
     line-height: 0.96;
     max-width: 640px;
     margin-bottom: 22px;
+  }
+
+  .hero h1 {
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero .mono {
+    color: rgba(255, 255, 255, 0.64);
+    margin-bottom: 10px;
+  }
+
+  .hero .mono strong {
+    color: #fff;
+  }
+
+  .hero .mono a {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .hero .mono a:hover {
+    color: #fff;
+    text-decoration: none;
   }
 
   .hero-copy {
