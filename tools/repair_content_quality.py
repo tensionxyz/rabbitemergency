@@ -17,44 +17,16 @@ from content_quality_gate import ROOT, BASE, content_word_count, ld_types, page_
 
 LAST_REVIEWED = "2026-06-03"
 
-REVIEWERS = [
-    {
-        "@type": "Person",
-        "name": "Dr. Srisai",
-        "jobTitle": "Veterinary reviewer",
-        "affiliation": {"@type": "Organization", "name": "RabbitEmergency.com Veterinary Review Board"},
-        "url": f"{BASE}/veterinary-reviewers/#srisai",
-        "description": "Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline.",
-    },
-    {
-        "@type": "Person",
-        "name": "Dr. Watanabe",
-        "jobTitle": "Veterinary reviewer",
-        "affiliation": {"@type": "Organization", "name": "RabbitEmergency.com Veterinary Review Board"},
-        "url": f"{BASE}/veterinary-reviewers/#watanabe",
-        "description": "Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline.",
-    },
-    {
-        "@type": "Person",
-        "name": "Dr. Lim",
-        "jobTitle": "Veterinary reviewer",
-        "affiliation": {"@type": "Organization", "name": "RabbitEmergency.com Veterinary Review Board"},
-        "url": f"{BASE}/veterinary-reviewers/#lim",
-        "description": "Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline.",
-    },
-    {
-        "@type": "Person",
-        "name": "Dr. Hsu",
-        "jobTitle": "Veterinary reviewer",
-        "affiliation": {"@type": "Organization", "name": "RabbitEmergency.com Veterinary Review Board"},
-        "url": f"{BASE}/veterinary-reviewers/#hsu",
-        "description": "Reviews rabbit emergency triage guidance for clinical safety, escalation thresholds, and claim discipline.",
-    },
-]
+REVIEWERS = {
+    "@type": "Organization",
+    "name": "RabbitEmergency.com source-led veterinary review process",
+    "url": f"{BASE}/veterinary-review/",
+    "description": "Source-cited rabbit emergency guidance pending named clinical reviewer publication.",
+}
 
 VISIBLE_REVIEW = (
-    'Reviewed by <a href="/veterinary-reviewers/">RabbitEmergency.com Veterinary Review Board</a> '
-    f'(Dr. Srisai, Dr. Watanabe, Dr. Lim, Dr. Hsu). Last reviewed: {LAST_REVIEWED}.'
+    'Review status: <a href="/veterinary-review/">source-cited, pending named veterinary review</a>. '
+    f"Last reviewed: {LAST_REVIEWED}."
 )
 
 
@@ -334,14 +306,16 @@ def ensure_visible_review(html: str) -> str:
         flags=re.I,
     )
     text = visible_text(html).lower()
-    if "/veterinary-reviewers/" in html and "last reviewed" in text:
+    if "/veterinary-review/" in html and "last reviewed" in text:
         return html
-    return insert_before_review_or_main(html, f'<h2>Reviewed by</h2><p class="reviewed">{VISIBLE_REVIEW}</p>')
+    return insert_before_review_or_main(html, f'<h2>Review status</h2><p class="reviewed">{VISIBLE_REVIEW}</p>')
 
 
 def repair_page(path: Path) -> bool:
     html = path.read_text(encoding="utf-8", errors="replace")
     original = html
+    if 'http-equiv="refresh"' in html and "noindex" in html.lower() and len(html) < 2500:
+        return False
     kind = page_kind(path, html)
     if kind not in {"medical", "emergency", "hub"}:
         return False
@@ -377,6 +351,9 @@ def update_sitemap() -> None:
     for path in sorted(ROOT.glob("**/index.html")):
         if ".git" in path.parts:
             continue
+        html = path.read_text(encoding="utf-8", errors="replace")
+        if 'http-equiv="refresh"' in html and "noindex" in html.lower() and len(html) < 2500:
+            continue
         urls.append(page_url(path))
     body = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url in sorted(set(urls)):
@@ -390,16 +367,16 @@ def update_sitemap() -> None:
 def repair_reviewer_pages() -> int:
     changed = 0
     language_links = (
-        '<p>Read in: <a href="/veterinary-reviewers/">English</a> · '
-        '<a href="/ja/veterinary-reviewers/">日本語</a> · '
-        '<a href="/zh-tw/veterinary-reviewers/">繁體中文</a> · '
-        '<a href="/th/veterinary-reviewers/">ไทย</a></p>'
+        '<p>Read in: <a href="/veterinary-review/">English</a> · '
+        '<a href="/ja/veterinary-review/">日本語</a> · '
+        '<a href="/zh-tw/veterinary-review/">繁體中文</a> · '
+        '<a href="/th/veterinary-review/">ไทย</a></p>'
     )
     for rel in (
-        "veterinary-reviewers/index.html",
-        "ja/veterinary-reviewers/index.html",
-        "zh-tw/veterinary-reviewers/index.html",
-        "th/veterinary-reviewers/index.html",
+        "veterinary-review/index.html",
+        "ja/veterinary-review/index.html",
+        "zh-tw/veterinary-review/index.html",
+        "th/veterinary-review/index.html",
     ):
         path = ROOT / rel
         if not path.exists():

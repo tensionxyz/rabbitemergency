@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://rabbitemergency.com"
 LOCALES = ("", "ja", "zh-tw", "th")
-REVIEWER_PAGE = "/veterinary-reviewers/"
+REVIEWER_PAGE = "/veterinary-review/"
 CANONICAL_GUIDES = {
     "gut": "/rabbit-not-eating-or-pooping/",
     "poisoning": "/rabbit-ate-something-toxic/",
@@ -179,10 +179,16 @@ def parse_pages() -> dict[Path, tuple[str, LinkParser]]:
         if ".git" in path.parts:
             continue
         html = path.read_text(encoding="utf-8", errors="replace")
+        if is_redirect_stub(html):
+            continue
         parser = LinkParser()
         parser.feed(html)
         pages[path] = (html, parser)
     return pages
+
+
+def is_redirect_stub(html: str) -> bool:
+    return 'http-equiv="refresh"' in html and "noindex" in html.lower() and len(html) < 2500
 
 
 def ld_types(obj: object) -> list[str]:
