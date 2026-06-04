@@ -886,6 +886,13 @@ details p{padding:14px 18px 4px;margin-bottom:10px}
     mix-blend-mode: multiply;
   }
 
+  .product-icon img[src*="/wooly-"] {
+    width: 118%;
+    height: 118%;
+    max-width: none;
+    padding: 0;
+  }
+
   .product-card h3 {
     color: var(--pine);
     font-size: 22px;
