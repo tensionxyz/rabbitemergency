@@ -1,2 +1,3 @@
 tools/.translation-cache.json
 .indexnow-key
+.secrets/
